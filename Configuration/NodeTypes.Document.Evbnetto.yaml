@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Evbnetto':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Evbnetto
+    icon: icon-house
+  properties: {  }

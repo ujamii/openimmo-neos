@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Ruecklagenetto':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Ruecklagenetto
+    icon: icon-house
+  properties: {  }

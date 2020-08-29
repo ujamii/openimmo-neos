@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.UserDefinedExtend':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\UserDefinedExtend
+    icon: icon-house
+  properties: {  }

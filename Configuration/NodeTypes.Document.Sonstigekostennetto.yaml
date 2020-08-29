@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Sonstigekostennetto':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Sonstigekostennetto
+    icon: icon-house
+  properties: {  }

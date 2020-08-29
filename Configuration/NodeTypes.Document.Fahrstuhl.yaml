@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Fahrstuhl':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Fahrstuhl
+    icon: icon-house
+  properties: {  }

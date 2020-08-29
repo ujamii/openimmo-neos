@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Summemietenetto':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Summemietenetto
+    icon: icon-house
+  properties: {  }

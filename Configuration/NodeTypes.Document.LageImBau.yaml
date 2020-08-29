@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.LageImBau':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\LageImBau
+    icon: icon-house
+  properties: {  }

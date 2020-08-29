@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.StpFreiplatz':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\StpFreiplatz
+    icon: icon-house
+  properties: {  }

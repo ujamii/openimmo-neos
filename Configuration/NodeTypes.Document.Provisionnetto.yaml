@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Provisionnetto':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Provisionnetto
+    icon: icon-house
+  properties: {  }

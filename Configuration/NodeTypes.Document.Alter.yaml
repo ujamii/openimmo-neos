@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Alter':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Alter
+    icon: icon-house
+  properties: {  }

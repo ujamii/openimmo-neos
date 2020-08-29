@@ -1,0 +1,20 @@
+{
+    "name": "ujamii/openimmo-neos",
+    "description": "NEOS CMS package for showing OpenImmo based data on a NEOS based website",
+    "type": "neos-package",
+    "require": {
+        "neos/flow": "*",
+        "ujamii/openimmo": "^0.5.0",
+        "gossi/php-code-generator": "^v0.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ujamii\\OpenImmoNeos\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Ujamii.OpenImmo"
+        }
+    }
+}

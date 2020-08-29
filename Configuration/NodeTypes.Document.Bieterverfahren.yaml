@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Bieterverfahren':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Bieterverfahren
+    icon: icon-house
+  properties: {  }

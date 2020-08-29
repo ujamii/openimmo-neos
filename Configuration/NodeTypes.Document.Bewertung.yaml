@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Bewertung':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Bewertung
+    icon: icon-house
+  properties: {  }

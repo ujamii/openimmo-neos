@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Versteigerung':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Versteigerung
+    icon: icon-house
+  properties: {  }

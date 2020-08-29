@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Geschlecht':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Geschlecht
+    icon: icon-house
+  properties: {  }

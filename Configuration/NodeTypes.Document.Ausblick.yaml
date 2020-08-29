@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Ausblick':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Ausblick
+    icon: icon-house
+  properties: {  }

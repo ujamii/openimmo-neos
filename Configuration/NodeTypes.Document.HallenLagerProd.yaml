@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.HallenLagerProd':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\HallenLagerProd
+    icon: icon-house
+  properties: {  }

@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.BueroPraxen':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\BueroPraxen
+    icon: icon-house
+  properties: {  }

@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.StpCarport':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\StpCarport
+    icon: icon-house
+  properties: {  }

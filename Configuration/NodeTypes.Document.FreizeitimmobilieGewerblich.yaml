@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.FreizeitimmobilieGewerblich':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\FreizeitimmobilieGewerblich
+    icon: icon-house
+  properties: {  }

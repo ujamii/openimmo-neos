@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Kueche':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Kueche
+    icon: icon-house
+  properties: {  }

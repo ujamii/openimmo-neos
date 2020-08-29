@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Nebenkostenprom2von':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Nebenkostenprom2von
+    icon: icon-house
+  properties: {  }

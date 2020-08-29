@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Gesamtmietenetto':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Gesamtmietenetto
+    icon: icon-house
+  properties: {  }

@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.MieteinnahmenSoll':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\MieteinnahmenSoll
+    icon: icon-house
+  properties: {  }

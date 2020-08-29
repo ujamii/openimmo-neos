@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.DistanzenSport':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\DistanzenSport
+    icon: icon-house
+  properties: {  }

@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Sonstigemietenetto':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Sonstigemietenetto
+    icon: icon-house
+  properties: {  }

@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.WeitereAdresse':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\WeitereAdresse
+    icon: icon-house
+  properties: {  }

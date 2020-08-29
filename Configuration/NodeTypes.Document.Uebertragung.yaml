@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Uebertragung':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Uebertragung
+    icon: icon-house
+  properties: {  }

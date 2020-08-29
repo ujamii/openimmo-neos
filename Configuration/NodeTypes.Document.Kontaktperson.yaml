@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Kontaktperson':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Kontaktperson
+    icon: icon-house
+  properties: {  }

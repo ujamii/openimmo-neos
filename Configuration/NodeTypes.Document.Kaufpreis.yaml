@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Kaufpreis':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Kaufpreis
+    icon: icon-house
+  properties: {  }

@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.UserDefinedAnyfield':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\UserDefinedAnyfield
+    icon: icon-house
+  properties: {  }

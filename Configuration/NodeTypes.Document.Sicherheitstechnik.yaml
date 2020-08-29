@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Sicherheitstechnik':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Sicherheitstechnik
+    icon: icon-house
+  properties: {  }

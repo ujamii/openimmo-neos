@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.MaxMietdauer':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\MaxMietdauer
+    icon: icon-house
+  properties: {  }

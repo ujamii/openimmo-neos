@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.EmailSonstige':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\EmailSonstige
+    icon: icon-house
+  properties: {  }

@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.AussenCourtage':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\AussenCourtage
+    icon: icon-house
+  properties: {  }

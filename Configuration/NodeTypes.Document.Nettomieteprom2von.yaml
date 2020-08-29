@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Nettomieteprom2von':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Nettomieteprom2von
+    icon: icon-house
+  properties: {  }

@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.StpGarage':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\StpGarage
+    icon: icon-house
+  properties: {  }

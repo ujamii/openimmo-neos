@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.ProvisionTeilen':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\ProvisionTeilen
+    icon: icon-house
+  properties: {  }

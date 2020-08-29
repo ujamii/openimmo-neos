@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Vermarktungsart':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Vermarktungsart
+    icon: icon-house
+  properties: {  }

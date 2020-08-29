@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.TelSonstige':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\TelSonstige
+    icon: icon-house
+  properties: {  }

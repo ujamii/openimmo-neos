@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Heizkostennetto':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Heizkostennetto
+    icon: icon-house
+  properties: {  }

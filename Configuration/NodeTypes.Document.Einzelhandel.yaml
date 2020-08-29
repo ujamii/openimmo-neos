@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Einzelhandel':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Einzelhandel
+    icon: icon-house
+  properties: {  }

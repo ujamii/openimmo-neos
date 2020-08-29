@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Betriebskostennetto':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Betriebskostennetto
+    icon: icon-house
+  properties: {  }

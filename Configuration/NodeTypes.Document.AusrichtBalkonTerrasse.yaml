@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.AusrichtBalkonTerrasse':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\AusrichtBalkonTerrasse
+    icon: icon-house
+  properties: {  }

@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.ErschliessungUmfang':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\ErschliessungUmfang
+    icon: icon-house
+  properties: {  }

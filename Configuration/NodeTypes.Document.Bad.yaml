@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Bad':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Bad
+    icon: icon-house
+  properties: {  }

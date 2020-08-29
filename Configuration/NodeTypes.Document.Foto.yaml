@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Foto':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Foto
+    icon: icon-house
+  properties: {  }

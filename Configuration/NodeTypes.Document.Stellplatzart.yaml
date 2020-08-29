@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Stellplatzart':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Stellplatzart
+    icon: icon-house
+  properties: {  }

@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Unterkellert':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Unterkellert
+    icon: icon-house
+  properties: {  }

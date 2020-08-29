@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Parken':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Parken
+    icon: icon-house
+  properties: {  }

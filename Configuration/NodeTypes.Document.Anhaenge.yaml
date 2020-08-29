@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Anhaenge':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Anhaenge
+    icon: icon-house
+  properties: {  }

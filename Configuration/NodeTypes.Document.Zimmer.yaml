@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Zimmer':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Zimmer
+    icon: icon-house
+  properties: {  }

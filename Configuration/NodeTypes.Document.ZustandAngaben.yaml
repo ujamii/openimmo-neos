@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.ZustandAngaben':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\ZustandAngaben
+    icon: icon-house
+  properties: {  }

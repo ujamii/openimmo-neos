@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Freitexte':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Freitexte
+    icon: icon-house
+  properties: {  }

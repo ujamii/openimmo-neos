@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Verkaufstatus':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Verkaufstatus
+    icon: icon-house
+  properties: {  }

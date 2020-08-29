@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.MieteinnahmenIst':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\MieteinnahmenIst
+    icon: icon-house
+  properties: {  }

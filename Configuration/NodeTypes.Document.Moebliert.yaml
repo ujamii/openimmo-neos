@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Moebliert':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Moebliert
+    icon: icon-house
+  properties: {  }

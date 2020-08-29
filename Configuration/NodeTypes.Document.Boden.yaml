@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Boden':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Boden
+    icon: icon-house
+  properties: {  }

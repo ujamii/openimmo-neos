@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.AngeschlGastronomie':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\AngeschlGastronomie
+    icon: icon-house
+  properties: {  }

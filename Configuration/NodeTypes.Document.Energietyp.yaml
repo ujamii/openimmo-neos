@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Energietyp':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Energietyp
+    icon: icon-house
+  properties: {  }

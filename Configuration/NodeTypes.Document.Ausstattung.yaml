@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Ausstattung':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Ausstattung
+    icon: icon-house
+  properties: {  }

@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Aktion':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Aktion
+    icon: icon-house
+  properties: {  }

@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Hauptmietzinsnetto':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Hauptmietzinsnetto
+    icon: icon-house
+  properties: {  }

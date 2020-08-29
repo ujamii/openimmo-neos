@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Bauweise':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Bauweise
+    icon: icon-house
+  properties: {  }

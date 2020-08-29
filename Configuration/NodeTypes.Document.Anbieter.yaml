@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Anbieter':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Anbieter
+    icon: icon-house
+  properties: {  }

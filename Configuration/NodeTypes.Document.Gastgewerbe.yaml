@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Gastgewerbe':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Gastgewerbe
+    icon: icon-house
+  properties: {  }

@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Dachform':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Dachform
+    icon: icon-house
+  properties: {  }

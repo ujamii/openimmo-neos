@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Wohnung':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Wohnung
+    icon: icon-house
+  properties: {  }

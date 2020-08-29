@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.LandUndForstwirtschaft':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\LandUndForstwirtschaft
+    icon: icon-house
+  properties: {  }

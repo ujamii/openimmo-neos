@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.ZinshausRenditeobjekt':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\ZinshausRenditeobjekt
+    icon: icon-house
+  properties: {  }

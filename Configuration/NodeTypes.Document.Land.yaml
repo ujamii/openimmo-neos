@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Land':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Land
+    icon: icon-house
+  properties: {  }

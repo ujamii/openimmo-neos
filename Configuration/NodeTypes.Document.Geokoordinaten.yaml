@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Geokoordinaten':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Geokoordinaten
+    icon: icon-house
+  properties: {  }

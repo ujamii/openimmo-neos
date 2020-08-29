@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Ausbaustufe':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Ausbaustufe
+    icon: icon-house
+  properties: {  }

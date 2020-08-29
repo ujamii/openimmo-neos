@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Gesamtkostenprom2von':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Gesamtkostenprom2von
+    icon: icon-house
+  properties: {  }

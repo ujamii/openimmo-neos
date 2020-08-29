@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.VerwaltungTechn':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\VerwaltungTechn
+    icon: icon-house
+  properties: {  }

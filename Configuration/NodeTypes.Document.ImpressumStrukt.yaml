@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.ImpressumStrukt':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\ImpressumStrukt
+    icon: icon-house
+  properties: {  }

@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.InnenCourtage':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\InnenCourtage
+    icon: icon-house
+  properties: {  }

@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Energiepass':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Energiepass
+    icon: icon-house
+  properties: {  }

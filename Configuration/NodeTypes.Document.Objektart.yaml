@@ -1,0 +1,7 @@
+'Ujamii.OpenImmo:Document.Objektart':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: Ujamii\OpenImmo\API\Objektart
+    icon: icon-house
+  properties: {  }
