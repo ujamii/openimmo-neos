@@ -1,7 +1,38 @@
-'Ujamii.OpenImmo:Document.EmailSonstige':
+'Ujamii.OpenImmoNeos:Document.EmailSonstige':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\EmailSonstige
-    icon: icon-house
-  properties: {  }
+    label: EmailSonstige
+    icon: icon-sign
+  properties:
+    bemerkung:
+      type: string
+      ui:
+        label: Bemerkung
+        inspector:
+          group: openimmo
+    emailart:
+      type: string
+      ui:
+        label: Emailart
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              EM_DIREKT:
+                label: Em_direkt
+              EM_PRIVAT:
+                label: Em_privat
+              EM_SONSTIGE:
+                label: Em_sonstige
+              EM_ZENTRALE:
+                label: Em_zentrale
+    value:
+      type: string
+      ui:
+        label: Value
+        inspector:
+          group: openimmo
+  abstract: true

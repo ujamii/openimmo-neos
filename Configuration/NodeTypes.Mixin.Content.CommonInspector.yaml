@@ -1,0 +1,9 @@
+'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector':
+  abstract: true
+  ui:
+    group: 'general'
+    inspector:
+      groups:
+        openimmo:
+          label: 'OpenImmo'
+          icon: 'icon-sign'

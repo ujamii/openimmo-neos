@@ -1,0 +1,3 @@
+prototype(Ujamii.OpenImmoNeos:Document.Nebenkostenprom2von) < prototype(Neos.Fusion:Component) {
+    renderer = ''
+}

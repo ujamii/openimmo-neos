@@ -1,7 +1,51 @@
-'Ujamii.OpenImmo:Document.Dachform':
+'Ujamii.OpenImmoNeos:Document.Dachform':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Dachform
-    icon: icon-house
-  properties: {  }
+    label: Dachform
+    icon: icon-sign
+  properties:
+    flachdach:
+      type: boolean
+      ui:
+        label: Flachdach
+        inspector:
+          group: openimmo
+    krueppelwalmdach:
+      type: boolean
+      ui:
+        label: Krueppelwalmdach
+        inspector:
+          group: openimmo
+    mansarddach:
+      type: boolean
+      ui:
+        label: Mansarddach
+        inspector:
+          group: openimmo
+    pultdach:
+      type: boolean
+      ui:
+        label: Pultdach
+        inspector:
+          group: openimmo
+    pyramidendach:
+      type: boolean
+      ui:
+        label: Pyramidendach
+        inspector:
+          group: openimmo
+    satteldach:
+      type: boolean
+      ui:
+        label: Satteldach
+        inspector:
+          group: openimmo
+    walmdach:
+      type: boolean
+      ui:
+        label: Walmdach
+        inspector:
+          group: openimmo
+  abstract: true

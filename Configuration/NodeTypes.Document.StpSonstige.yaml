@@ -1,7 +1,38 @@
-'Ujamii.OpenImmo:Document.StpSonstige':
+'Ujamii.OpenImmoNeos:Document.StpSonstige':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\StpSonstige
-    icon: icon-house
-  properties: {  }
+    label: StpSonstige
+    icon: icon-sign
+  properties:
+    bemerkung:
+      type: string
+      ui:
+        label: Bemerkung
+        inspector:
+          group: openimmo
+    platzart:
+      type: string
+      ui:
+        label: Platzart
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              CARPORT:
+                label: Carport
+              DUPLEX:
+                label: Duplex
+              FREIPLATZ:
+                label: Freiplatz
+              GARAGE:
+                label: Garage
+              PARKHAUS:
+                label: Parkhaus
+              SONSTIGES:
+                label: Sonstiges
+              TIEFGARAGE:
+                label: Tiefgarage
+  abstract: true

@@ -1,7 +1,15 @@
-'Ujamii.OpenImmo:Document.AussenCourtage':
+'Ujamii.OpenImmoNeos:Document.AussenCourtage':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\AussenCourtage
-    icon: icon-house
-  properties: {  }
+    label: AussenCourtage
+    icon: icon-sign
+  properties:
+    mitMwst:
+      type: boolean
+      ui:
+        label: MitMwst
+        inspector:
+          group: openimmo
+  abstract: true

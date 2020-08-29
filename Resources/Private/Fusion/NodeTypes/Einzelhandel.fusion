@@ -1,0 +1,3 @@
+prototype(Ujamii.OpenImmoNeos:Document.Einzelhandel) < prototype(Neos.Fusion:Component) {
+    renderer = ''
+}

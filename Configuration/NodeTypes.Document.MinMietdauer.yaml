@@ -1,7 +1,26 @@
-'Ujamii.OpenImmo:Document.MinMietdauer':
+'Ujamii.OpenImmoNeos:Document.MinMietdauer':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\MinMietdauer
-    icon: icon-house
-  properties: {  }
+    label: MinMietdauer
+    icon: icon-sign
+  properties:
+    minDauer:
+      type: string
+      ui:
+        label: MinDauer
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              JAHR:
+                label: Jahr
+              MONAT:
+                label: Monat
+              TAG:
+                label: Tag
+              WOCHE:
+                label: Woche
+  abstract: true

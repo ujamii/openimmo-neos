@@ -1,7 +1,39 @@
-'Ujamii.OpenImmo:Document.Ausbaustufe':
+'Ujamii.OpenImmoNeos:Document.Ausbaustufe':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Ausbaustufe
-    icon: icon-house
-  properties: {  }
+    label: Ausbaustufe
+    icon: icon-sign
+  properties:
+    ausbauhaus:
+      type: boolean
+      ui:
+        label: Ausbauhaus
+        inspector:
+          group: openimmo
+    bausatzhaus:
+      type: boolean
+      ui:
+        label: Bausatzhaus
+        inspector:
+          group: openimmo
+    schluesselfertigmitbodenplatte:
+      type: boolean
+      ui:
+        label: Schluesselfertigmitbodenplatte
+        inspector:
+          group: openimmo
+    schluesselfertigmitkeller:
+      type: boolean
+      ui:
+        label: Schluesselfertigmitkeller
+        inspector:
+          group: openimmo
+    schluesselfertigohnebodenplatte:
+      type: boolean
+      ui:
+        label: Schluesselfertigohnebodenplatte
+        inspector:
+          group: openimmo
+  abstract: true

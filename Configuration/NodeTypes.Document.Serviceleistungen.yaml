@@ -1,7 +1,39 @@
-'Ujamii.OpenImmo:Document.Serviceleistungen':
+'Ujamii.OpenImmoNeos:Document.Serviceleistungen':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Serviceleistungen
-    icon: icon-house
-  properties: {  }
+    label: Serviceleistungen
+    icon: icon-sign
+  properties:
+    betreutesWohnen:
+      type: boolean
+      ui:
+        label: BetreutesWohnen
+        inspector:
+          group: openimmo
+    catering:
+      type: boolean
+      ui:
+        label: Catering
+        inspector:
+          group: openimmo
+    einkauf:
+      type: boolean
+      ui:
+        label: Einkauf
+        inspector:
+          group: openimmo
+    reinigung:
+      type: boolean
+      ui:
+        label: Reinigung
+        inspector:
+          group: openimmo
+    wachdienst:
+      type: boolean
+      ui:
+        label: Wachdienst
+        inspector:
+          group: openimmo
+  abstract: true

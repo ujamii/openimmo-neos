@@ -1,7 +1,81 @@
-'Ujamii.OpenImmo:Document.Freitexte':
+'Ujamii.OpenImmoNeos:Document.Freitexte':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Freitexte
-    icon: icon-house
-  properties: {  }
+    label: Freitexte
+    icon: icon-sign
+  properties:
+    ausstattBeschr:
+      type: string
+      ui:
+        label: AusstattBeschr
+        inspector:
+          group: openimmo
+    dreizeiler:
+      type: string
+      ui:
+        label: Dreizeiler
+        inspector:
+          group: openimmo
+    lage:
+      type: string
+      ui:
+        label: Lage
+        inspector:
+          group: openimmo
+    objektbeschreibung:
+      type: string
+      ui:
+        label: Objektbeschreibung
+        inspector:
+          group: openimmo
+    objektText:
+      type: references
+      ui:
+        label: ObjektText
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.ObjektText'
+    objekttitel:
+      type: string
+      ui:
+        label: Objekttitel
+        inspector:
+          group: openimmo
+    sonstigeAngaben:
+      type: string
+      ui:
+        label: SonstigeAngaben
+        inspector:
+          group: openimmo
+    userDefinedAnyfield:
+      type: references
+      ui:
+        label: UserDefinedAnyfield
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedAnyfield'
+    userDefinedExtend:
+      type: references
+      ui:
+        label: UserDefinedExtend
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedExtend'
+    userDefinedSimplefield:
+      type: references
+      ui:
+        label: UserDefinedSimplefield
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedSimplefield'
+  abstract: true

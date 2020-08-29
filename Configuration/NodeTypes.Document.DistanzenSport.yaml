@@ -1,7 +1,38 @@
-'Ujamii.OpenImmo:Document.DistanzenSport':
+'Ujamii.OpenImmoNeos:Document.DistanzenSport':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\DistanzenSport
-    icon: icon-house
-  properties: {  }
+    label: DistanzenSport
+    icon: icon-sign
+  properties:
+    distanzZuSport:
+      type: string
+      ui:
+        label: DistanzZuSport
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              MEER:
+                label: Meer
+              NAHERHOLUNG:
+                label: Naherholung
+              SEE:
+                label: See
+              SKIGEBIET:
+                label: Skigebiet
+              SPORTANLAGEN:
+                label: Sportanlagen
+              STRAND:
+                label: Strand
+              WANDERGEBIETE:
+                label: Wandergebiete
+    value:
+      type: string
+      ui:
+        label: Value
+        inspector:
+          group: openimmo
+  abstract: true

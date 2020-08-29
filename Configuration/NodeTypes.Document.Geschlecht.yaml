@@ -1,7 +1,24 @@
-'Ujamii.OpenImmo:Document.Geschlecht':
+'Ujamii.OpenImmoNeos:Document.Geschlecht':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Geschlecht
-    icon: icon-house
-  properties: {  }
+    label: Geschlecht
+    icon: icon-sign
+  properties:
+    geschlAttr:
+      type: string
+      ui:
+        label: GeschlAttr
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              EGAL:
+                label: Egal
+              NUR_FRAU:
+                label: Nur_frau
+              NUR_MANN:
+                label: Nur_mann
+  abstract: true

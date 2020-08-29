@@ -1,7 +1,21 @@
-'Ujamii.OpenImmo:Document.Kaufpreis':
+'Ujamii.OpenImmoNeos:Document.Kaufpreis':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Kaufpreis
-    icon: icon-house
-  properties: {  }
+    label: Kaufpreis
+    icon: icon-sign
+  properties:
+    aufAnfrage:
+      type: boolean
+      ui:
+        label: AufAnfrage
+        inspector:
+          group: openimmo
+    value:
+      type: string
+      ui:
+        label: Value
+        inspector:
+          group: openimmo
+  abstract: true

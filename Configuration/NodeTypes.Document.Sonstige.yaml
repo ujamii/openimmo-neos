@@ -1,7 +1,26 @@
-'Ujamii.OpenImmo:Document.Sonstige':
+'Ujamii.OpenImmoNeos:Document.Sonstige':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Sonstige
-    icon: icon-house
-  properties: {  }
+    label: Sonstige
+    icon: icon-sign
+  properties:
+    sonstigeTyp:
+      type: string
+      ui:
+        label: SonstigeTyp
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              KRANKENHAUS:
+                label: Krankenhaus
+              PARKHAUS:
+                label: Parkhaus
+              SONSTIGE:
+                label: Sonstige
+              TANKSTELLE:
+                label: Tankstelle
+  abstract: true

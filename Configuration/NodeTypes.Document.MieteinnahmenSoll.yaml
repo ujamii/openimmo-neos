@@ -1,7 +1,32 @@
-'Ujamii.OpenImmo:Document.MieteinnahmenSoll':
+'Ujamii.OpenImmoNeos:Document.MieteinnahmenSoll':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\MieteinnahmenSoll
-    icon: icon-house
-  properties: {  }
+    label: MieteinnahmenSoll
+    icon: icon-sign
+  properties:
+    periode:
+      type: string
+      ui:
+        label: Periode
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              JAHR:
+                label: Jahr
+              MONAT:
+                label: Monat
+              TAG:
+                label: Tag
+              WOCHE:
+                label: Woche
+    value:
+      type: string
+      ui:
+        label: Value
+        inspector:
+          group: openimmo
+  abstract: true

@@ -1,7 +1,482 @@
-'Ujamii.OpenImmo:Document.Land':
+'Ujamii.OpenImmoNeos:Document.Land':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Land
-    icon: icon-house
-  properties: {  }
+    label: Land
+    icon: icon-sign
+  properties:
+    isoLand:
+      type: string
+      ui:
+        label: IsoLand
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              ABW:
+                label: Abw
+              AFG:
+                label: Afg
+              AGO:
+                label: Ago
+              AIA:
+                label: Aia
+              ALB:
+                label: Alb
+              AND:
+                label: And
+              ANT:
+                label: Ant
+              ARE:
+                label: Are
+              ARG:
+                label: Arg
+              ARM:
+                label: Arm
+              ASM:
+                label: Asm
+              ATG:
+                label: Atg
+              AUS:
+                label: Aus
+              AUT:
+                label: Aut
+              AZE:
+                label: Aze
+              BDI:
+                label: Bdi
+              BEL:
+                label: Bel
+              BEN:
+                label: Ben
+              BFA:
+                label: Bfa
+              BGD:
+                label: Bgd
+              BGR:
+                label: Bgr
+              BHR:
+                label: Bhr
+              BHS:
+                label: Bhs
+              BIH:
+                label: Bih
+              BLR:
+                label: Blr
+              BLZ:
+                label: Blz
+              BMU:
+                label: Bmu
+              BOL:
+                label: Bol
+              BRA:
+                label: Bra
+              BRB:
+                label: Brb
+              BRN:
+                label: Brn
+              BTN:
+                label: Btn
+              BWA:
+                label: Bwa
+              CAF:
+                label: Caf
+              CAN:
+                label: Can
+              CHE:
+                label: Che
+              CHL:
+                label: Chl
+              CHN:
+                label: Chn
+              CIV:
+                label: Civ
+              CMR:
+                label: Cmr
+              COD:
+                label: Cod
+              COG:
+                label: Cog
+              COK:
+                label: Cok
+              COL:
+                label: Col
+              COM:
+                label: Com
+              CPV:
+                label: Cpv
+              CRI:
+                label: Cri
+              CUB:
+                label: Cub
+              CYM:
+                label: Cym
+              CYP:
+                label: Cyp
+              CZE:
+                label: Cze
+              DEU:
+                label: Deu
+              DJI:
+                label: Dji
+              DMA:
+                label: Dma
+              DNK:
+                label: Dnk
+              DOM:
+                label: Dom
+              DZA:
+                label: Dza
+              ECU:
+                label: Ecu
+              EGY:
+                label: Egy
+              ERI:
+                label: Eri
+              ESH:
+                label: Esh
+              ESP:
+                label: Esp
+              EST:
+                label: Est
+              ETH:
+                label: Eth
+              FIN:
+                label: Fin
+              FJI:
+                label: Fji
+              FLK:
+                label: Flk
+              FRA:
+                label: Fra
+              FRO:
+                label: Fro
+              FSM:
+                label: Fsm
+              GAB:
+                label: Gab
+              GBR:
+                label: Gbr
+              GEO:
+                label: Geo
+              GHA:
+                label: Gha
+              GIB:
+                label: Gib
+              GIN:
+                label: Gin
+              GLP:
+                label: Glp
+              GMB:
+                label: Gmb
+              GNB:
+                label: Gnb
+              GNQ:
+                label: Gnq
+              GRC:
+                label: Grc
+              GRD:
+                label: Grd
+              GRL:
+                label: Grl
+              GTM:
+                label: Gtm
+              GUF:
+                label: Guf
+              GUM:
+                label: Gum
+              GUY:
+                label: Guy
+              HKG:
+                label: Hkg
+              HND:
+                label: Hnd
+              HRV:
+                label: Hrv
+              HTI:
+                label: Hti
+              HUN:
+                label: Hun
+              IDN:
+                label: Idn
+              IND:
+                label: Ind
+              IRL:
+                label: Irl
+              IRN:
+                label: Irn
+              IRQ:
+                label: Irq
+              ISL:
+                label: Isl
+              ISR:
+                label: Isr
+              ITA:
+                label: Ita
+              JAM:
+                label: Jam
+              JOR:
+                label: Jor
+              JPN:
+                label: Jpn
+              KAZ:
+                label: Kaz
+              KEN:
+                label: Ken
+              KGZ:
+                label: Kgz
+              KHM:
+                label: Khm
+              KIR:
+                label: Kir
+              KNA:
+                label: Kna
+              KOR:
+                label: Kor
+              KWT:
+                label: Kwt
+              LAO:
+                label: Lao
+              LBN:
+                label: Lbn
+              LBR:
+                label: Lbr
+              LBY:
+                label: Lby
+              LCA:
+                label: Lca
+              LIE:
+                label: Lie
+              LKA:
+                label: Lka
+              LSO:
+                label: Lso
+              LTU:
+                label: Ltu
+              LUX:
+                label: Lux
+              LVA:
+                label: Lva
+              MAC:
+                label: Mac
+              MAR:
+                label: Mar
+              MCO:
+                label: Mco
+              MDA:
+                label: Mda
+              MDG:
+                label: Mdg
+              MDV:
+                label: Mdv
+              MEX:
+                label: Mex
+              MHL:
+                label: Mhl
+              MKD:
+                label: Mkd
+              MLI:
+                label: Mli
+              MLT:
+                label: Mlt
+              MMR:
+                label: Mmr
+              MNE:
+                label: Mne
+              MNG:
+                label: Mng
+              MNP:
+                label: Mnp
+              MOZ:
+                label: Moz
+              MRT:
+                label: Mrt
+              MSR:
+                label: Msr
+              MTQ:
+                label: Mtq
+              MUS:
+                label: Mus
+              MWI:
+                label: Mwi
+              MYS:
+                label: Mys
+              NAM:
+                label: Nam
+              NCL:
+                label: Ncl
+              NER:
+                label: Ner
+              NFK:
+                label: Nfk
+              NGA:
+                label: Nga
+              NIC:
+                label: Nic
+              NIU:
+                label: Niu
+              NLD:
+                label: Nld
+              NOR:
+                label: Nor
+              NPL:
+                label: Npl
+              NRU:
+                label: Nru
+              NZL:
+                label: Nzl
+              OMN:
+                label: Omn
+              PAK:
+                label: Pak
+              PAN:
+                label: Pan
+              PCN:
+                label: Pcn
+              PER:
+                label: Per
+              PHL:
+                label: Phl
+              PLW:
+                label: Plw
+              PNG:
+                label: Png
+              POL:
+                label: Pol
+              PRI:
+                label: Pri
+              PRK:
+                label: Prk
+              PRT:
+                label: Prt
+              PRY:
+                label: Pry
+              PSE:
+                label: Pse
+              PYF:
+                label: Pyf
+              QAT:
+                label: Qat
+              REU:
+                label: Reu
+              ROM:
+                label: Rom
+              RUS:
+                label: Rus
+              RWA:
+                label: Rwa
+              SAU:
+                label: Sau
+              SDN:
+                label: Sdn
+              SEN:
+                label: Sen
+              SGP:
+                label: Sgp
+              SHN:
+                label: Shn
+              SJM:
+                label: Sjm
+              SLB:
+                label: Slb
+              SLE:
+                label: Sle
+              SLV:
+                label: Slv
+              SMR:
+                label: Smr
+              SMX:
+                label: Smx
+              SOM:
+                label: Som
+              SPM:
+                label: Spm
+              SRB:
+                label: Srb
+              STP:
+                label: Stp
+              SUR:
+                label: Sur
+              SVK:
+                label: Svk
+              SVN:
+                label: Svn
+              SWE:
+                label: Swe
+              SWZ:
+                label: Swz
+              SYC:
+                label: Syc
+              SYR:
+                label: Syr
+              TCA:
+                label: Tca
+              TCD:
+                label: Tcd
+              TGO:
+                label: Tgo
+              THA:
+                label: Tha
+              TJK:
+                label: Tjk
+              TKL:
+                label: Tkl
+              TKM:
+                label: Tkm
+              TMP:
+                label: Tmp
+              TON:
+                label: Ton
+              TTO:
+                label: Tto
+              TUN:
+                label: Tun
+              TUR:
+                label: Tur
+              TUV:
+                label: Tuv
+              TWN:
+                label: Twn
+              TZA:
+                label: Tza
+              UGA:
+                label: Uga
+              UKR:
+                label: Ukr
+              URY:
+                label: Ury
+              USA:
+                label: Usa
+              UZB:
+                label: Uzb
+              VAT:
+                label: Vat
+              VCT:
+                label: Vct
+              VEN:
+                label: Ven
+              VGB:
+                label: Vgb
+              VIR:
+                label: Vir
+              VNM:
+                label: Vnm
+              VUT:
+                label: Vut
+              WLF:
+                label: Wlf
+              WSM:
+                label: Wsm
+              YEM:
+                label: Yem
+              YUG:
+                label: Yug
+              ZAF:
+                label: Zaf
+              ZMB:
+                label: Zmb
+              ZWE:
+                label: Zwe
+  abstract: true

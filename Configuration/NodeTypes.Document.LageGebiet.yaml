@@ -1,7 +1,44 @@
-'Ujamii.OpenImmo:Document.LageGebiet':
+'Ujamii.OpenImmoNeos:Document.LageGebiet':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\LageGebiet
-    icon: icon-house
-  properties: {  }
+    label: LageGebiet
+    icon: icon-sign
+  properties:
+    gebiete:
+      type: string
+      ui:
+        label: Gebiete
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              1A:
+                label: 1a
+              1B:
+                label: 1b
+              GEWERBE:
+                label: Gewerbe
+              INDUSTRIE:
+                label: Industrie
+              MISCH:
+                label: Misch
+              NEBENZENTRUM:
+                label: Nebenzentrum
+              NEUBAU:
+                label: Neubau
+              ORTSLAGE:
+                label: Ortslage
+              SIEDLUNG:
+                label: Siedlung
+              STADTRAND:
+                label: Stadtrand
+              STADTTEIL:
+                label: Stadtteil
+              STADTZENTRUM:
+                label: Stadtzentrum
+              WOHN:
+                label: Wohn
+  abstract: true

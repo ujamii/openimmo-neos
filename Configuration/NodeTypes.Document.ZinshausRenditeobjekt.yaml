@@ -1,7 +1,44 @@
-'Ujamii.OpenImmo:Document.ZinshausRenditeobjekt':
+'Ujamii.OpenImmoNeos:Document.ZinshausRenditeobjekt':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\ZinshausRenditeobjekt
-    icon: icon-house
-  properties: {  }
+    label: ZinshausRenditeobjekt
+    icon: icon-sign
+  properties:
+    zinsTyp:
+      type: string
+      ui:
+        label: ZinsTyp
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              BETREUTES-WOHNEN:
+                label: Betreutes-wohnen
+              BUEROGEBAEUDE:
+                label: Buerogebaeude
+              EINKAUFSCENTREN:
+                label: Einkaufscentren
+              GESCHAEFTSHAUS:
+                label: Geschaeftshaus
+              INDUSTRIEANLAGEN:
+                label: Industrieanlagen
+              MEHRFAMILIENHAUS:
+                label: Mehrfamilienhaus
+              PFLEGEHEIM:
+                label: Pflegeheim
+              SANATORIUM:
+                label: Sanatorium
+              SB_MAERKTE:
+                label: Sb_maerkte
+              SENIORENHEIM:
+                label: Seniorenheim
+              VERBRAUCHERMAERKTE:
+                label: Verbrauchermaerkte
+              WOHN_UND_GESCHAEFTSHAUS:
+                label: Wohn_und_geschaeftshaus
+              WOHNANLAGEN:
+                label: Wohnanlagen
+  abstract: true

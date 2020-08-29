@@ -1,7 +1,21 @@
-'Ujamii.OpenImmo:Document.Sonstigekostennetto':
+'Ujamii.OpenImmoNeos:Document.Sonstigekostennetto':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Sonstigekostennetto
-    icon: icon-house
-  properties: {  }
+    label: Sonstigekostennetto
+    icon: icon-sign
+  properties:
+    sonstigekostenust:
+      type: string
+      ui:
+        label: Sonstigekostenust
+        inspector:
+          group: openimmo
+    value:
+      type: string
+      ui:
+        label: Value
+        inspector:
+          group: openimmo
+  abstract: true

@@ -1,0 +1,3 @@
+prototype(Ujamii.OpenImmoNeos:Document.StpDuplex) < prototype(Neos.Fusion:Component) {
+    renderer = ''
+}

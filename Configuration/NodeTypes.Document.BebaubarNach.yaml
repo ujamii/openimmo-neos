@@ -1,7 +1,32 @@
-'Ujamii.OpenImmo:Document.BebaubarNach':
+'Ujamii.OpenImmoNeos:Document.BebaubarNach':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\BebaubarNach
-    icon: icon-house
-  properties: {  }
+    label: BebaubarNach
+    icon: icon-sign
+  properties:
+    bebaubarAttr:
+      type: string
+      ui:
+        label: BebaubarAttr
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              34_NACHBARSCHAFT:
+                label: 34_nachbarschaft
+              35_AUSSENGEBIET:
+                label: 35_aussengebiet
+              B_PLAN:
+                label: B_plan
+              BAUERWARTUNGSLAND:
+                label: Bauerwartungsland
+              BAULAND_OHNE_B_PLAN:
+                label: Bauland_ohne_b_plan
+              'KEIN BAULAND':
+                label: 'Kein bauland'
+              LAENDERSPEZIFISCH:
+                label: Laenderspezifisch
+  abstract: true

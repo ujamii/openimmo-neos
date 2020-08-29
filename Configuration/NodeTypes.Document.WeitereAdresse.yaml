@@ -1,7 +1,225 @@
-'Ujamii.OpenImmo:Document.WeitereAdresse':
+'Ujamii.OpenImmoNeos:Document.WeitereAdresse':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\WeitereAdresse
-    icon: icon-house
-  properties: {  }
+    label: WeitereAdresse
+    icon: icon-sign
+  properties:
+    adressart:
+      type: string
+      ui:
+        label: Adressart
+        inspector:
+          group: openimmo
+    adressfreigabe:
+      type: boolean
+      ui:
+        label: Adressfreigabe
+        inspector:
+          group: openimmo
+    anrede:
+      type: string
+      ui:
+        label: Anrede
+        inspector:
+          group: openimmo
+    anredeBrief:
+      type: string
+      ui:
+        label: AnredeBrief
+        inspector:
+          group: openimmo
+    emailDirekt:
+      type: string
+      ui:
+        label: EmailDirekt
+        inspector:
+          group: openimmo
+    emailPrivat:
+      type: string
+      ui:
+        label: EmailPrivat
+        inspector:
+          group: openimmo
+    emailSonstige:
+      type: references
+      ui:
+        label: EmailSonstige
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.EmailSonstige'
+    emailZentrale:
+      type: string
+      ui:
+        label: EmailZentrale
+        inspector:
+          group: openimmo
+    firma:
+      type: string
+      ui:
+        label: Firma
+        inspector:
+          group: openimmo
+    freitextfeld:
+      type: string
+      ui:
+        label: Freitextfeld
+        inspector:
+          group: openimmo
+    hausnummer:
+      type: string
+      ui:
+        label: Hausnummer
+        inspector:
+          group: openimmo
+    land:
+      type: references
+      ui:
+        label: Land
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Land'
+    name:
+      type: string
+      ui:
+        label: Name
+        inspector:
+          group: openimmo
+    ort:
+      type: string
+      ui:
+        label: Ort
+        inspector:
+          group: openimmo
+    personennummer:
+      type: string
+      ui:
+        label: Personennummer
+        inspector:
+          group: openimmo
+    plz:
+      type: string
+      ui:
+        label: Plz
+        inspector:
+          group: openimmo
+    postfach:
+      type: string
+      ui:
+        label: Postfach
+        inspector:
+          group: openimmo
+    postfOrt:
+      type: string
+      ui:
+        label: PostfOrt
+        inspector:
+          group: openimmo
+    postfPlz:
+      type: string
+      ui:
+        label: PostfPlz
+        inspector:
+          group: openimmo
+    strasse:
+      type: string
+      ui:
+        label: Strasse
+        inspector:
+          group: openimmo
+    telDurchw:
+      type: string
+      ui:
+        label: TelDurchw
+        inspector:
+          group: openimmo
+    telFax:
+      type: string
+      ui:
+        label: TelFax
+        inspector:
+          group: openimmo
+    telHandy:
+      type: string
+      ui:
+        label: TelHandy
+        inspector:
+          group: openimmo
+    telPrivat:
+      type: string
+      ui:
+        label: TelPrivat
+        inspector:
+          group: openimmo
+    telSonstige:
+      type: references
+      ui:
+        label: TelSonstige
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.TelSonstige'
+    telZentrale:
+      type: string
+      ui:
+        label: TelZentrale
+        inspector:
+          group: openimmo
+    titel:
+      type: string
+      ui:
+        label: Titel
+        inspector:
+          group: openimmo
+    url:
+      type: string
+      ui:
+        label: Url
+        inspector:
+          group: openimmo
+    userDefinedAnyfield:
+      type: references
+      ui:
+        label: UserDefinedAnyfield
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedAnyfield'
+    userDefinedExtend:
+      type: references
+      ui:
+        label: UserDefinedExtend
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedExtend'
+    userDefinedSimplefield:
+      type: references
+      ui:
+        label: UserDefinedSimplefield
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedSimplefield'
+    vorname:
+      type: string
+      ui:
+        label: Vorname
+        inspector:
+          group: openimmo
+    zusatzfeld:
+      type: string
+      ui:
+        label: Zusatzfeld
+        inspector:
+          group: openimmo
+  abstract: true

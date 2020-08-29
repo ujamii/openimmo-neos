@@ -1,7 +1,46 @@
-'Ujamii.OpenImmo:Document.Wohnung':
+'Ujamii.OpenImmoNeos:Document.Wohnung':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Wohnung
-    icon: icon-house
-  properties: {  }
+    label: Wohnung
+    icon: icon-sign
+  properties:
+    wohnungtyp:
+      type: string
+      ui:
+        label: Wohnungtyp
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              APARTMENT:
+                label: Apartment
+              ATTIKAWOHNUNG:
+                label: Attikawohnung
+              DACHGESCHOSS:
+                label: Dachgeschoss
+              ERDGESCHOSS:
+                label: Erdgeschoss
+              ETAGE:
+                label: Etage
+              FERIENWOHNUNG:
+                label: Ferienwohnung
+              GALERIE:
+                label: Galerie
+              KEINE_ANGABE:
+                label: Keine_angabe
+              LOFT-STUDIO-ATELIER:
+                label: Loft-studio-atelier
+              MAISONETTE:
+                label: Maisonette
+              PENTHOUSE:
+                label: Penthouse
+              ROHDACHBODEN:
+                label: Rohdachboden
+              SOUTERRAIN:
+                label: Souterrain
+              TERRASSEN:
+                label: Terrassen
+  abstract: true

@@ -1,7 +1,18 @@
-'Ujamii.OpenImmo:Document.Bewertung':
+'Ujamii.OpenImmoNeos:Document.Bewertung':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Bewertung
-    icon: icon-house
-  properties: {  }
+    label: Bewertung
+    icon: icon-sign
+  properties:
+    feld:
+      type: references
+      ui:
+        label: Feld
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.string'
+  abstract: true

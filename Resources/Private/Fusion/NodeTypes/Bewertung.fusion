@@ -1,0 +1,3 @@
+prototype(Ujamii.OpenImmoNeos:Document.Bewertung) < prototype(Neos.Fusion:Component) {
+    renderer = ''
+}

@@ -1,7 +1,22 @@
-'Ujamii.OpenImmo:Document.Moebliert':
+'Ujamii.OpenImmoNeos:Document.Moebliert':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Moebliert
-    icon: icon-house
-  properties: {  }
+    label: Moebliert
+    icon: icon-sign
+  properties:
+    moeb:
+      type: string
+      ui:
+        label: Moeb
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              TEIL:
+                label: Teil
+              VOLL:
+                label: Voll
+  abstract: true

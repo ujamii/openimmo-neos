@@ -1,7 +1,45 @@
-'Ujamii.OpenImmo:Document.Stellplatzart':
+'Ujamii.OpenImmoNeos:Document.Stellplatzart':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Stellplatzart
-    icon: icon-house
-  properties: {  }
+    label: Stellplatzart
+    icon: icon-sign
+  properties:
+    carport:
+      type: boolean
+      ui:
+        label: Carport
+        inspector:
+          group: openimmo
+    duplex:
+      type: boolean
+      ui:
+        label: Duplex
+        inspector:
+          group: openimmo
+    freiplatz:
+      type: boolean
+      ui:
+        label: Freiplatz
+        inspector:
+          group: openimmo
+    garage:
+      type: boolean
+      ui:
+        label: Garage
+        inspector:
+          group: openimmo
+    parkhaus:
+      type: boolean
+      ui:
+        label: Parkhaus
+        inspector:
+          group: openimmo
+    tiefgarage:
+      type: boolean
+      ui:
+        label: Tiefgarage
+        inspector:
+          group: openimmo
+  abstract: true

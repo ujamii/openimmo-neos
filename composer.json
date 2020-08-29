@@ -14,7 +14,7 @@
     },
     "extra": {
         "neos": {
-            "package-key": "Ujamii.OpenImmo"
+            "package-key": "Ujamii.OpenImmoNeos"
         }
     }
 }

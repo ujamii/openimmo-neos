@@ -1,7 +1,52 @@
-'Ujamii.OpenImmo:Document.Distanzen':
+'Ujamii.OpenImmoNeos:Document.Distanzen':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Distanzen
-    icon: icon-house
-  properties: {  }
+    label: Distanzen
+    icon: icon-sign
+  properties:
+    distanzZu:
+      type: string
+      ui:
+        label: DistanzZu
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              AUTOBAHN:
+                label: Autobahn
+              BUS:
+                label: Bus
+              EINKAUFSMOEGLICHKEITEN:
+                label: Einkaufsmoeglichkeiten
+              FERNBAHNHOF:
+                label: Fernbahnhof
+              FLUGHAFEN:
+                label: Flughafen
+              GASTSTAETTEN:
+                label: Gaststaetten
+              GESAMTSCHULE:
+                label: Gesamtschule
+              GRUNDSCHULE:
+                label: Grundschule
+              GYMNASIUM:
+                label: Gymnasium
+              HAUPTSCHULE:
+                label: Hauptschule
+              KINDERGAERTEN:
+                label: Kindergaerten
+              REALSCHULE:
+                label: Realschule
+              US_BAHN:
+                label: Us_bahn
+              ZENTRUM:
+                label: Zentrum
+    value:
+      type: string
+      ui:
+        label: Value
+        inspector:
+          group: openimmo
+  abstract: true

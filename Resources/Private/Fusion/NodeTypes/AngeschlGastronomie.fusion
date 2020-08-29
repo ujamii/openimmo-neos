@@ -1,0 +1,3 @@
+prototype(Ujamii.OpenImmoNeos:Document.AngeschlGastronomie) < prototype(Neos.Fusion:Component) {
+    renderer = ''
+}

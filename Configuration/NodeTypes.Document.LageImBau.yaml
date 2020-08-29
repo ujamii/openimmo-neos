@@ -1,7 +1,33 @@
-'Ujamii.OpenImmo:Document.LageImBau':
+'Ujamii.OpenImmoNeos:Document.LageImBau':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\LageImBau
-    icon: icon-house
-  properties: {  }
+    label: LageImBau
+    icon: icon-sign
+  properties:
+    hinten:
+      type: boolean
+      ui:
+        label: Hinten
+        inspector:
+          group: openimmo
+    links:
+      type: boolean
+      ui:
+        label: Links
+        inspector:
+          group: openimmo
+    rechts:
+      type: boolean
+      ui:
+        label: Rechts
+        inspector:
+          group: openimmo
+    vorne:
+      type: boolean
+      ui:
+        label: Vorne
+        inspector:
+          group: openimmo
+  abstract: true

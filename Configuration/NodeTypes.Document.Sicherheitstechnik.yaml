@@ -1,7 +1,27 @@
-'Ujamii.OpenImmo:Document.Sicherheitstechnik':
+'Ujamii.OpenImmoNeos:Document.Sicherheitstechnik':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Sicherheitstechnik
-    icon: icon-house
-  properties: {  }
+    label: Sicherheitstechnik
+    icon: icon-sign
+  properties:
+    alarmanlage:
+      type: boolean
+      ui:
+        label: Alarmanlage
+        inspector:
+          group: openimmo
+    kamera:
+      type: boolean
+      ui:
+        label: Kamera
+        inspector:
+          group: openimmo
+    polizeiruf:
+      type: boolean
+      ui:
+        label: Polizeiruf
+        inspector:
+          group: openimmo
+  abstract: true

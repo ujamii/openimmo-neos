@@ -1,7 +1,45 @@
-'Ujamii.OpenImmo:Document.Openimmo':
+'Ujamii.OpenImmoNeos:Document.Openimmo':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Openimmo
-    icon: icon-house
-  properties: {  }
+    label: Openimmo
+    icon: icon-sign
+  properties:
+    anbieter:
+      type: references
+      ui:
+        label: Anbieter
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Anbieter'
+    uebertragung:
+      type: references
+      ui:
+        label: Uebertragung
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Uebertragung'
+    userDefinedAnyfield:
+      type: references
+      ui:
+        label: UserDefinedAnyfield
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedAnyfield'
+    userDefinedSimplefield:
+      type: references
+      ui:
+        label: UserDefinedSimplefield
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedSimplefield'
+  abstract: true

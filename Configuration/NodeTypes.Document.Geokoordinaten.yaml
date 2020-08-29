@@ -1,7 +1,21 @@
-'Ujamii.OpenImmo:Document.Geokoordinaten':
+'Ujamii.OpenImmoNeos:Document.Geokoordinaten':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Geokoordinaten
-    icon: icon-house
-  properties: {  }
+    label: Geokoordinaten
+    icon: icon-sign
+  properties:
+    breitengrad:
+      type: string
+      ui:
+        label: Breitengrad
+        inspector:
+          group: openimmo
+    laengengrad:
+      type: string
+      ui:
+        label: Laengengrad
+        inspector:
+          group: openimmo
+  abstract: true

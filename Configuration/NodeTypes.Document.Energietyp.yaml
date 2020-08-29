@@ -1,7 +1,63 @@
-'Ujamii.OpenImmo:Document.Energietyp':
+'Ujamii.OpenImmoNeos:Document.Energietyp':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Energietyp
-    icon: icon-house
-  properties: {  }
+    label: Energietyp
+    icon: icon-sign
+  properties:
+    kfw40:
+      type: boolean
+      ui:
+        label: Kfw40
+        inspector:
+          group: openimmo
+    kfw55:
+      type: boolean
+      ui:
+        label: Kfw55
+        inspector:
+          group: openimmo
+    kfw60:
+      type: boolean
+      ui:
+        label: Kfw60
+        inspector:
+          group: openimmo
+    kfw70:
+      type: boolean
+      ui:
+        label: Kfw70
+        inspector:
+          group: openimmo
+    minergiebauweise:
+      type: boolean
+      ui:
+        label: Minergiebauweise
+        inspector:
+          group: openimmo
+    minergieZertifiziert:
+      type: boolean
+      ui:
+        label: MinergieZertifiziert
+        inspector:
+          group: openimmo
+    neubaustandard:
+      type: boolean
+      ui:
+        label: Neubaustandard
+        inspector:
+          group: openimmo
+    niedrigenergie:
+      type: boolean
+      ui:
+        label: Niedrigenergie
+        inspector:
+          group: openimmo
+    passivhaus:
+      type: boolean
+      ui:
+        label: Passivhaus
+        inspector:
+          group: openimmo
+  abstract: true

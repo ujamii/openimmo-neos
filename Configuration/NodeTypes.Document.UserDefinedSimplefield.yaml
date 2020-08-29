@@ -1,7 +1,15 @@
-'Ujamii.OpenImmo:Document.UserDefinedSimplefield':
+'Ujamii.OpenImmoNeos:Document.UserDefinedSimplefield':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\UserDefinedSimplefield
-    icon: icon-house
-  properties: {  }
+    label: UserDefinedSimplefield
+    icon: icon-sign
+  properties:
+    feldname:
+      type: string
+      ui:
+        label: Feldname
+        inspector:
+          group: openimmo
+  abstract: true

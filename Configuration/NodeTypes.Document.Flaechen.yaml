@@ -1,7 +1,312 @@
-'Ujamii.OpenImmo:Document.Flaechen':
+'Ujamii.OpenImmoNeos:Document.Flaechen':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Flaechen
-    icon: icon-house
-  properties: {  }
+    label: Flaechen
+    icon: icon-sign
+  properties:
+    anzahlBadezimmer:
+      type: string
+      ui:
+        label: AnzahlBadezimmer
+        inspector:
+          group: openimmo
+    anzahlBalkone:
+      type: string
+      ui:
+        label: AnzahlBalkone
+        inspector:
+          group: openimmo
+    anzahlBetten:
+      type: string
+      ui:
+        label: AnzahlBetten
+        inspector:
+          group: openimmo
+    anzahlGewerbeeinheiten:
+      type: string
+      ui:
+        label: AnzahlGewerbeeinheiten
+        inspector:
+          group: openimmo
+    anzahlLogia:
+      type: string
+      ui:
+        label: AnzahlLogia
+        inspector:
+          group: openimmo
+    anzahlSchlafzimmer:
+      type: string
+      ui:
+        label: AnzahlSchlafzimmer
+        inspector:
+          group: openimmo
+    anzahlSepWc:
+      type: string
+      ui:
+        label: AnzahlSepWc
+        inspector:
+          group: openimmo
+    anzahlStellplaetze:
+      type: integer
+      ui:
+        label: AnzahlStellplaetze
+        inspector:
+          group: openimmo
+    anzahlTagungsraeume:
+      type: string
+      ui:
+        label: AnzahlTagungsraeume
+        inspector:
+          group: openimmo
+    anzahlTerrassen:
+      type: string
+      ui:
+        label: AnzahlTerrassen
+        inspector:
+          group: openimmo
+    anzahlWohneinheiten:
+      type: string
+      ui:
+        label: AnzahlWohneinheiten
+        inspector:
+          group: openimmo
+    anzahlWohnSchlafzimmer:
+      type: string
+      ui:
+        label: AnzahlWohnSchlafzimmer
+        inspector:
+          group: openimmo
+    anzahlZimmer:
+      type: string
+      ui:
+        label: AnzahlZimmer
+        inspector:
+          group: openimmo
+    ausnuetzungsziffer:
+      type: string
+      ui:
+        label: Ausnuetzungsziffer
+        inspector:
+          group: openimmo
+    balkonTerrasseFlaeche:
+      type: string
+      ui:
+        label: BalkonTerrasseFlaeche
+        inspector:
+          group: openimmo
+    beheizbareFlaeche:
+      type: string
+      ui:
+        label: BeheizbareFlaeche
+        inspector:
+          group: openimmo
+    bgf:
+      type: string
+      ui:
+        label: Bgf
+        inspector:
+          group: openimmo
+    bmz:
+      type: string
+      ui:
+        label: Bmz
+        inspector:
+          group: openimmo
+    bueroflaeche:
+      type: string
+      ui:
+        label: Bueroflaeche
+        inspector:
+          group: openimmo
+    bueroteilflaeche:
+      type: string
+      ui:
+        label: Bueroteilflaeche
+        inspector:
+          group: openimmo
+    dachbodenflaeche:
+      type: string
+      ui:
+        label: Dachbodenflaeche
+        inspector:
+          group: openimmo
+    einliegerwohnung:
+      type: boolean
+      ui:
+        label: Einliegerwohnung
+        inspector:
+          group: openimmo
+    fensterfront:
+      type: string
+      ui:
+        label: Fensterfront
+        inspector:
+          group: openimmo
+    fensterfrontQm:
+      type: string
+      ui:
+        label: FensterfrontQm
+        inspector:
+          group: openimmo
+    flaechebis:
+      type: string
+      ui:
+        label: Flaechebis
+        inspector:
+          group: openimmo
+    flaechevon:
+      type: string
+      ui:
+        label: Flaechevon
+        inspector:
+          group: openimmo
+    freiflaeche:
+      type: string
+      ui:
+        label: Freiflaeche
+        inspector:
+          group: openimmo
+    gartenflaeche:
+      type: string
+      ui:
+        label: Gartenflaeche
+        inspector:
+          group: openimmo
+    gastroflaeche:
+      type: string
+      ui:
+        label: Gastroflaeche
+        inspector:
+          group: openimmo
+    gesamtflaeche:
+      type: string
+      ui:
+        label: Gesamtflaeche
+        inspector:
+          group: openimmo
+    gfz:
+      type: string
+      ui:
+        label: Gfz
+        inspector:
+          group: openimmo
+    grundstuecksflaeche:
+      type: string
+      ui:
+        label: Grundstuecksflaeche
+        inspector:
+          group: openimmo
+    grundstuecksfront:
+      type: string
+      ui:
+        label: Grundstuecksfront
+        inspector:
+          group: openimmo
+    grz:
+      type: string
+      ui:
+        label: Grz
+        inspector:
+          group: openimmo
+    kellerflaeche:
+      type: string
+      ui:
+        label: Kellerflaeche
+        inspector:
+          group: openimmo
+    kubatur:
+      type: string
+      ui:
+        label: Kubatur
+        inspector:
+          group: openimmo
+    ladenflaeche:
+      type: string
+      ui:
+        label: Ladenflaeche
+        inspector:
+          group: openimmo
+    lagerflaeche:
+      type: string
+      ui:
+        label: Lagerflaeche
+        inspector:
+          group: openimmo
+    nutzflaeche:
+      type: string
+      ui:
+        label: Nutzflaeche
+        inspector:
+          group: openimmo
+    plaetzeGastraum:
+      type: string
+      ui:
+        label: PlaetzeGastraum
+        inspector:
+          group: openimmo
+    sonstflaeche:
+      type: string
+      ui:
+        label: Sonstflaeche
+        inspector:
+          group: openimmo
+    teilbarAb:
+      type: string
+      ui:
+        label: TeilbarAb
+        inspector:
+          group: openimmo
+    userDefinedAnyfield:
+      type: references
+      ui:
+        label: UserDefinedAnyfield
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedAnyfield'
+    userDefinedExtend:
+      type: references
+      ui:
+        label: UserDefinedExtend
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedExtend'
+    userDefinedSimplefield:
+      type: references
+      ui:
+        label: UserDefinedSimplefield
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedSimplefield'
+    verkaufsflaeche:
+      type: string
+      ui:
+        label: Verkaufsflaeche
+        inspector:
+          group: openimmo
+    vermietbareFlaeche:
+      type: string
+      ui:
+        label: VermietbareFlaeche
+        inspector:
+          group: openimmo
+    verwaltungsflaeche:
+      type: string
+      ui:
+        label: Verwaltungsflaeche
+        inspector:
+          group: openimmo
+    wohnflaeche:
+      type: string
+      ui:
+        label: Wohnflaeche
+        inspector:
+          group: openimmo
+  abstract: true

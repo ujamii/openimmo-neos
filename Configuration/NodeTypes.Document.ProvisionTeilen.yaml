@@ -1,7 +1,24 @@
-'Ujamii.OpenImmo:Document.ProvisionTeilen':
+'Ujamii.OpenImmoNeos:Document.ProvisionTeilen':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\ProvisionTeilen
-    icon: icon-house
-  properties: {  }
+    label: ProvisionTeilen
+    icon: icon-sign
+  properties:
+    wert:
+      type: string
+      ui:
+        label: Wert
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              absolut:
+                label: Absolut
+              prozent:
+                label: Prozent
+              text:
+                label: Text
+  abstract: true

@@ -1,7 +1,132 @@
-'Ujamii.OpenImmo:Document.VerwaltungTechn':
+'Ujamii.OpenImmoNeos:Document.VerwaltungTechn':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\VerwaltungTechn
-    icon: icon-house
-  properties: {  }
+    label: VerwaltungTechn
+    icon: icon-sign
+  properties:
+    aktion:
+      type: references
+      ui:
+        label: Aktion
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Aktion'
+    aktivBis:
+      type: DateTime
+      ui:
+        label: AktivBis
+        inspector:
+          group: openimmo
+          editorOptions:
+            format: d.m.Y
+    aktivVon:
+      type: DateTime
+      ui:
+        label: AktivVon
+        inspector:
+          group: openimmo
+          editorOptions:
+            format: d.m.Y
+    gruppenKennung:
+      type: string
+      ui:
+        label: GruppenKennung
+        inspector:
+          group: openimmo
+    kennungUrsprung:
+      type: string
+      ui:
+        label: KennungUrsprung
+        inspector:
+          group: openimmo
+    master:
+      type: references
+      ui:
+        label: Master
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Master'
+    objektnrExtern:
+      type: string
+      ui:
+        label: ObjektnrExtern
+        inspector:
+          group: openimmo
+    objektnrIntern:
+      type: string
+      ui:
+        label: ObjektnrIntern
+        inspector:
+          group: openimmo
+    openimmoObid:
+      type: string
+      ui:
+        label: OpenimmoObid
+        inspector:
+          group: openimmo
+    sprache:
+      type: string
+      ui:
+        label: Sprache
+        inspector:
+          group: openimmo
+    standVom:
+      type: DateTime
+      ui:
+        label: StandVom
+        inspector:
+          group: openimmo
+          editorOptions:
+            format: d.m.Y
+    userDefinedAnyfield:
+      type: references
+      ui:
+        label: UserDefinedAnyfield
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedAnyfield'
+    userDefinedExtend:
+      type: references
+      ui:
+        label: UserDefinedExtend
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedExtend'
+    userDefinedSimplefield:
+      type: references
+      ui:
+        label: UserDefinedSimplefield
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedSimplefield'
+    weitergabeGenerell:
+      type: boolean
+      ui:
+        label: WeitergabeGenerell
+        inspector:
+          group: openimmo
+    weitergabeNegativ:
+      type: string
+      ui:
+        label: WeitergabeNegativ
+        inspector:
+          group: openimmo
+    weitergabePositiv:
+      type: string
+      ui:
+        label: WeitergabePositiv
+        inspector:
+          group: openimmo
+  abstract: true

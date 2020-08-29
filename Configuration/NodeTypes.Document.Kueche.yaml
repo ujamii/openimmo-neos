@@ -1,7 +1,27 @@
-'Ujamii.OpenImmo:Document.Kueche':
+'Ujamii.OpenImmoNeos:Document.Kueche':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Kueche
-    icon: icon-house
-  properties: {  }
+    label: Kueche
+    icon: icon-sign
+  properties:
+    ebk:
+      type: boolean
+      ui:
+        label: Ebk
+        inspector:
+          group: openimmo
+    offen:
+      type: boolean
+      ui:
+        label: Offen
+        inspector:
+          group: openimmo
+    pantry:
+      type: boolean
+      ui:
+        label: Pantry
+        inspector:
+          group: openimmo
+  abstract: true

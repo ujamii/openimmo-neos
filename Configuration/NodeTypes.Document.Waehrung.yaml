@@ -1,7 +1,382 @@
-'Ujamii.OpenImmo:Document.Waehrung':
+'Ujamii.OpenImmoNeos:Document.Waehrung':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Waehrung
-    icon: icon-house
-  properties: {  }
+    label: Waehrung
+    icon: icon-sign
+  properties:
+    isoWaehrung:
+      type: string
+      ui:
+        label: IsoWaehrung
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              AED:
+                label: Aed
+              AFA:
+                label: Afa
+              ALL:
+                label: All
+              AMD:
+                label: Amd
+              ANG:
+                label: Ang
+              AON:
+                label: Aon
+              ARP:
+                label: Arp
+              ATS:
+                label: Ats
+              AUD:
+                label: Aud
+              AWF:
+                label: Awf
+              AZM:
+                label: Azm
+              BAK:
+                label: Bak
+              BBD:
+                label: Bbd
+              BDT:
+                label: Bdt
+              BEF:
+                label: Bef
+              BES:
+                label: Bes
+              BGL:
+                label: Bgl
+              BHD:
+                label: Bhd
+              BIF:
+                label: Bif
+              BMD:
+                label: Bmd
+              BND:
+                label: Bnd
+              BOB:
+                label: Bob
+              BRL:
+                label: Brl
+              BSD:
+                label: Bsd
+              BTR:
+                label: Btr
+              BWP:
+                label: Bwp
+              BYR:
+                label: Byr
+              BZD:
+                label: Bzd
+              CAD:
+                label: Cad
+              CDF:
+                label: Cdf
+              CHF:
+                label: Chf
+              CLP:
+                label: Clp
+              CNY:
+                label: Cny
+              COP:
+                label: Cop
+              CRC:
+                label: Crc
+              CUP:
+                label: Cup
+              CUW:
+                label: Cuw
+              CVE:
+                label: Cve
+              CYP:
+                label: Cyp
+              CZK:
+                label: Czk
+              DEM:
+                label: Dem
+              DJF:
+                label: Djf
+              DKK:
+                label: Dkk
+              DOP:
+                label: Dop
+              DZD:
+                label: Dzd
+              ECS:
+                label: Ecs
+              EEK:
+                label: Eek
+              EGP:
+                label: Egp
+              ERN:
+                label: Ern
+              ESP:
+                label: Esp
+              ETB:
+                label: Etb
+              EUR:
+                label: Eur
+              FIM:
+                label: Fim
+              FJD:
+                label: Fjd
+              FKP:
+                label: Fkp
+              FRF:
+                label: Frf
+              GBP:
+                label: Gbp
+              GEL:
+                label: Gel
+              GHC:
+                label: Ghc
+              GIP:
+                label: Gip
+              GMD:
+                label: Gmd
+              GNF:
+                label: Gnf
+              GRD:
+                label: Grd
+              GTQ:
+                label: Gtq
+              GYD:
+                label: Gyd
+              HKD:
+                label: Hkd
+              HNL:
+                label: Hnl
+              HRK:
+                label: Hrk
+              HTG:
+                label: Htg
+              HUF:
+                label: Huf
+              IDR:
+                label: Idr
+              IEP:
+                label: Iep
+              ILS:
+                label: Ils
+              INR:
+                label: Inr
+              IQD:
+                label: Iqd
+              IRR:
+                label: Irr
+              ISK:
+                label: Isk
+              ITL:
+                label: Itl
+              JMD:
+                label: Jmd
+              JOD:
+                label: Jod
+              JPY:
+                label: Jpy
+              KES:
+                label: Kes
+              KGS:
+                label: Kgs
+              KHR:
+                label: Khr
+              KMF:
+                label: Kmf
+              KPW:
+                label: Kpw
+              KRW:
+                label: Krw
+              KWD:
+                label: Kwd
+              KYD:
+                label: Kyd
+              KZT:
+                label: Kzt
+              LAK:
+                label: Lak
+              LBP:
+                label: Lbp
+              LKR:
+                label: Lkr
+              LRD:
+                label: Lrd
+              LSL:
+                label: Lsl
+              LTL:
+                label: Ltl
+              LUF:
+                label: Luf
+              LVL:
+                label: Lvl
+              LYD:
+                label: Lyd
+              MAD:
+                label: Mad
+              MDL:
+                label: Mdl
+              MGF:
+                label: Mgf
+              MMK:
+                label: Mmk
+              MNT:
+                label: Mnt
+              MOP:
+                label: Mop
+              MRO:
+                label: Mro
+              MTL:
+                label: Mtl
+              MUR:
+                label: Mur
+              MVR:
+                label: Mvr
+              MWK:
+                label: Mwk
+              MXP:
+                label: Mxp
+              MYR:
+                label: Myr
+              MZM:
+                label: Mzm
+              NAD:
+                label: Nad
+              NGN:
+                label: Ngn
+              NIO:
+                label: Nio
+              NLG:
+                label: Nlg
+              NOK:
+                label: Nok
+              NPR:
+                label: Npr
+              NZD:
+                label: Nzd
+              OMR:
+                label: Omr
+              PAB:
+                label: Pab
+              PEN:
+                label: Pen
+              PGK:
+                label: Pgk
+              PHP:
+                label: Php
+              PKR:
+                label: Pkr
+              PLZ:
+                label: Plz
+              PTE:
+                label: Pte
+              PYG:
+                label: Pyg
+              QAR:
+                label: Qar
+              ROL:
+                label: Rol
+              RUR:
+                label: Rur
+              RWF:
+                label: Rwf
+              SAR:
+                label: Sar
+              SBD:
+                label: Sbd
+              SBL:
+                label: Sbl
+              SCR:
+                label: Scr
+              SDD:
+                label: Sdd
+              SEK:
+                label: Sek
+              SGD:
+                label: Sgd
+              SHP:
+                label: Shp
+              SIT:
+                label: Sit
+              SKK:
+                label: Skk
+              SLL:
+                label: Sll
+              SOS:
+                label: Sos
+              SRG:
+                label: Srg
+              STD:
+                label: Std
+              SVC:
+                label: Svc
+              SYP:
+                label: Syp
+              SZL:
+                label: Szl
+              THB:
+                label: Thb
+              TJR:
+                label: Tjr
+              TMM:
+                label: Tmm
+              TND:
+                label: Tnd
+              TOP:
+                label: Top
+              TRL:
+                label: Trl
+              TTD:
+                label: Ttd
+              TWD:
+                label: Twd
+              TZS:
+                label: Tzs
+              UAH:
+                label: Uah
+              UGX:
+                label: Ugx
+              USD:
+                label: Usd
+              UYU:
+                label: Uyu
+              UZS:
+                label: Uzs
+              VEB:
+                label: Veb
+              VND:
+                label: Vnd
+              VUV:
+                label: Vuv
+              WST:
+                label: Wst
+              XAF:
+                label: Xaf
+              XAG:
+                label: Xag
+              XAU:
+                label: Xau
+              XCD:
+                label: Xcd
+              XCO:
+                label: Xco
+              XDR:
+                label: Xdr
+              XPD:
+                label: Xpd
+              XPF:
+                label: Xpf
+              XPT:
+                label: Xpt
+              YER:
+                label: Yer
+              YUN:
+                label: Yun
+              ZAR:
+                label: Zar
+              ZMK:
+                label: Zmk
+              ZWD:
+                label: Zwd
+  abstract: true

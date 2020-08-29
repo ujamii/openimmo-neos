@@ -1,7 +1,69 @@
-'Ujamii.OpenImmo:Document.ImpressumStrukt':
+'Ujamii.OpenImmoNeos:Document.ImpressumStrukt':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\ImpressumStrukt
-    icon: icon-house
-  properties: {  }
+    label: ImpressumStrukt
+    icon: icon-sign
+  properties:
+    berufsaufsichtsbehoerde:
+      type: string
+      ui:
+        label: Berufsaufsichtsbehoerde
+        inspector:
+          group: openimmo
+    firmenanschrift:
+      type: string
+      ui:
+        label: Firmenanschrift
+        inspector:
+          group: openimmo
+    firmenname:
+      type: string
+      ui:
+        label: Firmenname
+        inspector:
+          group: openimmo
+    handelsregister:
+      type: string
+      ui:
+        label: Handelsregister
+        inspector:
+          group: openimmo
+    handelsregisterNr:
+      type: string
+      ui:
+        label: HandelsregisterNr
+        inspector:
+          group: openimmo
+    steuernummer:
+      type: string
+      ui:
+        label: Steuernummer
+        inspector:
+          group: openimmo
+    telefon:
+      type: string
+      ui:
+        label: Telefon
+        inspector:
+          group: openimmo
+    umsstId:
+      type: string
+      ui:
+        label: UmsstId
+        inspector:
+          group: openimmo
+    vertretungsberechtigter:
+      type: string
+      ui:
+        label: Vertretungsberechtigter
+        inspector:
+          group: openimmo
+    weiteres:
+      type: string
+      ui:
+        label: Weiteres
+        inspector:
+          group: openimmo
+  abstract: true

@@ -1,7 +1,21 @@
-'Ujamii.OpenImmo:Document.Provisionnetto':
+'Ujamii.OpenImmoNeos:Document.Provisionnetto':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Provisionnetto
-    icon: icon-house
-  properties: {  }
+    label: Provisionnetto
+    icon: icon-sign
+  properties:
+    provisionust:
+      type: string
+      ui:
+        label: Provisionust
+        inspector:
+          group: openimmo
+    value:
+      type: string
+      ui:
+        label: Value
+        inspector:
+          group: openimmo
+  abstract: true

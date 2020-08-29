@@ -1,0 +1,3 @@
+prototype(Ujamii.OpenImmoNeos:Document.Betriebskostennetto) < prototype(Neos.Fusion:Component) {
+    renderer = ''
+}

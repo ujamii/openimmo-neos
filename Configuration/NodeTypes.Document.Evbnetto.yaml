@@ -1,7 +1,21 @@
-'Ujamii.OpenImmo:Document.Evbnetto':
+'Ujamii.OpenImmoNeos:Document.Evbnetto':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Evbnetto
-    icon: icon-house
-  properties: {  }
+    label: Evbnetto
+    icon: icon-sign
+  properties:
+    evbust:
+      type: string
+      ui:
+        label: Evbust
+        inspector:
+          group: openimmo
+    value:
+      type: string
+      ui:
+        label: Value
+        inspector:
+          group: openimmo
+  abstract: true

@@ -1,7 +1,36 @@
-'Ujamii.OpenImmo:Document.Grundstueck':
+'Ujamii.OpenImmoNeos:Document.Grundstueck':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Grundstueck
-    icon: icon-house
-  properties: {  }
+    label: Grundstueck
+    icon: icon-sign
+  properties:
+    grundstTyp:
+      type: string
+      ui:
+        label: GrundstTyp
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              FREIZEIT:
+                label: Freizeit
+              GEMISCHT:
+                label: Gemischt
+              GEWERBE:
+                label: Gewerbe
+              GEWERBEPARK:
+                label: Gewerbepark
+              INDUSTRIE:
+                label: Industrie
+              LAND_FORSTWIRSCHAFT:
+                label: Land_forstwirschaft
+              SEELIEGENSCHAFT:
+                label: Seeliegenschaft
+              SONDERNUTZUNG:
+                label: Sondernutzung
+              WOHNEN:
+                label: Wohnen
+  abstract: true

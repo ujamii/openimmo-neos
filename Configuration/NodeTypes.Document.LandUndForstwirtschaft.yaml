@@ -1,7 +1,46 @@
-'Ujamii.OpenImmo:Document.LandUndForstwirtschaft':
+'Ujamii.OpenImmoNeos:Document.LandUndForstwirtschaft':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\LandUndForstwirtschaft
-    icon: icon-house
-  properties: {  }
+    label: LandUndForstwirtschaft
+    icon: icon-sign
+  properties:
+    landTyp:
+      type: string
+      ui:
+        label: LandTyp
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              ACKERBAU:
+                label: Ackerbau
+              ANWESEN:
+                label: Anwesen
+              AUSSIEDLERHOF:
+                label: Aussiedlerhof
+              BAUERNHOF:
+                label: Bauernhof
+              GARTENBAU:
+                label: Gartenbau
+              JAGD_UND_FORSTWIRTSCHAFT:
+                label: Jagd_und_forstwirtschaft
+              JAGDREVIER:
+                label: Jagdrevier
+              LANDWIRTSCHAFTLICHE_BETRIEBE:
+                label: Landwirtschaftliche_betriebe
+              REITERHOEFE:
+                label: Reiterhoefe
+              SCHEUNEN:
+                label: Scheunen
+              SONSTIGE_LANDWIRTSCHAFTSIMMOBILIEN:
+                label: Sonstige_landwirtschaftsimmobilien
+              TEICH_UND_FISCHWIRTSCHAFT:
+                label: Teich_und_fischwirtschaft
+              VIEHWIRTSCHAFT:
+                label: Viehwirtschaft
+              WEINBAU:
+                label: Weinbau
+  abstract: true

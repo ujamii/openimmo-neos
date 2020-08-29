@@ -1,7 +1,174 @@
-'Ujamii.OpenImmo:Document.Geo':
+'Ujamii.OpenImmoNeos:Document.Geo':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Geo
-    icon: icon-house
-  properties: {  }
+    label: Geo
+    icon: icon-sign
+  properties:
+    anzahlEtagen:
+      type: integer
+      ui:
+        label: AnzahlEtagen
+        inspector:
+          group: openimmo
+    bundesland:
+      type: string
+      ui:
+        label: Bundesland
+        inspector:
+          group: openimmo
+    etage:
+      type: integer
+      ui:
+        label: Etage
+        inspector:
+          group: openimmo
+    flur:
+      type: string
+      ui:
+        label: Flur
+        inspector:
+          group: openimmo
+    flurstueck:
+      type: string
+      ui:
+        label: Flurstueck
+        inspector:
+          group: openimmo
+    gemarkung:
+      type: string
+      ui:
+        label: Gemarkung
+        inspector:
+          group: openimmo
+    gemeindecode:
+      type: string
+      ui:
+        label: Gemeindecode
+        inspector:
+          group: openimmo
+    geokoordinaten:
+      type: references
+      ui:
+        label: Geokoordinaten
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Geokoordinaten'
+    hausnummer:
+      type: string
+      ui:
+        label: Hausnummer
+        inspector:
+          group: openimmo
+    kartenMakro:
+      type: boolean
+      ui:
+        label: KartenMakro
+        inspector:
+          group: openimmo
+    kartenMikro:
+      type: boolean
+      ui:
+        label: KartenMikro
+        inspector:
+          group: openimmo
+    lageGebiet:
+      type: references
+      ui:
+        label: LageGebiet
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.LageGebiet'
+    lageImBau:
+      type: references
+      ui:
+        label: LageImBau
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.LageImBau'
+    land:
+      type: references
+      ui:
+        label: Land
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Land'
+    luftbildern:
+      type: boolean
+      ui:
+        label: Luftbildern
+        inspector:
+          group: openimmo
+    ort:
+      type: string
+      ui:
+        label: Ort
+        inspector:
+          group: openimmo
+    plz:
+      type: string
+      ui:
+        label: Plz
+        inspector:
+          group: openimmo
+    regionalerZusatz:
+      type: string
+      ui:
+        label: RegionalerZusatz
+        inspector:
+          group: openimmo
+    strasse:
+      type: string
+      ui:
+        label: Strasse
+        inspector:
+          group: openimmo
+    userDefinedAnyfield:
+      type: references
+      ui:
+        label: UserDefinedAnyfield
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedAnyfield'
+    userDefinedExtend:
+      type: references
+      ui:
+        label: UserDefinedExtend
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedExtend'
+    userDefinedSimplefield:
+      type: references
+      ui:
+        label: UserDefinedSimplefield
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedSimplefield'
+    virtuelletour:
+      type: boolean
+      ui:
+        label: Virtuelletour
+        inspector:
+          group: openimmo
+    wohnungsnr:
+      type: string
+      ui:
+        label: Wohnungsnr
+        inspector:
+          group: openimmo
+  abstract: true

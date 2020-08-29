@@ -1,0 +1,3 @@
+prototype(Ujamii.OpenImmoNeos:Document.LageImBau) < prototype(Neos.Fusion:Component) {
+    renderer = ''
+}

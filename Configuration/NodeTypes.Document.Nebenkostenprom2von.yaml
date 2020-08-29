@@ -1,7 +1,21 @@
-'Ujamii.OpenImmo:Document.Nebenkostenprom2von':
+'Ujamii.OpenImmoNeos:Document.Nebenkostenprom2von':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Nebenkostenprom2von
-    icon: icon-house
-  properties: {  }
+    label: Nebenkostenprom2von
+    icon: icon-sign
+  properties:
+    nebenkostenprom2bis:
+      type: string
+      ui:
+        label: Nebenkostenprom2bis
+        inspector:
+          group: openimmo
+    value:
+      type: string
+      ui:
+        label: Value
+        inspector:
+          group: openimmo
+  abstract: true

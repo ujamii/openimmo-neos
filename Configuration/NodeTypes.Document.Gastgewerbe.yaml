@@ -1,7 +1,40 @@
-'Ujamii.OpenImmo:Document.Gastgewerbe':
+'Ujamii.OpenImmoNeos:Document.Gastgewerbe':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Gastgewerbe
-    icon: icon-house
-  properties: {  }
+    label: Gastgewerbe
+    icon: icon-sign
+  properties:
+    gastgewTyp:
+      type: string
+      ui:
+        label: GastgewTyp
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              BAR:
+                label: Bar
+              CAFE:
+                label: Cafe
+              DISCOTHEK:
+                label: Discothek
+              EINRAUMLOKAL:
+                label: Einraumlokal
+              GASTRONOMIE:
+                label: Gastronomie
+              GASTRONOMIE_UND_WOHNUNG:
+                label: Gastronomie_und_wohnung
+              HOTELS:
+                label: Hotels
+              PENSIONEN:
+                label: Pensionen
+              RAUCHERLOKAL:
+                label: Raucherlokal
+              RESTAURANT:
+                label: Restaurant
+              WEITERE_BEHERBERGUNGSBETRIEBE:
+                label: Weitere_beherbergungsbetriebe
+  abstract: true

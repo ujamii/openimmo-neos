@@ -1,7 +1,20 @@
-'Ujamii.OpenImmo:Document.Zimmer':
+'Ujamii.OpenImmoNeos:Document.Zimmer':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Zimmer
-    icon: icon-house
-  properties: {  }
+    label: Zimmer
+    icon: icon-sign
+  properties:
+    zimmertyp:
+      type: string
+      ui:
+        label: Zimmertyp
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              ZIMMER:
+                label: Zimmer
+  abstract: true

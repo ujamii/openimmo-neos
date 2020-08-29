@@ -1,7 +1,93 @@
-'Ujamii.OpenImmo:Document.Boden':
+'Ujamii.OpenImmoNeos:Document.Boden':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Boden
-    icon: icon-house
-  properties: {  }
+    label: Boden
+    icon: icon-sign
+  properties:
+    dielen:
+      type: boolean
+      ui:
+        label: Dielen
+        inspector:
+          group: openimmo
+    doppelboden:
+      type: boolean
+      ui:
+        label: Doppelboden
+        inspector:
+          group: openimmo
+    estrich:
+      type: boolean
+      ui:
+        label: Estrich
+        inspector:
+          group: openimmo
+    fertigparkett:
+      type: boolean
+      ui:
+        label: Fertigparkett
+        inspector:
+          group: openimmo
+    fliesen:
+      type: boolean
+      ui:
+        label: Fliesen
+        inspector:
+          group: openimmo
+    granit:
+      type: boolean
+      ui:
+        label: Granit
+        inspector:
+          group: openimmo
+    kunststoff:
+      type: boolean
+      ui:
+        label: Kunststoff
+        inspector:
+          group: openimmo
+    laminat:
+      type: boolean
+      ui:
+        label: Laminat
+        inspector:
+          group: openimmo
+    linoleum:
+      type: boolean
+      ui:
+        label: Linoleum
+        inspector:
+          group: openimmo
+    marmor:
+      type: boolean
+      ui:
+        label: Marmor
+        inspector:
+          group: openimmo
+    parkett:
+      type: boolean
+      ui:
+        label: Parkett
+        inspector:
+          group: openimmo
+    stein:
+      type: boolean
+      ui:
+        label: Stein
+        inspector:
+          group: openimmo
+    teppich:
+      type: boolean
+      ui:
+        label: Teppich
+        inspector:
+          group: openimmo
+    terrakotta:
+      type: boolean
+      ui:
+        label: Terrakotta
+        inspector:
+          group: openimmo
+  abstract: true

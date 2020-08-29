@@ -1,7 +1,26 @@
-'Ujamii.OpenImmo:Document.Erschliessung':
+'Ujamii.OpenImmoNeos:Document.Erschliessung':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Erschliessung
-    icon: icon-house
-  properties: {  }
+    label: Erschliessung
+    icon: icon-sign
+  properties:
+    erschlAttr:
+      type: string
+      ui:
+        label: ErschlAttr
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              ORTSUEBLICHERSCHLOSSEN:
+                label: Ortsueblicherschlossen
+              TEILERSCHLOSSEN:
+                label: Teilerschlossen
+              UNERSCHLOSSEN:
+                label: Unerschlossen
+              VOLLERSCHLOSSEN:
+                label: Vollerschlossen
+  abstract: true

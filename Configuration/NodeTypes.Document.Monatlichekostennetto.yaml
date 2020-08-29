@@ -1,7 +1,21 @@
-'Ujamii.OpenImmo:Document.Monatlichekostennetto':
+'Ujamii.OpenImmoNeos:Document.Monatlichekostennetto':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Monatlichekostennetto
-    icon: icon-house
-  properties: {  }
+    label: Monatlichekostennetto
+    icon: icon-sign
+  properties:
+    monatlichekostenust:
+      type: string
+      ui:
+        label: Monatlichekostenust
+        inspector:
+          group: openimmo
+    value:
+      type: string
+      ui:
+        label: Value
+        inspector:
+          group: openimmo
+  abstract: true

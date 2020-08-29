@@ -1,7 +1,21 @@
-'Ujamii.OpenImmo:Document.Sonstigemietenetto':
+'Ujamii.OpenImmoNeos:Document.Sonstigemietenetto':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Sonstigemietenetto
-    icon: icon-house
-  properties: {  }
+    label: Sonstigemietenetto
+    icon: icon-sign
+  properties:
+    sonstigemieteust:
+      type: string
+      ui:
+        label: Sonstigemieteust
+        inspector:
+          group: openimmo
+    value:
+      type: string
+      ui:
+        label: Value
+        inspector:
+          group: openimmo
+  abstract: true

@@ -1,7 +1,423 @@
-'Ujamii.OpenImmo:Document.Ausstattung':
+'Ujamii.OpenImmoNeos:Document.Ausstattung':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Ausstattung
-    icon: icon-house
-  properties: {  }
+    label: Ausstattung
+    icon: icon-sign
+  properties:
+    abstellraum:
+      type: boolean
+      ui:
+        label: Abstellraum
+        inspector:
+          group: openimmo
+    angeschlGastronomie:
+      type: references
+      ui:
+        label: AngeschlGastronomie
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.AngeschlGastronomie'
+    ausbaustufe:
+      type: references
+      ui:
+        label: Ausbaustufe
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Ausbaustufe'
+    ausrichtBalkonTerrasse:
+      type: references
+      ui:
+        label: AusrichtBalkonTerrasse
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.AusrichtBalkonTerrasse'
+    ausstattKategorie:
+      type: string
+      ui:
+        label: AusstattKategorie
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              GEHOBEN:
+                label: Gehoben
+              LUXUS:
+                label: Luxus
+              STANDARD:
+                label: Standard
+    bad:
+      type: references
+      ui:
+        label: Bad
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Bad'
+    barrierefrei:
+      type: boolean
+      ui:
+        label: Barrierefrei
+        inspector:
+          group: openimmo
+    bauweise:
+      type: references
+      ui:
+        label: Bauweise
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Bauweise'
+    befeuerung:
+      type: references
+      ui:
+        label: Befeuerung
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Befeuerung'
+    bibliothek:
+      type: boolean
+      ui:
+        label: Bibliothek
+        inspector:
+          group: openimmo
+    boden:
+      type: references
+      ui:
+        label: Boden
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Boden'
+    brauereibindung:
+      type: boolean
+      ui:
+        label: Brauereibindung
+        inspector:
+          group: openimmo
+    breitbandZugang:
+      type: references
+      ui:
+        label: BreitbandZugang
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.BreitbandZugang'
+    dachboden:
+      type: boolean
+      ui:
+        label: Dachboden
+        inspector:
+          group: openimmo
+    dachform:
+      type: references
+      ui:
+        label: Dachform
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Dachform'
+    dvbt:
+      type: boolean
+      ui:
+        label: Dvbt
+        inspector:
+          group: openimmo
+    dvVerkabelung:
+      type: boolean
+      ui:
+        label: DvVerkabelung
+        inspector:
+          group: openimmo
+    energietyp:
+      type: references
+      ui:
+        label: Energietyp
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Energietyp'
+    fahrradraum:
+      type: boolean
+      ui:
+        label: Fahrradraum
+        inspector:
+          group: openimmo
+    fahrstuhl:
+      type: references
+      ui:
+        label: Fahrstuhl
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Fahrstuhl'
+    gaestewc:
+      type: boolean
+      ui:
+        label: Gaestewc
+        inspector:
+          group: openimmo
+    gartennutzung:
+      type: boolean
+      ui:
+        label: Gartennutzung
+        inspector:
+          group: openimmo
+    gastterrasse:
+      type: boolean
+      ui:
+        label: Gastterrasse
+        inspector:
+          group: openimmo
+    hallenhoehe:
+      type: string
+      ui:
+        label: Hallenhoehe
+        inspector:
+          group: openimmo
+    hebebuehne:
+      type: boolean
+      ui:
+        label: Hebebuehne
+        inspector:
+          group: openimmo
+    heizungsart:
+      type: references
+      ui:
+        label: Heizungsart
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Heizungsart'
+    kabelkanaele:
+      type: boolean
+      ui:
+        label: Kabelkanaele
+        inspector:
+          group: openimmo
+    kabelSatTv:
+      type: boolean
+      ui:
+        label: KabelSatTv
+        inspector:
+          group: openimmo
+    kamin:
+      type: boolean
+      ui:
+        label: Kamin
+        inspector:
+          group: openimmo
+    kantineCafeteria:
+      type: boolean
+      ui:
+        label: KantineCafeteria
+        inspector:
+          group: openimmo
+    klimatisiert:
+      type: boolean
+      ui:
+        label: Klimatisiert
+        inspector:
+          group: openimmo
+    kran:
+      type: boolean
+      ui:
+        label: Kran
+        inspector:
+          group: openimmo
+    kueche:
+      type: references
+      ui:
+        label: Kueche
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Kueche'
+    moebliert:
+      type: references
+      ui:
+        label: Moebliert
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Moebliert'
+    raeumeVeraenderbar:
+      type: boolean
+      ui:
+        label: RaeumeVeraenderbar
+        inspector:
+          group: openimmo
+    rampe:
+      type: boolean
+      ui:
+        label: Rampe
+        inspector:
+          group: openimmo
+    rolladen:
+      type: boolean
+      ui:
+        label: Rolladen
+        inspector:
+          group: openimmo
+    rollstuhlgerecht:
+      type: boolean
+      ui:
+        label: Rollstuhlgerecht
+        inspector:
+          group: openimmo
+    sauna:
+      type: boolean
+      ui:
+        label: Sauna
+        inspector:
+          group: openimmo
+    seniorengerecht:
+      type: boolean
+      ui:
+        label: Seniorengerecht
+        inspector:
+          group: openimmo
+    serviceleistungen:
+      type: references
+      ui:
+        label: Serviceleistungen
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Serviceleistungen'
+    sicherheitstechnik:
+      type: references
+      ui:
+        label: Sicherheitstechnik
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Sicherheitstechnik'
+    sporteinrichtungen:
+      type: boolean
+      ui:
+        label: Sporteinrichtungen
+        inspector:
+          group: openimmo
+    stellplatzart:
+      type: references
+      ui:
+        label: Stellplatzart
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Stellplatzart'
+    stromanschlusswert:
+      type: string
+      ui:
+        label: Stromanschlusswert
+        inspector:
+          group: openimmo
+    swimmingpool:
+      type: boolean
+      ui:
+        label: Swimmingpool
+        inspector:
+          group: openimmo
+    teekueche:
+      type: boolean
+      ui:
+        label: Teekueche
+        inspector:
+          group: openimmo
+    telefonFerienimmobilie:
+      type: boolean
+      ui:
+        label: TelefonFerienimmobilie
+        inspector:
+          group: openimmo
+    umtsEmpfang:
+      type: boolean
+      ui:
+        label: UmtsEmpfang
+        inspector:
+          group: openimmo
+    unterkellert:
+      type: references
+      ui:
+        label: Unterkellert
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Unterkellert'
+    userDefinedAnyfield:
+      type: references
+      ui:
+        label: UserDefinedAnyfield
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedAnyfield'
+    userDefinedExtend:
+      type: references
+      ui:
+        label: UserDefinedExtend
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedExtend'
+    userDefinedSimplefield:
+      type: references
+      ui:
+        label: UserDefinedSimplefield
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedSimplefield'
+    waschTrockenraum:
+      type: boolean
+      ui:
+        label: WaschTrockenraum
+        inspector:
+          group: openimmo
+    wellnessbereich:
+      type: boolean
+      ui:
+        label: Wellnessbereich
+        inspector:
+          group: openimmo
+    wgGeeignet:
+      type: boolean
+      ui:
+        label: WgGeeignet
+        inspector:
+          group: openimmo
+    wintergarten:
+      type: boolean
+      ui:
+        label: Wintergarten
+        inspector:
+          group: openimmo
+  abstract: true

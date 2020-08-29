@@ -1,0 +1,3 @@
+prototype(Ujamii.OpenImmoNeos:Document.WeitereAdresse) < prototype(Neos.Fusion:Component) {
+    renderer = ''
+}

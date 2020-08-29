@@ -1,7 +1,177 @@
-'Ujamii.OpenImmo:Document.VerwaltungObjekt':
+'Ujamii.OpenImmoNeos:Document.VerwaltungObjekt':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\VerwaltungObjekt
-    icon: icon-house
-  properties: {  }
+    label: VerwaltungObjekt
+    icon: icon-sign
+  properties:
+    abdatum:
+      type: DateTime
+      ui:
+        label: Abdatum
+        inspector:
+          group: openimmo
+          editorOptions:
+            format: d.m.Y
+    alsFerien:
+      type: boolean
+      ui:
+        label: AlsFerien
+        inspector:
+          group: openimmo
+    bisdatum:
+      type: DateTime
+      ui:
+        label: Bisdatum
+        inspector:
+          group: openimmo
+          editorOptions:
+            format: d.m.Y
+    branchen:
+      type: string
+      ui:
+        label: Branchen
+        inspector:
+          group: openimmo
+    denkmalgeschuetzt:
+      type: boolean
+      ui:
+        label: Denkmalgeschuetzt
+        inspector:
+          group: openimmo
+    geschlecht:
+      type: references
+      ui:
+        label: Geschlecht
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Geschlecht'
+    gewerblicheNutzung:
+      type: boolean
+      ui:
+        label: GewerblicheNutzung
+        inspector:
+          group: openimmo
+    gruppennummer:
+      type: string
+      ui:
+        label: Gruppennummer
+        inspector:
+          group: openimmo
+    haustiere:
+      type: boolean
+      ui:
+        label: Haustiere
+        inspector:
+          group: openimmo
+    hochhaus:
+      type: boolean
+      ui:
+        label: Hochhaus
+        inspector:
+          group: openimmo
+    laufzeit:
+      type: string
+      ui:
+        label: Laufzeit
+        inspector:
+          group: openimmo
+    maxMietdauer:
+      type: references
+      ui:
+        label: MaxMietdauer
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.MaxMietdauer'
+    maxPersonen:
+      type: integer
+      ui:
+        label: MaxPersonen
+        inspector:
+          group: openimmo
+    minMietdauer:
+      type: references
+      ui:
+        label: MinMietdauer
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.MinMietdauer'
+    nichtraucher:
+      type: boolean
+      ui:
+        label: Nichtraucher
+        inspector:
+          group: openimmo
+    objektadresseFreigeben:
+      type: boolean
+      ui:
+        label: ObjektadresseFreigeben
+        inspector:
+          group: openimmo
+    userDefinedAnyfield:
+      type: references
+      ui:
+        label: UserDefinedAnyfield
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedAnyfield'
+    userDefinedExtend:
+      type: references
+      ui:
+        label: UserDefinedExtend
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedExtend'
+    userDefinedSimplefield:
+      type: references
+      ui:
+        label: UserDefinedSimplefield
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedSimplefield'
+    verfuegbarAb:
+      type: string
+      ui:
+        label: VerfuegbarAb
+        inspector:
+          group: openimmo
+    vermietet:
+      type: boolean
+      ui:
+        label: Vermietet
+        inspector:
+          group: openimmo
+    versteigerungstermin:
+      type: DateTime
+      ui:
+        label: Versteigerungstermin
+        inspector:
+          group: openimmo
+          editorOptions:
+            format: d.m.Y
+    wbsSozialwohnung:
+      type: boolean
+      ui:
+        label: WbsSozialwohnung
+        inspector:
+          group: openimmo
+    zugang:
+      type: string
+      ui:
+        label: Zugang
+        inspector:
+          group: openimmo
+  abstract: true

@@ -1,7 +1,27 @@
-'Ujamii.OpenImmo:Document.Bauweise':
+'Ujamii.OpenImmoNeos:Document.Bauweise':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Bauweise
-    icon: icon-house
-  properties: {  }
+    label: Bauweise
+    icon: icon-sign
+  properties:
+    fertigteile:
+      type: boolean
+      ui:
+        label: Fertigteile
+        inspector:
+          group: openimmo
+    holz:
+      type: boolean
+      ui:
+        label: Holz
+        inspector:
+          group: openimmo
+    massiv:
+      type: boolean
+      ui:
+        label: Massiv
+        inspector:
+          group: openimmo
+  abstract: true

@@ -1,7 +1,33 @@
-'Ujamii.OpenImmo:Document.Nutzungsart':
+'Ujamii.OpenImmoNeos:Document.Nutzungsart':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Nutzungsart
-    icon: icon-house
-  properties: {  }
+    label: Nutzungsart
+    icon: icon-sign
+  properties:
+    anlage:
+      type: boolean
+      ui:
+        label: Anlage
+        inspector:
+          group: openimmo
+    gewerbe:
+      type: boolean
+      ui:
+        label: Gewerbe
+        inspector:
+          group: openimmo
+    waz:
+      type: boolean
+      ui:
+        label: Waz
+        inspector:
+          group: openimmo
+    wohnen:
+      type: boolean
+      ui:
+        label: Wohnen
+        inspector:
+          group: openimmo
+  abstract: true

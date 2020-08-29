@@ -1,0 +1,3 @@
+prototype(Ujamii.OpenImmoNeos:Document.MinMietdauer) < prototype(Neos.Fusion:Component) {
+    renderer = ''
+}

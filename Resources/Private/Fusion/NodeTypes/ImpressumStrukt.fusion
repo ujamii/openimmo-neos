@@ -1,0 +1,3 @@
+prototype(Ujamii.OpenImmoNeos:Document.ImpressumStrukt) < prototype(Neos.Fusion:Component) {
+    renderer = ''
+}

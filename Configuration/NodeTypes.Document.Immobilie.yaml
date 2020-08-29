@@ -1,7 +1,179 @@
-'Ujamii.OpenImmo:Document.Immobilie':
+'Ujamii.OpenImmoNeos:Document.Immobilie':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Immobilie
-    icon: icon-house
-  properties: {  }
+    label: Immobilie
+    icon: icon-sign
+  properties:
+    anhaenge:
+      type: references
+      ui:
+        label: Anhaenge
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Anhaenge'
+    ausstattung:
+      type: references
+      ui:
+        label: Ausstattung
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Ausstattung'
+    bewertung:
+      type: references
+      ui:
+        label: Bewertung
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Bewertung'
+    bieterverfahren:
+      type: references
+      ui:
+        label: Bieterverfahren
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Bieterverfahren'
+    flaechen:
+      type: references
+      ui:
+        label: Flaechen
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Flaechen'
+    freitexte:
+      type: references
+      ui:
+        label: Freitexte
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Freitexte'
+    geo:
+      type: references
+      ui:
+        label: Geo
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Geo'
+    infrastruktur:
+      type: references
+      ui:
+        label: Infrastruktur
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Infrastruktur'
+    kontaktperson:
+      type: references
+      ui:
+        label: Kontaktperson
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Kontaktperson'
+    objektkategorie:
+      type: references
+      ui:
+        label: Objektkategorie
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Objektkategorie'
+    preise:
+      type: references
+      ui:
+        label: Preise
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Preise'
+    userDefinedAnyfield:
+      type: references
+      ui:
+        label: UserDefinedAnyfield
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedAnyfield'
+    userDefinedExtend:
+      type: references
+      ui:
+        label: UserDefinedExtend
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedExtend'
+    userDefinedSimplefield:
+      type: references
+      ui:
+        label: UserDefinedSimplefield
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.UserDefinedSimplefield'
+    versteigerung:
+      type: references
+      ui:
+        label: Versteigerung
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Versteigerung'
+    verwaltungObjekt:
+      type: references
+      ui:
+        label: VerwaltungObjekt
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.VerwaltungObjekt'
+    verwaltungTechn:
+      type: references
+      ui:
+        label: VerwaltungTechn
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.VerwaltungTechn'
+    weitereAdresse:
+      type: references
+      ui:
+        label: WeitereAdresse
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.WeitereAdresse'
+    zustandAngaben:
+      type: references
+      ui:
+        label: ZustandAngaben
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.ZustandAngaben'

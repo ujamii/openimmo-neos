@@ -1,7 +1,24 @@
-'Ujamii.OpenImmo:Document.Verkaufstatus':
+'Ujamii.OpenImmoNeos:Document.Verkaufstatus':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Verkaufstatus
-    icon: icon-house
-  properties: {  }
+    label: Verkaufstatus
+    icon: icon-sign
+  properties:
+    stand:
+      type: string
+      ui:
+        label: Stand
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              OFFEN:
+                label: Offen
+              RESERVIERT:
+                label: Reserviert
+              VERKAUFT:
+                label: Verkauft
+  abstract: true

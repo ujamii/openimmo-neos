@@ -1,7 +1,72 @@
-'Ujamii.OpenImmo:Document.Haus':
+'Ujamii.OpenImmoNeos:Document.Haus':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Haus
-    icon: icon-house
-  properties: {  }
+    label: Haus
+    icon: icon-sign
+  properties:
+    haustyp:
+      type: string
+      ui:
+        label: Haustyp
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              APARTMENTHAUS:
+                label: Apartmenthaus
+              BAUERNHAUS:
+                label: Bauernhaus
+              BERGHUETTE:
+                label: Berghuette
+              BUNGALOW:
+                label: Bungalow
+              BURG:
+                label: Burg
+              CHALET:
+                label: Chalet
+              DOPPELHAUSHAELFTE:
+                label: Doppelhaushaelfte
+              EINFAMILIENHAUS:
+                label: Einfamilienhaus
+              FERIENHAUS:
+                label: Ferienhaus
+              FERTIGHAUS:
+                label: Fertighaus
+              FINCA:
+                label: Finca
+              HERRENHAUS:
+                label: Herrenhaus
+              KEINE_ANGABE:
+                label: Keine_angabe
+              LANDHAUS:
+                label: Landhaus
+              LAUBE-DATSCHE-GARTENHAUS:
+                label: Laube-datsche-gartenhaus
+              MEHRFAMILIENHAUS:
+                label: Mehrfamilienhaus
+              REIHENECK:
+                label: Reiheneck
+              REIHENEND:
+                label: Reihenend
+              REIHENHAUS:
+                label: Reihenhaus
+              REIHENMITTEL:
+                label: Reihenmittel
+              RESTHOF:
+                label: Resthof
+              RUSTICO:
+                label: Rustico
+              SCHLOSS:
+                label: Schloss
+              STADTHAUS:
+                label: Stadthaus
+              STRANDHAUS:
+                label: Strandhaus
+              VILLA:
+                label: Villa
+              ZWEIFAMILIENHAUS:
+                label: Zweifamilienhaus
+  abstract: true

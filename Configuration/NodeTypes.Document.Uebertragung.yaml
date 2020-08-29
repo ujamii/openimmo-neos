@@ -1,7 +1,86 @@
-'Ujamii.OpenImmo:Document.Uebertragung':
+'Ujamii.OpenImmoNeos:Document.Uebertragung':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Uebertragung
-    icon: icon-house
-  properties: {  }
+    label: Uebertragung
+    icon: icon-sign
+  properties:
+    art:
+      type: string
+      ui:
+        label: Art
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              OFFLINE:
+                label: Offline
+              ONLINE:
+                label: Online
+    modus:
+      type: string
+      ui:
+        label: Modus
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              CHANGE:
+                label: Change
+              DELETE:
+                label: Delete
+              NEW:
+                label: New
+    regiId:
+      type: string
+      ui:
+        label: RegiId
+        inspector:
+          group: openimmo
+    sendersoftware:
+      type: string
+      ui:
+        label: Sendersoftware
+        inspector:
+          group: openimmo
+    senderversion:
+      type: string
+      ui:
+        label: Senderversion
+        inspector:
+          group: openimmo
+    technEmail:
+      type: string
+      ui:
+        label: TechnEmail
+        inspector:
+          group: openimmo
+    timestamp:
+      type: DateTime
+      ui:
+        label: Timestamp
+        inspector:
+          group: openimmo
+    umfang:
+      type: string
+      ui:
+        label: Umfang
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              TEIL:
+                label: Teil
+              VOLL:
+                label: Voll
+    version:
+      type: string
+      ui:
+        label: Version
+        inspector:
+          group: openimmo
+  abstract: true

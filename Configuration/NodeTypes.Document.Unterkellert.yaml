@@ -1,7 +1,24 @@
-'Ujamii.OpenImmo:Document.Unterkellert':
+'Ujamii.OpenImmoNeos:Document.Unterkellert':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Unterkellert
-    icon: icon-house
-  properties: {  }
+    label: Unterkellert
+    icon: icon-sign
+  properties:
+    keller:
+      type: string
+      ui:
+        label: Keller
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              JA:
+                label: Ja
+              NEIN:
+                label: Nein
+              TEIL:
+                label: Teil
+  abstract: true

@@ -3,6 +3,7 @@
 namespace Ujamii\OpenImmoNeos\Command;
 
 use gossi\codegen\model\PhpClass;
+use gossi\codegen\model\PhpConstant;
 use gossi\codegen\model\PhpProperty;
 use Neos\Flow\Annotations as Flow;
 use Neos\Flow\Cli\CommandController;
@@ -72,10 +73,35 @@ class OpenImmoCommandController extends CommandController
             throw new \Exception($msg);
         }
 
-        $packagePath = $this->packageManager->getPackage('Ujamii.OpenImmo')->getPackagePath();
+        $packagePath = $this->packageManager->getPackage('Ujamii.OpenImmoNeos')->getPackagePath();
 
         $this->outputLine("Found {$numberOfClasses} classes in namespace {$this->openImmoApiNamespace}");
         $this->generateNodeTypeYamlConfig($packagePath);
+
+        $this->generateFusionPrototypes($packagePath);
+    }
+
+    /**
+     * @param string $packagePath
+     */
+    protected function generateFusionPrototypes(string $packagePath)
+    {
+        $this->outputLine('Generating fusion prototype files ...');
+        $targetPath = $packagePath . implode(DIRECTORY_SEPARATOR, ['Resources', 'Private', 'Fusion', 'NodeTypes']) . DIRECTORY_SEPARATOR;
+
+        foreach ($this->apiClasses as $classname => $file) {
+            $documentName = str_replace($this->openImmoApiNamespace . '\\', '', $classname);
+            $nodeType     = $this->getNodeTypeNameFromClassname($documentName);
+            $fusionCode   = "prototype({$nodeType}) < prototype(Neos.Fusion:Component) {" . PHP_EOL .
+                            "    renderer = ''" . PHP_EOL .
+                            "}";
+
+            // TODO: add property getter and render component
+
+            $filename = "{$documentName}.fusion";
+            $this->outputLine("Writing {$nodeType} to file {$filename} ...");
+            file_put_contents($targetPath . $filename, $fusionCode);
+        }
     }
 
     /**
@@ -95,21 +121,27 @@ class OpenImmoCommandController extends CommandController
 
             /* @var PhpProperty $classProperty */
             foreach ($classProperties as $classProperty) {
-                $yamlProperties[$classProperty->getName()] = $this->getPropertyConfig($classProperty);
+                $yamlProperties[$classProperty->getName()] = $this->getPropertyConfig($classProperty, $modelClass);
             }
 
             $yaml = [
                 $nodeType => [
                     'superTypes' => [
-                        'Neos.Neos:Document' => true
+                        'Neos.Neos:Document' => true,
+                        'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector' => true,
                     ],
                     'ui'         => [
-                        'label' => $documentName,
-                        'icon'  => 'icon-house',
+                        'label' => ucfirst($documentName),
+                        'icon'  => 'icon-sign',
                     ],
                     'properties' => $yamlProperties,
                 ]
             ];
+
+            // only the base type should be shown in the backend
+            if ($documentName !== 'Immobilie') {
+                $yaml[$nodeType]['abstract'] = true;
+            }
 
             $filename = "NodeTypes.Document.{$documentName}.yaml";
             $this->outputLine("Writing {$nodeType} to file {$filename} ...");
@@ -120,14 +152,16 @@ class OpenImmoCommandController extends CommandController
     /**
      * @param PhpProperty $property
      *
+     * @param PhpClass $class
+     *
      * @return array
      */
-    protected function getPropertyConfig(PhpProperty $property)
+    protected function getPropertyConfig(PhpProperty $property, PhpClass $class)
     {
         $typeTags = $property->getDocblock()->getTags('Type');
         if ($typeTags->size() > 0) {
-            $typeTag = $typeTags->get(0);
-            $typeFromPhpClass    = trim($typeTag->getDescription(), '"() ');
+            $typeTag          = $typeTags->get(0);
+            $typeFromPhpClass = trim($typeTag->getDescription(), '"() ');
         } else {
             $typeFromPhpClass = trim($property->getType(), '"[] ');
         }
@@ -138,15 +172,38 @@ class OpenImmoCommandController extends CommandController
             case 'boolean':
             case 'string':
                 $neosPropType = $typeFromPhpClass;
+                if ($property->getDocblock()->hasTag('see')) {
+                    // there may also be constants with that name, then generate a fixed selectbox
+                    $items = [];
+                    /* @var $constant PhpConstant */
+                    foreach ($class->getConstants() as $constant) {
+                        $constantFilter = preg_replace('%@see ([A-Z_]+)\*.*%', '$1', $property->getDocblock()->getTags('see')->get(0));
+                        if (strpos($constant->getName(), $constantFilter) === 0) {
+                            $items[$constant->getValue()] = [
+                                'label' => ucfirst(strtolower($constant->getValue()))
+                            ];
+                        }
+                    }
+                    $additionalConfig = [
+                        'ui' => [
+                            'inspector' => [
+                                'editor'        => 'Neos.Neos/Inspector/Editors/SelectBoxEditor',
+                                'editorOptions' => [
+                                    'values' => $items
+                                ]
+                            ]
+                        ]
+                    ];
+                }
                 break;
 
             case 'float':
-                $neosPropType = 'string';
-                $additionalConfig = [
-                    'validation' => [
-                        'Neos.Neos/Validation/FloatValidator'
-                    ]
-                ];
+                $neosPropType     = 'string';
+//                $additionalConfig = [
+//                    'validation' => [
+//                        'Neos.Neos/Validation/FloatValidator'
+//                    ]
+//                ];
                 break;
 
             case 'int':
@@ -156,6 +213,7 @@ class OpenImmoCommandController extends CommandController
             case 'datetime':
             case 'DateTime<\'Y-m-d\'>':
             case 'DateTime<\'Y-m-d\TH:i:s\'>':
+            case 'DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>':
                 $neosPropType = 'DateTime';
                 if ($typeFromPhpClass == 'DateTime<\'Y-m-d\'>') {
                     $additionalConfig = [
@@ -171,15 +229,23 @@ class OpenImmoCommandController extends CommandController
                 break;
 
             default:
-                $neosPropType = 'references';
+                $neosPropType     = 'references';
+                $isPlural         = substr($typeFromPhpClass, 0, 6) == 'array<';
+                $singularTypeName = str_replace('array<', '', str_replace('>', '', $typeFromPhpClass));
                 $additionalConfig = [
-                    'ui' => [
+                    'ui'         => [
                         'inspector' => [
                             'editorOptions' => [
-                                'nodeTypes' => [$this->getNodeTypeNameFromClassname($typeFromPhpClass)]
+                                'nodeTypes' => [$this->getNodeTypeNameFromClassname($singularTypeName)]
                             ]
                         ]
-                    ]
+                    ],
+//                    'validation' => [
+//                        'Neos.Neos/Validation/CountValidator' => [
+//                            'minimum' => 0,
+//                            'maximum' => $isPlural ? 99 : 1,
+//                        ]
+//                    ]
                 ];
                 break;
         }
@@ -187,20 +253,26 @@ class OpenImmoCommandController extends CommandController
         $baseConfig = [
             'type' => $neosPropType,
             'ui'   => [
-                'label' => $property->getName()
+                'label' => ucfirst($property->getName()),
+                'inspector' => [
+                    'group' => 'openimmo'
+                ]
             ],
         ];
-        return array_merge($baseConfig, $additionalConfig);
+
+        return array_merge_recursive($baseConfig, $additionalConfig);
     }
 
     /**
-     * @param string $classname
+     * @param string $classname May be just the class name or including the namespace.
      *
      * @return string
      */
     protected function getNodeTypeNameFromClassname(string $classname): string
     {
-        return "Ujamii.OpenImmo:Document.{$classname}";
+        $classname = str_replace($this->openImmoApiNamespace . '\\', '', $classname);
+
+        return "Ujamii.OpenImmoNeos:Document.{$classname}";
     }
 
 }

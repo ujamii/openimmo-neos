@@ -1,7 +1,57 @@
-'Ujamii.OpenImmo:Document.AusrichtBalkonTerrasse':
+'Ujamii.OpenImmoNeos:Document.AusrichtBalkonTerrasse':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\AusrichtBalkonTerrasse
-    icon: icon-house
-  properties: {  }
+    label: AusrichtBalkonTerrasse
+    icon: icon-sign
+  properties:
+    nord:
+      type: boolean
+      ui:
+        label: Nord
+        inspector:
+          group: openimmo
+    nordost:
+      type: boolean
+      ui:
+        label: Nordost
+        inspector:
+          group: openimmo
+    nordwest:
+      type: boolean
+      ui:
+        label: Nordwest
+        inspector:
+          group: openimmo
+    ost:
+      type: boolean
+      ui:
+        label: Ost
+        inspector:
+          group: openimmo
+    sued:
+      type: boolean
+      ui:
+        label: Sued
+        inspector:
+          group: openimmo
+    suedost:
+      type: boolean
+      ui:
+        label: Suedost
+        inspector:
+          group: openimmo
+    suedwest:
+      type: boolean
+      ui:
+        label: Suedwest
+        inspector:
+          group: openimmo
+    west:
+      type: boolean
+      ui:
+        label: West
+        inspector:
+          group: openimmo
+  abstract: true

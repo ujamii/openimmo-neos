@@ -1,7 +1,50 @@
-'Ujamii.OpenImmo:Document.Zustand':
+'Ujamii.OpenImmoNeos:Document.Zustand':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Zustand
-    icon: icon-house
-  properties: {  }
+    label: Zustand
+    icon: icon-sign
+  properties:
+    zustandArt:
+      type: string
+      ui:
+        label: ZustandArt
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              ABRISSOBJEKT:
+                label: Abrissobjekt
+              BAUFAELLIG:
+                label: Baufaellig
+              ENTKERNT:
+                label: Entkernt
+              ERSTBEZUG:
+                label: Erstbezug
+              GEPFLEGT:
+                label: Gepflegt
+              MODERNISIERT:
+                label: Modernisiert
+              NACH_VEREINBARUNG:
+                label: Nach_vereinbarung
+              NEUWERTIG:
+                label: Neuwertig
+              PROJEKTIERT:
+                label: Projektiert
+              ROHBAU:
+                label: Rohbau
+              SANIERUNGSBEDUERFTIG:
+                label: Sanierungsbeduerftig
+              TEIL_SANIERT:
+                label: Teil_saniert
+              TEIL_VOLLRENOVIERT:
+                label: Teil_vollrenoviert
+              TEIL_VOLLRENOVIERUNGSBED:
+                label: Teil_vollrenovierungsbed
+              TEIL_VOLLSANIERT:
+                label: Teil_vollsaniert
+              VOLL_SANIERT:
+                label: Voll_saniert
+  abstract: true

@@ -1,7 +1,42 @@
-'Ujamii.OpenImmo:Document.TelSonstige':
+'Ujamii.OpenImmoNeos:Document.TelSonstige':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\TelSonstige
-    icon: icon-house
-  properties: {  }
+    label: TelSonstige
+    icon: icon-sign
+  properties:
+    bemerkung:
+      type: string
+      ui:
+        label: Bemerkung
+        inspector:
+          group: openimmo
+    telefonart:
+      type: string
+      ui:
+        label: Telefonart
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              TEL_DURCHW:
+                label: Tel_durchw
+              TEL_FAX:
+                label: Tel_fax
+              TEL_HANDY:
+                label: Tel_handy
+              TEL_PRIVAT:
+                label: Tel_privat
+              TEL_SONSTIGE:
+                label: Tel_sonstige
+              TEL_ZENTRALE:
+                label: Tel_zentrale
+    value:
+      type: string
+      ui:
+        label: Value
+        inspector:
+          group: openimmo
+  abstract: true

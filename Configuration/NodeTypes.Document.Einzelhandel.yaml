@@ -1,7 +1,36 @@
-'Ujamii.OpenImmo:Document.Einzelhandel':
+'Ujamii.OpenImmoNeos:Document.Einzelhandel':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Einzelhandel
-    icon: icon-house
-  properties: {  }
+    label: Einzelhandel
+    icon: icon-sign
+  properties:
+    handelTyp:
+      type: string
+      ui:
+        label: HandelTyp
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              AUSSTELLUNGSFLAECHE:
+                label: Ausstellungsflaeche
+              EINKAUFSZENTRUM:
+                label: Einkaufszentrum
+              EINZELHANDELSLADEN:
+                label: Einzelhandelsladen
+              FACTORY_OUTLET:
+                label: Factory_outlet
+              KAUFHAUS:
+                label: Kaufhaus
+              KIOSK:
+                label: Kiosk
+              LADENLOKAL:
+                label: Ladenlokal
+              VERBRAUCHERMARKT:
+                label: Verbrauchermarkt
+              VERKAUFSFLAECHE:
+                label: Verkaufsflaeche
+  abstract: true

@@ -1,7 +1,26 @@
-'Ujamii.OpenImmo:Document.Ausblick':
+'Ujamii.OpenImmoNeos:Document.Ausblick':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Ausblick
-    icon: icon-house
-  properties: {  }
+    label: Ausblick
+    icon: icon-sign
+  properties:
+    blick:
+      type: string
+      ui:
+        label: Blick
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              BERGE:
+                label: Berge
+              FERNE:
+                label: Ferne
+              MEER:
+                label: Meer
+              SEE:
+                label: See
+  abstract: true

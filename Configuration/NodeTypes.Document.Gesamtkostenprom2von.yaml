@@ -1,7 +1,21 @@
-'Ujamii.OpenImmo:Document.Gesamtkostenprom2von':
+'Ujamii.OpenImmoNeos:Document.Gesamtkostenprom2von':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Gesamtkostenprom2von
-    icon: icon-house
-  properties: {  }
+    label: Gesamtkostenprom2von
+    icon: icon-sign
+  properties:
+    gesamtkostenprom2bis:
+      type: string
+      ui:
+        label: Gesamtkostenprom2bis
+        inspector:
+          group: openimmo
+    value:
+      type: string
+      ui:
+        label: Value
+        inspector:
+          group: openimmo
+  abstract: true

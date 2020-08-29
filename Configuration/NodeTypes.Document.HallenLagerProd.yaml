@@ -1,7 +1,42 @@
-'Ujamii.OpenImmo:Document.HallenLagerProd':
+'Ujamii.OpenImmoNeos:Document.HallenLagerProd':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\HallenLagerProd
-    icon: icon-house
-  properties: {  }
+    label: HallenLagerProd
+    icon: icon-sign
+  properties:
+    hallenTyp:
+      type: string
+      ui:
+        label: HallenTyp
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              FREIFLAECHEN:
+                label: Freiflaechen
+              HALLE:
+                label: Halle
+              HOCHREGALLAGER:
+                label: Hochregallager
+              INDUSTRIEHALLE:
+                label: Industriehalle
+              KUEHLHAUS:
+                label: Kuehlhaus
+              LAGER:
+                label: Lager
+              LAGER_MIT_FREIFLAECHE:
+                label: Lager_mit_freiflaeche
+              LAGERFLAECHEN:
+                label: Lagerflaechen
+              PRODUKTION:
+                label: Produktion
+              SERVICE:
+                label: Service
+              SPEDITIONSLAGER:
+                label: Speditionslager
+              WERKSTATT:
+                label: Werkstatt
+  abstract: true

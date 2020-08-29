@@ -1,7 +1,21 @@
-'Ujamii.OpenImmo:Document.Kaufpreisnetto':
+'Ujamii.OpenImmoNeos:Document.Kaufpreisnetto':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Kaufpreisnetto
-    icon: icon-house
-  properties: {  }
+    label: Kaufpreisnetto
+    icon: icon-sign
+  properties:
+    kaufpreisust:
+      type: string
+      ui:
+        label: Kaufpreisust
+        inspector:
+          group: openimmo
+    value:
+      type: string
+      ui:
+        label: Value
+        inspector:
+          group: openimmo
+  abstract: true

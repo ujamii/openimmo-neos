@@ -1,7 +1,93 @@
-'Ujamii.OpenImmo:Document.Anhang':
+'Ujamii.OpenImmoNeos:Document.Anhang':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Anhang
-    icon: icon-house
-  properties: {  }
+    label: Anhang
+    icon: icon-sign
+  properties:
+    anhangtitel:
+      type: string
+      ui:
+        label: Anhangtitel
+        inspector:
+          group: openimmo
+    check:
+      type: references
+      ui:
+        label: Check
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Check'
+    daten:
+      type: references
+      ui:
+        label: Daten
+        inspector:
+          group: openimmo
+          editorOptions:
+            nodeTypes:
+              - 'Ujamii.OpenImmoNeos:Document.Daten'
+    format:
+      type: string
+      ui:
+        label: Format
+        inspector:
+          group: openimmo
+    gruppe:
+      type: string
+      ui:
+        label: Gruppe
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              ANBIETERLOGO:
+                label: Anbieterlogo
+              ANBOBJURL:
+                label: Anbobjurl
+              AUSSENANSICHTEN:
+                label: Aussenansichten
+              BILD:
+                label: Bild
+              DOKUMENTE:
+                label: Dokumente
+              EPASS-SKALA:
+                label: Epass-skala
+              FILM:
+                label: Film
+              FILMLINK:
+                label: Filmlink
+              GRUNDRISS:
+                label: Grundriss
+              INNENANSICHTEN:
+                label: Innenansichten
+              KARTEN_LAGEPLAN:
+                label: Karten_lageplan
+              LINKS:
+                label: Links
+              PANORAMA:
+                label: Panorama
+              QRCODE:
+                label: Qrcode
+              TITELBILD:
+                label: Titelbild
+    location:
+      type: string
+      ui:
+        label: Location
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              EXTERN:
+                label: Extern
+              INTERN:
+                label: Intern
+              REMOTE:
+                label: Remote
+  abstract: true

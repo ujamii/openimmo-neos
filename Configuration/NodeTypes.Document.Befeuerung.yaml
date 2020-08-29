@@ -1,7 +1,93 @@
-'Ujamii.OpenImmo:Document.Befeuerung':
+'Ujamii.OpenImmoNeos:Document.Befeuerung':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Befeuerung
-    icon: icon-house
-  properties: {  }
+    label: Befeuerung
+    icon: icon-sign
+  properties:
+    alternativ:
+      type: boolean
+      ui:
+        label: Alternativ
+        inspector:
+          group: openimmo
+    block:
+      type: boolean
+      ui:
+        label: Block
+        inspector:
+          group: openimmo
+    elektro:
+      type: boolean
+      ui:
+        label: Elektro
+        inspector:
+          group: openimmo
+    erdwaerme:
+      type: boolean
+      ui:
+        label: Erdwaerme
+        inspector:
+          group: openimmo
+    fern:
+      type: boolean
+      ui:
+        label: Fern
+        inspector:
+          group: openimmo
+    fluessiggas:
+      type: boolean
+      ui:
+        label: Fluessiggas
+        inspector:
+          group: openimmo
+    gas:
+      type: boolean
+      ui:
+        label: Gas
+        inspector:
+          group: openimmo
+    holz:
+      type: boolean
+      ui:
+        label: Holz
+        inspector:
+          group: openimmo
+    kohle:
+      type: boolean
+      ui:
+        label: Kohle
+        inspector:
+          group: openimmo
+    luftwp:
+      type: boolean
+      ui:
+        label: Luftwp
+        inspector:
+          group: openimmo
+    oel:
+      type: boolean
+      ui:
+        label: Oel
+        inspector:
+          group: openimmo
+    pellet:
+      type: boolean
+      ui:
+        label: Pellet
+        inspector:
+          group: openimmo
+    solar:
+      type: boolean
+      ui:
+        label: Solar
+        inspector:
+          group: openimmo
+    wasserElektro:
+      type: boolean
+      ui:
+        label: WasserElektro
+        inspector:
+          group: openimmo
+  abstract: true

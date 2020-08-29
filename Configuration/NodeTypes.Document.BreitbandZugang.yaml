@@ -1,7 +1,21 @@
-'Ujamii.OpenImmo:Document.BreitbandZugang':
+'Ujamii.OpenImmoNeos:Document.BreitbandZugang':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\BreitbandZugang
-    icon: icon-house
-  properties: {  }
+    label: BreitbandZugang
+    icon: icon-sign
+  properties:
+    art:
+      type: string
+      ui:
+        label: Art
+        inspector:
+          group: openimmo
+    speed:
+      type: string
+      ui:
+        label: Speed
+        inspector:
+          group: openimmo
+  abstract: true

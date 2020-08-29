@@ -1,0 +1,3 @@
+prototype(Ujamii.OpenImmoNeos:Document.ProvisionTeilen) < prototype(Neos.Fusion:Component) {
+    renderer = ''
+}

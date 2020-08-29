@@ -1,0 +1,3 @@
+prototype(Ujamii.OpenImmoNeos:Document.AusrichtBalkonTerrasse) < prototype(Neos.Fusion:Component) {
+    renderer = ''
+}

@@ -1,0 +1,3 @@
+prototype(Ujamii.OpenImmoNeos:Document.PreisZeiteinheit) < prototype(Neos.Fusion:Component) {
+    renderer = ''
+}

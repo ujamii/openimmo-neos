@@ -1,7 +1,24 @@
-'Ujamii.OpenImmo:Document.FreizeitimmobilieGewerblich':
+'Ujamii.OpenImmoNeos:Document.FreizeitimmobilieGewerblich':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\FreizeitimmobilieGewerblich
-    icon: icon-house
-  properties: {  }
+    label: FreizeitimmobilieGewerblich
+    icon: icon-sign
+  properties:
+    freizeitTyp:
+      type: string
+      ui:
+        label: FreizeitTyp
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              FREIZEITANLAGE:
+                label: Freizeitanlage
+              SPORTANLAGEN:
+                label: Sportanlagen
+              VERGNUEGUNGSPARKS_UND_CENTER:
+                label: Vergnuegungsparks_und_center
+  abstract: true

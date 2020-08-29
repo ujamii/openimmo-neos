@@ -1,7 +1,15 @@
-'Ujamii.OpenImmo:Document.Master':
+'Ujamii.OpenImmoNeos:Document.Master':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Master
-    icon: icon-house
-  properties: {  }
+    label: Master
+    icon: icon-sign
+  properties:
+    visible:
+      type: boolean
+      ui:
+        label: Visible
+        inspector:
+          group: openimmo
+  abstract: true

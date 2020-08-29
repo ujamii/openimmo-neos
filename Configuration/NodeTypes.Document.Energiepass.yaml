@@ -1,7 +1,152 @@
-'Ujamii.OpenImmo:Document.Energiepass':
+'Ujamii.OpenImmoNeos:Document.Energiepass':
   superTypes:
     'Neos.Neos:Document': true
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
   ui:
-    label: Ujamii\OpenImmo\API\Energiepass
-    icon: icon-house
-  properties: {  }
+    label: Energiepass
+    icon: icon-sign
+  properties:
+    ausstelldatum:
+      type: DateTime
+      ui:
+        label: Ausstelldatum
+        inspector:
+          group: openimmo
+          editorOptions:
+            format: d.m.Y
+    baujahr:
+      type: string
+      ui:
+        label: Baujahr
+        inspector:
+          group: openimmo
+    endenergiebedarf:
+      type: string
+      ui:
+        label: Endenergiebedarf
+        inspector:
+          group: openimmo
+    energieverbrauchkennwert:
+      type: string
+      ui:
+        label: Energieverbrauchkennwert
+        inspector:
+          group: openimmo
+    epart:
+      type: string
+      ui:
+        label: Epart
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              BEDARF:
+                label: Bedarf
+              VERBRAUCH:
+                label: Verbrauch
+    epasstext:
+      type: string
+      ui:
+        label: Epasstext
+        inspector:
+          group: openimmo
+    fgeeklasse:
+      type: string
+      ui:
+        label: Fgeeklasse
+        inspector:
+          group: openimmo
+    fgeewert:
+      type: string
+      ui:
+        label: Fgeewert
+        inspector:
+          group: openimmo
+    gebaeudeart:
+      type: string
+      ui:
+        label: Gebaeudeart
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              nichtwohn:
+                label: Nichtwohn
+              wohn:
+                label: Wohn
+    geg2018:
+      type: string
+      ui:
+        label: Geg2018
+        inspector:
+          group: openimmo
+    gueltigBis:
+      type: string
+      ui:
+        label: GueltigBis
+        inspector:
+          group: openimmo
+    hwbklasse:
+      type: string
+      ui:
+        label: Hwbklasse
+        inspector:
+          group: openimmo
+    hwbwert:
+      type: string
+      ui:
+        label: Hwbwert
+        inspector:
+          group: openimmo
+    jahrgang:
+      type: string
+      ui:
+        label: Jahrgang
+        inspector:
+          group: openimmo
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              2008:
+                label: '2008'
+              2014:
+                label: '2014'
+              bei_besichtigung:
+                label: Bei_besichtigung
+              nicht_noetig:
+                label: Nicht_noetig
+              ohne:
+                label: Ohne
+    mitwarmwasser:
+      type: boolean
+      ui:
+        label: Mitwarmwasser
+        inspector:
+          group: openimmo
+    primaerenergietraeger:
+      type: string
+      ui:
+        label: Primaerenergietraeger
+        inspector:
+          group: openimmo
+    stromwert:
+      type: string
+      ui:
+        label: Stromwert
+        inspector:
+          group: openimmo
+    waermewert:
+      type: string
+      ui:
+        label: Waermewert
+        inspector:
+          group: openimmo
+    wertklasse:
+      type: string
+      ui:
+        label: Wertklasse
+        inspector:
+          group: openimmo
+  abstract: true
