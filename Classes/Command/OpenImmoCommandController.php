@@ -2,10 +2,11 @@
 
 namespace Ujamii\OpenImmoNeos\Command;
 
+use gossi\codegen\model\PhpClass;
+use gossi\codegen\model\PhpProperty;
 use Neos\Flow\Annotations as Flow;
 use Neos\Flow\Cli\CommandController;
 use Neos\Flow\Package\PackageManager;
-use Neos\Flow\Reflection\ReflectionService;
 use Symfony\Component\Yaml\Yaml;
 
 /**
@@ -33,16 +34,15 @@ class OpenImmoCommandController extends CommandController
     protected $classNamesInApiNamespace = [];
 
     /**
+     * @var array
+     */
+    protected $propertyLinks = [];
+
+    /**
      * @var PackageManager
      * @Flow\Inject
      */
     protected $packageManager;
-
-    /**
-     * @var ReflectionService
-     * @Flow\Inject
-     */
-    protected $reflectionService;
 
     /**
      * Generates wrapper files for the ujamii/openimmo API.
@@ -59,7 +59,7 @@ class OpenImmoCommandController extends CommandController
         foreach ($allClasses as $classname => $file) {
             // Store the namespace of each class in the namespace map
             if (substr($classname, 0, strlen($this->openImmoApiNamespace)) == $this->openImmoApiNamespace) {
-                $shortname = (new \ReflectionClass($classname))->getShortName();
+                $shortname                        = (new \ReflectionClass($classname))->getShortName();
                 $this->apiClasses[$classname]     = $file;
                 $this->classNamesInApiNamespace[] = $shortname;
             }
@@ -67,7 +67,8 @@ class OpenImmoCommandController extends CommandController
 
         $numberOfClasses = count($this->classNamesInApiNamespace);
         if ($numberOfClasses == 0) {
-            $msg = sprintf('No classes in the namepsace "%s" were found! Please call "composer dumpautoload --optimize" to generate a classmap!', $this->openImmoApiNamespace);
+            $msg = sprintf('No classes in the namepsace "%s" were found! Please call "composer dumpautoload --optimize" to generate a classmap!',
+                $this->openImmoApiNamespace);
             throw new \Exception($msg);
         }
 
@@ -86,18 +87,15 @@ class OpenImmoCommandController extends CommandController
         $targetPath = $packagePath . 'Configuration' . DIRECTORY_SEPARATOR;
 
         foreach ($this->apiClasses as $classname => $file) {
-            $documentName = str_replace($this->openImmoApiNamespace . '\\', '', $classname);
-            $nodeType = $this->getNodeTypeNameFromClassname($documentName);
-            $modelClass = PhpClass::fromFile($file);
-            $classProperties = $this->reflectionService->getClassPropertyNames($classname);
-            $yamlProperties = [];
+            $documentName    = str_replace($this->openImmoApiNamespace . '\\', '', $classname);
+            $nodeType        = $this->getNodeTypeNameFromClassname($documentName);
+            $modelClass      = PhpClass::fromFile($file);
+            $classProperties = $modelClass->getProperties();
+            $yamlProperties  = [];
+
+            /* @var PhpProperty $classProperty */
             foreach ($classProperties as $classProperty) {
-                $yamlProperties[$classProperty] = [
-                    'type' => $this->reflectionService->getPropertyTagValues($classname, $classProperty, 'Type'),
-                    'ui' => [
-                        'label' => $classProperty
-                    ],
-                ];
+                $yamlProperties[$classProperty->getName()] = $this->getPropertyConfig($classProperty);
             }
 
             $yaml = [
@@ -105,9 +103,9 @@ class OpenImmoCommandController extends CommandController
                     'superTypes' => [
                         'Neos.Neos:Document' => true
                     ],
-                    'ui' => [
+                    'ui'         => [
                         'label' => $documentName,
-                        'icon' => 'icon-house',
+                        'icon'  => 'icon-house',
                     ],
                     'properties' => $yamlProperties,
                 ]
@@ -117,6 +115,82 @@ class OpenImmoCommandController extends CommandController
             $this->outputLine("Writing {$nodeType} to file {$filename} ...");
             file_put_contents($targetPath . $filename, Yaml::dump($yaml, 10, 2));
         }
+    }
+
+    /**
+     * @param PhpProperty $property
+     *
+     * @return array
+     */
+    protected function getPropertyConfig(PhpProperty $property)
+    {
+        $typeTags = $property->getDocblock()->getTags('Type');
+        if ($typeTags->size() > 0) {
+            $typeTag = $typeTags->get(0);
+            $typeFromPhpClass    = trim($typeTag->getDescription(), '"() ');
+        } else {
+            $typeFromPhpClass = trim($property->getType(), '"[] ');
+        }
+
+        $additionalConfig = [];
+        switch ($typeFromPhpClass) {
+
+            case 'boolean':
+            case 'string':
+                $neosPropType = $typeFromPhpClass;
+                break;
+
+            case 'float':
+                $neosPropType = 'string';
+                $additionalConfig = [
+                    'validation' => [
+                        'Neos.Neos/Validation/FloatValidator'
+                    ]
+                ];
+                break;
+
+            case 'int':
+                $neosPropType = 'integer';
+                break;
+
+            case 'datetime':
+            case 'DateTime<\'Y-m-d\'>':
+            case 'DateTime<\'Y-m-d\TH:i:s\'>':
+                $neosPropType = 'DateTime';
+                if ($typeFromPhpClass == 'DateTime<\'Y-m-d\'>') {
+                    $additionalConfig = [
+                        'ui' => [
+                            'inspector' => [
+                                'editorOptions' => [
+                                    'format' => 'd.m.Y'
+                                ]
+                            ]
+                        ]
+                    ];
+                }
+                break;
+
+            default:
+                $neosPropType = 'references';
+                $additionalConfig = [
+                    'ui' => [
+                        'inspector' => [
+                            'editorOptions' => [
+                                'nodeTypes' => [$this->getNodeTypeNameFromClassname($typeFromPhpClass)]
+                            ]
+                        ]
+                    ]
+                ];
+                break;
+        }
+
+        $baseConfig = [
+            'type' => $neosPropType,
+            'ui'   => [
+                'label' => $property->getName()
+            ],
+        ];
+        return array_merge($baseConfig, $additionalConfig);
     }
 
     /**
