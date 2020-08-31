@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Verkaufstatus
-    icon: icon-sign
+    icon: icon-check-circle
   properties:
     stand:
       type: string

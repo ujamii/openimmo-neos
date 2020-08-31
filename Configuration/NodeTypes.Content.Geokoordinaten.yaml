@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Geokoordinaten
-    icon: icon-sign
+    icon: icon-globe
   properties:
     breitengrad:
       type: string

@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: PreisZeiteinheit
-    icon: icon-sign
+    icon: icon-calendar-alt
   properties:
     zeiteinheit:
       type: string

@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Heizungsart
-    icon: icon-sign
+    icon: icon-temperature-high
   properties:
     etage:
       type: boolean

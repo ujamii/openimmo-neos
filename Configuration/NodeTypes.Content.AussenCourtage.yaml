@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: AussenCourtage
-    icon: icon-sign
+    icon: icon-hand-holding-usd
   properties:
     mitMwst:
       type: boolean

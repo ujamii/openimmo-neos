@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Energiepass
-    icon: icon-sign
+    icon: icon-solar-panel
   properties:
     ausstelldatum:
       type: DateTime

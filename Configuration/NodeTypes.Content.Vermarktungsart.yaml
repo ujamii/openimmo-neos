@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Vermarktungsart
-    icon: icon-sign
+    icon: icon-tags
   properties:
     erbpacht:
       type: boolean

@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Waehrung
-    icon: icon-sign
+    icon: icon-euro-sign
   properties:
     isoWaehrung:
       type: string

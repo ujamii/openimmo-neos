@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Befeuerung
-    icon: icon-sign
+    icon: icon-fire-alt
   properties:
     alternativ:
       type: boolean

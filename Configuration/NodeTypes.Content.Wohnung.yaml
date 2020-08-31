@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Wohnung
-    icon: icon-sign
+    icon: icon-house-user
   properties:
     wohnungtyp:
       type: string

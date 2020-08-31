@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Unterkellert
-    icon: icon-sign
+    icon: icon-dungeon
   properties:
     keller:
       type: string
