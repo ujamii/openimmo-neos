@@ -1,3 +1,6 @@
+## 0.1.1 (August 31, 2020)
+  - [DOC] added license and author information
+
 ## 0.1.0 (August 31, 2020)
   - [DOC] added some documentation
   - [FEATURE] imported files are deleted after import 
