@@ -6,20 +6,28 @@ Neos:
 
 Ujamii:
   OpenImmoNeos:
+    import:
+      sourceDirectory: 'import/'
+      targetNodeType: 'Ujamii.OpenImmoNeos:Document.OpenImmoRoot'
     nodeTypeIcons:
       default: icon-sign
       Anhaenge: icon-image
       Anhang: icon-image
+      AussenCourtage: icon-hand-holding-usd
       Ausstattung: icon-info-circle
       Bad: icon-bath
+      Befeuerung: icon-fire-alt
       Bewertung: icon-star-half-alt
       BreitbandZugang: icon-laptop-house
       Distanzen: icon-map-signs
       DistanzenSport: icon-running
+      Energiepass: icon-solar-panel
       Flaechen: icon-layer-group
       Freitexte: icon-align-left
       Geo: icon-globe
+      Geokoordinaten: icon-globe
       Haus: icon-home
+      Heizungsart: icon-temperature-high
       Kaufpreis: icon-euro-sign
       Kaufpreisnetto: icon-euro-sign
       Kontaktperson: icon-address-book
@@ -29,8 +37,15 @@ Ujamii:
       Objektkategorie: icon-tags
       Parken: icon-parking
       Preise: icon-euro-sign
+      PreisZeiteinheit: icon-calendar-alt
       Stellplatzart: icon-parking
+      Unterkellert: icon-dungeon
+      Verkaufstatus: icon-check-circle
+      Vermarktungsart: icon-tags
       Versteigerung: icon-gavel
       VerwaltungObjekt: icon-user-tie
       VerwaltungTechn: icon-user-cog
+      Waehrung: icon-euro-sign
+      Wohnung: icon-house-user
+      Zustand: icon-star
       ZustandAngaben: icon-history

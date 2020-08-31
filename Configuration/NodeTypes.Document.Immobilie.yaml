@@ -5,7 +5,13 @@
   ui:
     label: Immobilie
     icon: icon-sign
-  properties: {  }
+  properties:
+    estateIdentifier:
+      type: string
+      ui:
+        label: 'estate identifier'
+        inspector:
+          group: openimmo
   childNodes:
     main:
       type: 'Neos.Neos:ContentCollection'

@@ -2,13 +2,27 @@
 
 namespace Ujamii\OpenImmoNeos\Command;
 
+use Doctrine\Common\Annotations\AnnotationRegistry;
 use gossi\codegen\model\PhpClass;
 use gossi\codegen\model\PhpConstant;
 use gossi\codegen\model\PhpProperty;
+use JMS\Serializer\Handler\HandlerRegistryInterface;
+use Neos\ContentRepository\Domain\Model\NodeInterface;
+use Neos\ContentRepository\Domain\NodeType\NodeTypeConstraints;
 use Neos\Flow\Annotations as Flow;
 use Neos\Flow\Cli\CommandController;
 use Neos\Flow\Package\PackageManager;
+use Neos\Flow\Persistence\PersistenceManagerInterface;
+use Neos\Neos\Controller\Exception\NodeNotFoundException;
+use Symfony\Component\Finder\Finder;
+use Symfony\Component\Process\ExecutableFinder;
+use Symfony\Component\Process\Process;
 use Symfony\Component\Yaml\Yaml;
+use Ujamii\OpenImmo\API\Aktion;
+use Ujamii\OpenImmo\API\Immobilie;
+use Ujamii\OpenImmo\API\Openimmo;
+use Ujamii\OpenImmo\Handler\DateTimeHandler;
+use Ujamii\OpenImmoNeos\Service\ContentHelper;
 
 /**
  * @Flow\Scope("singleton")
@@ -52,6 +66,24 @@ class OpenImmoCommandController extends CommandController
     protected $nodeTypeIcons;
 
     /**
+     * @Flow\InjectConfiguration(path="import")
+     * @var array
+     */
+    protected $importConfig;
+
+    /**
+     * @var ContentHelper
+     * @Flow\Inject
+     */
+    protected $contentHelper;
+
+    /**
+     * @var PersistenceManagerInterface
+     * @Flow\Inject
+     */
+    protected $persistenceManager;
+
+    /**
      * Generates wrapper files for the ujamii/openimmo API.
      *
      * @return int|void|null
@@ -85,6 +117,240 @@ class OpenImmoCommandController extends CommandController
         $this->generateNodeTypeYamlConfig($packagePath);
 
         $this->generateFusionPrototypes($packagePath);
+    }
+
+    /**
+     * Imports OpenImmo data from configured directory.
+     * @throws NodeNotFoundException
+     */
+    public function importCommand()
+    {
+        $importSourceDirectory = $this->importConfig['sourceDirectory'];
+        $this->outputLine("Importing ZIP files from directory {$importSourceDirectory} ...");
+
+        $finder = new Finder();
+        $finder->files()->name('*.zip')->in($importSourceDirectory)->sortByName();
+
+        if ($finder->hasResults()) {
+            foreach ($finder as $file) {
+                // unzip file
+                $finder   = new ExecutableFinder;
+                $hasUnzip = (bool)$finder->find('unzip');
+                if ($hasUnzip) {
+                    $directoryName = $file->getFilenameWithoutExtension();
+                    if ( ! is_dir(FLOW_PATH_ROOT . $importSourceDirectory . $directoryName)) {
+                        $this->outputLine("<info>extracting {$file->getRealPath()} to {$directoryName}</info>");
+                        $process = new Process(['unzip', $file->getRealPath(), "-d{$directoryName}"], $file->getPath());
+                        $process->run();
+
+                        if ( ! $process->isSuccessful()) {
+                            $this->outputLine('<error>unzip failed with error:</error>');
+                            $this->output($process->getOutput());
+                            $this->sendAndExit(1);
+                        }
+                    } else {
+                        $this->outputLine("<info>directory {$directoryName} already exists</info>");
+                    }
+
+                    $importResult = $this->importOpenImmoDirectory($importSourceDirectory . $directoryName);
+                    if ($importResult) {
+                        // TODO: delete zip file and unpacked files
+                    }
+                } else {
+                    $this->outputLine('<error>unzip not found on this host!</error>');
+                    $this->sendAndExit(1);
+                }
+            }
+        } else {
+            $this->outputLine("No files found.");
+        }
+    }
+
+    /**
+     * @param string $directory
+     *
+     * @throws NodeNotFoundException
+     * @throws \Neos\Eel\Exception
+     */
+    protected function importOpenImmoDirectory(string $directory)
+    {
+        $this->outputLine("Importing xml and assets from directory {$directory} ...");
+        $openImmo = $this->getParsedXml($directory);
+
+        /* @var Immobilie */
+        foreach ($openImmo->getAnbieter()[0]->getImmobilie() as $immobilie) {
+            $actionToPerform  = $immobilie->getVerwaltungTechn()->getAktion()->getAktionart();
+            $estateIdenitifer = $immobilie->getVerwaltungTechn()->getObjektnrIntern();
+            /* @var NodeInterface $existingNode */
+            $existingNode = $this->contentHelper->findNode(
+                'Ujamii.OpenImmoNeos:Document.Immobilie',
+                ['estateIdentifier' => $estateIdenitifer]
+            );
+
+            switch ($actionToPerform) {
+
+                case Aktion::AKTIONART_CHANGE:
+                    if (is_null($existingNode)) {
+                        // create
+                        /* @var NodeInterface $parentNode */
+                        $parentNode = $this->contentHelper->findNode(
+                            $this->importConfig['targetNodeType']
+                        );
+                        if (is_null($parentNode)) {
+                            $this->outputLine("<error>No parent node of type {$this->importConfig['targetNodeType']} found!</error>");
+                            $this->sendAndExit(1);
+                        }
+
+                        $existingNode = $this->contentHelper->createNodeFromTemplateInParent(
+                            'Ujamii.OpenImmoNeos:Document.Immobilie',
+                            $parentNode->getNodeAggregateIdentifier(),
+                            [
+                                'title'            => $this->generateNodeName($immobilie),
+                                'estateIdentifier' => $estateIdenitifer,
+                            ],
+                            $this->generateNodeName($immobilie)
+                        );
+
+                        $this->persistenceManager->persistAll();
+                    }
+
+                    $this->updateNodePropertiesAndChildren($existingNode, $immobilie);
+                    break;
+
+                case Aktion::AKTIONART_DELETE:
+                    if (is_null($existingNode)) {
+                        $this->outputLine("<error>No estate item found with identifier {$estateIdenitifer}!</error>");
+                        $this->sendAndExit(1);
+                    }
+
+                    $this->outputLine("<info>Removing real estate node {$estateIdenitifer}!</info>");
+                    $existingNode->remove();
+                    break;
+            }
+        }
+    }
+
+    /**
+     * @param NodeInterface $existingNode
+     * @param object $estateData
+     *
+     * @throws \ReflectionException
+     */
+    protected function updateNodePropertiesAndChildren(NodeInterface $existingNode, object $estateData)
+    {
+        $reflectionClass = new \ReflectionClass($estateData);
+        $classProperties = $reflectionClass->getProperties();
+
+        foreach ($classProperties as $classProperty) {
+            $getterName    = 'get' . ucfirst($classProperty->getName());
+            $propertyValue = $estateData->{$getterName}();
+            if (empty($propertyValue)) {
+                continue;
+            }
+
+            $docBlock = $reflectionClass->getProperty($classProperty->getName())->getDocComment();
+            preg_match('/@Type\("(.*)"\)/m', $docBlock, $matches);
+
+            switch ($matches[1]) {
+
+                case 'boolean':
+                case 'string':
+                case 'float':
+                case 'int':
+                case 'datetime':
+                case 'DateTime<\'Y-m-d\'>':
+                case 'DateTime<\'Y-m-d\TH:i:s\'>':
+                case 'DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>':
+                    $existingNode->setProperty($classProperty->getName(), $propertyValue);
+                    if ($propertyValue instanceof \DateTime) {
+                        $debugPropertyValue = $propertyValue->format('Y-m-d H:i:s');
+                    } else {
+                        $debugPropertyValue = $propertyValue;
+                    }
+                    $this->outputLine("<info>Filling property {$classProperty->getName()} with value \"{$debugPropertyValue}\".</info>");
+                    break;
+
+                default:
+                    if ($classProperty->getName() == 'daten') {
+                        // TODO: import asset
+                    } else {
+                        $classPropertyType = $this->getNodeTypeNameFromClassname($matches[1]);
+                        $childNodes        = $existingNode->findChildNodes(new NodeTypeConstraints(false, [$classPropertyType]));
+
+                        $this->outputLine("<info>Searching for {$classPropertyType}: {$childNodes->count()}</info>");
+                        if ($childNodes->count() == 0) {
+                            // create
+                            $childNode = $this->contentHelper->createNodeFromTemplateInParent(
+                                $classPropertyType,
+                                $existingNode->getPrimaryChildNode()->getNodeAggregateIdentifier()
+                            );
+
+                            $this->persistenceManager->persistAll();
+                        } else {
+                            // update
+                            $childNode = $childNodes[0];
+                        }
+
+                        if (is_array($propertyValue)) {
+                            foreach ($propertyValue as $singleValue) {
+                                $this->updateNodePropertiesAndChildren($childNode, $singleValue);
+                            }
+                        } else {
+
+                            $this->updateNodePropertiesAndChildren($childNode, $propertyValue);
+                        }
+                    }
+                    break;
+
+            }
+        }
+    }
+
+    /**
+     * @param string $directory
+     *
+     * @return Openimmo
+     */
+    protected function getParsedXml(string $directory): Openimmo
+    {
+        // read xml
+        $finder = new Finder();
+        $finder->files()->name('*.xml')->in($directory);
+        if ($finder->hasResults()) {
+            $iterator = $finder->getIterator();
+            $iterator->rewind();
+            $xmlString = $iterator->current()->getContents();
+            AnnotationRegistry::registerLoader('class_exists');
+
+            $builder = \JMS\Serializer\SerializerBuilder::create();
+            $builder
+                ->configureHandlers(function (HandlerRegistryInterface $registry) {
+                    $registry->registerSubscribingHandler(new DateTimeHandler());
+                });
+            $serializer = $builder->build();
+
+            /* @var Openimmo $openImmo */
+            return $serializer->deserialize($xmlString, Openimmo::class, 'xml');
+        } else {
+            $this->outputLine("<error>No xml file found in directory {$directory}!</error>");
+            $this->sendAndExit(1);
+        }
+    }
+
+    /**
+     * Generates a readable node name.
+     *
+     * @param Immobilie $estateObject
+     *
+     * @return string|null
+     */
+    protected function generateNodeName(Immobilie $estateObject)
+    {
+        try {
+            return "{$estateObject->getGeo()->getStrasse()} {$estateObject->getGeo()->getHausnummer()}";
+        } catch (\Exception $e) {
+            return $estateObject->getVerwaltungTechn()->getObjektnrIntern();
+        }
     }
 
     /**
@@ -247,6 +513,18 @@ class OpenImmoCommandController extends CommandController
 
             // simple types like string and int will become properties
             $yamlProperties = [];
+
+            if ($documentName == 'Immobilie') {
+                $yamlProperties['estateIdentifier'] = [
+                    'type' => 'string',
+                    'ui'   => [
+                        'label'     => 'estate identifier',
+                        'inspector' => [
+                            'group' => 'openimmo',
+                        ]
+                    ],
+                ];
+            }
 
             // complex types will become NEOS NodeTypes
             $allowedChildNodes = [];
@@ -455,6 +733,7 @@ class OpenImmoCommandController extends CommandController
      */
     protected function getNodeTypeNameFromClassname(string $classname): string
     {
+        $classname = str_replace('array<', '', str_replace('>', '', $classname));
         $classname = str_replace($this->openImmoApiNamespace . '\\', '', $classname);
         if ($classname == 'Immobilie') {
             $documentOrContent = 'Document';

@@ -1,0 +1,12 @@
+'Ujamii.OpenImmoNeos:Document.OpenImmoRoot':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: OpenImmoRoot
+    icon: icon-sign
+  properties: {  }
+  childNodes:
+    constraints:
+      nodeTypes:
+        'Ujamii.OpenImmoNeos:Content.Immobilie': true
+        '*': false

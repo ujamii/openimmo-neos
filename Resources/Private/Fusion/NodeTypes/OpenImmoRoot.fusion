@@ -1,0 +1,3 @@
+prototype(Ujamii.OpenImmoNeos:Document.OpenImmoRoot) < prototype(Neos.Fusion:Component) {
+    renderer = 'Bitte eine Immobilie im Baum auswählen!'
+}
