@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: BreitbandZugang
-    icon: icon-sign
+    icon: icon-laptop-house
   properties:
     art:
       type: string
