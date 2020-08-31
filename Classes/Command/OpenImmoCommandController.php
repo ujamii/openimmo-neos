@@ -92,10 +92,11 @@ class OpenImmoCommandController extends CommandController
     protected $persistenceManager;
 
     /**
-     * Generates wrapper files for the ujamii/openimmo API.
+     * Generates wrapper files (yaml and fusion) for the ujamii/openimmo API.
      *
      * @return int|void|null
-     * @throws \Exception
+     * @throws \Neos\Flow\Package\Exception\UnknownPackageException
+     * @throws \ReflectionException
      */
     public function generateCommand()
     {
@@ -116,21 +117,24 @@ class OpenImmoCommandController extends CommandController
         if ($numberOfClasses == 0) {
             $msg = sprintf('No classes in the namepsace "%s" were found! Please call "composer dumpautoload --optimize" to generate a classmap!',
                 $this->openImmoApiNamespace);
-            throw new \Exception($msg);
+            $this->outputLine("<error>$msg</error>");
+            $this->sendAndExit(1);
         }
 
         $packagePath = $this->packageManager->getPackage('Ujamii.OpenImmoNeos')->getPackagePath();
 
         $this->outputLine("Found {$numberOfClasses} classes in namespace {$this->openImmoApiNamespace}");
         $this->generateNodeTypeYamlConfig($packagePath);
-
         $this->generateFusionPrototypes($packagePath);
     }
 
     /**
      * Imports OpenImmo data from configured directory.
      * @throws NodeNotFoundException
+     * @throws \Neos\ContentRepository\Exception\ImportException
+     * @throws \Neos\ContentRepository\Exception\NodeTypeNotFoundException
      * @throws \Neos\Eel\Exception
+     * @throws \ReflectionException
      */
     public function importCommand()
     {
