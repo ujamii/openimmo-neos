@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Preise
-    icon: icon-sign
+    icon: icon-euro-sign
   properties:
     abstand:
       type: string

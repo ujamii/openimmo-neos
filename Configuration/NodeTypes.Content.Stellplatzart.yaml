@@ -1,39 +1,45 @@
-'Ujamii.OpenImmoNeos:Content.Bad':
+'Ujamii.OpenImmoNeos:Content.Stellplatzart':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
     'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
-    label: Bad
-    icon: icon-sign
+    label: Stellplatzart
+    icon: icon-parking
   properties:
-    bidet:
+    carport:
       type: boolean
       ui:
-        label: Bidet
+        label: Carport
         inspector:
           group: openimmo
-    dusche:
+    duplex:
       type: boolean
       ui:
-        label: Dusche
+        label: Duplex
         inspector:
           group: openimmo
-    fenster:
+    freiplatz:
       type: boolean
       ui:
-        label: Fenster
+        label: Freiplatz
         inspector:
           group: openimmo
-    pissoir:
+    garage:
       type: boolean
       ui:
-        label: Pissoir
+        label: Garage
         inspector:
           group: openimmo
-    wanne:
+    parkhaus:
       type: boolean
       ui:
-        label: Wanne
+        label: Parkhaus
+        inspector:
+          group: openimmo
+    tiefgarage:
+      type: boolean
+      ui:
+        label: Tiefgarage
         inspector:
           group: openimmo

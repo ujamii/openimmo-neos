@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Versteigerung
-    icon: icon-sign
+    icon: icon-gavel
   properties:
     aktenzeichen:
       type: string

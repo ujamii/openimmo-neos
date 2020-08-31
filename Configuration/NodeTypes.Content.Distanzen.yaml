@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Distanzen
-    icon: icon-sign
+    icon: icon-map-signs
   properties:
     distanzZu:
       type: string

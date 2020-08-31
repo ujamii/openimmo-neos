@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Ausstattung
-    icon: icon-sign
+    icon: icon-info-circle
   properties:
     abstellraum:
       type: boolean

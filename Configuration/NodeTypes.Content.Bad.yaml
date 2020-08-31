@@ -1,33 +1,39 @@
-'Ujamii.OpenImmoNeos:Content.Nutzungsart':
+'Ujamii.OpenImmoNeos:Content.Bad':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
     'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
-    label: Nutzungsart
-    icon: icon-sign
+    label: Bad
+    icon: icon-bath
   properties:
-    anlage:
+    bidet:
       type: boolean
       ui:
-        label: Anlage
+        label: Bidet
         inspector:
           group: openimmo
-    gewerbe:
+    dusche:
       type: boolean
       ui:
-        label: Gewerbe
+        label: Dusche
         inspector:
           group: openimmo
-    waz:
+    fenster:
       type: boolean
       ui:
-        label: Waz
+        label: Fenster
         inspector:
           group: openimmo
-    wohnen:
+    pissoir:
       type: boolean
       ui:
-        label: Wohnen
+        label: Pissoir
+        inspector:
+          group: openimmo
+    wanne:
+      type: boolean
+      ui:
+        label: Wanne
         inspector:
           group: openimmo

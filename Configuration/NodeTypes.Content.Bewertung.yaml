@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Bewertung
-    icon: icon-sign
+    icon: icon-star-half-alt
   properties: {  }
   childNodes:
     main:

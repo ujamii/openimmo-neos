@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Land
-    icon: icon-sign
+    icon: icon-globe-europe
   properties:
     isoLand:
       type: string

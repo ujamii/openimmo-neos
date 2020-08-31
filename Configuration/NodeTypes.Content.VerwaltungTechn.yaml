@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: VerwaltungTechn
-    icon: icon-sign
+    icon: icon-user-cog
   properties:
     aktivBis:
       type: DateTime

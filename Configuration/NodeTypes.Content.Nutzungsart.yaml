@@ -1,45 +1,33 @@
-'Ujamii.OpenImmoNeos:Content.Stellplatzart':
+'Ujamii.OpenImmoNeos:Content.Nutzungsart':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
     'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
-    label: Stellplatzart
-    icon: icon-sign
+    label: Nutzungsart
+    icon: icon-tags
   properties:
-    carport:
+    anlage:
       type: boolean
       ui:
-        label: Carport
+        label: Anlage
         inspector:
           group: openimmo
-    duplex:
+    gewerbe:
       type: boolean
       ui:
-        label: Duplex
+        label: Gewerbe
         inspector:
           group: openimmo
-    freiplatz:
+    waz:
       type: boolean
       ui:
-        label: Freiplatz
+        label: Waz
         inspector:
           group: openimmo
-    garage:
+    wohnen:
       type: boolean
       ui:
-        label: Garage
-        inspector:
-          group: openimmo
-    parkhaus:
-      type: boolean
-      ui:
-        label: Parkhaus
-        inspector:
-          group: openimmo
-    tiefgarage:
-      type: boolean
-      ui:
-        label: Tiefgarage
+        label: Wohnen
         inspector:
           group: openimmo

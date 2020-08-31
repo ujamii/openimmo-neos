@@ -1,16 +1,16 @@
-'Ujamii.OpenImmoNeos:Content.Kaufpreis':
+'Ujamii.OpenImmoNeos:Content.Kaufpreisnetto':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
     'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
-    label: Kaufpreis
-    icon: icon-sign
+    label: Kaufpreisnetto
+    icon: icon-euro-sign
   properties:
-    aufAnfrage:
-      type: boolean
+    kaufpreisust:
+      type: string
       ui:
-        label: AufAnfrage
+        label: Kaufpreisust
         inspector:
           group: openimmo
     value:

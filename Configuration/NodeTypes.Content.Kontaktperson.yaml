@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Kontaktperson
-    icon: icon-sign
+    icon: icon-address-book
   properties:
     adressfreigabe:
       type: boolean

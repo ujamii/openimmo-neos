@@ -1,21 +1,19 @@
-'Ujamii.OpenImmoNeos:Content.Objektkategorie':
+'Ujamii.OpenImmoNeos:Content.Anhaenge':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
     'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
-    label: Objektkategorie
-    icon: icon-sign
+    label: Anhaenge
+    icon: icon-image
   properties: {  }
   childNodes:
     main:
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'Ujamii.OpenImmoNeos:Content.Nutzungsart': true
-          'Ujamii.OpenImmoNeos:Content.Objektart': true
+          'Ujamii.OpenImmoNeos:Content.Anhang': true
           'Ujamii.OpenImmoNeos:Content.UserDefinedAnyfield': true
           'Ujamii.OpenImmoNeos:Content.UserDefinedExtend': true
           'Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield': true
-          'Ujamii.OpenImmoNeos:Content.Vermarktungsart': true
           '*': false

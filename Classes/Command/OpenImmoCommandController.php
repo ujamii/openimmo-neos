@@ -46,6 +46,12 @@ class OpenImmoCommandController extends CommandController
     protected $packageManager;
 
     /**
+     * @Flow\InjectConfiguration(path="nodeTypeIcons")
+     * @var array
+     */
+    protected $nodeTypeIcons;
+
+    /**
      * Generates wrapper files for the ujamii/openimmo API.
      *
      * @return int|void|null
@@ -115,10 +121,10 @@ class OpenImmoCommandController extends CommandController
                 $propertyRenderer[] = '{props.mainContent}';
             }
 
-            $propertyGetterCode = implode(PHP_EOL . '    ', array_filter($propertyGetters));
+            $propertyGetterCode   = implode(PHP_EOL . '    ', array_filter($propertyGetters));
             $moleculePropertyCode = implode(PHP_EOL . '    ', array_filter($moleculeProperties));
-            $rendererCode       = implode(PHP_EOL . '        ', array_filter($propertyRenderer));
-            $moleculeName = "Ujamii.OpenImmoNeos:Component.Molecule.{$documentName}";
+            $rendererCode         = implode(PHP_EOL . '        ', array_filter($propertyRenderer));
+            $moleculeName         = "Ujamii.OpenImmoNeos:Component.Molecule.{$documentName}";
 
             $fusionCode = "prototype({$nodeType}) < prototype(Neos.Fusion:Component) {" . PHP_EOL .
                           "    {$propertyGetterCode}" . PHP_EOL .
@@ -128,8 +134,8 @@ class OpenImmoCommandController extends CommandController
                 $fusionCode .= " mainContent={mainContent}";
             }
             $fusionCode .= "/>" . PHP_EOL .
-                          "    `" . PHP_EOL .
-                          "}";
+                           "    `" . PHP_EOL .
+                           "}";
 
             $moleculeCode = "prototype(Ujamii.OpenImmoNeos:Component.Molecule.{$documentName}) < prototype(Neos.Fusion:Component) {" . PHP_EOL .
                             "    {$moleculePropertyCode}" . PHP_EOL .
@@ -254,7 +260,7 @@ class OpenImmoCommandController extends CommandController
                     ],
                     'ui'         => [
                         'label' => ucfirst($documentName),
-                        'icon'  => 'icon-sign', // TODO: make the icon configurable in yaml
+                        'icon'  => $this->getIconForNodeType(ucfirst($documentName)),
                     ],
                     'properties' => $yamlProperties,
                 ]
@@ -262,12 +268,13 @@ class OpenImmoCommandController extends CommandController
 
             // only the base type should be shown in the backend
             if ($documentName == 'Immobilie') {
-                $yaml[$nodeType]['superTypes']['Neos.Neos:Document'] = true;
-                $this->nodeHasChildNodesCache[$nodeType]             = true;
+                $documentType                            = 'Document';
+                $this->nodeHasChildNodesCache[$nodeType] = true;
             } else {
+                $documentType                                                                       = 'Content';
                 $yaml[$nodeType]['superTypes']['Ujamii.OpenImmoNeos:Constraint.Content.Restricted'] = true;
-                $yaml[$nodeType]['superTypes']['Neos.Neos:Content']                                 = true;
             }
+            $yaml[$nodeType]['superTypes']['Neos.Neos:' . $documentType] = true;
 
             if (count($allowedChildNodes) > 0) {
                 $allowedChildNodes['*']                  = false;
@@ -280,7 +287,7 @@ class OpenImmoCommandController extends CommandController
                 $this->nodeHasChildNodesCache[$nodeType] = true;
             }
 
-            $filename = "NodeTypes.Document.{$documentName}.yaml";
+            $filename = "NodeTypes.{$documentType}.{$documentName}.yaml";
             $this->outputLine("Writing {$nodeType} to file {$filename} ...");
             file_put_contents($targetPath . $filename, Yaml::dump($yaml, 10, 2));
         }
@@ -461,6 +468,22 @@ class OpenImmoCommandController extends CommandController
         }
 
         return $typeFromPhpClass;
+    }
+
+    /**
+     * Returns icon identifier for given node type.
+     *
+     * @param string $nodeType
+     *
+     * @return string
+     */
+    protected function getIconForNodeType(string $nodeType): string
+    {
+        if (isset($this->nodeTypeIcons[$nodeType])) {
+            return $this->nodeTypeIcons[$nodeType];
+        }
+
+        return $this->nodeTypeIcons['default'];
     }
 
 }

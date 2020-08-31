@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Haus
-    icon: icon-sign
+    icon: icon-home
   properties:
     haustyp:
       type: string

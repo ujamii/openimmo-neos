@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Anhang
-    icon: icon-sign
+    icon: icon-image
   properties:
     anhangtitel:
       type: string

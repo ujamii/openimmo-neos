@@ -1,124 +1,112 @@
-'Ujamii.OpenImmoNeos:Content.VerwaltungObjekt':
+'Ujamii.OpenImmoNeos:Content.Geo':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
     'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
-    label: VerwaltungObjekt
-    icon: icon-sign
+    label: Geo
+    icon: icon-globe
   properties:
-    abdatum:
-      type: DateTime
-      ui:
-        label: Abdatum
-        inspector:
-          group: openimmo
-          editorOptions:
-            format: d.m.Y
-    alsFerien:
-      type: boolean
-      ui:
-        label: AlsFerien
-        inspector:
-          group: openimmo
-    bisdatum:
-      type: DateTime
-      ui:
-        label: Bisdatum
-        inspector:
-          group: openimmo
-          editorOptions:
-            format: d.m.Y
-    branchen:
-      type: string
-      ui:
-        label: Branchen
-        inspector:
-          group: openimmo
-    denkmalgeschuetzt:
-      type: boolean
-      ui:
-        label: Denkmalgeschuetzt
-        inspector:
-          group: openimmo
-    gewerblicheNutzung:
-      type: boolean
-      ui:
-        label: GewerblicheNutzung
-        inspector:
-          group: openimmo
-    gruppennummer:
-      type: string
-      ui:
-        label: Gruppennummer
-        inspector:
-          group: openimmo
-    haustiere:
-      type: boolean
-      ui:
-        label: Haustiere
-        inspector:
-          group: openimmo
-    hochhaus:
-      type: boolean
-      ui:
-        label: Hochhaus
-        inspector:
-          group: openimmo
-    laufzeit:
-      type: string
-      ui:
-        label: Laufzeit
-        inspector:
-          group: openimmo
-    maxPersonen:
+    anzahlEtagen:
       type: integer
       ui:
-        label: MaxPersonen
+        label: AnzahlEtagen
         inspector:
           group: openimmo
-    nichtraucher:
-      type: boolean
-      ui:
-        label: Nichtraucher
-        inspector:
-          group: openimmo
-    objektadresseFreigeben:
-      type: boolean
-      ui:
-        label: ObjektadresseFreigeben
-        inspector:
-          group: openimmo
-    verfuegbarAb:
+    bundesland:
       type: string
       ui:
-        label: VerfuegbarAb
+        label: Bundesland
         inspector:
           group: openimmo
-    vermietet:
-      type: boolean
+    etage:
+      type: integer
       ui:
-        label: Vermietet
+        label: Etage
         inspector:
           group: openimmo
-    versteigerungstermin:
-      type: DateTime
-      ui:
-        label: Versteigerungstermin
-        inspector:
-          group: openimmo
-          editorOptions:
-            format: d.m.Y
-    wbsSozialwohnung:
-      type: boolean
-      ui:
-        label: WbsSozialwohnung
-        inspector:
-          group: openimmo
-    zugang:
+    flur:
       type: string
       ui:
-        label: Zugang
+        label: Flur
+        inspector:
+          group: openimmo
+    flurstueck:
+      type: string
+      ui:
+        label: Flurstueck
+        inspector:
+          group: openimmo
+    gemarkung:
+      type: string
+      ui:
+        label: Gemarkung
+        inspector:
+          group: openimmo
+    gemeindecode:
+      type: string
+      ui:
+        label: Gemeindecode
+        inspector:
+          group: openimmo
+    hausnummer:
+      type: string
+      ui:
+        label: Hausnummer
+        inspector:
+          group: openimmo
+    kartenMakro:
+      type: boolean
+      ui:
+        label: KartenMakro
+        inspector:
+          group: openimmo
+    kartenMikro:
+      type: boolean
+      ui:
+        label: KartenMikro
+        inspector:
+          group: openimmo
+    luftbildern:
+      type: boolean
+      ui:
+        label: Luftbildern
+        inspector:
+          group: openimmo
+    ort:
+      type: string
+      ui:
+        label: Ort
+        inspector:
+          group: openimmo
+    plz:
+      type: string
+      ui:
+        label: Plz
+        inspector:
+          group: openimmo
+    regionalerZusatz:
+      type: string
+      ui:
+        label: RegionalerZusatz
+        inspector:
+          group: openimmo
+    strasse:
+      type: string
+      ui:
+        label: Strasse
+        inspector:
+          group: openimmo
+    virtuelletour:
+      type: boolean
+      ui:
+        label: Virtuelletour
+        inspector:
+          group: openimmo
+    wohnungsnr:
+      type: string
+      ui:
+        label: Wohnungsnr
         inspector:
           group: openimmo
   childNodes:
@@ -126,9 +114,10 @@
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'Ujamii.OpenImmoNeos:Content.Geschlecht': true
-          'Ujamii.OpenImmoNeos:Content.MaxMietdauer': true
-          'Ujamii.OpenImmoNeos:Content.MinMietdauer': true
+          'Ujamii.OpenImmoNeos:Content.Geokoordinaten': true
+          'Ujamii.OpenImmoNeos:Content.LageGebiet': true
+          'Ujamii.OpenImmoNeos:Content.LageImBau': true
+          'Ujamii.OpenImmoNeos:Content.Land': true
           'Ujamii.OpenImmoNeos:Content.UserDefinedAnyfield': true
           'Ujamii.OpenImmoNeos:Content.UserDefinedExtend': true
           'Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield': true

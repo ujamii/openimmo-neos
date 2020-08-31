@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Flaechen
-    icon: icon-sign
+    icon: icon-layer-group
   properties:
     anzahlBadezimmer:
       type: string

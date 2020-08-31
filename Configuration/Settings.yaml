@@ -3,3 +3,34 @@ Neos:
     fusion:
       autoInclude:
         Ujamii.OpenImmoNeos: true
+
+Ujamii:
+  OpenImmoNeos:
+    nodeTypeIcons:
+      default: icon-sign
+      Anhaenge: icon-image
+      Anhang: icon-image
+      Ausstattung: icon-info-circle
+      Bad: icon-bath
+      Bewertung: icon-star-half-alt
+      BreitbandZugang: icon-laptop-house
+      Distanzen: icon-map-signs
+      DistanzenSport: icon-running
+      Flaechen: icon-layer-group
+      Freitexte: icon-align-left
+      Geo: icon-globe
+      Haus: icon-home
+      Kaufpreis: icon-euro-sign
+      Kaufpreisnetto: icon-euro-sign
+      Kontaktperson: icon-address-book
+      Land: icon-globe-europe
+      Nutzungsart: icon-tags
+      Objektart: icon-tags
+      Objektkategorie: icon-tags
+      Parken: icon-parking
+      Preise: icon-euro-sign
+      Stellplatzart: icon-parking
+      Versteigerung: icon-gavel
+      VerwaltungObjekt: icon-user-tie
+      VerwaltungTechn: icon-user-cog
+      ZustandAngaben: icon-history

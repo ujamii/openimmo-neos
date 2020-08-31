@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: DistanzenSport
-    icon: icon-sign
+    icon: icon-running
   properties:
     distanzZuSport:
       type: string

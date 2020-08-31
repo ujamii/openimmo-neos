@@ -5,7 +5,7 @@
     'Neos.Neos:Content': true
   ui:
     label: Parken
-    icon: icon-sign
+    icon: icon-parking
   properties:
     parkenTyp:
       type: string

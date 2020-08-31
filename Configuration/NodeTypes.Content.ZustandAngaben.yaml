@@ -1,46 +1,34 @@
-'Ujamii.OpenImmoNeos:Content.Freitexte':
+'Ujamii.OpenImmoNeos:Content.ZustandAngaben':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
     'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
-    label: Freitexte
-    icon: icon-sign
+    label: ZustandAngaben
+    icon: icon-history
   properties:
-    ausstattBeschr:
+    altlasten:
       type: string
       ui:
-        label: AusstattBeschr
+        label: Altlasten
         inspector:
           group: openimmo
-    dreizeiler:
+    baujahr:
       type: string
       ui:
-        label: Dreizeiler
+        label: Baujahr
         inspector:
           group: openimmo
-    lage:
+    bauzone:
       type: string
       ui:
-        label: Lage
+        label: Bauzone
         inspector:
           group: openimmo
-    objektbeschreibung:
+    letztemodernisierung:
       type: string
       ui:
-        label: Objektbeschreibung
-        inspector:
-          group: openimmo
-    objekttitel:
-      type: string
-      ui:
-        label: Objekttitel
-        inspector:
-          group: openimmo
-    sonstigeAngaben:
-      type: string
-      ui:
-        label: SonstigeAngaben
+        label: Letztemodernisierung
         inspector:
           group: openimmo
   childNodes:
@@ -48,8 +36,14 @@
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'Ujamii.OpenImmoNeos:Content.ObjektText': true
+          'Ujamii.OpenImmoNeos:Content.Alter': true
+          'Ujamii.OpenImmoNeos:Content.BebaubarNach': true
+          'Ujamii.OpenImmoNeos:Content.Energiepass': true
+          'Ujamii.OpenImmoNeos:Content.Erschliessung': true
+          'Ujamii.OpenImmoNeos:Content.ErschliessungUmfang': true
           'Ujamii.OpenImmoNeos:Content.UserDefinedAnyfield': true
           'Ujamii.OpenImmoNeos:Content.UserDefinedExtend': true
           'Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield': true
+          'Ujamii.OpenImmoNeos:Content.Verkaufstatus': true
+          'Ujamii.OpenImmoNeos:Content.Zustand': true
           '*': false
