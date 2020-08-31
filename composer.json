@@ -2,6 +2,13 @@
     "name": "ujamii/openimmo-neos",
     "description": "NEOS CMS package for showing OpenImmo based data on a NEOS based website",
     "type": "neos-package",
+    "license": "GPL-3.0-only",
+    "authors": [
+        {
+            "name": "Michael Grundkötter",
+            "email": "mg@ujamii.com"
+        }
+    ],
     "require": {
         "neos/flow": "*",
         "ujamii/openimmo": "^0.5.0",
