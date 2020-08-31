@@ -1,4 +1,5 @@
 'Ujamii.OpenImmoNeos:Content.Anhang':
+  label: '${q(node).property("anhangtitel") + " (" + q(node).property("format") + ")"}'
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
     'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
@@ -88,10 +89,3 @@
                 label: Intern
               REMOTE:
                 label: Remote
-  childNodes:
-    main:
-      type: 'Neos.Neos:ContentCollection'
-      constraints:
-        nodeTypes:
-          'Ujamii.OpenImmoNeos:Content.Check': true
-          '*': false

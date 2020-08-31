@@ -49,3 +49,5 @@ Ujamii:
       Wohnung: icon-house-user
       Zustand: icon-star
       ZustandAngaben: icon-history
+    nodeTypeLabels:
+      Anhang: ${q(node).property("anhangtitel") + " (" + q(node).property("format") + ")"}

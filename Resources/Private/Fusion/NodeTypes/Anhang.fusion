@@ -4,10 +4,7 @@ prototype(Ujamii.OpenImmoNeos:Content.Anhang) < prototype(Neos.Fusion:Component)
     format = ${q(node).property('format')}
     gruppe = ${q(node).property('gruppe')}
     location = ${q(node).property('location')}
-    @context.mainContent = Neos.Neos:ContentCollection {
-        nodePath = 'main'
-    }
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Anhang {...props} mainContent={mainContent}/>
+        <Ujamii.OpenImmoNeos:Component.Molecule.Anhang {...props}/>
     `
 }

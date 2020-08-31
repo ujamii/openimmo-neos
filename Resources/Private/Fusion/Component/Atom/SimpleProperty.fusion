@@ -2,7 +2,23 @@ prototype(Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty) < prototype(Neos.Fu
     name = ''
     value = ''
 
+    @context.value2 = ${this.value}
+
+    formattedValue = Neos.Fusion:Case {
+        isDateTime {
+            condition = ${Type.className(value2) == 'DateTime'}
+            renderer = ${Date.format(value2, 'd.m.Y H:i')}
+        }
+
+        fallback {
+            condition = true
+            renderer = ${value2}
+        }
+    }
+
     renderer = afx`
-        {String.firstLetterToUpperCase(props.name)}: {props.value}<br/>
+        <div @if.hasValue={props.value}>
+            {String.firstLetterToUpperCase(props.name)}: {props.formattedValue}<br/>
+        </div>
     `
 }

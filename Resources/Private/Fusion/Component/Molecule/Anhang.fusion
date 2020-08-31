@@ -10,6 +10,5 @@ prototype(Ujamii.OpenImmoNeos:Component.Molecule.Anhang) < prototype(Neos.Fusion
         <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="format" value={props.format} />
         <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gruppe" value={props.gruppe} />
         <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="location" value={props.location} />
-        {props.mainContent}
     `
 }
