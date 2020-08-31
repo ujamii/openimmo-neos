@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.Parken':
+'Ujamii.OpenImmoNeos:Content.Parken':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: Parken
     icon: icon-sign
@@ -35,4 +36,3 @@
                 label: Tiefgarage
               TIEFGARAGENSTELLPLATZ:
                 label: Tiefgaragenstellplatz
-  abstract: true

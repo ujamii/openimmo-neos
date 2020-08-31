@@ -1,69 +1,27 @@
-'Ujamii.OpenImmoNeos:Document.Infrastruktur':
+'Ujamii.OpenImmoNeos:Content.Infrastruktur':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: Infrastruktur
     icon: icon-sign
   properties:
-    ausblick:
-      type: references
-      ui:
-        label: Ausblick
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Ausblick'
-    distanzen:
-      type: references
-      ui:
-        label: Distanzen
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Distanzen'
-    distanzenSport:
-      type: references
-      ui:
-        label: DistanzenSport
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.DistanzenSport'
-    userDefinedAnyfield:
-      type: references
-      ui:
-        label: UserDefinedAnyfield
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedAnyfield'
-    userDefinedExtend:
-      type: references
-      ui:
-        label: UserDefinedExtend
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedExtend'
-    userDefinedSimplefield:
-      type: references
-      ui:
-        label: UserDefinedSimplefield
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedSimplefield'
     zulieferung:
       type: boolean
       ui:
         label: Zulieferung
         inspector:
           group: openimmo
-  abstract: true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Ujamii.OpenImmoNeos:Content.Ausblick': true
+          'Ujamii.OpenImmoNeos:Content.Distanzen': true
+          'Ujamii.OpenImmoNeos:Content.DistanzenSport': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedAnyfield': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedExtend': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield': true
+          '*': false

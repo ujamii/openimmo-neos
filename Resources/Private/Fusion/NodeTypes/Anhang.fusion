@@ -1,3 +1,16 @@
-prototype(Ujamii.OpenImmoNeos:Document.Anhang) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Anhang) < prototype(Neos.Fusion:Component) {
+    anhangtitel = ${q(node).property('anhangtitel')}
+    format = ${q(node).property('format')}
+    gruppe = ${q(node).property('gruppe')}
+    location = ${q(node).property('location')}
+    mainContent = Neos.Neos:ContentCollection {
+        nodePath = 'main'
+    }
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anhangtitel" value={props.anhangtitel} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="format" value={props.format} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gruppe" value={props.gruppe} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="location" value={props.location} />
+        {props.mainContent}
+    `
 }

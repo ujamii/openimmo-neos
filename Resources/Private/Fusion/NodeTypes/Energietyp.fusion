@@ -1,3 +1,22 @@
-prototype(Ujamii.OpenImmoNeos:Document.Energietyp) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Energietyp) < prototype(Neos.Fusion:Component) {
+    kfw40 = ${q(node).property('kfw40')}
+    kfw55 = ${q(node).property('kfw55')}
+    kfw60 = ${q(node).property('kfw60')}
+    kfw70 = ${q(node).property('kfw70')}
+    minergiebauweise = ${q(node).property('minergiebauweise')}
+    minergieZertifiziert = ${q(node).property('minergieZertifiziert')}
+    neubaustandard = ${q(node).property('neubaustandard')}
+    niedrigenergie = ${q(node).property('niedrigenergie')}
+    passivhaus = ${q(node).property('passivhaus')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kfw40" value={props.kfw40} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kfw55" value={props.kfw55} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kfw60" value={props.kfw60} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kfw70" value={props.kfw70} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="minergiebauweise" value={props.minergiebauweise} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="minergieZertifiziert" value={props.minergieZertifiziert} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="neubaustandard" value={props.neubaustandard} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="niedrigenergie" value={props.niedrigenergie} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="passivhaus" value={props.passivhaus} />
+    `
 }

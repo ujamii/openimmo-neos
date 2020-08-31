@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.Aktion':
+'Ujamii.OpenImmoNeos:Content.Aktion':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: Aktion
     icon: icon-sign
@@ -21,4 +22,3 @@
                 label: Delete
               REFERENZ:
                 label: Referenz
-  abstract: true

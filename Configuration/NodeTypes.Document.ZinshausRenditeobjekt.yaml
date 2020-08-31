@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.ZinshausRenditeobjekt':
+'Ujamii.OpenImmoNeos:Content.ZinshausRenditeobjekt':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: ZinshausRenditeobjekt
     icon: icon-sign
@@ -41,4 +42,3 @@
                 label: Wohn_und_geschaeftshaus
               WOHNANLAGEN:
                 label: Wohnanlagen
-  abstract: true

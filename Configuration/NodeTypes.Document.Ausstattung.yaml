@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.Ausstattung':
+'Ujamii.OpenImmoNeos:Content.Ausstattung':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: Ausstattung
     icon: icon-sign
@@ -12,33 +13,6 @@
         label: Abstellraum
         inspector:
           group: openimmo
-    angeschlGastronomie:
-      type: references
-      ui:
-        label: AngeschlGastronomie
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.AngeschlGastronomie'
-    ausbaustufe:
-      type: references
-      ui:
-        label: Ausbaustufe
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Ausbaustufe'
-    ausrichtBalkonTerrasse:
-      type: references
-      ui:
-        label: AusrichtBalkonTerrasse
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.AusrichtBalkonTerrasse'
     ausstattKategorie:
       type: string
       ui:
@@ -54,84 +28,30 @@
                 label: Luxus
               STANDARD:
                 label: Standard
-    bad:
-      type: references
-      ui:
-        label: Bad
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Bad'
     barrierefrei:
       type: boolean
       ui:
         label: Barrierefrei
         inspector:
           group: openimmo
-    bauweise:
-      type: references
-      ui:
-        label: Bauweise
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Bauweise'
-    befeuerung:
-      type: references
-      ui:
-        label: Befeuerung
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Befeuerung'
     bibliothek:
       type: boolean
       ui:
         label: Bibliothek
         inspector:
           group: openimmo
-    boden:
-      type: references
-      ui:
-        label: Boden
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Boden'
     brauereibindung:
       type: boolean
       ui:
         label: Brauereibindung
         inspector:
           group: openimmo
-    breitbandZugang:
-      type: references
-      ui:
-        label: BreitbandZugang
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.BreitbandZugang'
     dachboden:
       type: boolean
       ui:
         label: Dachboden
         inspector:
           group: openimmo
-    dachform:
-      type: references
-      ui:
-        label: Dachform
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Dachform'
     dvbt:
       type: boolean
       ui:
@@ -144,30 +64,12 @@
         label: DvVerkabelung
         inspector:
           group: openimmo
-    energietyp:
-      type: references
-      ui:
-        label: Energietyp
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Energietyp'
     fahrradraum:
       type: boolean
       ui:
         label: Fahrradraum
         inspector:
           group: openimmo
-    fahrstuhl:
-      type: references
-      ui:
-        label: Fahrstuhl
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Fahrstuhl'
     gaestewc:
       type: boolean
       ui:
@@ -198,15 +100,6 @@
         label: Hebebuehne
         inspector:
           group: openimmo
-    heizungsart:
-      type: references
-      ui:
-        label: Heizungsart
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Heizungsart'
     kabelkanaele:
       type: boolean
       ui:
@@ -243,24 +136,6 @@
         label: Kran
         inspector:
           group: openimmo
-    kueche:
-      type: references
-      ui:
-        label: Kueche
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Kueche'
-    moebliert:
-      type: references
-      ui:
-        label: Moebliert
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Moebliert'
     raeumeVeraenderbar:
       type: boolean
       ui:
@@ -297,39 +172,12 @@
         label: Seniorengerecht
         inspector:
           group: openimmo
-    serviceleistungen:
-      type: references
-      ui:
-        label: Serviceleistungen
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Serviceleistungen'
-    sicherheitstechnik:
-      type: references
-      ui:
-        label: Sicherheitstechnik
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Sicherheitstechnik'
     sporteinrichtungen:
       type: boolean
       ui:
         label: Sporteinrichtungen
         inspector:
           group: openimmo
-    stellplatzart:
-      type: references
-      ui:
-        label: Stellplatzart
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Stellplatzart'
     stromanschlusswert:
       type: string
       ui:
@@ -360,42 +208,6 @@
         label: UmtsEmpfang
         inspector:
           group: openimmo
-    unterkellert:
-      type: references
-      ui:
-        label: Unterkellert
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Unterkellert'
-    userDefinedAnyfield:
-      type: references
-      ui:
-        label: UserDefinedAnyfield
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedAnyfield'
-    userDefinedExtend:
-      type: references
-      ui:
-        label: UserDefinedExtend
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedExtend'
-    userDefinedSimplefield:
-      type: references
-      ui:
-        label: UserDefinedSimplefield
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedSimplefield'
     waschTrockenraum:
       type: boolean
       ui:
@@ -420,4 +232,30 @@
         label: Wintergarten
         inspector:
           group: openimmo
-  abstract: true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Ujamii.OpenImmoNeos:Content.AngeschlGastronomie': true
+          'Ujamii.OpenImmoNeos:Content.Ausbaustufe': true
+          'Ujamii.OpenImmoNeos:Content.AusrichtBalkonTerrasse': true
+          'Ujamii.OpenImmoNeos:Content.Bad': true
+          'Ujamii.OpenImmoNeos:Content.Bauweise': true
+          'Ujamii.OpenImmoNeos:Content.Befeuerung': true
+          'Ujamii.OpenImmoNeos:Content.Boden': true
+          'Ujamii.OpenImmoNeos:Content.BreitbandZugang': true
+          'Ujamii.OpenImmoNeos:Content.Dachform': true
+          'Ujamii.OpenImmoNeos:Content.Energietyp': true
+          'Ujamii.OpenImmoNeos:Content.Fahrstuhl': true
+          'Ujamii.OpenImmoNeos:Content.Heizungsart': true
+          'Ujamii.OpenImmoNeos:Content.Kueche': true
+          'Ujamii.OpenImmoNeos:Content.Moebliert': true
+          'Ujamii.OpenImmoNeos:Content.Serviceleistungen': true
+          'Ujamii.OpenImmoNeos:Content.Sicherheitstechnik': true
+          'Ujamii.OpenImmoNeos:Content.Stellplatzart': true
+          'Ujamii.OpenImmoNeos:Content.Unterkellert': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedAnyfield': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedExtend': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield': true
+          '*': false

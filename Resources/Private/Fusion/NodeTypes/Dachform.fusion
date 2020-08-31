@@ -1,3 +1,18 @@
-prototype(Ujamii.OpenImmoNeos:Document.Dachform) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Dachform) < prototype(Neos.Fusion:Component) {
+    flachdach = ${q(node).property('flachdach')}
+    krueppelwalmdach = ${q(node).property('krueppelwalmdach')}
+    mansarddach = ${q(node).property('mansarddach')}
+    pultdach = ${q(node).property('pultdach')}
+    pyramidendach = ${q(node).property('pyramidendach')}
+    satteldach = ${q(node).property('satteldach')}
+    walmdach = ${q(node).property('walmdach')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="flachdach" value={props.flachdach} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="krueppelwalmdach" value={props.krueppelwalmdach} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="mansarddach" value={props.mansarddach} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="pultdach" value={props.pultdach} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="pyramidendach" value={props.pyramidendach} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="satteldach" value={props.satteldach} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="walmdach" value={props.walmdach} />
+    `
 }

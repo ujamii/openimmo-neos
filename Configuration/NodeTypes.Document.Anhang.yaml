@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.Anhang':
+'Ujamii.OpenImmoNeos:Content.Anhang':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: Anhang
     icon: icon-sign
@@ -12,24 +13,6 @@
         label: Anhangtitel
         inspector:
           group: openimmo
-    check:
-      type: references
-      ui:
-        label: Check
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Check'
-    daten:
-      type: references
-      ui:
-        label: Daten
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Daten'
     format:
       type: string
       ui:
@@ -90,4 +73,11 @@
                 label: Intern
               REMOTE:
                 label: Remote
-  abstract: true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Ujamii.OpenImmoNeos:Content.Check': true
+          'Ujamii.OpenImmoNeos:Content.Daten': true
+          '*': false

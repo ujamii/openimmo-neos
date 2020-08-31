@@ -1,3 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Document.Alter) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Alter) < prototype(Neos.Fusion:Component) {
+    alterAttr = ${q(node).property('alterAttr')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="alterAttr" value={props.alterAttr} />
+    `
 }

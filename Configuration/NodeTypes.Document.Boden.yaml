@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.Boden':
+'Ujamii.OpenImmoNeos:Content.Boden':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: Boden
     icon: icon-sign
@@ -90,4 +91,3 @@
         label: Terrakotta
         inspector:
           group: openimmo
-  abstract: true

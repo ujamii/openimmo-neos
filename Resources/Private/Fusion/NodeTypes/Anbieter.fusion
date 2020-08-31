@@ -1,3 +1,18 @@
-prototype(Ujamii.OpenImmoNeos:Document.Anbieter) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Anbieter) < prototype(Neos.Fusion:Component) {
+    anbieternr = ${q(node).property('anbieternr')}
+    firma = ${q(node).property('firma')}
+    impressum = ${q(node).property('impressum')}
+    lizenzkennung = ${q(node).property('lizenzkennung')}
+    openimmoAnid = ${q(node).property('openimmoAnid')}
+    mainContent = Neos.Neos:ContentCollection {
+        nodePath = 'main'
+    }
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anbieternr" value={props.anbieternr} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="firma" value={props.firma} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="impressum" value={props.impressum} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="lizenzkennung" value={props.lizenzkennung} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="openimmoAnid" value={props.openimmoAnid} />
+        {props.mainContent}
+    `
 }

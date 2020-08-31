@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.HallenLagerProd':
+'Ujamii.OpenImmoNeos:Content.HallenLagerProd':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: HallenLagerProd
     icon: icon-sign
@@ -39,4 +40,3 @@
                 label: Speditionslager
               WERKSTATT:
                 label: Werkstatt
-  abstract: true

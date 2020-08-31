@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.Preise':
+'Ujamii.OpenImmoNeos:Content.Preise':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: Preise
     icon: icon-sign
@@ -12,24 +13,6 @@
         label: Abstand
         inspector:
           group: openimmo
-    aussenCourtage:
-      type: references
-      ui:
-        label: AussenCourtage
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.AussenCourtage'
-    betriebskostennetto:
-      type: references
-      ui:
-        label: Betriebskostennetto
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Betriebskostennetto'
     courtageHinweis:
       type: string
       ui:
@@ -48,15 +31,6 @@
         label: Erschliessungskosten
         inspector:
           group: openimmo
-    evbnetto:
-      type: references
-      ui:
-        label: Evbnetto
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Evbnetto'
     freitextPreis:
       type: string
       ui:
@@ -69,54 +43,18 @@
         label: Gesamtbelastungbrutto
         inspector:
           group: openimmo
-    gesamtbelastungnetto:
-      type: references
-      ui:
-        label: Gesamtbelastungnetto
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Gesamtbelastungnetto'
-    gesamtkostenprom2von:
-      type: references
-      ui:
-        label: Gesamtkostenprom2von
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Gesamtkostenprom2von'
     gesamtmietebrutto:
       type: string
       ui:
         label: Gesamtmietebrutto
         inspector:
           group: openimmo
-    gesamtmietenetto:
-      type: references
-      ui:
-        label: Gesamtmietenetto
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Gesamtmietenetto'
     geschaeftsguthaben:
       type: string
       ui:
         label: Geschaeftsguthaben
         inspector:
           group: openimmo
-    hauptmietzinsnetto:
-      type: references
-      ui:
-        label: Hauptmietzinsnetto
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Hauptmietzinsnetto'
     hausgeld:
       type: string
       ui:
@@ -135,54 +73,18 @@
         label: HeizkostenEnthalten
         inspector:
           group: openimmo
-    heizkostennetto:
-      type: references
-      ui:
-        label: Heizkostennetto
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Heizkostennetto'
-    innenCourtage:
-      type: references
-      ui:
-        label: InnenCourtage
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.InnenCourtage'
     kaltmiete:
       type: string
       ui:
         label: Kaltmiete
         inspector:
           group: openimmo
-    kaufpreis:
-      type: references
-      ui:
-        label: Kaufpreis
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Kaufpreis'
     kaufpreisbrutto:
       type: string
       ui:
         label: Kaufpreisbrutto
         inspector:
           group: openimmo
-    kaufpreisnetto:
-      type: references
-      ui:
-        label: Kaufpreisnetto
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Kaufpreisnetto'
     kaufpreisProQm:
       type: string
       ui:
@@ -201,24 +103,6 @@
         label: KautionText
         inspector:
           group: openimmo
-    mieteinnahmenIst:
-      type: references
-      ui:
-        label: MieteinnahmenIst
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.MieteinnahmenIst'
-    mieteinnahmenSoll:
-      type: references
-      ui:
-        label: MieteinnahmenSoll
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.MieteinnahmenSoll'
     mietpreisProQm:
       type: string
       ui:
@@ -237,15 +121,6 @@
         label: Monatlichekostenbrutto
         inspector:
           group: openimmo
-    monatlichekostennetto:
-      type: references
-      ui:
-        label: Monatlichekostennetto
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Monatlichekostennetto'
     mwstGesamt:
       type: string
       ui:
@@ -264,30 +139,12 @@
         label: Nebenkosten
         inspector:
           group: openimmo
-    nebenkostenprom2von:
-      type: references
-      ui:
-        label: Nebenkostenprom2von
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Nebenkostenprom2von'
     nettokaltmiete:
       type: string
       ui:
         label: Nettokaltmiete
         inspector:
           group: openimmo
-    nettomieteprom2von:
-      type: references
-      ui:
-        label: Nettomieteprom2von
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Nettomieteprom2von'
     nettorendite:
       type: string
       ui:
@@ -318,15 +175,6 @@
         label: Pauschalmiete
         inspector:
           group: openimmo
-    preisZeiteinheit:
-      type: references
-      ui:
-        label: PreisZeiteinheit
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.PreisZeiteinheit'
     preisZeitraumBis:
       type: DateTime
       ui:
@@ -349,30 +197,12 @@
         label: Provisionbrutto
         inspector:
           group: openimmo
-    provisionnetto:
-      type: references
-      ui:
-        label: Provisionnetto
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Provisionnetto'
     provisionspflichtig:
       type: boolean
       ui:
         label: Provisionspflichtig
         inspector:
           group: openimmo
-    provisionTeilen:
-      type: references
-      ui:
-        label: ProvisionTeilen
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.ProvisionTeilen'
     richtpreis:
       type: string
       ui:
@@ -385,141 +215,6 @@
         label: Richtpreisprom2
         inspector:
           group: openimmo
-    ruecklagenetto:
-      type: references
-      ui:
-        label: Ruecklagenetto
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Ruecklagenetto'
-    sonstigekostennetto:
-      type: references
-      ui:
-        label: Sonstigekostennetto
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Sonstigekostennetto'
-    sonstigemietenetto:
-      type: references
-      ui:
-        label: Sonstigemietenetto
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Sonstigemietenetto'
-    stpCarport:
-      type: references
-      ui:
-        label: StpCarport
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.StpCarport'
-    stpDuplex:
-      type: references
-      ui:
-        label: StpDuplex
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.StpDuplex'
-    stpFreiplatz:
-      type: references
-      ui:
-        label: StpFreiplatz
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.StpFreiplatz'
-    stpGarage:
-      type: references
-      ui:
-        label: StpGarage
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.StpGarage'
-    stpParkhaus:
-      type: references
-      ui:
-        label: StpParkhaus
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.StpParkhaus'
-    stpSonstige:
-      type: references
-      ui:
-        label: StpSonstige
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.StpSonstige'
-    stpTiefgarage:
-      type: references
-      ui:
-        label: StpTiefgarage
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.StpTiefgarage'
-    summemietenetto:
-      type: references
-      ui:
-        label: Summemietenetto
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Summemietenetto'
-    userDefinedAnyfield:
-      type: references
-      ui:
-        label: UserDefinedAnyfield
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedAnyfield'
-    userDefinedExtend:
-      type: references
-      ui:
-        label: UserDefinedExtend
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedExtend'
-    userDefinedSimplefield:
-      type: references
-      ui:
-        label: UserDefinedSimplefield
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedSimplefield'
-    waehrung:
-      type: references
-      ui:
-        label: Waehrung
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Waehrung'
     warmmiete:
       type: string
       ui:
@@ -538,4 +233,43 @@
         label: ZzgMehrwertsteuer
         inspector:
           group: openimmo
-  abstract: true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Ujamii.OpenImmoNeos:Content.AussenCourtage': true
+          'Ujamii.OpenImmoNeos:Content.Betriebskostennetto': true
+          'Ujamii.OpenImmoNeos:Content.Evbnetto': true
+          'Ujamii.OpenImmoNeos:Content.Gesamtbelastungnetto': true
+          'Ujamii.OpenImmoNeos:Content.Gesamtkostenprom2von': true
+          'Ujamii.OpenImmoNeos:Content.Gesamtmietenetto': true
+          'Ujamii.OpenImmoNeos:Content.Hauptmietzinsnetto': true
+          'Ujamii.OpenImmoNeos:Content.Heizkostennetto': true
+          'Ujamii.OpenImmoNeos:Content.InnenCourtage': true
+          'Ujamii.OpenImmoNeos:Content.Kaufpreis': true
+          'Ujamii.OpenImmoNeos:Content.Kaufpreisnetto': true
+          'Ujamii.OpenImmoNeos:Content.MieteinnahmenIst': true
+          'Ujamii.OpenImmoNeos:Content.MieteinnahmenSoll': true
+          'Ujamii.OpenImmoNeos:Content.Monatlichekostennetto': true
+          'Ujamii.OpenImmoNeos:Content.Nebenkostenprom2von': true
+          'Ujamii.OpenImmoNeos:Content.Nettomieteprom2von': true
+          'Ujamii.OpenImmoNeos:Content.PreisZeiteinheit': true
+          'Ujamii.OpenImmoNeos:Content.Provisionnetto': true
+          'Ujamii.OpenImmoNeos:Content.ProvisionTeilen': true
+          'Ujamii.OpenImmoNeos:Content.Ruecklagenetto': true
+          'Ujamii.OpenImmoNeos:Content.Sonstigekostennetto': true
+          'Ujamii.OpenImmoNeos:Content.Sonstigemietenetto': true
+          'Ujamii.OpenImmoNeos:Content.StpCarport': true
+          'Ujamii.OpenImmoNeos:Content.StpDuplex': true
+          'Ujamii.OpenImmoNeos:Content.StpFreiplatz': true
+          'Ujamii.OpenImmoNeos:Content.StpGarage': true
+          'Ujamii.OpenImmoNeos:Content.StpParkhaus': true
+          'Ujamii.OpenImmoNeos:Content.StpSonstige': true
+          'Ujamii.OpenImmoNeos:Content.StpTiefgarage': true
+          'Ujamii.OpenImmoNeos:Content.Summemietenetto': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedAnyfield': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedExtend': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield': true
+          'Ujamii.OpenImmoNeos:Content.Waehrung': true
+          '*': false

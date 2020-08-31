@@ -1,3 +1,32 @@
-prototype(Ujamii.OpenImmoNeos:Document.Boden) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Boden) < prototype(Neos.Fusion:Component) {
+    dielen = ${q(node).property('dielen')}
+    doppelboden = ${q(node).property('doppelboden')}
+    estrich = ${q(node).property('estrich')}
+    fertigparkett = ${q(node).property('fertigparkett')}
+    fliesen = ${q(node).property('fliesen')}
+    granit = ${q(node).property('granit')}
+    kunststoff = ${q(node).property('kunststoff')}
+    laminat = ${q(node).property('laminat')}
+    linoleum = ${q(node).property('linoleum')}
+    marmor = ${q(node).property('marmor')}
+    parkett = ${q(node).property('parkett')}
+    stein = ${q(node).property('stein')}
+    teppich = ${q(node).property('teppich')}
+    terrakotta = ${q(node).property('terrakotta')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="dielen" value={props.dielen} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="doppelboden" value={props.doppelboden} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="estrich" value={props.estrich} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="fertigparkett" value={props.fertigparkett} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="fliesen" value={props.fliesen} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="granit" value={props.granit} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kunststoff" value={props.kunststoff} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="laminat" value={props.laminat} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="linoleum" value={props.linoleum} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="marmor" value={props.marmor} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="parkett" value={props.parkett} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="stein" value={props.stein} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="teppich" value={props.teppich} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="terrakotta" value={props.terrakotta} />
+    `
 }

@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.Anbieter':
+'Ujamii.OpenImmoNeos:Content.Anbieter':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: Anbieter
     icon: icon-sign
@@ -12,45 +13,18 @@
         label: Anbieternr
         inspector:
           group: openimmo
-    anhang:
-      type: references
-      ui:
-        label: Anhang
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Anhang'
     firma:
       type: string
       ui:
         label: Firma
         inspector:
           group: openimmo
-    immobilie:
-      type: references
-      ui:
-        label: Immobilie
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Immobilie'
     impressum:
       type: string
       ui:
         label: Impressum
         inspector:
           group: openimmo
-    impressumStrukt:
-      type: references
-      ui:
-        label: ImpressumStrukt
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.ImpressumStrukt'
     lizenzkennung:
       type: string
       ui:
@@ -63,31 +37,15 @@
         label: OpenimmoAnid
         inspector:
           group: openimmo
-    userDefinedAnyfield:
-      type: references
-      ui:
-        label: UserDefinedAnyfield
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedAnyfield'
-    userDefinedExtend:
-      type: references
-      ui:
-        label: UserDefinedExtend
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedExtend'
-    userDefinedSimplefield:
-      type: references
-      ui:
-        label: UserDefinedSimplefield
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedSimplefield'
-  abstract: true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Ujamii.OpenImmoNeos:Content.Anhang': true
+          'Ujamii.OpenImmoNeos:Document.Immobilie': true
+          'Ujamii.OpenImmoNeos:Content.ImpressumStrukt': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedAnyfield': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedExtend': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield': true
+          '*': false

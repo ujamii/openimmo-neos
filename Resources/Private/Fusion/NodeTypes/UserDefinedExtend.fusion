@@ -1,3 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Document.UserDefinedExtend) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.UserDefinedExtend) < prototype(Neos.Fusion:Component) {
+    mainContent = Neos.Neos:ContentCollection {
+        nodePath = 'main'
+    }
+    renderer = afx`
+        {props.mainContent}
+    `
 }

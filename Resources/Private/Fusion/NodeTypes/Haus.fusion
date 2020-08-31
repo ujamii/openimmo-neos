@@ -1,3 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Document.Haus) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Haus) < prototype(Neos.Fusion:Component) {
+    haustyp = ${q(node).property('haustyp')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="haustyp" value={props.haustyp} />
+    `
 }

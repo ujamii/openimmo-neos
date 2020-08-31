@@ -1,3 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Document.ObjektText) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.ObjektText) < prototype(Neos.Fusion:Component) {
+    lang = ${q(node).property('lang')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="lang" value={props.lang} />
+    `
 }

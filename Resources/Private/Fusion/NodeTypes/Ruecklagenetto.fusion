@@ -1,3 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Document.Ruecklagenetto) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Ruecklagenetto) < prototype(Neos.Fusion:Component) {
+    ruecklageust = ${q(node).property('ruecklageust')}
+    value = ${q(node).property('value')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="ruecklageust" value={props.ruecklageust} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+    `
 }

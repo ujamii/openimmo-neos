@@ -1,3 +1,42 @@
-prototype(Ujamii.OpenImmoNeos:Document.Energiepass) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Energiepass) < prototype(Neos.Fusion:Component) {
+    ausstelldatum = ${q(node).property('ausstelldatum')}
+    baujahr = ${q(node).property('baujahr')}
+    endenergiebedarf = ${q(node).property('endenergiebedarf')}
+    energieverbrauchkennwert = ${q(node).property('energieverbrauchkennwert')}
+    epart = ${q(node).property('epart')}
+    epasstext = ${q(node).property('epasstext')}
+    fgeeklasse = ${q(node).property('fgeeklasse')}
+    fgeewert = ${q(node).property('fgeewert')}
+    gebaeudeart = ${q(node).property('gebaeudeart')}
+    geg2018 = ${q(node).property('geg2018')}
+    gueltigBis = ${q(node).property('gueltigBis')}
+    hwbklasse = ${q(node).property('hwbklasse')}
+    hwbwert = ${q(node).property('hwbwert')}
+    jahrgang = ${q(node).property('jahrgang')}
+    mitwarmwasser = ${q(node).property('mitwarmwasser')}
+    primaerenergietraeger = ${q(node).property('primaerenergietraeger')}
+    stromwert = ${q(node).property('stromwert')}
+    waermewert = ${q(node).property('waermewert')}
+    wertklasse = ${q(node).property('wertklasse')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="ausstelldatum" value={props.ausstelldatum} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="baujahr" value={props.baujahr} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="endenergiebedarf" value={props.endenergiebedarf} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="energieverbrauchkennwert" value={props.energieverbrauchkennwert} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="epart" value={props.epart} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="epasstext" value={props.epasstext} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="fgeeklasse" value={props.fgeeklasse} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="fgeewert" value={props.fgeewert} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gebaeudeart" value={props.gebaeudeart} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="geg2018" value={props.geg2018} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gueltigBis" value={props.gueltigBis} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="hwbklasse" value={props.hwbklasse} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="hwbwert" value={props.hwbwert} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="jahrgang" value={props.jahrgang} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="mitwarmwasser" value={props.mitwarmwasser} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="primaerenergietraeger" value={props.primaerenergietraeger} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="stromwert" value={props.stromwert} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="waermewert" value={props.waermewert} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="wertklasse" value={props.wertklasse} />
+    `
 }

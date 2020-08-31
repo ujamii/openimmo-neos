@@ -1,3 +1,42 @@
-prototype(Ujamii.OpenImmoNeos:Document.Geo) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Geo) < prototype(Neos.Fusion:Component) {
+    anzahlEtagen = ${q(node).property('anzahlEtagen')}
+    bundesland = ${q(node).property('bundesland')}
+    etage = ${q(node).property('etage')}
+    flur = ${q(node).property('flur')}
+    flurstueck = ${q(node).property('flurstueck')}
+    gemarkung = ${q(node).property('gemarkung')}
+    gemeindecode = ${q(node).property('gemeindecode')}
+    hausnummer = ${q(node).property('hausnummer')}
+    kartenMakro = ${q(node).property('kartenMakro')}
+    kartenMikro = ${q(node).property('kartenMikro')}
+    luftbildern = ${q(node).property('luftbildern')}
+    ort = ${q(node).property('ort')}
+    plz = ${q(node).property('plz')}
+    regionalerZusatz = ${q(node).property('regionalerZusatz')}
+    strasse = ${q(node).property('strasse')}
+    virtuelletour = ${q(node).property('virtuelletour')}
+    wohnungsnr = ${q(node).property('wohnungsnr')}
+    mainContent = Neos.Neos:ContentCollection {
+        nodePath = 'main'
+    }
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anzahlEtagen" value={props.anzahlEtagen} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bundesland" value={props.bundesland} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="etage" value={props.etage} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="flur" value={props.flur} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="flurstueck" value={props.flurstueck} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gemarkung" value={props.gemarkung} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gemeindecode" value={props.gemeindecode} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="hausnummer" value={props.hausnummer} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kartenMakro" value={props.kartenMakro} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kartenMikro" value={props.kartenMikro} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="luftbildern" value={props.luftbildern} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="ort" value={props.ort} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="plz" value={props.plz} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="regionalerZusatz" value={props.regionalerZusatz} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="strasse" value={props.strasse} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="virtuelletour" value={props.virtuelletour} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="wohnungsnr" value={props.wohnungsnr} />
+        {props.mainContent}
+    `
 }

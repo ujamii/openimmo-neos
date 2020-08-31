@@ -1,3 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Document.Grundstueck) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Grundstueck) < prototype(Neos.Fusion:Component) {
+    grundstTyp = ${q(node).property('grundstTyp')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="grundstTyp" value={props.grundstTyp} />
+    `
 }

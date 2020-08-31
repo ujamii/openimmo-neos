@@ -1,3 +1,10 @@
-prototype(Ujamii.OpenImmoNeos:Document.TelSonstige) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.TelSonstige) < prototype(Neos.Fusion:Component) {
+    bemerkung = ${q(node).property('bemerkung')}
+    telefonart = ${q(node).property('telefonart')}
+    value = ${q(node).property('value')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bemerkung" value={props.bemerkung} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="telefonart" value={props.telefonart} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+    `
 }

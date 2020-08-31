@@ -1,3 +1,20 @@
-prototype(Ujamii.OpenImmoNeos:Document.AusrichtBalkonTerrasse) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.AusrichtBalkonTerrasse) < prototype(Neos.Fusion:Component) {
+    nord = ${q(node).property('nord')}
+    nordost = ${q(node).property('nordost')}
+    nordwest = ${q(node).property('nordwest')}
+    ost = ${q(node).property('ost')}
+    sued = ${q(node).property('sued')}
+    suedost = ${q(node).property('suedost')}
+    suedwest = ${q(node).property('suedwest')}
+    west = ${q(node).property('west')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="nord" value={props.nord} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="nordost" value={props.nordost} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="nordwest" value={props.nordwest} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="ost" value={props.ost} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="sued" value={props.sued} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="suedost" value={props.suedost} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="suedwest" value={props.suedwest} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="west" value={props.west} />
+    `
 }

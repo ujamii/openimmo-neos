@@ -1,3 +1,22 @@
-prototype(Ujamii.OpenImmoNeos:Document.Bieterverfahren) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Bieterverfahren) < prototype(Neos.Fusion:Component) {
+    beginnAngebotsphase = ${q(node).property('beginnAngebotsphase')}
+    beginnBietzeit = ${q(node).property('beginnBietzeit')}
+    besichtigungstermin = ${q(node).property('besichtigungstermin')}
+    besichtigungstermin2 = ${q(node).property('besichtigungstermin2')}
+    endeBietzeit = ${q(node).property('endeBietzeit')}
+    hoechstgebotZeigen = ${q(node).property('hoechstgebotZeigen')}
+    mindestpreis = ${q(node).property('mindestpreis')}
+    mainContent = Neos.Neos:ContentCollection {
+        nodePath = 'main'
+    }
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="beginnAngebotsphase" value={props.beginnAngebotsphase} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="beginnBietzeit" value={props.beginnBietzeit} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="besichtigungstermin" value={props.besichtigungstermin} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="besichtigungstermin2" value={props.besichtigungstermin2} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="endeBietzeit" value={props.endeBietzeit} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="hoechstgebotZeigen" value={props.hoechstgebotZeigen} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="mindestpreis" value={props.mindestpreis} />
+        {props.mainContent}
+    `
 }

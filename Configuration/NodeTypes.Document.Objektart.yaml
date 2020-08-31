@@ -1,135 +1,29 @@
-'Ujamii.OpenImmoNeos:Document.Objektart':
+'Ujamii.OpenImmoNeos:Content.Objektart':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: Objektart
     icon: icon-sign
-  properties:
-    bueroPraxen:
-      type: references
-      ui:
-        label: BueroPraxen
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.BueroPraxen'
-    einzelhandel:
-      type: references
-      ui:
-        label: Einzelhandel
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Einzelhandel'
-    freizeitimmobilieGewerblich:
-      type: references
-      ui:
-        label: FreizeitimmobilieGewerblich
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.FreizeitimmobilieGewerblich'
-    gastgewerbe:
-      type: references
-      ui:
-        label: Gastgewerbe
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Gastgewerbe'
-    grundstueck:
-      type: references
-      ui:
-        label: Grundstueck
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Grundstueck'
-    hallenLagerProd:
-      type: references
-      ui:
-        label: HallenLagerProd
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.HallenLagerProd'
-    haus:
-      type: references
-      ui:
-        label: Haus
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Haus'
-    landUndForstwirtschaft:
-      type: references
-      ui:
-        label: LandUndForstwirtschaft
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.LandUndForstwirtschaft'
-    objektartZusatz:
-      type: references
-      ui:
-        label: ObjektartZusatz
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.string'
-    parken:
-      type: references
-      ui:
-        label: Parken
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Parken'
-    sonstige:
-      type: references
-      ui:
-        label: Sonstige
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Sonstige'
-    wohnung:
-      type: references
-      ui:
-        label: Wohnung
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Wohnung'
-    zimmer:
-      type: references
-      ui:
-        label: Zimmer
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Zimmer'
-    zinshausRenditeobjekt:
-      type: references
-      ui:
-        label: ZinshausRenditeobjekt
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.ZinshausRenditeobjekt'
-  abstract: true
+  properties: {  }
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Ujamii.OpenImmoNeos:Content.BueroPraxen': true
+          'Ujamii.OpenImmoNeos:Content.Einzelhandel': true
+          'Ujamii.OpenImmoNeos:Content.FreizeitimmobilieGewerblich': true
+          'Ujamii.OpenImmoNeos:Content.Gastgewerbe': true
+          'Ujamii.OpenImmoNeos:Content.Grundstueck': true
+          'Ujamii.OpenImmoNeos:Content.HallenLagerProd': true
+          'Ujamii.OpenImmoNeos:Content.Haus': true
+          'Ujamii.OpenImmoNeos:Content.LandUndForstwirtschaft': true
+          'Ujamii.OpenImmoNeos:Content.string': true
+          'Ujamii.OpenImmoNeos:Content.Parken': true
+          'Ujamii.OpenImmoNeos:Content.Sonstige': true
+          'Ujamii.OpenImmoNeos:Content.Wohnung': true
+          'Ujamii.OpenImmoNeos:Content.Zimmer': true
+          'Ujamii.OpenImmoNeos:Content.ZinshausRenditeobjekt': true
+          '*': false

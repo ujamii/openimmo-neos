@@ -1,3 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Document.Kaufpreisnetto) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Kaufpreisnetto) < prototype(Neos.Fusion:Component) {
+    kaufpreisust = ${q(node).property('kaufpreisust')}
+    value = ${q(node).property('value')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kaufpreisust" value={props.kaufpreisust} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+    `
 }

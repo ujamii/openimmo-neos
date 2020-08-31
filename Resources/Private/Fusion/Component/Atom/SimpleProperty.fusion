@@ -1,0 +1,8 @@
+prototype(Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty) < prototype(Neos.Fusion:Component) {
+    name = ''
+    value = ''
+
+    renderer = afx`
+        {String.firstLetterToUpperCase(props.name)}: {props.value}<br/>
+    `
+}

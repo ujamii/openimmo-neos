@@ -1,20 +1,12 @@
-'Ujamii.OpenImmoNeos:Document.VerwaltungTechn':
+'Ujamii.OpenImmoNeos:Content.VerwaltungTechn':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: VerwaltungTechn
     icon: icon-sign
   properties:
-    aktion:
-      type: references
-      ui:
-        label: Aktion
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Aktion'
     aktivBis:
       type: DateTime
       ui:
@@ -43,15 +35,6 @@
         label: KennungUrsprung
         inspector:
           group: openimmo
-    master:
-      type: references
-      ui:
-        label: Master
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Master'
     objektnrExtern:
       type: string
       ui:
@@ -84,33 +67,6 @@
           group: openimmo
           editorOptions:
             format: d.m.Y
-    userDefinedAnyfield:
-      type: references
-      ui:
-        label: UserDefinedAnyfield
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedAnyfield'
-    userDefinedExtend:
-      type: references
-      ui:
-        label: UserDefinedExtend
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedExtend'
-    userDefinedSimplefield:
-      type: references
-      ui:
-        label: UserDefinedSimplefield
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedSimplefield'
     weitergabeGenerell:
       type: boolean
       ui:
@@ -129,4 +85,14 @@
         label: WeitergabePositiv
         inspector:
           group: openimmo
-  abstract: true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Ujamii.OpenImmoNeos:Content.Aktion': true
+          'Ujamii.OpenImmoNeos:Content.Master': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedAnyfield': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedExtend': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield': true
+          '*': false

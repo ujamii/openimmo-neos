@@ -1,3 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Document.HallenLagerProd) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.HallenLagerProd) < prototype(Neos.Fusion:Component) {
+    hallenTyp = ${q(node).property('hallenTyp')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="hallenTyp" value={props.hallenTyp} />
+    `
 }

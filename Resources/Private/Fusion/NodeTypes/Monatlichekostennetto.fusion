@@ -1,3 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Document.Monatlichekostennetto) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Monatlichekostennetto) < prototype(Neos.Fusion:Component) {
+    monatlichekostenust = ${q(node).property('monatlichekostenust')}
+    value = ${q(node).property('value')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="monatlichekostenust" value={props.monatlichekostenust} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+    `
 }

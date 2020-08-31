@@ -1,3 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Document.Nettomieteprom2von) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Nettomieteprom2von) < prototype(Neos.Fusion:Component) {
+    nettomieteprom2bis = ${q(node).property('nettomieteprom2bis')}
+    value = ${q(node).property('value')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="nettomieteprom2bis" value={props.nettomieteprom2bis} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+    `
 }

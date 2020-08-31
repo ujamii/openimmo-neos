@@ -1,3 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Document.Parken) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Parken) < prototype(Neos.Fusion:Component) {
+    parkenTyp = ${q(node).property('parkenTyp')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="parkenTyp" value={props.parkenTyp} />
+    `
 }

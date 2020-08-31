@@ -1,3 +1,44 @@
-prototype(Ujamii.OpenImmoNeos:Document.VerwaltungObjekt) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.VerwaltungObjekt) < prototype(Neos.Fusion:Component) {
+    abdatum = ${q(node).property('abdatum')}
+    alsFerien = ${q(node).property('alsFerien')}
+    bisdatum = ${q(node).property('bisdatum')}
+    branchen = ${q(node).property('branchen')}
+    denkmalgeschuetzt = ${q(node).property('denkmalgeschuetzt')}
+    gewerblicheNutzung = ${q(node).property('gewerblicheNutzung')}
+    gruppennummer = ${q(node).property('gruppennummer')}
+    haustiere = ${q(node).property('haustiere')}
+    hochhaus = ${q(node).property('hochhaus')}
+    laufzeit = ${q(node).property('laufzeit')}
+    maxPersonen = ${q(node).property('maxPersonen')}
+    nichtraucher = ${q(node).property('nichtraucher')}
+    objektadresseFreigeben = ${q(node).property('objektadresseFreigeben')}
+    verfuegbarAb = ${q(node).property('verfuegbarAb')}
+    vermietet = ${q(node).property('vermietet')}
+    versteigerungstermin = ${q(node).property('versteigerungstermin')}
+    wbsSozialwohnung = ${q(node).property('wbsSozialwohnung')}
+    zugang = ${q(node).property('zugang')}
+    mainContent = Neos.Neos:ContentCollection {
+        nodePath = 'main'
+    }
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="abdatum" value={props.abdatum} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="alsFerien" value={props.alsFerien} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bisdatum" value={props.bisdatum} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="branchen" value={props.branchen} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="denkmalgeschuetzt" value={props.denkmalgeschuetzt} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gewerblicheNutzung" value={props.gewerblicheNutzung} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gruppennummer" value={props.gruppennummer} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="haustiere" value={props.haustiere} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="hochhaus" value={props.hochhaus} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="laufzeit" value={props.laufzeit} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="maxPersonen" value={props.maxPersonen} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="nichtraucher" value={props.nichtraucher} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="objektadresseFreigeben" value={props.objektadresseFreigeben} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="verfuegbarAb" value={props.verfuegbarAb} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="vermietet" value={props.vermietet} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="versteigerungstermin" value={props.versteigerungstermin} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="wbsSozialwohnung" value={props.wbsSozialwohnung} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="zugang" value={props.zugang} />
+        {props.mainContent}
+    `
 }

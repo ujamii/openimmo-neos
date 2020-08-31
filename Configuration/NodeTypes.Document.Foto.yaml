@@ -1,20 +1,12 @@
-'Ujamii.OpenImmoNeos:Document.Foto':
+'Ujamii.OpenImmoNeos:Content.Foto':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: Foto
     icon: icon-sign
   properties:
-    daten:
-      type: references
-      ui:
-        label: Daten
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Daten'
     format:
       type: string
       ui:
@@ -34,4 +26,10 @@
                 label: Extern
               REMOTE:
                 label: Remote
-  abstract: true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Ujamii.OpenImmoNeos:Content.Daten': true
+          '*': false

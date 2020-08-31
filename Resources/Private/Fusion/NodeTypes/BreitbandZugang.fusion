@@ -1,3 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Document.BreitbandZugang) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.BreitbandZugang) < prototype(Neos.Fusion:Component) {
+    art = ${q(node).property('art')}
+    speed = ${q(node).property('speed')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="art" value={props.art} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="speed" value={props.speed} />
+    `
 }

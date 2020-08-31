@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.AusrichtBalkonTerrasse':
+'Ujamii.OpenImmoNeos:Content.AusrichtBalkonTerrasse':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: AusrichtBalkonTerrasse
     icon: icon-sign
@@ -54,4 +55,3 @@
         label: West
         inspector:
           group: openimmo
-  abstract: true

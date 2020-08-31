@@ -1,3 +1,24 @@
-prototype(Ujamii.OpenImmoNeos:Document.ImpressumStrukt) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.ImpressumStrukt) < prototype(Neos.Fusion:Component) {
+    berufsaufsichtsbehoerde = ${q(node).property('berufsaufsichtsbehoerde')}
+    firmenanschrift = ${q(node).property('firmenanschrift')}
+    firmenname = ${q(node).property('firmenname')}
+    handelsregister = ${q(node).property('handelsregister')}
+    handelsregisterNr = ${q(node).property('handelsregisterNr')}
+    steuernummer = ${q(node).property('steuernummer')}
+    telefon = ${q(node).property('telefon')}
+    umsstId = ${q(node).property('umsstId')}
+    vertretungsberechtigter = ${q(node).property('vertretungsberechtigter')}
+    weiteres = ${q(node).property('weiteres')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="berufsaufsichtsbehoerde" value={props.berufsaufsichtsbehoerde} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="firmenanschrift" value={props.firmenanschrift} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="firmenname" value={props.firmenname} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="handelsregister" value={props.handelsregister} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="handelsregisterNr" value={props.handelsregisterNr} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="steuernummer" value={props.steuernummer} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="telefon" value={props.telefon} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="umsstId" value={props.umsstId} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="vertretungsberechtigter" value={props.vertretungsberechtigter} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="weiteres" value={props.weiteres} />
+    `
 }

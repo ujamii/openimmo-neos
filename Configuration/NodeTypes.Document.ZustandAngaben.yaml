@@ -1,20 +1,12 @@
-'Ujamii.OpenImmoNeos:Document.ZustandAngaben':
+'Ujamii.OpenImmoNeos:Content.ZustandAngaben':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: ZustandAngaben
     icon: icon-sign
   properties:
-    alter:
-      type: references
-      ui:
-        label: Alter
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Alter'
     altlasten:
       type: string
       ui:
@@ -33,91 +25,25 @@
         label: Bauzone
         inspector:
           group: openimmo
-    bebaubarNach:
-      type: references
-      ui:
-        label: BebaubarNach
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.BebaubarNach'
-    energiepass:
-      type: references
-      ui:
-        label: Energiepass
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Energiepass'
-    erschliessung:
-      type: references
-      ui:
-        label: Erschliessung
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Erschliessung'
-    erschliessungUmfang:
-      type: references
-      ui:
-        label: ErschliessungUmfang
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.ErschliessungUmfang'
     letztemodernisierung:
       type: string
       ui:
         label: Letztemodernisierung
         inspector:
           group: openimmo
-    userDefinedAnyfield:
-      type: references
-      ui:
-        label: UserDefinedAnyfield
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedAnyfield'
-    userDefinedExtend:
-      type: references
-      ui:
-        label: UserDefinedExtend
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedExtend'
-    userDefinedSimplefield:
-      type: references
-      ui:
-        label: UserDefinedSimplefield
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedSimplefield'
-    verkaufstatus:
-      type: references
-      ui:
-        label: Verkaufstatus
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Verkaufstatus'
-    zustand:
-      type: references
-      ui:
-        label: Zustand
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Zustand'
-  abstract: true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Ujamii.OpenImmoNeos:Content.Alter': true
+          'Ujamii.OpenImmoNeos:Content.BebaubarNach': true
+          'Ujamii.OpenImmoNeos:Content.Energiepass': true
+          'Ujamii.OpenImmoNeos:Content.Erschliessung': true
+          'Ujamii.OpenImmoNeos:Content.ErschliessungUmfang': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedAnyfield': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedExtend': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield': true
+          'Ujamii.OpenImmoNeos:Content.Verkaufstatus': true
+          'Ujamii.OpenImmoNeos:Content.Zustand': true
+          '*': false

@@ -1,3 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Document.Gesamtbelastungnetto) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Gesamtbelastungnetto) < prototype(Neos.Fusion:Component) {
+    gesamtbelastungust = ${q(node).property('gesamtbelastungust')}
+    value = ${q(node).property('value')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gesamtbelastungust" value={props.gesamtbelastungust} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+    `
 }

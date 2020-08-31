@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.Ausblick':
+'Ujamii.OpenImmoNeos:Content.Ausblick':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: Ausblick
     icon: icon-sign
@@ -23,4 +24,3 @@
                 label: Meer
               SEE:
                 label: See
-  abstract: true

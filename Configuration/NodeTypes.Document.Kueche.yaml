@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.Kueche':
+'Ujamii.OpenImmoNeos:Content.Kueche':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: Kueche
     icon: icon-sign
@@ -24,4 +25,3 @@
         label: Pantry
         inspector:
           group: openimmo
-  abstract: true

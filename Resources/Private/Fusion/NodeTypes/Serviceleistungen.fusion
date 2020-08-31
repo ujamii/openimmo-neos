@@ -1,3 +1,14 @@
-prototype(Ujamii.OpenImmoNeos:Document.Serviceleistungen) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Serviceleistungen) < prototype(Neos.Fusion:Component) {
+    betreutesWohnen = ${q(node).property('betreutesWohnen')}
+    catering = ${q(node).property('catering')}
+    einkauf = ${q(node).property('einkauf')}
+    reinigung = ${q(node).property('reinigung')}
+    wachdienst = ${q(node).property('wachdienst')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="betreutesWohnen" value={props.betreutesWohnen} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="catering" value={props.catering} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="einkauf" value={props.einkauf} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="reinigung" value={props.reinigung} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="wachdienst" value={props.wachdienst} />
+    `
 }

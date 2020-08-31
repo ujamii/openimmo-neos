@@ -1,3 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Document.Gastgewerbe) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Gastgewerbe) < prototype(Neos.Fusion:Component) {
+    gastgewTyp = ${q(node).property('gastgewTyp')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gastgewTyp" value={props.gastgewTyp} />
+    `
 }

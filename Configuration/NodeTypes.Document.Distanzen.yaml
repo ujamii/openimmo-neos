@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.Distanzen':
+'Ujamii.OpenImmoNeos:Content.Distanzen':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: Distanzen
     icon: icon-sign
@@ -49,4 +50,3 @@
         label: Value
         inspector:
           group: openimmo
-  abstract: true

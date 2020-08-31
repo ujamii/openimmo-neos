@@ -1,3 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Document.Geokoordinaten) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Geokoordinaten) < prototype(Neos.Fusion:Component) {
+    breitengrad = ${q(node).property('breitengrad')}
+    laengengrad = ${q(node).property('laengengrad')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="breitengrad" value={props.breitengrad} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="laengengrad" value={props.laengengrad} />
+    `
 }

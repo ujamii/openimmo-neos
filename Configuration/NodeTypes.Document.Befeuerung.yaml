@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.Befeuerung':
+'Ujamii.OpenImmoNeos:Content.Befeuerung':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: Befeuerung
     icon: icon-sign
@@ -90,4 +91,3 @@
         label: WasserElektro
         inspector:
           group: openimmo
-  abstract: true

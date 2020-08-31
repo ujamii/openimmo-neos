@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.WeitereAdresse':
+'Ujamii.OpenImmoNeos:Content.WeitereAdresse':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: WeitereAdresse
     icon: icon-sign
@@ -42,15 +43,6 @@
         label: EmailPrivat
         inspector:
           group: openimmo
-    emailSonstige:
-      type: references
-      ui:
-        label: EmailSonstige
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.EmailSonstige'
     emailZentrale:
       type: string
       ui:
@@ -75,15 +67,6 @@
         label: Hausnummer
         inspector:
           group: openimmo
-    land:
-      type: references
-      ui:
-        label: Land
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Land'
     name:
       type: string
       ui:
@@ -156,15 +139,6 @@
         label: TelPrivat
         inspector:
           group: openimmo
-    telSonstige:
-      type: references
-      ui:
-        label: TelSonstige
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.TelSonstige'
     telZentrale:
       type: string
       ui:
@@ -183,33 +157,6 @@
         label: Url
         inspector:
           group: openimmo
-    userDefinedAnyfield:
-      type: references
-      ui:
-        label: UserDefinedAnyfield
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedAnyfield'
-    userDefinedExtend:
-      type: references
-      ui:
-        label: UserDefinedExtend
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedExtend'
-    userDefinedSimplefield:
-      type: references
-      ui:
-        label: UserDefinedSimplefield
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedSimplefield'
     vorname:
       type: string
       ui:
@@ -222,4 +169,15 @@
         label: Zusatzfeld
         inspector:
           group: openimmo
-  abstract: true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Ujamii.OpenImmoNeos:Content.EmailSonstige': true
+          'Ujamii.OpenImmoNeos:Content.Land': true
+          'Ujamii.OpenImmoNeos:Content.TelSonstige': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedAnyfield': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedExtend': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield': true
+          '*': false

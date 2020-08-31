@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.Zustand':
+'Ujamii.OpenImmoNeos:Content.Zustand':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: Zustand
     icon: icon-sign
@@ -47,4 +48,3 @@
                 label: Teil_vollsaniert
               VOLL_SANIERT:
                 label: Voll_saniert
-  abstract: true

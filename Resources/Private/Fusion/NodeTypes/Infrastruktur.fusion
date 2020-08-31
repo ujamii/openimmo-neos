@@ -1,3 +1,10 @@
-prototype(Ujamii.OpenImmoNeos:Document.Infrastruktur) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Infrastruktur) < prototype(Neos.Fusion:Component) {
+    zulieferung = ${q(node).property('zulieferung')}
+    mainContent = Neos.Neos:ContentCollection {
+        nodePath = 'main'
+    }
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="zulieferung" value={props.zulieferung} />
+        {props.mainContent}
+    `
 }

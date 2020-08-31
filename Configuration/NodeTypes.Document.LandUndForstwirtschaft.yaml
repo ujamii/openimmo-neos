@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.LandUndForstwirtschaft':
+'Ujamii.OpenImmoNeos:Content.LandUndForstwirtschaft':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: LandUndForstwirtschaft
     icon: icon-sign
@@ -43,4 +44,3 @@
                 label: Viehwirtschaft
               WEINBAU:
                 label: Weinbau
-  abstract: true

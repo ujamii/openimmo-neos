@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.Einzelhandel':
+'Ujamii.OpenImmoNeos:Content.Einzelhandel':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: Einzelhandel
     icon: icon-sign
@@ -33,4 +34,3 @@
                 label: Verbrauchermarkt
               VERKAUFSFLAECHE:
                 label: Verkaufsflaeche
-  abstract: true

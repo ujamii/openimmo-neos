@@ -1,3 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Document.ErschliessungUmfang) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.ErschliessungUmfang) < prototype(Neos.Fusion:Component) {
+    erschlAttr = ${q(node).property('erschlAttr')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="erschlAttr" value={props.erschlAttr} />
+    `
 }

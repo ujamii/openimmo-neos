@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.FreizeitimmobilieGewerblich':
+'Ujamii.OpenImmoNeos:Content.FreizeitimmobilieGewerblich':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: FreizeitimmobilieGewerblich
     icon: icon-sign
@@ -21,4 +22,3 @@
                 label: Sportanlagen
               VERGNUEGUNGSPARKS_UND_CENTER:
                 label: Vergnuegungsparks_und_center
-  abstract: true

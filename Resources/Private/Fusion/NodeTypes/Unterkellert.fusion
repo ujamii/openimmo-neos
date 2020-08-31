@@ -1,3 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Document.Unterkellert) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Unterkellert) < prototype(Neos.Fusion:Component) {
+    keller = ${q(node).property('keller')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="keller" value={props.keller} />
+    `
 }

@@ -1,3 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Document.Check) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Check) < prototype(Neos.Fusion:Component) {
+    ctype = ${q(node).property('ctype')}
+    value = ${q(node).property('value')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="ctype" value={props.ctype} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+    `
 }

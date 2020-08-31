@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.VerwaltungObjekt':
+'Ujamii.OpenImmoNeos:Content.VerwaltungObjekt':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: VerwaltungObjekt
     icon: icon-sign
@@ -40,15 +41,6 @@
         label: Denkmalgeschuetzt
         inspector:
           group: openimmo
-    geschlecht:
-      type: references
-      ui:
-        label: Geschlecht
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.Geschlecht'
     gewerblicheNutzung:
       type: boolean
       ui:
@@ -79,30 +71,12 @@
         label: Laufzeit
         inspector:
           group: openimmo
-    maxMietdauer:
-      type: references
-      ui:
-        label: MaxMietdauer
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.MaxMietdauer'
     maxPersonen:
       type: integer
       ui:
         label: MaxPersonen
         inspector:
           group: openimmo
-    minMietdauer:
-      type: references
-      ui:
-        label: MinMietdauer
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.MinMietdauer'
     nichtraucher:
       type: boolean
       ui:
@@ -115,33 +89,6 @@
         label: ObjektadresseFreigeben
         inspector:
           group: openimmo
-    userDefinedAnyfield:
-      type: references
-      ui:
-        label: UserDefinedAnyfield
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedAnyfield'
-    userDefinedExtend:
-      type: references
-      ui:
-        label: UserDefinedExtend
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedExtend'
-    userDefinedSimplefield:
-      type: references
-      ui:
-        label: UserDefinedSimplefield
-        inspector:
-          group: openimmo
-          editorOptions:
-            nodeTypes:
-              - 'Ujamii.OpenImmoNeos:Document.UserDefinedSimplefield'
     verfuegbarAb:
       type: string
       ui:
@@ -174,4 +121,15 @@
         label: Zugang
         inspector:
           group: openimmo
-  abstract: true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Ujamii.OpenImmoNeos:Content.Geschlecht': true
+          'Ujamii.OpenImmoNeos:Content.MaxMietdauer': true
+          'Ujamii.OpenImmoNeos:Content.MinMietdauer': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedAnyfield': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedExtend': true
+          'Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield': true
+          '*': false

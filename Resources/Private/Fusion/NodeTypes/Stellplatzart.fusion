@@ -1,3 +1,16 @@
-prototype(Ujamii.OpenImmoNeos:Document.Stellplatzart) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Stellplatzart) < prototype(Neos.Fusion:Component) {
+    carport = ${q(node).property('carport')}
+    duplex = ${q(node).property('duplex')}
+    freiplatz = ${q(node).property('freiplatz')}
+    garage = ${q(node).property('garage')}
+    parkhaus = ${q(node).property('parkhaus')}
+    tiefgarage = ${q(node).property('tiefgarage')}
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="carport" value={props.carport} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="duplex" value={props.duplex} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="freiplatz" value={props.freiplatz} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="garage" value={props.garage} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="parkhaus" value={props.parkhaus} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="tiefgarage" value={props.tiefgarage} />
+    `
 }

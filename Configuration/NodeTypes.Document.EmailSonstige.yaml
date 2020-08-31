@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.EmailSonstige':
+'Ujamii.OpenImmoNeos:Content.EmailSonstige':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: EmailSonstige
     icon: icon-sign
@@ -35,4 +36,3 @@
         label: Value
         inspector:
           group: openimmo
-  abstract: true

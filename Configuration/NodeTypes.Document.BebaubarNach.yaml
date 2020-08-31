@@ -1,7 +1,8 @@
-'Ujamii.OpenImmoNeos:Document.BebaubarNach':
+'Ujamii.OpenImmoNeos:Content.BebaubarNach':
   superTypes:
-    'Neos.Neos:Document': true
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
   ui:
     label: BebaubarNach
     icon: icon-sign
@@ -29,4 +30,3 @@
                 label: 'Kein bauland'
               LAENDERSPEZIFISCH:
                 label: Laenderspezifisch
-  abstract: true

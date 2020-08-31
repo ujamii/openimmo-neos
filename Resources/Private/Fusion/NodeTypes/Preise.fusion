@@ -1,3 +1,82 @@
-prototype(Ujamii.OpenImmoNeos:Document.Preise) < prototype(Neos.Fusion:Component) {
-    renderer = ''
+prototype(Ujamii.OpenImmoNeos:Content.Preise) < prototype(Neos.Fusion:Component) {
+    abstand = ${q(node).property('abstand')}
+    courtageHinweis = ${q(node).property('courtageHinweis')}
+    erbpacht = ${q(node).property('erbpacht')}
+    erschliessungskosten = ${q(node).property('erschliessungskosten')}
+    freitextPreis = ${q(node).property('freitextPreis')}
+    gesamtbelastungbrutto = ${q(node).property('gesamtbelastungbrutto')}
+    gesamtmietebrutto = ${q(node).property('gesamtmietebrutto')}
+    geschaeftsguthaben = ${q(node).property('geschaeftsguthaben')}
+    hausgeld = ${q(node).property('hausgeld')}
+    heizkosten = ${q(node).property('heizkosten')}
+    heizkostenEnthalten = ${q(node).property('heizkostenEnthalten')}
+    kaltmiete = ${q(node).property('kaltmiete')}
+    kaufpreisbrutto = ${q(node).property('kaufpreisbrutto')}
+    kaufpreisProQm = ${q(node).property('kaufpreisProQm')}
+    kaution = ${q(node).property('kaution')}
+    kautionText = ${q(node).property('kautionText')}
+    mietpreisProQm = ${q(node).property('mietpreisProQm')}
+    mietzuschlaege = ${q(node).property('mietzuschlaege')}
+    monatlichekostenbrutto = ${q(node).property('monatlichekostenbrutto')}
+    mwstGesamt = ${q(node).property('mwstGesamt')}
+    mwstSatz = ${q(node).property('mwstSatz')}
+    nebenkosten = ${q(node).property('nebenkosten')}
+    nettokaltmiete = ${q(node).property('nettokaltmiete')}
+    nettorendite = ${q(node).property('nettorendite')}
+    nettorenditeIst = ${q(node).property('nettorenditeIst')}
+    nettorenditeSoll = ${q(node).property('nettorenditeSoll')}
+    pacht = ${q(node).property('pacht')}
+    pauschalmiete = ${q(node).property('pauschalmiete')}
+    preisZeitraumBis = ${q(node).property('preisZeitraumBis')}
+    preisZeitraumVon = ${q(node).property('preisZeitraumVon')}
+    provisionbrutto = ${q(node).property('provisionbrutto')}
+    provisionspflichtig = ${q(node).property('provisionspflichtig')}
+    richtpreis = ${q(node).property('richtpreis')}
+    richtpreisprom2 = ${q(node).property('richtpreisprom2')}
+    warmmiete = ${q(node).property('warmmiete')}
+    xFache = ${q(node).property('xFache')}
+    zzgMehrwertsteuer = ${q(node).property('zzgMehrwertsteuer')}
+    mainContent = Neos.Neos:ContentCollection {
+        nodePath = 'main'
+    }
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="abstand" value={props.abstand} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="courtageHinweis" value={props.courtageHinweis} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="erbpacht" value={props.erbpacht} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="erschliessungskosten" value={props.erschliessungskosten} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="freitextPreis" value={props.freitextPreis} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gesamtbelastungbrutto" value={props.gesamtbelastungbrutto} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gesamtmietebrutto" value={props.gesamtmietebrutto} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="geschaeftsguthaben" value={props.geschaeftsguthaben} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="hausgeld" value={props.hausgeld} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="heizkosten" value={props.heizkosten} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="heizkostenEnthalten" value={props.heizkostenEnthalten} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kaltmiete" value={props.kaltmiete} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kaufpreisbrutto" value={props.kaufpreisbrutto} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kaufpreisProQm" value={props.kaufpreisProQm} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kaution" value={props.kaution} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kautionText" value={props.kautionText} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="mietpreisProQm" value={props.mietpreisProQm} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="mietzuschlaege" value={props.mietzuschlaege} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="monatlichekostenbrutto" value={props.monatlichekostenbrutto} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="mwstGesamt" value={props.mwstGesamt} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="mwstSatz" value={props.mwstSatz} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="nebenkosten" value={props.nebenkosten} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="nettokaltmiete" value={props.nettokaltmiete} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="nettorendite" value={props.nettorendite} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="nettorenditeIst" value={props.nettorenditeIst} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="nettorenditeSoll" value={props.nettorenditeSoll} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="pacht" value={props.pacht} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="pauschalmiete" value={props.pauschalmiete} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="preisZeitraumBis" value={props.preisZeitraumBis} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="preisZeitraumVon" value={props.preisZeitraumVon} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="provisionbrutto" value={props.provisionbrutto} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="provisionspflichtig" value={props.provisionspflichtig} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="richtpreis" value={props.richtpreis} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="richtpreisprom2" value={props.richtpreisprom2} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="warmmiete" value={props.warmmiete} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="xFache" value={props.xFache} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="zzgMehrwertsteuer" value={props.zzgMehrwertsteuer} />
+        {props.mainContent}
+    `
 }
