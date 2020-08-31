@@ -3,8 +3,6 @@ prototype(Ujamii.OpenImmoNeos:Content.EmailSonstige) < prototype(Neos.Fusion:Com
     emailart = ${q(node).property('emailart')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bemerkung" value={props.bemerkung} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="emailart" value={props.emailart} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.EmailSonstige {...props}/>
     `
 }

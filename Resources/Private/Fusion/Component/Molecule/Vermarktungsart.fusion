@@ -1,0 +1,12 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Vermarktungsart) < prototype(Neos.Fusion:Component) {
+    erbpacht = null
+    kauf = null
+    leasing = null
+    mietePacht = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="erbpacht" value={props.erbpacht} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kauf" value={props.kauf} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="leasing" value={props.leasing} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="mietePacht" value={props.mietePacht} />
+    `
+}

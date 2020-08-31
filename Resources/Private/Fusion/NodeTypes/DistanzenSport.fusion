@@ -2,7 +2,6 @@ prototype(Ujamii.OpenImmoNeos:Content.DistanzenSport) < prototype(Neos.Fusion:Co
     distanzZuSport = ${q(node).property('distanzZuSport')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="distanzZuSport" value={props.distanzZuSport} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.DistanzenSport {...props}/>
     `
 }

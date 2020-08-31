@@ -2,7 +2,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Provisionnetto) < prototype(Neos.Fusion:Co
     provisionust = ${q(node).property('provisionust')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="provisionust" value={props.provisionust} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Provisionnetto {...props}/>
     `
 }

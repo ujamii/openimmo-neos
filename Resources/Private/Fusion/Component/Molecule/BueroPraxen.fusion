@@ -1,0 +1,6 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.BueroPraxen) < prototype(Neos.Fusion:Component) {
+    bueroTyp = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bueroTyp" value={props.bueroTyp} />
+    `
+}

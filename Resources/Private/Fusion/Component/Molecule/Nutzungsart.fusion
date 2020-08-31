@@ -1,0 +1,12 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Nutzungsart) < prototype(Neos.Fusion:Component) {
+    anlage = null
+    gewerbe = null
+    waz = null
+    wohnen = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anlage" value={props.anlage} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gewerbe" value={props.gewerbe} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="waz" value={props.waz} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="wohnen" value={props.wohnen} />
+    `
+}

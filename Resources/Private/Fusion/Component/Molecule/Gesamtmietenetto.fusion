@@ -1,0 +1,8 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Gesamtmietenetto) < prototype(Neos.Fusion:Component) {
+    gesamtmieteust = null
+    value = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gesamtmieteust" value={props.gesamtmieteust} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+    `
+}

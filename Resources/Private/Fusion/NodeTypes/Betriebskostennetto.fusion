@@ -2,7 +2,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Betriebskostennetto) < prototype(Neos.Fusi
     betriebskostenust = ${q(node).property('betriebskostenust')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="betriebskostenust" value={props.betriebskostenust} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Betriebskostennetto {...props}/>
     `
 }

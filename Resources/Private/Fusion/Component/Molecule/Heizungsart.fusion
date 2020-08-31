@@ -1,0 +1,14 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Heizungsart) < prototype(Neos.Fusion:Component) {
+    etage = null
+    fern = null
+    fussboden = null
+    ofen = null
+    zentral = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="etage" value={props.etage} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="fern" value={props.fern} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="fussboden" value={props.fussboden} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="ofen" value={props.ofen} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="zentral" value={props.zentral} />
+    `
+}

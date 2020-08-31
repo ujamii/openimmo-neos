@@ -11,22 +11,10 @@ prototype(Ujamii.OpenImmoNeos:Content.VerwaltungTechn) < prototype(Neos.Fusion:C
     weitergabeGenerell = ${q(node).property('weitergabeGenerell')}
     weitergabeNegativ = ${q(node).property('weitergabeNegativ')}
     weitergabePositiv = ${q(node).property('weitergabePositiv')}
-    mainContent = Neos.Neos:ContentCollection {
+    @context.mainContent = Neos.Neos:ContentCollection {
         nodePath = 'main'
     }
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="aktivBis" value={props.aktivBis} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="aktivVon" value={props.aktivVon} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gruppenKennung" value={props.gruppenKennung} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kennungUrsprung" value={props.kennungUrsprung} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="objektnrExtern" value={props.objektnrExtern} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="objektnrIntern" value={props.objektnrIntern} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="openimmoObid" value={props.openimmoObid} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="sprache" value={props.sprache} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="standVom" value={props.standVom} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="weitergabeGenerell" value={props.weitergabeGenerell} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="weitergabeNegativ" value={props.weitergabeNegativ} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="weitergabePositiv" value={props.weitergabePositiv} />
-        {props.mainContent}
+        <Ujamii.OpenImmoNeos:Component.Molecule.VerwaltungTechn {...props} mainContent={mainContent}/>
     `
 }

@@ -2,7 +2,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Heizkostennetto) < prototype(Neos.Fusion:C
     heizkostenust = ${q(node).property('heizkostenust')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="heizkostenust" value={props.heizkostenust} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Heizkostennetto {...props}/>
     `
 }

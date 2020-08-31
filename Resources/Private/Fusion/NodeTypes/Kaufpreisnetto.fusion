@@ -2,7 +2,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Kaufpreisnetto) < prototype(Neos.Fusion:Co
     kaufpreisust = ${q(node).property('kaufpreisust')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kaufpreisust" value={props.kaufpreisust} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Kaufpreisnetto {...props}/>
     `
 }

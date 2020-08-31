@@ -1,6 +1,6 @@
 prototype(Ujamii.OpenImmoNeos:Content.Verkaufstatus) < prototype(Neos.Fusion:Component) {
     stand = ${q(node).property('stand')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="stand" value={props.stand} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Verkaufstatus {...props}/>
     `
 }

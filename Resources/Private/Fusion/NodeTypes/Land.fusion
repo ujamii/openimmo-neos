@@ -1,6 +1,6 @@
 prototype(Ujamii.OpenImmoNeos:Content.Land) < prototype(Neos.Fusion:Component) {
     isoLand = ${q(node).property('isoLand')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="isoLand" value={props.isoLand} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Land {...props}/>
     `
 }

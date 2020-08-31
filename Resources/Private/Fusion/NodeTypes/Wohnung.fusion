@@ -1,6 +1,6 @@
 prototype(Ujamii.OpenImmoNeos:Content.Wohnung) < prototype(Neos.Fusion:Component) {
     wohnungtyp = ${q(node).property('wohnungtyp')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="wohnungtyp" value={props.wohnungtyp} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Wohnung {...props}/>
     `
 }

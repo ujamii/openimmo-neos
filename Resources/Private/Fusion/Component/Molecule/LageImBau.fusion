@@ -1,0 +1,12 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.LageImBau) < prototype(Neos.Fusion:Component) {
+    hinten = null
+    links = null
+    rechts = null
+    vorne = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="hinten" value={props.hinten} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="links" value={props.links} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="rechts" value={props.rechts} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="vorne" value={props.vorne} />
+    `
+}

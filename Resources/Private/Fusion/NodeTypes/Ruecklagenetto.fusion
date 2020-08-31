@@ -2,7 +2,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Ruecklagenetto) < prototype(Neos.Fusion:Co
     ruecklageust = ${q(node).property('ruecklageust')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="ruecklageust" value={props.ruecklageust} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Ruecklagenetto {...props}/>
     `
 }

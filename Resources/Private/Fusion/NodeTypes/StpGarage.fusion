@@ -3,8 +3,6 @@ prototype(Ujamii.OpenImmoNeos:Content.StpGarage) < prototype(Neos.Fusion:Compone
     stellplatzkaufpreis = ${q(node).property('stellplatzkaufpreis')}
     stellplatzmiete = ${q(node).property('stellplatzmiete')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anzahl" value={props.anzahl} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="stellplatzkaufpreis" value={props.stellplatzkaufpreis} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="stellplatzmiete" value={props.stellplatzmiete} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.StpGarage {...props}/>
     `
 }

@@ -1,6 +1,6 @@
 prototype(Ujamii.OpenImmoNeos:Content.Moebliert) < prototype(Neos.Fusion:Component) {
     moeb = ${q(node).property('moeb')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="moeb" value={props.moeb} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Moebliert {...props}/>
     `
 }

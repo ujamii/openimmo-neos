@@ -1,0 +1,6 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.UserDefinedSimplefield) < prototype(Neos.Fusion:Component) {
+    feldname = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="feldname" value={props.feldname} />
+    `
+}

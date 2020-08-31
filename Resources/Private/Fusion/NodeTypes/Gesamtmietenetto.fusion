@@ -2,7 +2,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Gesamtmietenetto) < prototype(Neos.Fusion:
     gesamtmieteust = ${q(node).property('gesamtmieteust')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gesamtmieteust" value={props.gesamtmieteust} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Gesamtmietenetto {...props}/>
     `
 }

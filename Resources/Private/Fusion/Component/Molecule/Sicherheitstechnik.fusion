@@ -1,0 +1,10 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Sicherheitstechnik) < prototype(Neos.Fusion:Component) {
+    alarmanlage = null
+    kamera = null
+    polizeiruf = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="alarmanlage" value={props.alarmanlage} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kamera" value={props.kamera} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="polizeiruf" value={props.polizeiruf} />
+    `
+}

@@ -1,0 +1,10 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Kueche) < prototype(Neos.Fusion:Component) {
+    ebk = null
+    offen = null
+    pantry = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="ebk" value={props.ebk} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="offen" value={props.offen} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="pantry" value={props.pantry} />
+    `
+}

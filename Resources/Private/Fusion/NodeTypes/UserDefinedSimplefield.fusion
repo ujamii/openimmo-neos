@@ -1,6 +1,6 @@
 prototype(Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield) < prototype(Neos.Fusion:Component) {
     feldname = ${q(node).property('feldname')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="feldname" value={props.feldname} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.UserDefinedSimplefield {...props}/>
     `
 }

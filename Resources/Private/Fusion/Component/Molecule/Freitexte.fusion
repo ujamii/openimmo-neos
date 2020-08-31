@@ -1,0 +1,17 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Freitexte) < prototype(Neos.Fusion:Component) {
+    ausstattBeschr = null
+    dreizeiler = null
+    lage = null
+    objektbeschreibung = null
+    objekttitel = null
+    sonstigeAngaben = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="ausstattBeschr" value={props.ausstattBeschr} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="dreizeiler" value={props.dreizeiler} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="lage" value={props.lage} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="objektbeschreibung" value={props.objektbeschreibung} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="objekttitel" value={props.objekttitel} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="sonstigeAngaben" value={props.sonstigeAngaben} />
+        {props.mainContent}
+    `
+}

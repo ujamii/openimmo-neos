@@ -29,40 +29,10 @@ prototype(Ujamii.OpenImmoNeos:Content.Kontaktperson) < prototype(Neos.Fusion:Com
     url = ${q(node).property('url')}
     vorname = ${q(node).property('vorname')}
     zusatzfeld = ${q(node).property('zusatzfeld')}
-    mainContent = Neos.Neos:ContentCollection {
+    @context.mainContent = Neos.Neos:ContentCollection {
         nodePath = 'main'
     }
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="adressfreigabe" value={props.adressfreigabe} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anrede" value={props.anrede} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anredeBrief" value={props.anredeBrief} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="emailDirekt" value={props.emailDirekt} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="emailFeedback" value={props.emailFeedback} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="emailPrivat" value={props.emailPrivat} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="emailZentrale" value={props.emailZentrale} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="firma" value={props.firma} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="freitextfeld" value={props.freitextfeld} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="hausnummer" value={props.hausnummer} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="immobilientreuhaenderid" value={props.immobilientreuhaenderid} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="name" value={props.name} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="ort" value={props.ort} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="personennummer" value={props.personennummer} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="plz" value={props.plz} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="position" value={props.position} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="postfach" value={props.postfach} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="postfOrt" value={props.postfOrt} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="postfPlz" value={props.postfPlz} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="referenzId" value={props.referenzId} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="strasse" value={props.strasse} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="telDurchw" value={props.telDurchw} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="telFax" value={props.telFax} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="telHandy" value={props.telHandy} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="telPrivat" value={props.telPrivat} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="telZentrale" value={props.telZentrale} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="titel" value={props.titel} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="url" value={props.url} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="vorname" value={props.vorname} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="zusatzfeld" value={props.zusatzfeld} />
-        {props.mainContent}
+        <Ujamii.OpenImmoNeos:Component.Molecule.Kontaktperson {...props} mainContent={mainContent}/>
     `
 }

@@ -1,0 +1,8 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.StpSonstige) < prototype(Neos.Fusion:Component) {
+    bemerkung = null
+    platzart = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bemerkung" value={props.bemerkung} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="platzart" value={props.platzart} />
+    `
+}

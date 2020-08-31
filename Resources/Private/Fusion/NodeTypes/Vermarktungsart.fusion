@@ -4,9 +4,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Vermarktungsart) < prototype(Neos.Fusion:C
     leasing = ${q(node).property('leasing')}
     mietePacht = ${q(node).property('mietePacht')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="erbpacht" value={props.erbpacht} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kauf" value={props.kauf} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="leasing" value={props.leasing} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="mietePacht" value={props.mietePacht} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Vermarktungsart {...props}/>
     `
 }

@@ -3,8 +3,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Bauweise) < prototype(Neos.Fusion:Componen
     holz = ${q(node).property('holz')}
     massiv = ${q(node).property('massiv')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="fertigteile" value={props.fertigteile} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="holz" value={props.holz} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="massiv" value={props.massiv} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Bauweise {...props}/>
     `
 }

@@ -2,7 +2,6 @@ prototype(Ujamii.OpenImmoNeos:Content.AngeschlGastronomie) < prototype(Neos.Fusi
     bar = ${q(node).property('bar')}
     hotelrestaurant = ${q(node).property('hotelrestaurant')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bar" value={props.bar} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="hotelrestaurant" value={props.hotelrestaurant} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.AngeschlGastronomie {...props}/>
     `
 }

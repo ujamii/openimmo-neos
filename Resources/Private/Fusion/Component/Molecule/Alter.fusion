@@ -1,0 +1,6 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Alter) < prototype(Neos.Fusion:Component) {
+    alterAttr = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="alterAttr" value={props.alterAttr} />
+    `
+}

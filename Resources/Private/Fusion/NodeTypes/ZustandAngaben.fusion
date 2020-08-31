@@ -3,14 +3,10 @@ prototype(Ujamii.OpenImmoNeos:Content.ZustandAngaben) < prototype(Neos.Fusion:Co
     baujahr = ${q(node).property('baujahr')}
     bauzone = ${q(node).property('bauzone')}
     letztemodernisierung = ${q(node).property('letztemodernisierung')}
-    mainContent = Neos.Neos:ContentCollection {
+    @context.mainContent = Neos.Neos:ContentCollection {
         nodePath = 'main'
     }
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="altlasten" value={props.altlasten} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="baujahr" value={props.baujahr} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bauzone" value={props.bauzone} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="letztemodernisierung" value={props.letztemodernisierung} />
-        {props.mainContent}
+        <Ujamii.OpenImmoNeos:Component.Molecule.ZustandAngaben {...props} mainContent={mainContent}/>
     `
 }

@@ -3,8 +3,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Sicherheitstechnik) < prototype(Neos.Fusio
     kamera = ${q(node).property('kamera')}
     polizeiruf = ${q(node).property('polizeiruf')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="alarmanlage" value={props.alarmanlage} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kamera" value={props.kamera} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="polizeiruf" value={props.polizeiruf} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Sicherheitstechnik {...props}/>
     `
 }

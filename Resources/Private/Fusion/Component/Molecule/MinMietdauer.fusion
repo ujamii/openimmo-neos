@@ -1,0 +1,6 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.MinMietdauer) < prototype(Neos.Fusion:Component) {
+    minDauer = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="minDauer" value={props.minDauer} />
+    `
+}

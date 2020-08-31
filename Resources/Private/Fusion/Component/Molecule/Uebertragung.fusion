@@ -1,0 +1,22 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Uebertragung) < prototype(Neos.Fusion:Component) {
+    art = null
+    modus = null
+    regiId = null
+    sendersoftware = null
+    senderversion = null
+    technEmail = null
+    timestamp = null
+    umfang = null
+    version = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="art" value={props.art} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="modus" value={props.modus} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="regiId" value={props.regiId} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="sendersoftware" value={props.sendersoftware} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="senderversion" value={props.senderversion} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="technEmail" value={props.technEmail} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="timestamp" value={props.timestamp} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="umfang" value={props.umfang} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="version" value={props.version} />
+    `
+}

@@ -1,0 +1,6 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.BebaubarNach) < prototype(Neos.Fusion:Component) {
+    bebaubarAttr = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bebaubarAttr" value={props.bebaubarAttr} />
+    `
+}

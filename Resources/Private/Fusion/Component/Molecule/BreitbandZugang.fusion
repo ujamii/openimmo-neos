@@ -1,0 +1,8 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.BreitbandZugang) < prototype(Neos.Fusion:Component) {
+    art = null
+    speed = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="art" value={props.art} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="speed" value={props.speed} />
+    `
+}

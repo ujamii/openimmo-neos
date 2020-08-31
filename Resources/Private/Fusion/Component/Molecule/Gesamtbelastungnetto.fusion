@@ -1,0 +1,8 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Gesamtbelastungnetto) < prototype(Neos.Fusion:Component) {
+    gesamtbelastungust = null
+    value = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gesamtbelastungust" value={props.gesamtbelastungust} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+    `
+}

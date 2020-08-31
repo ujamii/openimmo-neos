@@ -1,0 +1,8 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Betriebskostennetto) < prototype(Neos.Fusion:Component) {
+    betriebskostenust = null
+    value = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="betriebskostenust" value={props.betriebskostenust} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+    `
+}

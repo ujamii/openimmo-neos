@@ -5,10 +5,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Ausbaustufe) < prototype(Neos.Fusion:Compo
     schluesselfertigmitkeller = ${q(node).property('schluesselfertigmitkeller')}
     schluesselfertigohnebodenplatte = ${q(node).property('schluesselfertigohnebodenplatte')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="ausbauhaus" value={props.ausbauhaus} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bausatzhaus" value={props.bausatzhaus} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="schluesselfertigmitbodenplatte" value={props.schluesselfertigmitbodenplatte} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="schluesselfertigmitkeller" value={props.schluesselfertigmitkeller} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="schluesselfertigohnebodenplatte" value={props.schluesselfertigohnebodenplatte} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Ausbaustufe {...props}/>
     `
 }

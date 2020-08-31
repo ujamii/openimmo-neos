@@ -4,9 +4,6 @@ prototype(Ujamii.OpenImmoNeos:Content.LageImBau) < prototype(Neos.Fusion:Compone
     rechts = ${q(node).property('rechts')}
     vorne = ${q(node).property('vorne')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="hinten" value={props.hinten} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="links" value={props.links} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="rechts" value={props.rechts} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="vorne" value={props.vorne} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.LageImBau {...props}/>
     `
 }

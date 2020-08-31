@@ -1,0 +1,8 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Geokoordinaten) < prototype(Neos.Fusion:Component) {
+    breitengrad = null
+    laengengrad = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="breitengrad" value={props.breitengrad} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="laengengrad" value={props.laengengrad} />
+    `
+}

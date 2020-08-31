@@ -1,0 +1,6 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Parken) < prototype(Neos.Fusion:Component) {
+    parkenTyp = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="parkenTyp" value={props.parkenTyp} />
+    `
+}

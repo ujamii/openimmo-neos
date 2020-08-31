@@ -1,0 +1,13 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.ZustandAngaben) < prototype(Neos.Fusion:Component) {
+    altlasten = null
+    baujahr = null
+    bauzone = null
+    letztemodernisierung = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="altlasten" value={props.altlasten} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="baujahr" value={props.baujahr} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bauzone" value={props.bauzone} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="letztemodernisierung" value={props.letztemodernisierung} />
+        {props.mainContent}
+    `
+}

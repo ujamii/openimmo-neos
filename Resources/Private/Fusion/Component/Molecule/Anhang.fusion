@@ -1,0 +1,13 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Anhang) < prototype(Neos.Fusion:Component) {
+    anhangtitel = null
+    format = null
+    gruppe = null
+    location = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anhangtitel" value={props.anhangtitel} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="format" value={props.format} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gruppe" value={props.gruppe} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="location" value={props.location} />
+        {props.mainContent}
+    `
+}

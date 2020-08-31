@@ -2,7 +2,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Summemietenetto) < prototype(Neos.Fusion:C
     summemieteust = ${q(node).property('summemieteust')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="summemieteust" value={props.summemieteust} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Summemietenetto {...props}/>
     `
 }

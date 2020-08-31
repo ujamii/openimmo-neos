@@ -1,0 +1,6 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.FreizeitimmobilieGewerblich) < prototype(Neos.Fusion:Component) {
+    freizeitTyp = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="freizeitTyp" value={props.freizeitTyp} />
+    `
+}

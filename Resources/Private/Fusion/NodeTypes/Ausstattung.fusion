@@ -35,46 +35,10 @@ prototype(Ujamii.OpenImmoNeos:Content.Ausstattung) < prototype(Neos.Fusion:Compo
     wellnessbereich = ${q(node).property('wellnessbereich')}
     wgGeeignet = ${q(node).property('wgGeeignet')}
     wintergarten = ${q(node).property('wintergarten')}
-    mainContent = Neos.Neos:ContentCollection {
+    @context.mainContent = Neos.Neos:ContentCollection {
         nodePath = 'main'
     }
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="abstellraum" value={props.abstellraum} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="ausstattKategorie" value={props.ausstattKategorie} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="barrierefrei" value={props.barrierefrei} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bibliothek" value={props.bibliothek} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="brauereibindung" value={props.brauereibindung} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="dachboden" value={props.dachboden} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="dvbt" value={props.dvbt} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="dvVerkabelung" value={props.dvVerkabelung} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="fahrradraum" value={props.fahrradraum} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gaestewc" value={props.gaestewc} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gartennutzung" value={props.gartennutzung} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gastterrasse" value={props.gastterrasse} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="hallenhoehe" value={props.hallenhoehe} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="hebebuehne" value={props.hebebuehne} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kabelkanaele" value={props.kabelkanaele} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kabelSatTv" value={props.kabelSatTv} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kamin" value={props.kamin} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kantineCafeteria" value={props.kantineCafeteria} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="klimatisiert" value={props.klimatisiert} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kran" value={props.kran} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="raeumeVeraenderbar" value={props.raeumeVeraenderbar} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="rampe" value={props.rampe} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="rolladen" value={props.rolladen} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="rollstuhlgerecht" value={props.rollstuhlgerecht} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="sauna" value={props.sauna} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="seniorengerecht" value={props.seniorengerecht} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="sporteinrichtungen" value={props.sporteinrichtungen} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="stromanschlusswert" value={props.stromanschlusswert} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="swimmingpool" value={props.swimmingpool} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="teekueche" value={props.teekueche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="telefonFerienimmobilie" value={props.telefonFerienimmobilie} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="umtsEmpfang" value={props.umtsEmpfang} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="waschTrockenraum" value={props.waschTrockenraum} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="wellnessbereich" value={props.wellnessbereich} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="wgGeeignet" value={props.wgGeeignet} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="wintergarten" value={props.wintergarten} />
-        {props.mainContent}
+        <Ujamii.OpenImmoNeos:Component.Molecule.Ausstattung {...props} mainContent={mainContent}/>
     `
 }

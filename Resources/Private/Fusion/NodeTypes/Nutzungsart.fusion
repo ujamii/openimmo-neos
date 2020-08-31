@@ -4,9 +4,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Nutzungsart) < prototype(Neos.Fusion:Compo
     waz = ${q(node).property('waz')}
     wohnen = ${q(node).property('wohnen')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anlage" value={props.anlage} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gewerbe" value={props.gewerbe} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="waz" value={props.waz} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="wohnen" value={props.wohnen} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Nutzungsart {...props}/>
     `
 }

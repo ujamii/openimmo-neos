@@ -1,0 +1,6 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Zustand) < prototype(Neos.Fusion:Component) {
+    zustandArt = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="zustandArt" value={props.zustandArt} />
+    `
+}

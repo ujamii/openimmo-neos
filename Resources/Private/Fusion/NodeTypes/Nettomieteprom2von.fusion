@@ -2,7 +2,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Nettomieteprom2von) < prototype(Neos.Fusio
     nettomieteprom2bis = ${q(node).property('nettomieteprom2bis')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="nettomieteprom2bis" value={props.nettomieteprom2bis} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Nettomieteprom2von {...props}/>
     `
 }

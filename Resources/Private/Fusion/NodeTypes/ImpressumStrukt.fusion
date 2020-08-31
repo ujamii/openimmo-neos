@@ -10,15 +10,6 @@ prototype(Ujamii.OpenImmoNeos:Content.ImpressumStrukt) < prototype(Neos.Fusion:C
     vertretungsberechtigter = ${q(node).property('vertretungsberechtigter')}
     weiteres = ${q(node).property('weiteres')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="berufsaufsichtsbehoerde" value={props.berufsaufsichtsbehoerde} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="firmenanschrift" value={props.firmenanschrift} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="firmenname" value={props.firmenname} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="handelsregister" value={props.handelsregister} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="handelsregisterNr" value={props.handelsregisterNr} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="steuernummer" value={props.steuernummer} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="telefon" value={props.telefon} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="umsstId" value={props.umsstId} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="vertretungsberechtigter" value={props.vertretungsberechtigter} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="weiteres" value={props.weiteres} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.ImpressumStrukt {...props}/>
     `
 }

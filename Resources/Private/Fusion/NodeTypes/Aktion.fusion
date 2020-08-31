@@ -1,6 +1,6 @@
 prototype(Ujamii.OpenImmoNeos:Content.Aktion) < prototype(Neos.Fusion:Component) {
     aktionart = ${q(node).property('aktionart')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="aktionart" value={props.aktionart} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Aktion {...props}/>
     `
 }

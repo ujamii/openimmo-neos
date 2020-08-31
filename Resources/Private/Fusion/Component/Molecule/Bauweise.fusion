@@ -1,0 +1,10 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Bauweise) < prototype(Neos.Fusion:Component) {
+    fertigteile = null
+    holz = null
+    massiv = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="fertigteile" value={props.fertigteile} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="holz" value={props.holz} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="massiv" value={props.massiv} />
+    `
+}

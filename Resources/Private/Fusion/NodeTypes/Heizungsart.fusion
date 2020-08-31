@@ -5,10 +5,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Heizungsart) < prototype(Neos.Fusion:Compo
     ofen = ${q(node).property('ofen')}
     zentral = ${q(node).property('zentral')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="etage" value={props.etage} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="fern" value={props.fern} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="fussboden" value={props.fussboden} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="ofen" value={props.ofen} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="zentral" value={props.zentral} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Heizungsart {...props}/>
     `
 }

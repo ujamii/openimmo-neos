@@ -1,6 +1,6 @@
 prototype(Ujamii.OpenImmoNeos:Content.Sonstige) < prototype(Neos.Fusion:Component) {
     sonstigeTyp = ${q(node).property('sonstigeTyp')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="sonstigeTyp" value={props.sonstigeTyp} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Sonstige {...props}/>
     `
 }

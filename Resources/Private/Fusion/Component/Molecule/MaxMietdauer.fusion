@@ -1,0 +1,6 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.MaxMietdauer) < prototype(Neos.Fusion:Component) {
+    maxDauer = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="maxDauer" value={props.maxDauer} />
+    `
+}

@@ -87,24 +87,28 @@ class OpenImmoCommandController extends CommandController
     protected function generateFusionPrototypes(string $packagePath)
     {
         $this->outputLine('Generating fusion prototype files ...');
-        $targetPath = $packagePath . implode(DIRECTORY_SEPARATOR, ['Resources', 'Private', 'Fusion', 'NodeTypes']) . DIRECTORY_SEPARATOR;
+        $contentTargetPath  = $packagePath . implode(DIRECTORY_SEPARATOR, ['Resources', 'Private', 'Fusion', 'NodeTypes']) . DIRECTORY_SEPARATOR;
+        $moleculeTargetPath = $packagePath . implode(DIRECTORY_SEPARATOR, ['Resources', 'Private', 'Fusion', 'Component', 'Molecule']) . DIRECTORY_SEPARATOR;
 
         foreach ($this->apiClasses as $classname => $file) {
-            $documentName     = str_replace($this->openImmoApiNamespace . '\\', '', $classname);
-            $nodeType         = $this->getNodeTypeNameFromClassname($documentName);
-            $classProperties  = PhpClass::fromFile($file)->getProperties();
-            $propertyGetters  = [];
-            $propertyRenderer = [];
+            $documentName       = str_replace($this->openImmoApiNamespace . '\\', '', $classname);
+            $nodeType           = $this->getNodeTypeNameFromClassname($documentName);
+            $classProperties    = PhpClass::fromFile($file)->getProperties();
+            $propertyGetters    = [];
+            $propertyRenderer   = [];
+            $moleculeProperties = [];
 
             /* @var PhpProperty $classProperty */
             foreach ($classProperties as $classProperty) {
-                $propertyGetters[] = $this->generateFusionPropertyGetter($classProperty);
-                $propertyRenderer[] = $this->generateFusionPropertyRenderer($classProperty);
+                list($propertyGetter, $moleculeProperty) = $this->generateFusionPropertyGetter($classProperty);
+                $propertyGetters[]    = $propertyGetter;
+                $moleculeProperties[] = $moleculeProperty;
+                $propertyRenderer[]   = $this->generateFusionPropertyRenderer($classProperty);
             }
 
             // there may also be a contentCollection, so this needs to be rendered, too.
             if ($this->nodeHasChildNodesCache[$nodeType]) {
-                $propertyGetters[] = 'mainContent = Neos.Neos:ContentCollection {';
+                $propertyGetters[] = '@context.mainContent = Neos.Neos:ContentCollection {';
                 $propertyGetters[] = '    nodePath = \'main\'';
                 $propertyGetters[] = '}';
 
@@ -112,20 +116,32 @@ class OpenImmoCommandController extends CommandController
             }
 
             $propertyGetterCode = implode(PHP_EOL . '    ', array_filter($propertyGetters));
-            $rendererCode = implode(PHP_EOL . '        ', array_filter($propertyRenderer));
+            $moleculePropertyCode = implode(PHP_EOL . '    ', array_filter($moleculeProperties));
+            $rendererCode       = implode(PHP_EOL . '        ', array_filter($propertyRenderer));
+            $moleculeName = "Ujamii.OpenImmoNeos:Component.Molecule.{$documentName}";
 
             $fusionCode = "prototype({$nodeType}) < prototype(Neos.Fusion:Component) {" . PHP_EOL .
                           "    {$propertyGetterCode}" . PHP_EOL .
                           "    renderer = afx`" . PHP_EOL .
-                          "        {$rendererCode}" . PHP_EOL .
+                          "        <{$moleculeName} {...props}";
+            if ($this->nodeHasChildNodesCache[$nodeType]) {
+                $fusionCode .= " mainContent={mainContent}";
+            }
+            $fusionCode .= "/>" . PHP_EOL .
                           "    `" . PHP_EOL .
                           "}";
 
-            // TODO: add property getter and render component
+            $moleculeCode = "prototype(Ujamii.OpenImmoNeos:Component.Molecule.{$documentName}) < prototype(Neos.Fusion:Component) {" . PHP_EOL .
+                            "    {$moleculePropertyCode}" . PHP_EOL .
+                            "    renderer = afx`" . PHP_EOL .
+                            "        {$rendererCode}" . PHP_EOL .
+                            "    `" . PHP_EOL .
+                            "}";
 
             $filename = "{$documentName}.fusion";
             $this->outputLine("Writing {$nodeType} to file {$filename} ...");
-            file_put_contents($targetPath . $filename, $fusionCode);
+            file_put_contents($contentTargetPath . $filename, $fusionCode);
+            file_put_contents($moleculeTargetPath . $filename, $moleculeCode);
         }
     }
 
@@ -134,9 +150,9 @@ class OpenImmoCommandController extends CommandController
      *
      * @param PhpProperty $property
      *
-     * @return string
+     * @return array [fusionCodeForGetter, fusionCodeForMolecule]
      */
-    protected function generateFusionPropertyGetter(PhpProperty $property): string
+    protected function generateFusionPropertyGetter(PhpProperty $property): array
     {
         $typeFromPhpClass = $this->getPhpPropertyType($property);
 
@@ -150,16 +166,18 @@ class OpenImmoCommandController extends CommandController
             case 'DateTime<\'Y-m-d\'>':
             case 'DateTime<\'Y-m-d\TH:i:s\'>':
             case 'DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>':
-                $fusionCode = "{$property->getName()} = \${q(node).property('{$property->getName()}')}";
+                $fusionGetter             = "{$property->getName()} = \${q(node).property('{$property->getName()}')}";
+                $fusionMoleculeDefinition = "{$property->getName()} = null";
                 break;
 
             default:
-                // TODO: fusion code for rendering child node
-                $fusionCode = '';
+                // fusion code for retrieving child node(s) is added only once (@see self::generateFusionPrototypes)
+                $fusionGetter             = '';
+                $fusionMoleculeDefinition = '';
                 break;
         }
 
-        return $fusionCode;
+        return [$fusionGetter, $fusionMoleculeDefinition];
     }
 
     /**
@@ -187,7 +205,7 @@ class OpenImmoCommandController extends CommandController
                 break;
 
             default:
-                // TODO: fusion code for rendering child node
+                // fusion code for rendering child node(s) is added only once (@see self::generateFusionPrototypes)
                 $fusionCode = '';
                 break;
         }
@@ -229,7 +247,7 @@ class OpenImmoCommandController extends CommandController
             }
 
             $this->nodeHasChildNodesCache[$nodeType] = false;
-            $yaml = [
+            $yaml                                    = [
                 $nodeType => [
                     'superTypes' => [
                         'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector' => true,
@@ -245,16 +263,16 @@ class OpenImmoCommandController extends CommandController
             // only the base type should be shown in the backend
             if ($documentName == 'Immobilie') {
                 $yaml[$nodeType]['superTypes']['Neos.Neos:Document'] = true;
-                $this->nodeHasChildNodesCache[$nodeType] = true;
+                $this->nodeHasChildNodesCache[$nodeType]             = true;
             } else {
                 $yaml[$nodeType]['superTypes']['Ujamii.OpenImmoNeos:Constraint.Content.Restricted'] = true;
                 $yaml[$nodeType]['superTypes']['Neos.Neos:Content']                                 = true;
             }
 
             if (count($allowedChildNodes) > 0) {
-                $allowedChildNodes['*']                               = false;
-                $yaml[$nodeType]['childNodes']['main'] = [
-                    'type' => 'Neos.Neos:ContentCollection',
+                $allowedChildNodes['*']                  = false;
+                $yaml[$nodeType]['childNodes']['main']   = [
+                    'type'        => 'Neos.Neos:ContentCollection',
                     'constraints' => [
                         'nodeTypes' => $allowedChildNodes
                     ]
@@ -344,7 +362,7 @@ class OpenImmoCommandController extends CommandController
             default:
                 // those are handled via childNodes
                 return null;
-                // TODO: add assets here instead of Anhang and Anhaenge
+                // TODO: add assets here instead of Anhang, Foto, Anhaenge, Daten
                 $neosPropType     = 'references';
                 $isPlural         = substr($typeFromPhpClass, 0, 6) == 'array<';
                 $singularTypeName = str_replace('array<', '', str_replace('>', '', $typeFromPhpClass));

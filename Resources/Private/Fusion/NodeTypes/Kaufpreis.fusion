@@ -2,7 +2,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Kaufpreis) < prototype(Neos.Fusion:Compone
     aufAnfrage = ${q(node).property('aufAnfrage')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="aufAnfrage" value={props.aufAnfrage} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Kaufpreis {...props}/>
     `
 }

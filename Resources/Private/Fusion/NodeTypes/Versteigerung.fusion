@@ -6,11 +6,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Versteigerung) < prototype(Neos.Fusion:Com
     zvtermin = ${q(node).property('zvtermin')}
     zwangsversteigerung = ${q(node).property('zwangsversteigerung')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="aktenzeichen" value={props.aktenzeichen} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="amtsgericht" value={props.amtsgericht} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="verkehrswert" value={props.verkehrswert} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="zusatztermin" value={props.zusatztermin} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="zvtermin" value={props.zvtermin} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="zwangsversteigerung" value={props.zwangsversteigerung} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Versteigerung {...props}/>
     `
 }

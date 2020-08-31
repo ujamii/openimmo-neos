@@ -1,0 +1,8 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Nebenkostenprom2von) < prototype(Neos.Fusion:Component) {
+    nebenkostenprom2bis = null
+    value = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="nebenkostenprom2bis" value={props.nebenkostenprom2bis} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+    `
+}

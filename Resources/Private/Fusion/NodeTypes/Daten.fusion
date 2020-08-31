@@ -2,7 +2,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Daten) < prototype(Neos.Fusion:Component) 
     anhanginhalt = ${q(node).property('anhanginhalt')}
     pfad = ${q(node).property('pfad')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anhanginhalt" value={props.anhanginhalt} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="pfad" value={props.pfad} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Daten {...props}/>
     `
 }

@@ -1,0 +1,6 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.ErschliessungUmfang) < prototype(Neos.Fusion:Component) {
+    erschlAttr = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="erschlAttr" value={props.erschlAttr} />
+    `
+}

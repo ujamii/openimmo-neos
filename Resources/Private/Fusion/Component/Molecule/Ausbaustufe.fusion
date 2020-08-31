@@ -1,0 +1,14 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Ausbaustufe) < prototype(Neos.Fusion:Component) {
+    ausbauhaus = null
+    bausatzhaus = null
+    schluesselfertigmitbodenplatte = null
+    schluesselfertigmitkeller = null
+    schluesselfertigohnebodenplatte = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="ausbauhaus" value={props.ausbauhaus} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bausatzhaus" value={props.bausatzhaus} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="schluesselfertigmitbodenplatte" value={props.schluesselfertigmitbodenplatte} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="schluesselfertigmitkeller" value={props.schluesselfertigmitkeller} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="schluesselfertigohnebodenplatte" value={props.schluesselfertigohnebodenplatte} />
+    `
+}

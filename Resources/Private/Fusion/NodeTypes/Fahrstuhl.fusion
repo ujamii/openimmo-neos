@@ -2,7 +2,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Fahrstuhl) < prototype(Neos.Fusion:Compone
     lasten = ${q(node).property('lasten')}
     personen = ${q(node).property('personen')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="lasten" value={props.lasten} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="personen" value={props.personen} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Fahrstuhl {...props}/>
     `
 }

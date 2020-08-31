@@ -2,7 +2,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Gesamtkostenprom2von) < prototype(Neos.Fus
     gesamtkostenprom2bis = ${q(node).property('gesamtkostenprom2bis')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gesamtkostenprom2bis" value={props.gesamtkostenprom2bis} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Gesamtkostenprom2von {...props}/>
     `
 }

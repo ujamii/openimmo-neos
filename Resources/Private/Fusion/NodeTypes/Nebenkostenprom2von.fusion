@@ -2,7 +2,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Nebenkostenprom2von) < prototype(Neos.Fusi
     nebenkostenprom2bis = ${q(node).property('nebenkostenprom2bis')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="nebenkostenprom2bis" value={props.nebenkostenprom2bis} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Nebenkostenprom2von {...props}/>
     `
 }

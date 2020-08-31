@@ -1,0 +1,9 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Foto) < prototype(Neos.Fusion:Component) {
+    format = null
+    location = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="format" value={props.format} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="location" value={props.location} />
+        {props.mainContent}
+    `
+}

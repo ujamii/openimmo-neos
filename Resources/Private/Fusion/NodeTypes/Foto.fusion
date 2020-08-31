@@ -1,12 +1,10 @@
 prototype(Ujamii.OpenImmoNeos:Content.Foto) < prototype(Neos.Fusion:Component) {
     format = ${q(node).property('format')}
     location = ${q(node).property('location')}
-    mainContent = Neos.Neos:ContentCollection {
+    @context.mainContent = Neos.Neos:ContentCollection {
         nodePath = 'main'
     }
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="format" value={props.format} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="location" value={props.location} />
-        {props.mainContent}
+        <Ujamii.OpenImmoNeos:Component.Molecule.Foto {...props} mainContent={mainContent}/>
     `
 }

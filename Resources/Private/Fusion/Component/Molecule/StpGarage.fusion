@@ -1,0 +1,10 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.StpGarage) < prototype(Neos.Fusion:Component) {
+    anzahl = null
+    stellplatzkaufpreis = null
+    stellplatzmiete = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anzahl" value={props.anzahl} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="stellplatzkaufpreis" value={props.stellplatzkaufpreis} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="stellplatzmiete" value={props.stellplatzmiete} />
+    `
+}

@@ -1,8 +1,8 @@
 prototype(Ujamii.OpenImmoNeos:Document.Immobilie) < prototype(Neos.Fusion:Component) {
-    mainContent = Neos.Neos:ContentCollection {
+    @context.mainContent = Neos.Neos:ContentCollection {
         nodePath = 'main'
     }
     renderer = afx`
-        {props.mainContent}
+        <Ujamii.OpenImmoNeos:Component.Molecule.Immobilie {...props} mainContent={mainContent}/>
     `
 }

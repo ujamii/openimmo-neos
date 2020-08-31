@@ -5,10 +5,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Bad) < prototype(Neos.Fusion:Component) {
     pissoir = ${q(node).property('pissoir')}
     wanne = ${q(node).property('wanne')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bidet" value={props.bidet} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="dusche" value={props.dusche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="fenster" value={props.fenster} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="pissoir" value={props.pissoir} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="wanne" value={props.wanne} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Bad {...props}/>
     `
 }

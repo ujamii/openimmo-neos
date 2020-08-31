@@ -1,0 +1,16 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Versteigerung) < prototype(Neos.Fusion:Component) {
+    aktenzeichen = null
+    amtsgericht = null
+    verkehrswert = null
+    zusatztermin = null
+    zvtermin = null
+    zwangsversteigerung = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="aktenzeichen" value={props.aktenzeichen} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="amtsgericht" value={props.amtsgericht} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="verkehrswert" value={props.verkehrswert} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="zusatztermin" value={props.zusatztermin} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="zvtermin" value={props.zvtermin} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="zwangsversteigerung" value={props.zwangsversteigerung} />
+    `
+}

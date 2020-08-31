@@ -1,0 +1,8 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Fahrstuhl) < prototype(Neos.Fusion:Component) {
+    lasten = null
+    personen = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="lasten" value={props.lasten} />
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="personen" value={props.personen} />
+    `
+}

@@ -1,6 +1,6 @@
 prototype(Ujamii.OpenImmoNeos:Content.Einzelhandel) < prototype(Neos.Fusion:Component) {
     handelTyp = ${q(node).property('handelTyp')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="handelTyp" value={props.handelTyp} />
+        <Ujamii.OpenImmoNeos:Component.Molecule.Einzelhandel {...props}/>
     `
 }

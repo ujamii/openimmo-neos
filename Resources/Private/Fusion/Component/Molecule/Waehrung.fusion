@@ -1,0 +1,6 @@
+prototype(Ujamii.OpenImmoNeos:Component.Molecule.Waehrung) < prototype(Neos.Fusion:Component) {
+    isoWaehrung = null
+    renderer = afx`
+        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="isoWaehrung" value={props.isoWaehrung} />
+    `
+}
