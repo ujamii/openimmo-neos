@@ -11,12 +11,14 @@
       type: string
       ui:
         label: Bemerkung
+        reloadIfChanged: true
         inspector:
           group: openimmo
     platzart:
       type: string
       ui:
         label: Platzart
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor

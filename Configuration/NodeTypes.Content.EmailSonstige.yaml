@@ -11,12 +11,14 @@
       type: string
       ui:
         label: Bemerkung
+        reloadIfChanged: true
         inspector:
           group: openimmo
     emailart:
       type: string
       ui:
         label: Emailart
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
@@ -34,5 +36,6 @@
       type: string
       ui:
         label: Value
+        reloadIfChanged: true
         inspector:
           group: openimmo

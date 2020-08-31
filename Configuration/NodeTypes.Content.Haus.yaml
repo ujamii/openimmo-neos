@@ -11,6 +11,7 @@
       type: string
       ui:
         label: Haustyp
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor

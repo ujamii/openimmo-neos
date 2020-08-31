@@ -177,9 +177,15 @@ class OpenImmoCommandController extends CommandController
                 break;
 
             default:
-                // fusion code for retrieving child node(s) is added only once (@see self::generateFusionPrototypes)
-                $fusionGetter             = '';
-                $fusionMoleculeDefinition = '';
+                if ($property->getName() == 'daten') {
+                    // special case for assets
+                    $fusionGetter             = "{$property->getName()} = \${q(node).property('{$property->getName()}')}";
+                    $fusionMoleculeDefinition = "{$property->getName()} = null";
+                } else {
+                    // fusion code for retrieving child node(s) is added only once (@see self::generateFusionPrototypes)
+                    $fusionGetter             = '';
+                    $fusionMoleculeDefinition = '';
+                }
                 break;
         }
 
@@ -211,8 +217,14 @@ class OpenImmoCommandController extends CommandController
                 break;
 
             default:
-                // fusion code for rendering child node(s) is added only once (@see self::generateFusionPrototypes)
-                $fusionCode = '';
+                if ($property->getName() == 'daten') {
+                    // special case for assets
+                    $fusionCode = "<Neos.Neos:ImageTag asset={props.{$property->getName()}} />";
+                } else {
+                    // fusion code for rendering child node(s) is added only once (@see self::generateFusionPrototypes)
+                    $fusionCode = '';
+                }
+
                 break;
         }
 
@@ -247,7 +259,9 @@ class OpenImmoCommandController extends CommandController
                 }
 
                 $targetNodeType = $this->getChildNodeType($classProperty);
-                if (null !== $targetNodeType) {
+                if ( ! in_array($targetNodeType, [null, 'Ujamii.OpenImmoNeos:Content.Daten'])) {
+                    // the NodeType Ujamii.OpenImmoNeos:Content.Daten is special, as this will be converted to
+                    // a NEOS CMS asset instead of a string based property.
                     $allowedChildNodes[$targetNodeType] = true;
                 }
             }
@@ -367,35 +381,34 @@ class OpenImmoCommandController extends CommandController
                 break;
 
             default:
-                // those are handled via childNodes
-                return null;
-                // TODO: add assets here instead of Anhang, Foto, Anhaenge, Daten
-                $neosPropType     = 'references';
-                $isPlural         = substr($typeFromPhpClass, 0, 6) == 'array<';
-                $singularTypeName = str_replace('array<', '', str_replace('>', '', $typeFromPhpClass));
-                $additionalConfig = [
-                    'ui' => [
-                        'inspector' => [
-                            'editorOptions' => [
-                                'nodeTypes' => [$this->getNodeTypeNameFromClassname($singularTypeName)]
+                if ($property->getName() == 'daten') {
+                    // special case for assets
+                    $neosPropType     = 'Neos\Media\Domain\Model\ImageInterface';
+                    $additionalConfig = [
+                        'ui' => [
+                            'inspector' => [
+                                'editorOptions' => [
+                                    'features' => [
+                                        'crop'   => true,
+                                        'resize' => true,
+                                    ]
+                                ]
                             ]
-                        ]
-                    ],
-//                    'validation' => [
-//                        'Neos.Neos/Validation/CountValidator' => [
-//                            'minimum' => 0,
-//                            'maximum' => $isPlural ? 99 : 1,
-//                        ]
-//                    ]
-                ];
+                        ],
+                    ];
+                } else {
+                    // those are handled via childNodes
+                    return null;
+                }
                 break;
         }
 
         $baseConfig = [
             'type' => $neosPropType,
             'ui'   => [
-                'label'     => ucfirst($property->getName()),
-                'inspector' => [
+                'label'           => ucfirst($property->getName()),
+                'reloadIfChanged' => true,
+                'inspector'       => [
                     'group' => 'openimmo'
                 ]
             ],

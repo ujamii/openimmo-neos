@@ -11,47 +11,55 @@
       type: boolean
       ui:
         label: Nord
+        reloadIfChanged: true
         inspector:
           group: openimmo
     nordost:
       type: boolean
       ui:
         label: Nordost
+        reloadIfChanged: true
         inspector:
           group: openimmo
     nordwest:
       type: boolean
       ui:
         label: Nordwest
+        reloadIfChanged: true
         inspector:
           group: openimmo
     ost:
       type: boolean
       ui:
         label: Ost
+        reloadIfChanged: true
         inspector:
           group: openimmo
     sued:
       type: boolean
       ui:
         label: Sued
+        reloadIfChanged: true
         inspector:
           group: openimmo
     suedost:
       type: boolean
       ui:
         label: Suedost
+        reloadIfChanged: true
         inspector:
           group: openimmo
     suedwest:
       type: boolean
       ui:
         label: Suedwest
+        reloadIfChanged: true
         inspector:
           group: openimmo
     west:
       type: boolean
       ui:
         label: West
+        reloadIfChanged: true
         inspector:
           group: openimmo

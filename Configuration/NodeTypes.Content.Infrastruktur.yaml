@@ -11,6 +11,7 @@
       type: boolean
       ui:
         label: Zulieferung
+        reloadIfChanged: true
         inspector:
           group: openimmo
   childNodes:

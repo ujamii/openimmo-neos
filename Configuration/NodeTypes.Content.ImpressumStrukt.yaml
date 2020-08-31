@@ -11,59 +11,69 @@
       type: string
       ui:
         label: Berufsaufsichtsbehoerde
+        reloadIfChanged: true
         inspector:
           group: openimmo
     firmenanschrift:
       type: string
       ui:
         label: Firmenanschrift
+        reloadIfChanged: true
         inspector:
           group: openimmo
     firmenname:
       type: string
       ui:
         label: Firmenname
+        reloadIfChanged: true
         inspector:
           group: openimmo
     handelsregister:
       type: string
       ui:
         label: Handelsregister
+        reloadIfChanged: true
         inspector:
           group: openimmo
     handelsregisterNr:
       type: string
       ui:
         label: HandelsregisterNr
+        reloadIfChanged: true
         inspector:
           group: openimmo
     steuernummer:
       type: string
       ui:
         label: Steuernummer
+        reloadIfChanged: true
         inspector:
           group: openimmo
     telefon:
       type: string
       ui:
         label: Telefon
+        reloadIfChanged: true
         inspector:
           group: openimmo
     umsstId:
       type: string
       ui:
         label: UmsstId
+        reloadIfChanged: true
         inspector:
           group: openimmo
     vertretungsberechtigter:
       type: string
       ui:
         label: Vertretungsberechtigter
+        reloadIfChanged: true
         inspector:
           group: openimmo
     weiteres:
       type: string
       ui:
         label: Weiteres
+        reloadIfChanged: true
         inspector:
           group: openimmo

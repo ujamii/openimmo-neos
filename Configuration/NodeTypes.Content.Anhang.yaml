@@ -11,18 +11,32 @@
       type: string
       ui:
         label: Anhangtitel
+        reloadIfChanged: true
         inspector:
           group: openimmo
+    daten:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: Daten
+        reloadIfChanged: true
+        inspector:
+          group: openimmo
+          editorOptions:
+            features:
+              crop: true
+              resize: true
     format:
       type: string
       ui:
         label: Format
+        reloadIfChanged: true
         inspector:
           group: openimmo
     gruppe:
       type: string
       ui:
         label: Gruppe
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
@@ -62,6 +76,7 @@
       type: string
       ui:
         label: Location
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
@@ -79,5 +94,4 @@
       constraints:
         nodeTypes:
           'Ujamii.OpenImmoNeos:Content.Check': true
-          'Ujamii.OpenImmoNeos:Content.Daten': true
           '*': false

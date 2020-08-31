@@ -11,5 +11,6 @@
       type: boolean
       ui:
         label: MitMwst
+        reloadIfChanged: true
         inspector:
           group: openimmo

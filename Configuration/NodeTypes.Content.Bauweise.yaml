@@ -11,17 +11,20 @@
       type: boolean
       ui:
         label: Fertigteile
+        reloadIfChanged: true
         inspector:
           group: openimmo
     holz:
       type: boolean
       ui:
         label: Holz
+        reloadIfChanged: true
         inspector:
           group: openimmo
     massiv:
       type: boolean
       ui:
         label: Massiv
+        reloadIfChanged: true
         inspector:
           group: openimmo

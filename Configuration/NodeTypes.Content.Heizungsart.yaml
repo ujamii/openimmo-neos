@@ -11,29 +11,34 @@
       type: boolean
       ui:
         label: Etage
+        reloadIfChanged: true
         inspector:
           group: openimmo
     fern:
       type: boolean
       ui:
         label: Fern
+        reloadIfChanged: true
         inspector:
           group: openimmo
     fussboden:
       type: boolean
       ui:
         label: Fussboden
+        reloadIfChanged: true
         inspector:
           group: openimmo
     ofen:
       type: boolean
       ui:
         label: Ofen
+        reloadIfChanged: true
         inspector:
           group: openimmo
     zentral:
       type: boolean
       ui:
         label: Zentral
+        reloadIfChanged: true
         inspector:
           group: openimmo

@@ -11,23 +11,27 @@
       type: boolean
       ui:
         label: Anlage
+        reloadIfChanged: true
         inspector:
           group: openimmo
     gewerbe:
       type: boolean
       ui:
         label: Gewerbe
+        reloadIfChanged: true
         inspector:
           group: openimmo
     waz:
       type: boolean
       ui:
         label: Waz
+        reloadIfChanged: true
         inspector:
           group: openimmo
     wohnen:
       type: boolean
       ui:
         label: Wohnen
+        reloadIfChanged: true
         inspector:
           group: openimmo

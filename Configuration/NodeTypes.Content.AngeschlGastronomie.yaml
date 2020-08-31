@@ -11,11 +11,13 @@
       type: boolean
       ui:
         label: Bar
+        reloadIfChanged: true
         inspector:
           group: openimmo
     hotelrestaurant:
       type: boolean
       ui:
         label: Hotelrestaurant
+        reloadIfChanged: true
         inspector:
           group: openimmo

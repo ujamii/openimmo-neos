@@ -11,6 +11,7 @@
       type: DateTime
       ui:
         label: Abdatum
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editorOptions:
@@ -19,12 +20,14 @@
       type: boolean
       ui:
         label: AlsFerien
+        reloadIfChanged: true
         inspector:
           group: openimmo
     bisdatum:
       type: DateTime
       ui:
         label: Bisdatum
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editorOptions:
@@ -33,78 +36,91 @@
       type: string
       ui:
         label: Branchen
+        reloadIfChanged: true
         inspector:
           group: openimmo
     denkmalgeschuetzt:
       type: boolean
       ui:
         label: Denkmalgeschuetzt
+        reloadIfChanged: true
         inspector:
           group: openimmo
     gewerblicheNutzung:
       type: boolean
       ui:
         label: GewerblicheNutzung
+        reloadIfChanged: true
         inspector:
           group: openimmo
     gruppennummer:
       type: string
       ui:
         label: Gruppennummer
+        reloadIfChanged: true
         inspector:
           group: openimmo
     haustiere:
       type: boolean
       ui:
         label: Haustiere
+        reloadIfChanged: true
         inspector:
           group: openimmo
     hochhaus:
       type: boolean
       ui:
         label: Hochhaus
+        reloadIfChanged: true
         inspector:
           group: openimmo
     laufzeit:
       type: string
       ui:
         label: Laufzeit
+        reloadIfChanged: true
         inspector:
           group: openimmo
     maxPersonen:
       type: integer
       ui:
         label: MaxPersonen
+        reloadIfChanged: true
         inspector:
           group: openimmo
     nichtraucher:
       type: boolean
       ui:
         label: Nichtraucher
+        reloadIfChanged: true
         inspector:
           group: openimmo
     objektadresseFreigeben:
       type: boolean
       ui:
         label: ObjektadresseFreigeben
+        reloadIfChanged: true
         inspector:
           group: openimmo
     verfuegbarAb:
       type: string
       ui:
         label: VerfuegbarAb
+        reloadIfChanged: true
         inspector:
           group: openimmo
     vermietet:
       type: boolean
       ui:
         label: Vermietet
+        reloadIfChanged: true
         inspector:
           group: openimmo
     versteigerungstermin:
       type: DateTime
       ui:
         label: Versteigerungstermin
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editorOptions:
@@ -113,12 +129,14 @@
       type: boolean
       ui:
         label: WbsSozialwohnung
+        reloadIfChanged: true
         inspector:
           group: openimmo
     zugang:
       type: string
       ui:
         label: Zugang
+        reloadIfChanged: true
         inspector:
           group: openimmo
   childNodes:

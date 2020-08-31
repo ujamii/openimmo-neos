@@ -11,29 +11,34 @@
       type: boolean
       ui:
         label: BetreutesWohnen
+        reloadIfChanged: true
         inspector:
           group: openimmo
     catering:
       type: boolean
       ui:
         label: Catering
+        reloadIfChanged: true
         inspector:
           group: openimmo
     einkauf:
       type: boolean
       ui:
         label: Einkauf
+        reloadIfChanged: true
         inspector:
           group: openimmo
     reinigung:
       type: boolean
       ui:
         label: Reinigung
+        reloadIfChanged: true
         inspector:
           group: openimmo
     wachdienst:
       type: boolean
       ui:
         label: Wachdienst
+        reloadIfChanged: true
         inspector:
           group: openimmo

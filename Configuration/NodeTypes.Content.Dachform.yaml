@@ -11,41 +11,48 @@
       type: boolean
       ui:
         label: Flachdach
+        reloadIfChanged: true
         inspector:
           group: openimmo
     krueppelwalmdach:
       type: boolean
       ui:
         label: Krueppelwalmdach
+        reloadIfChanged: true
         inspector:
           group: openimmo
     mansarddach:
       type: boolean
       ui:
         label: Mansarddach
+        reloadIfChanged: true
         inspector:
           group: openimmo
     pultdach:
       type: boolean
       ui:
         label: Pultdach
+        reloadIfChanged: true
         inspector:
           group: openimmo
     pyramidendach:
       type: boolean
       ui:
         label: Pyramidendach
+        reloadIfChanged: true
         inspector:
           group: openimmo
     satteldach:
       type: boolean
       ui:
         label: Satteldach
+        reloadIfChanged: true
         inspector:
           group: openimmo
     walmdach:
       type: boolean
       ui:
         label: Walmdach
+        reloadIfChanged: true
         inspector:
           group: openimmo

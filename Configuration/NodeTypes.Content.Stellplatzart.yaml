@@ -11,35 +11,41 @@
       type: boolean
       ui:
         label: Carport
+        reloadIfChanged: true
         inspector:
           group: openimmo
     duplex:
       type: boolean
       ui:
         label: Duplex
+        reloadIfChanged: true
         inspector:
           group: openimmo
     freiplatz:
       type: boolean
       ui:
         label: Freiplatz
+        reloadIfChanged: true
         inspector:
           group: openimmo
     garage:
       type: boolean
       ui:
         label: Garage
+        reloadIfChanged: true
         inspector:
           group: openimmo
     parkhaus:
       type: boolean
       ui:
         label: Parkhaus
+        reloadIfChanged: true
         inspector:
           group: openimmo
     tiefgarage:
       type: boolean
       ui:
         label: Tiefgarage
+        reloadIfChanged: true
         inspector:
           group: openimmo

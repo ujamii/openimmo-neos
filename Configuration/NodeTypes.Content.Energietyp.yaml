@@ -11,53 +11,62 @@
       type: boolean
       ui:
         label: Kfw40
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kfw55:
       type: boolean
       ui:
         label: Kfw55
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kfw60:
       type: boolean
       ui:
         label: Kfw60
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kfw70:
       type: boolean
       ui:
         label: Kfw70
+        reloadIfChanged: true
         inspector:
           group: openimmo
     minergiebauweise:
       type: boolean
       ui:
         label: Minergiebauweise
+        reloadIfChanged: true
         inspector:
           group: openimmo
     minergieZertifiziert:
       type: boolean
       ui:
         label: MinergieZertifiziert
+        reloadIfChanged: true
         inspector:
           group: openimmo
     neubaustandard:
       type: boolean
       ui:
         label: Neubaustandard
+        reloadIfChanged: true
         inspector:
           group: openimmo
     niedrigenergie:
       type: boolean
       ui:
         label: Niedrigenergie
+        reloadIfChanged: true
         inspector:
           group: openimmo
     passivhaus:
       type: boolean
       ui:
         label: Passivhaus
+        reloadIfChanged: true
         inspector:
           group: openimmo

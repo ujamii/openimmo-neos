@@ -11,6 +11,7 @@
       type: DateTime
       ui:
         label: Ausstelldatum
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editorOptions:
@@ -19,24 +20,28 @@
       type: string
       ui:
         label: Baujahr
+        reloadIfChanged: true
         inspector:
           group: openimmo
     endenergiebedarf:
       type: string
       ui:
         label: Endenergiebedarf
+        reloadIfChanged: true
         inspector:
           group: openimmo
     energieverbrauchkennwert:
       type: string
       ui:
         label: Energieverbrauchkennwert
+        reloadIfChanged: true
         inspector:
           group: openimmo
     epart:
       type: string
       ui:
         label: Epart
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
@@ -50,24 +55,28 @@
       type: string
       ui:
         label: Epasstext
+        reloadIfChanged: true
         inspector:
           group: openimmo
     fgeeklasse:
       type: string
       ui:
         label: Fgeeklasse
+        reloadIfChanged: true
         inspector:
           group: openimmo
     fgeewert:
       type: string
       ui:
         label: Fgeewert
+        reloadIfChanged: true
         inspector:
           group: openimmo
     gebaeudeart:
       type: string
       ui:
         label: Gebaeudeart
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
@@ -81,30 +90,35 @@
       type: string
       ui:
         label: Geg2018
+        reloadIfChanged: true
         inspector:
           group: openimmo
     gueltigBis:
       type: string
       ui:
         label: GueltigBis
+        reloadIfChanged: true
         inspector:
           group: openimmo
     hwbklasse:
       type: string
       ui:
         label: Hwbklasse
+        reloadIfChanged: true
         inspector:
           group: openimmo
     hwbwert:
       type: string
       ui:
         label: Hwbwert
+        reloadIfChanged: true
         inspector:
           group: openimmo
     jahrgang:
       type: string
       ui:
         label: Jahrgang
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
@@ -124,29 +138,34 @@
       type: boolean
       ui:
         label: Mitwarmwasser
+        reloadIfChanged: true
         inspector:
           group: openimmo
     primaerenergietraeger:
       type: string
       ui:
         label: Primaerenergietraeger
+        reloadIfChanged: true
         inspector:
           group: openimmo
     stromwert:
       type: string
       ui:
         label: Stromwert
+        reloadIfChanged: true
         inspector:
           group: openimmo
     waermewert:
       type: string
       ui:
         label: Waermewert
+        reloadIfChanged: true
         inspector:
           group: openimmo
     wertklasse:
       type: string
       ui:
         label: Wertklasse
+        reloadIfChanged: true
         inspector:
           group: openimmo

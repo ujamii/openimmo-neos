@@ -11,29 +11,34 @@
       type: boolean
       ui:
         label: Ausbauhaus
+        reloadIfChanged: true
         inspector:
           group: openimmo
     bausatzhaus:
       type: boolean
       ui:
         label: Bausatzhaus
+        reloadIfChanged: true
         inspector:
           group: openimmo
     schluesselfertigmitbodenplatte:
       type: boolean
       ui:
         label: Schluesselfertigmitbodenplatte
+        reloadIfChanged: true
         inspector:
           group: openimmo
     schluesselfertigmitkeller:
       type: boolean
       ui:
         label: Schluesselfertigmitkeller
+        reloadIfChanged: true
         inspector:
           group: openimmo
     schluesselfertigohnebodenplatte:
       type: boolean
       ui:
         label: Schluesselfertigohnebodenplatte
+        reloadIfChanged: true
         inspector:
           group: openimmo

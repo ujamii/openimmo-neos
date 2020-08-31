@@ -11,35 +11,41 @@
       type: string
       ui:
         label: Aktenzeichen
+        reloadIfChanged: true
         inspector:
           group: openimmo
     amtsgericht:
       type: string
       ui:
         label: Amtsgericht
+        reloadIfChanged: true
         inspector:
           group: openimmo
     verkehrswert:
       type: string
       ui:
         label: Verkehrswert
+        reloadIfChanged: true
         inspector:
           group: openimmo
     zusatztermin:
       type: DateTime
       ui:
         label: Zusatztermin
+        reloadIfChanged: true
         inspector:
           group: openimmo
     zvtermin:
       type: DateTime
       ui:
         label: Zvtermin
+        reloadIfChanged: true
         inspector:
           group: openimmo
     zwangsversteigerung:
       type: boolean
       ui:
         label: Zwangsversteigerung
+        reloadIfChanged: true
         inspector:
           group: openimmo

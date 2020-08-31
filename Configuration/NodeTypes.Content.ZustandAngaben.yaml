@@ -11,24 +11,28 @@
       type: string
       ui:
         label: Altlasten
+        reloadIfChanged: true
         inspector:
           group: openimmo
     baujahr:
       type: string
       ui:
         label: Baujahr
+        reloadIfChanged: true
         inspector:
           group: openimmo
     bauzone:
       type: string
       ui:
         label: Bauzone
+        reloadIfChanged: true
         inspector:
           group: openimmo
     letztemodernisierung:
       type: string
       ui:
         label: Letztemodernisierung
+        reloadIfChanged: true
         inspector:
           group: openimmo
   childNodes:

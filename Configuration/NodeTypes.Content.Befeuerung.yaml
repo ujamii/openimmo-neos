@@ -11,83 +11,97 @@
       type: boolean
       ui:
         label: Alternativ
+        reloadIfChanged: true
         inspector:
           group: openimmo
     block:
       type: boolean
       ui:
         label: Block
+        reloadIfChanged: true
         inspector:
           group: openimmo
     elektro:
       type: boolean
       ui:
         label: Elektro
+        reloadIfChanged: true
         inspector:
           group: openimmo
     erdwaerme:
       type: boolean
       ui:
         label: Erdwaerme
+        reloadIfChanged: true
         inspector:
           group: openimmo
     fern:
       type: boolean
       ui:
         label: Fern
+        reloadIfChanged: true
         inspector:
           group: openimmo
     fluessiggas:
       type: boolean
       ui:
         label: Fluessiggas
+        reloadIfChanged: true
         inspector:
           group: openimmo
     gas:
       type: boolean
       ui:
         label: Gas
+        reloadIfChanged: true
         inspector:
           group: openimmo
     holz:
       type: boolean
       ui:
         label: Holz
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kohle:
       type: boolean
       ui:
         label: Kohle
+        reloadIfChanged: true
         inspector:
           group: openimmo
     luftwp:
       type: boolean
       ui:
         label: Luftwp
+        reloadIfChanged: true
         inspector:
           group: openimmo
     oel:
       type: boolean
       ui:
         label: Oel
+        reloadIfChanged: true
         inspector:
           group: openimmo
     pellet:
       type: boolean
       ui:
         label: Pellet
+        reloadIfChanged: true
         inspector:
           group: openimmo
     solar:
       type: boolean
       ui:
         label: Solar
+        reloadIfChanged: true
         inspector:
           group: openimmo
     wasserElektro:
       type: boolean
       ui:
         label: WasserElektro
+        reloadIfChanged: true
         inspector:
           group: openimmo

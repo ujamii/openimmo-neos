@@ -11,6 +11,7 @@
       type: DateTime
       ui:
         label: BeginnAngebotsphase
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editorOptions:
@@ -19,12 +20,14 @@
       type: DateTime
       ui:
         label: BeginnBietzeit
+        reloadIfChanged: true
         inspector:
           group: openimmo
     besichtigungstermin:
       type: DateTime
       ui:
         label: Besichtigungstermin
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editorOptions:
@@ -33,6 +36,7 @@
       type: DateTime
       ui:
         label: Besichtigungstermin2
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editorOptions:
@@ -41,6 +45,7 @@
       type: DateTime
       ui:
         label: EndeBietzeit
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editorOptions:
@@ -49,12 +54,14 @@
       type: boolean
       ui:
         label: HoechstgebotZeigen
+        reloadIfChanged: true
         inspector:
           group: openimmo
     mindestpreis:
       type: string
       ui:
         label: Mindestpreis
+        reloadIfChanged: true
         inspector:
           group: openimmo
   childNodes:

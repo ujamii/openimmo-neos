@@ -11,29 +11,34 @@
       type: boolean
       ui:
         label: Bidet
+        reloadIfChanged: true
         inspector:
           group: openimmo
     dusche:
       type: boolean
       ui:
         label: Dusche
+        reloadIfChanged: true
         inspector:
           group: openimmo
     fenster:
       type: boolean
       ui:
         label: Fenster
+        reloadIfChanged: true
         inspector:
           group: openimmo
     pissoir:
       type: boolean
       ui:
         label: Pissoir
+        reloadIfChanged: true
         inspector:
           group: openimmo
     wanne:
       type: boolean
       ui:
         label: Wanne
+        reloadIfChanged: true
         inspector:
           group: openimmo

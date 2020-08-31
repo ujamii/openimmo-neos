@@ -11,23 +11,27 @@
       type: boolean
       ui:
         label: Erbpacht
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kauf:
       type: boolean
       ui:
         label: Kauf
+        reloadIfChanged: true
         inspector:
           group: openimmo
     leasing:
       type: boolean
       ui:
         label: Leasing
+        reloadIfChanged: true
         inspector:
           group: openimmo
     mietePacht:
       type: boolean
       ui:
         label: MietePacht
+        reloadIfChanged: true
         inspector:
           group: openimmo

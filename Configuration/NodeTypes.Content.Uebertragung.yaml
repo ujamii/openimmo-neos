@@ -11,6 +11,7 @@
       type: string
       ui:
         label: Art
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
@@ -24,6 +25,7 @@
       type: string
       ui:
         label: Modus
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
@@ -39,36 +41,42 @@
       type: string
       ui:
         label: RegiId
+        reloadIfChanged: true
         inspector:
           group: openimmo
     sendersoftware:
       type: string
       ui:
         label: Sendersoftware
+        reloadIfChanged: true
         inspector:
           group: openimmo
     senderversion:
       type: string
       ui:
         label: Senderversion
+        reloadIfChanged: true
         inspector:
           group: openimmo
     technEmail:
       type: string
       ui:
         label: TechnEmail
+        reloadIfChanged: true
         inspector:
           group: openimmo
     timestamp:
       type: DateTime
       ui:
         label: Timestamp
+        reloadIfChanged: true
         inspector:
           group: openimmo
     umfang:
       type: string
       ui:
         label: Umfang
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
@@ -82,5 +90,6 @@
       type: string
       ui:
         label: Version
+        reloadIfChanged: true
         inspector:
           group: openimmo

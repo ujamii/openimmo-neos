@@ -7,16 +7,29 @@
     label: Foto
     icon: icon-sign
   properties:
+    daten:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: Daten
+        reloadIfChanged: true
+        inspector:
+          group: openimmo
+          editorOptions:
+            features:
+              crop: true
+              resize: true
     format:
       type: string
       ui:
         label: Format
+        reloadIfChanged: true
         inspector:
           group: openimmo
     location:
       type: string
       ui:
         label: Location
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
@@ -26,10 +39,3 @@
                 label: Extern
               REMOTE:
                 label: Remote
-  childNodes:
-    main:
-      type: 'Neos.Neos:ContentCollection'
-      constraints:
-        nodeTypes:
-          'Ujamii.OpenImmoNeos:Content.Daten': true
-          '*': false

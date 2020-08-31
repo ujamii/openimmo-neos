@@ -11,83 +11,97 @@
       type: boolean
       ui:
         label: Dielen
+        reloadIfChanged: true
         inspector:
           group: openimmo
     doppelboden:
       type: boolean
       ui:
         label: Doppelboden
+        reloadIfChanged: true
         inspector:
           group: openimmo
     estrich:
       type: boolean
       ui:
         label: Estrich
+        reloadIfChanged: true
         inspector:
           group: openimmo
     fertigparkett:
       type: boolean
       ui:
         label: Fertigparkett
+        reloadIfChanged: true
         inspector:
           group: openimmo
     fliesen:
       type: boolean
       ui:
         label: Fliesen
+        reloadIfChanged: true
         inspector:
           group: openimmo
     granit:
       type: boolean
       ui:
         label: Granit
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kunststoff:
       type: boolean
       ui:
         label: Kunststoff
+        reloadIfChanged: true
         inspector:
           group: openimmo
     laminat:
       type: boolean
       ui:
         label: Laminat
+        reloadIfChanged: true
         inspector:
           group: openimmo
     linoleum:
       type: boolean
       ui:
         label: Linoleum
+        reloadIfChanged: true
         inspector:
           group: openimmo
     marmor:
       type: boolean
       ui:
         label: Marmor
+        reloadIfChanged: true
         inspector:
           group: openimmo
     parkett:
       type: boolean
       ui:
         label: Parkett
+        reloadIfChanged: true
         inspector:
           group: openimmo
     stein:
       type: boolean
       ui:
         label: Stein
+        reloadIfChanged: true
         inspector:
           group: openimmo
     teppich:
       type: boolean
       ui:
         label: Teppich
+        reloadIfChanged: true
         inspector:
           group: openimmo
     terrakotta:
       type: boolean
       ui:
         label: Terrakotta
+        reloadIfChanged: true
         inspector:
           group: openimmo

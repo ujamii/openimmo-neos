@@ -11,11 +11,13 @@
       type: boolean
       ui:
         label: Lasten
+        reloadIfChanged: true
         inspector:
           group: openimmo
     personen:
       type: boolean
       ui:
         label: Personen
+        reloadIfChanged: true
         inspector:
           group: openimmo

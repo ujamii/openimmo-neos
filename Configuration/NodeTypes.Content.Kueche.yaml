@@ -11,17 +11,20 @@
       type: boolean
       ui:
         label: Ebk
+        reloadIfChanged: true
         inspector:
           group: openimmo
     offen:
       type: boolean
       ui:
         label: Offen
+        reloadIfChanged: true
         inspector:
           group: openimmo
     pantry:
       type: boolean
       ui:
         label: Pantry
+        reloadIfChanged: true
         inspector:
           group: openimmo

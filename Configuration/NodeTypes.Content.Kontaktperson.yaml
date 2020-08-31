@@ -11,180 +11,210 @@
       type: boolean
       ui:
         label: Adressfreigabe
+        reloadIfChanged: true
         inspector:
           group: openimmo
     anrede:
       type: string
       ui:
         label: Anrede
+        reloadIfChanged: true
         inspector:
           group: openimmo
     anredeBrief:
       type: string
       ui:
         label: AnredeBrief
+        reloadIfChanged: true
         inspector:
           group: openimmo
     emailDirekt:
       type: string
       ui:
         label: EmailDirekt
+        reloadIfChanged: true
         inspector:
           group: openimmo
     emailFeedback:
       type: string
       ui:
         label: EmailFeedback
+        reloadIfChanged: true
         inspector:
           group: openimmo
     emailPrivat:
       type: string
       ui:
         label: EmailPrivat
+        reloadIfChanged: true
         inspector:
           group: openimmo
     emailZentrale:
       type: string
       ui:
         label: EmailZentrale
+        reloadIfChanged: true
         inspector:
           group: openimmo
     firma:
       type: string
       ui:
         label: Firma
+        reloadIfChanged: true
         inspector:
           group: openimmo
     freitextfeld:
       type: string
       ui:
         label: Freitextfeld
+        reloadIfChanged: true
         inspector:
           group: openimmo
     hausnummer:
       type: string
       ui:
         label: Hausnummer
+        reloadIfChanged: true
         inspector:
           group: openimmo
     immobilientreuhaenderid:
       type: string
       ui:
         label: Immobilientreuhaenderid
+        reloadIfChanged: true
         inspector:
           group: openimmo
     name:
       type: string
       ui:
         label: Name
+        reloadIfChanged: true
         inspector:
           group: openimmo
     ort:
       type: string
       ui:
         label: Ort
+        reloadIfChanged: true
         inspector:
           group: openimmo
     personennummer:
       type: string
       ui:
         label: Personennummer
+        reloadIfChanged: true
         inspector:
           group: openimmo
     plz:
       type: string
       ui:
         label: Plz
+        reloadIfChanged: true
         inspector:
           group: openimmo
     position:
       type: string
       ui:
         label: Position
+        reloadIfChanged: true
         inspector:
           group: openimmo
     postfach:
       type: string
       ui:
         label: Postfach
+        reloadIfChanged: true
         inspector:
           group: openimmo
     postfOrt:
       type: string
       ui:
         label: PostfOrt
+        reloadIfChanged: true
         inspector:
           group: openimmo
     postfPlz:
       type: string
       ui:
         label: PostfPlz
+        reloadIfChanged: true
         inspector:
           group: openimmo
     referenzId:
       type: string
       ui:
         label: ReferenzId
+        reloadIfChanged: true
         inspector:
           group: openimmo
     strasse:
       type: string
       ui:
         label: Strasse
+        reloadIfChanged: true
         inspector:
           group: openimmo
     telDurchw:
       type: string
       ui:
         label: TelDurchw
+        reloadIfChanged: true
         inspector:
           group: openimmo
     telFax:
       type: string
       ui:
         label: TelFax
+        reloadIfChanged: true
         inspector:
           group: openimmo
     telHandy:
       type: string
       ui:
         label: TelHandy
+        reloadIfChanged: true
         inspector:
           group: openimmo
     telPrivat:
       type: string
       ui:
         label: TelPrivat
+        reloadIfChanged: true
         inspector:
           group: openimmo
     telZentrale:
       type: string
       ui:
         label: TelZentrale
+        reloadIfChanged: true
         inspector:
           group: openimmo
     titel:
       type: string
       ui:
         label: Titel
+        reloadIfChanged: true
         inspector:
           group: openimmo
     url:
       type: string
       ui:
         label: Url
+        reloadIfChanged: true
         inspector:
           group: openimmo
     vorname:
       type: string
       ui:
         label: Vorname
+        reloadIfChanged: true
         inspector:
           group: openimmo
     zusatzfeld:
       type: string
       ui:
         label: Zusatzfeld
+        reloadIfChanged: true
         inspector:
           group: openimmo
   childNodes:

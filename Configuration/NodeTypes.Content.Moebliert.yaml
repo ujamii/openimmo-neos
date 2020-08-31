@@ -11,6 +11,7 @@
       type: string
       ui:
         label: Moeb
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor

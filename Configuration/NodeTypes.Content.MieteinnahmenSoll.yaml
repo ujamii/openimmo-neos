@@ -11,6 +11,7 @@
       type: string
       ui:
         label: Periode
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
@@ -28,5 +29,6 @@
       type: string
       ui:
         label: Value
+        reloadIfChanged: true
         inspector:
           group: openimmo

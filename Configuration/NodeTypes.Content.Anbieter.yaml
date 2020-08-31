@@ -11,30 +11,35 @@
       type: string
       ui:
         label: Anbieternr
+        reloadIfChanged: true
         inspector:
           group: openimmo
     firma:
       type: string
       ui:
         label: Firma
+        reloadIfChanged: true
         inspector:
           group: openimmo
     impressum:
       type: string
       ui:
         label: Impressum
+        reloadIfChanged: true
         inspector:
           group: openimmo
     lizenzkennung:
       type: string
       ui:
         label: Lizenzkennung
+        reloadIfChanged: true
         inspector:
           group: openimmo
     openimmoAnid:
       type: string
       ui:
         label: OpenimmoAnid
+        reloadIfChanged: true
         inspector:
           group: openimmo
   childNodes:

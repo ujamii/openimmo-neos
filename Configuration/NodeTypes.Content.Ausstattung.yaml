@@ -11,12 +11,14 @@
       type: boolean
       ui:
         label: Abstellraum
+        reloadIfChanged: true
         inspector:
           group: openimmo
     ausstattKategorie:
       type: string
       ui:
         label: AusstattKategorie
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
@@ -32,204 +34,238 @@
       type: boolean
       ui:
         label: Barrierefrei
+        reloadIfChanged: true
         inspector:
           group: openimmo
     bibliothek:
       type: boolean
       ui:
         label: Bibliothek
+        reloadIfChanged: true
         inspector:
           group: openimmo
     brauereibindung:
       type: boolean
       ui:
         label: Brauereibindung
+        reloadIfChanged: true
         inspector:
           group: openimmo
     dachboden:
       type: boolean
       ui:
         label: Dachboden
+        reloadIfChanged: true
         inspector:
           group: openimmo
     dvbt:
       type: boolean
       ui:
         label: Dvbt
+        reloadIfChanged: true
         inspector:
           group: openimmo
     dvVerkabelung:
       type: boolean
       ui:
         label: DvVerkabelung
+        reloadIfChanged: true
         inspector:
           group: openimmo
     fahrradraum:
       type: boolean
       ui:
         label: Fahrradraum
+        reloadIfChanged: true
         inspector:
           group: openimmo
     gaestewc:
       type: boolean
       ui:
         label: Gaestewc
+        reloadIfChanged: true
         inspector:
           group: openimmo
     gartennutzung:
       type: boolean
       ui:
         label: Gartennutzung
+        reloadIfChanged: true
         inspector:
           group: openimmo
     gastterrasse:
       type: boolean
       ui:
         label: Gastterrasse
+        reloadIfChanged: true
         inspector:
           group: openimmo
     hallenhoehe:
       type: string
       ui:
         label: Hallenhoehe
+        reloadIfChanged: true
         inspector:
           group: openimmo
     hebebuehne:
       type: boolean
       ui:
         label: Hebebuehne
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kabelkanaele:
       type: boolean
       ui:
         label: Kabelkanaele
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kabelSatTv:
       type: boolean
       ui:
         label: KabelSatTv
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kamin:
       type: boolean
       ui:
         label: Kamin
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kantineCafeteria:
       type: boolean
       ui:
         label: KantineCafeteria
+        reloadIfChanged: true
         inspector:
           group: openimmo
     klimatisiert:
       type: boolean
       ui:
         label: Klimatisiert
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kran:
       type: boolean
       ui:
         label: Kran
+        reloadIfChanged: true
         inspector:
           group: openimmo
     raeumeVeraenderbar:
       type: boolean
       ui:
         label: RaeumeVeraenderbar
+        reloadIfChanged: true
         inspector:
           group: openimmo
     rampe:
       type: boolean
       ui:
         label: Rampe
+        reloadIfChanged: true
         inspector:
           group: openimmo
     rolladen:
       type: boolean
       ui:
         label: Rolladen
+        reloadIfChanged: true
         inspector:
           group: openimmo
     rollstuhlgerecht:
       type: boolean
       ui:
         label: Rollstuhlgerecht
+        reloadIfChanged: true
         inspector:
           group: openimmo
     sauna:
       type: boolean
       ui:
         label: Sauna
+        reloadIfChanged: true
         inspector:
           group: openimmo
     seniorengerecht:
       type: boolean
       ui:
         label: Seniorengerecht
+        reloadIfChanged: true
         inspector:
           group: openimmo
     sporteinrichtungen:
       type: boolean
       ui:
         label: Sporteinrichtungen
+        reloadIfChanged: true
         inspector:
           group: openimmo
     stromanschlusswert:
       type: string
       ui:
         label: Stromanschlusswert
+        reloadIfChanged: true
         inspector:
           group: openimmo
     swimmingpool:
       type: boolean
       ui:
         label: Swimmingpool
+        reloadIfChanged: true
         inspector:
           group: openimmo
     teekueche:
       type: boolean
       ui:
         label: Teekueche
+        reloadIfChanged: true
         inspector:
           group: openimmo
     telefonFerienimmobilie:
       type: boolean
       ui:
         label: TelefonFerienimmobilie
+        reloadIfChanged: true
         inspector:
           group: openimmo
     umtsEmpfang:
       type: boolean
       ui:
         label: UmtsEmpfang
+        reloadIfChanged: true
         inspector:
           group: openimmo
     waschTrockenraum:
       type: boolean
       ui:
         label: WaschTrockenraum
+        reloadIfChanged: true
         inspector:
           group: openimmo
     wellnessbereich:
       type: boolean
       ui:
         label: Wellnessbereich
+        reloadIfChanged: true
         inspector:
           group: openimmo
     wgGeeignet:
       type: boolean
       ui:
         label: WgGeeignet
+        reloadIfChanged: true
         inspector:
           group: openimmo
     wintergarten:
       type: boolean
       ui:
         label: Wintergarten
+        reloadIfChanged: true
         inspector:
           group: openimmo
   childNodes:

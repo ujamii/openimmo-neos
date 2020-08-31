@@ -11,5 +11,6 @@
       type: string
       ui:
         label: Lang
+        reloadIfChanged: true
         inspector:
           group: openimmo

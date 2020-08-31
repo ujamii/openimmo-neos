@@ -11,36 +11,42 @@
       type: string
       ui:
         label: AusstattBeschr
+        reloadIfChanged: true
         inspector:
           group: openimmo
     dreizeiler:
       type: string
       ui:
         label: Dreizeiler
+        reloadIfChanged: true
         inspector:
           group: openimmo
     lage:
       type: string
       ui:
         label: Lage
+        reloadIfChanged: true
         inspector:
           group: openimmo
     objektbeschreibung:
       type: string
       ui:
         label: Objektbeschreibung
+        reloadIfChanged: true
         inspector:
           group: openimmo
     objekttitel:
       type: string
       ui:
         label: Objekttitel
+        reloadIfChanged: true
         inspector:
           group: openimmo
     sonstigeAngaben:
       type: string
       ui:
         label: SonstigeAngaben
+        reloadIfChanged: true
         inspector:
           group: openimmo
   childNodes:

@@ -11,11 +11,13 @@
       type: string
       ui:
         label: Breitengrad
+        reloadIfChanged: true
         inspector:
           group: openimmo
     laengengrad:
       type: string
       ui:
         label: Laengengrad
+        reloadIfChanged: true
         inspector:
           group: openimmo

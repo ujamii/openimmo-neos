@@ -11,174 +11,203 @@
       type: string
       ui:
         label: Abstand
+        reloadIfChanged: true
         inspector:
           group: openimmo
     courtageHinweis:
       type: string
       ui:
         label: CourtageHinweis
+        reloadIfChanged: true
         inspector:
           group: openimmo
     erbpacht:
       type: string
       ui:
         label: Erbpacht
+        reloadIfChanged: true
         inspector:
           group: openimmo
     erschliessungskosten:
       type: string
       ui:
         label: Erschliessungskosten
+        reloadIfChanged: true
         inspector:
           group: openimmo
     freitextPreis:
       type: string
       ui:
         label: FreitextPreis
+        reloadIfChanged: true
         inspector:
           group: openimmo
     gesamtbelastungbrutto:
       type: string
       ui:
         label: Gesamtbelastungbrutto
+        reloadIfChanged: true
         inspector:
           group: openimmo
     gesamtmietebrutto:
       type: string
       ui:
         label: Gesamtmietebrutto
+        reloadIfChanged: true
         inspector:
           group: openimmo
     geschaeftsguthaben:
       type: string
       ui:
         label: Geschaeftsguthaben
+        reloadIfChanged: true
         inspector:
           group: openimmo
     hausgeld:
       type: string
       ui:
         label: Hausgeld
+        reloadIfChanged: true
         inspector:
           group: openimmo
     heizkosten:
       type: string
       ui:
         label: Heizkosten
+        reloadIfChanged: true
         inspector:
           group: openimmo
     heizkostenEnthalten:
       type: boolean
       ui:
         label: HeizkostenEnthalten
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kaltmiete:
       type: string
       ui:
         label: Kaltmiete
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kaufpreisbrutto:
       type: string
       ui:
         label: Kaufpreisbrutto
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kaufpreisProQm:
       type: string
       ui:
         label: KaufpreisProQm
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kaution:
       type: string
       ui:
         label: Kaution
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kautionText:
       type: string
       ui:
         label: KautionText
+        reloadIfChanged: true
         inspector:
           group: openimmo
     mietpreisProQm:
       type: string
       ui:
         label: MietpreisProQm
+        reloadIfChanged: true
         inspector:
           group: openimmo
     mietzuschlaege:
       type: string
       ui:
         label: Mietzuschlaege
+        reloadIfChanged: true
         inspector:
           group: openimmo
     monatlichekostenbrutto:
       type: string
       ui:
         label: Monatlichekostenbrutto
+        reloadIfChanged: true
         inspector:
           group: openimmo
     mwstGesamt:
       type: string
       ui:
         label: MwstGesamt
+        reloadIfChanged: true
         inspector:
           group: openimmo
     mwstSatz:
       type: string
       ui:
         label: MwstSatz
+        reloadIfChanged: true
         inspector:
           group: openimmo
     nebenkosten:
       type: string
       ui:
         label: Nebenkosten
+        reloadIfChanged: true
         inspector:
           group: openimmo
     nettokaltmiete:
       type: string
       ui:
         label: Nettokaltmiete
+        reloadIfChanged: true
         inspector:
           group: openimmo
     nettorendite:
       type: string
       ui:
         label: Nettorendite
+        reloadIfChanged: true
         inspector:
           group: openimmo
     nettorenditeIst:
       type: string
       ui:
         label: NettorenditeIst
+        reloadIfChanged: true
         inspector:
           group: openimmo
     nettorenditeSoll:
       type: string
       ui:
         label: NettorenditeSoll
+        reloadIfChanged: true
         inspector:
           group: openimmo
     pacht:
       type: string
       ui:
         label: Pacht
+        reloadIfChanged: true
         inspector:
           group: openimmo
     pauschalmiete:
       type: string
       ui:
         label: Pauschalmiete
+        reloadIfChanged: true
         inspector:
           group: openimmo
     preisZeitraumBis:
       type: DateTime
       ui:
         label: PreisZeitraumBis
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editorOptions:
@@ -187,6 +216,7 @@
       type: DateTime
       ui:
         label: PreisZeitraumVon
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editorOptions:
@@ -195,42 +225,49 @@
       type: string
       ui:
         label: Provisionbrutto
+        reloadIfChanged: true
         inspector:
           group: openimmo
     provisionspflichtig:
       type: boolean
       ui:
         label: Provisionspflichtig
+        reloadIfChanged: true
         inspector:
           group: openimmo
     richtpreis:
       type: string
       ui:
         label: Richtpreis
+        reloadIfChanged: true
         inspector:
           group: openimmo
     richtpreisprom2:
       type: string
       ui:
         label: Richtpreisprom2
+        reloadIfChanged: true
         inspector:
           group: openimmo
     warmmiete:
       type: string
       ui:
         label: Warmmiete
+        reloadIfChanged: true
         inspector:
           group: openimmo
     xFache:
       type: string
       ui:
         label: XFache
+        reloadIfChanged: true
         inspector:
           group: openimmo
     zzgMehrwertsteuer:
       type: boolean
       ui:
         label: ZzgMehrwertsteuer
+        reloadIfChanged: true
         inspector:
           group: openimmo
   childNodes:

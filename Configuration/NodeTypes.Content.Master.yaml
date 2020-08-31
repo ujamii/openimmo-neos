@@ -11,5 +11,6 @@
       type: boolean
       ui:
         label: Visible
+        reloadIfChanged: true
         inspector:
           group: openimmo

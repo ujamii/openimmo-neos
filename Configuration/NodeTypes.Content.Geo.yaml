@@ -11,102 +11,119 @@
       type: integer
       ui:
         label: AnzahlEtagen
+        reloadIfChanged: true
         inspector:
           group: openimmo
     bundesland:
       type: string
       ui:
         label: Bundesland
+        reloadIfChanged: true
         inspector:
           group: openimmo
     etage:
       type: integer
       ui:
         label: Etage
+        reloadIfChanged: true
         inspector:
           group: openimmo
     flur:
       type: string
       ui:
         label: Flur
+        reloadIfChanged: true
         inspector:
           group: openimmo
     flurstueck:
       type: string
       ui:
         label: Flurstueck
+        reloadIfChanged: true
         inspector:
           group: openimmo
     gemarkung:
       type: string
       ui:
         label: Gemarkung
+        reloadIfChanged: true
         inspector:
           group: openimmo
     gemeindecode:
       type: string
       ui:
         label: Gemeindecode
+        reloadIfChanged: true
         inspector:
           group: openimmo
     hausnummer:
       type: string
       ui:
         label: Hausnummer
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kartenMakro:
       type: boolean
       ui:
         label: KartenMakro
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kartenMikro:
       type: boolean
       ui:
         label: KartenMikro
+        reloadIfChanged: true
         inspector:
           group: openimmo
     luftbildern:
       type: boolean
       ui:
         label: Luftbildern
+        reloadIfChanged: true
         inspector:
           group: openimmo
     ort:
       type: string
       ui:
         label: Ort
+        reloadIfChanged: true
         inspector:
           group: openimmo
     plz:
       type: string
       ui:
         label: Plz
+        reloadIfChanged: true
         inspector:
           group: openimmo
     regionalerZusatz:
       type: string
       ui:
         label: RegionalerZusatz
+        reloadIfChanged: true
         inspector:
           group: openimmo
     strasse:
       type: string
       ui:
         label: Strasse
+        reloadIfChanged: true
         inspector:
           group: openimmo
     virtuelletour:
       type: boolean
       ui:
         label: Virtuelletour
+        reloadIfChanged: true
         inspector:
           group: openimmo
     wohnungsnr:
       type: string
       ui:
         label: Wohnungsnr
+        reloadIfChanged: true
         inspector:
           group: openimmo
   childNodes:

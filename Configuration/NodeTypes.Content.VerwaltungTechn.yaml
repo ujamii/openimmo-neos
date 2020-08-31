@@ -11,6 +11,7 @@
       type: DateTime
       ui:
         label: AktivBis
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editorOptions:
@@ -19,6 +20,7 @@
       type: DateTime
       ui:
         label: AktivVon
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editorOptions:
@@ -27,42 +29,49 @@
       type: string
       ui:
         label: GruppenKennung
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kennungUrsprung:
       type: string
       ui:
         label: KennungUrsprung
+        reloadIfChanged: true
         inspector:
           group: openimmo
     objektnrExtern:
       type: string
       ui:
         label: ObjektnrExtern
+        reloadIfChanged: true
         inspector:
           group: openimmo
     objektnrIntern:
       type: string
       ui:
         label: ObjektnrIntern
+        reloadIfChanged: true
         inspector:
           group: openimmo
     openimmoObid:
       type: string
       ui:
         label: OpenimmoObid
+        reloadIfChanged: true
         inspector:
           group: openimmo
     sprache:
       type: string
       ui:
         label: Sprache
+        reloadIfChanged: true
         inspector:
           group: openimmo
     standVom:
       type: DateTime
       ui:
         label: StandVom
+        reloadIfChanged: true
         inspector:
           group: openimmo
           editorOptions:
@@ -71,18 +80,21 @@
       type: boolean
       ui:
         label: WeitergabeGenerell
+        reloadIfChanged: true
         inspector:
           group: openimmo
     weitergabeNegativ:
       type: string
       ui:
         label: WeitergabeNegativ
+        reloadIfChanged: true
         inspector:
           group: openimmo
     weitergabePositiv:
       type: string
       ui:
         label: WeitergabePositiv
+        reloadIfChanged: true
         inspector:
           group: openimmo
   childNodes:

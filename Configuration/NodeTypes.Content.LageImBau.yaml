@@ -11,23 +11,27 @@
       type: boolean
       ui:
         label: Hinten
+        reloadIfChanged: true
         inspector:
           group: openimmo
     links:
       type: boolean
       ui:
         label: Links
+        reloadIfChanged: true
         inspector:
           group: openimmo
     rechts:
       type: boolean
       ui:
         label: Rechts
+        reloadIfChanged: true
         inspector:
           group: openimmo
     vorne:
       type: boolean
       ui:
         label: Vorne
+        reloadIfChanged: true
         inspector:
           group: openimmo

@@ -11,17 +11,20 @@
       type: integer
       ui:
         label: Anzahl
+        reloadIfChanged: true
         inspector:
           group: openimmo
     stellplatzkaufpreis:
       type: string
       ui:
         label: Stellplatzkaufpreis
+        reloadIfChanged: true
         inspector:
           group: openimmo
     stellplatzmiete:
       type: string
       ui:
         label: Stellplatzmiete
+        reloadIfChanged: true
         inspector:
           group: openimmo

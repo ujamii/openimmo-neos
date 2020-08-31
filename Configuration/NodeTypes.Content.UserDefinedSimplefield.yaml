@@ -11,5 +11,6 @@
       type: string
       ui:
         label: Feldname
+        reloadIfChanged: true
         inspector:
           group: openimmo

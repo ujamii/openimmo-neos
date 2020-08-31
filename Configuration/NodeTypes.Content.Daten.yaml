@@ -11,11 +11,13 @@
       type: string
       ui:
         label: Anhanginhalt
+        reloadIfChanged: true
         inspector:
           group: openimmo
     pfad:
       type: string
       ui:
         label: Pfad
+        reloadIfChanged: true
         inspector:
           group: openimmo

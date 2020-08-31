@@ -11,11 +11,13 @@
       type: string
       ui:
         label: Art
+        reloadIfChanged: true
         inspector:
           group: openimmo
     speed:
       type: string
       ui:
         label: Speed
+        reloadIfChanged: true
         inspector:
           group: openimmo

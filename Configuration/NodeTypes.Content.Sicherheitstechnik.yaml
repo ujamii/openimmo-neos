@@ -11,17 +11,20 @@
       type: boolean
       ui:
         label: Alarmanlage
+        reloadIfChanged: true
         inspector:
           group: openimmo
     kamera:
       type: boolean
       ui:
         label: Kamera
+        reloadIfChanged: true
         inspector:
           group: openimmo
     polizeiruf:
       type: boolean
       ui:
         label: Polizeiruf
+        reloadIfChanged: true
         inspector:
           group: openimmo
