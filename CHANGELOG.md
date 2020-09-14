@@ -1,3 +1,7 @@
+## 0.2.0 (September 14, 2020)
+  - [TASK] regenerated package files
+  - [TEST] renamed package
+
 ## 0.1.1 (August 31, 2020)
   - [DOC] added license and author information
 
