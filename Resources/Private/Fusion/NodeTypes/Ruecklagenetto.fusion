@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Content.Ruecklagenetto) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Ruecklagenetto) < prototype(Neos.Fusion:Component) {
     ruecklageust = ${q(node).property('ruecklageust')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Ruecklagenetto {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Ruecklagenetto {...props}/>
     `
 }

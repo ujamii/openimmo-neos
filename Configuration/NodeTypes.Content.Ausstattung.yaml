@@ -1,7 +1,7 @@
-'Ujamii.OpenImmoNeos:Content.Ausstattung':
+'Ujamii.OpenImmo:Content.Ausstattung':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
-    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Ujamii.OpenImmo:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
     label: Ausstattung
@@ -273,25 +273,25 @@
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'Ujamii.OpenImmoNeos:Content.AngeschlGastronomie': true
-          'Ujamii.OpenImmoNeos:Content.Ausbaustufe': true
-          'Ujamii.OpenImmoNeos:Content.AusrichtBalkonTerrasse': true
-          'Ujamii.OpenImmoNeos:Content.Bad': true
-          'Ujamii.OpenImmoNeos:Content.Bauweise': true
-          'Ujamii.OpenImmoNeos:Content.Befeuerung': true
-          'Ujamii.OpenImmoNeos:Content.Boden': true
-          'Ujamii.OpenImmoNeos:Content.BreitbandZugang': true
-          'Ujamii.OpenImmoNeos:Content.Dachform': true
-          'Ujamii.OpenImmoNeos:Content.Energietyp': true
-          'Ujamii.OpenImmoNeos:Content.Fahrstuhl': true
-          'Ujamii.OpenImmoNeos:Content.Heizungsart': true
-          'Ujamii.OpenImmoNeos:Content.Kueche': true
-          'Ujamii.OpenImmoNeos:Content.Moebliert': true
-          'Ujamii.OpenImmoNeos:Content.Serviceleistungen': true
-          'Ujamii.OpenImmoNeos:Content.Sicherheitstechnik': true
-          'Ujamii.OpenImmoNeos:Content.Stellplatzart': true
-          'Ujamii.OpenImmoNeos:Content.Unterkellert': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedAnyfield': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedExtend': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield': true
+          'Ujamii.OpenImmo:Content.AngeschlGastronomie': true
+          'Ujamii.OpenImmo:Content.Ausbaustufe': true
+          'Ujamii.OpenImmo:Content.AusrichtBalkonTerrasse': true
+          'Ujamii.OpenImmo:Content.Bad': true
+          'Ujamii.OpenImmo:Content.Bauweise': true
+          'Ujamii.OpenImmo:Content.Befeuerung': true
+          'Ujamii.OpenImmo:Content.Boden': true
+          'Ujamii.OpenImmo:Content.BreitbandZugang': true
+          'Ujamii.OpenImmo:Content.Dachform': true
+          'Ujamii.OpenImmo:Content.Energietyp': true
+          'Ujamii.OpenImmo:Content.Fahrstuhl': true
+          'Ujamii.OpenImmo:Content.Heizungsart': true
+          'Ujamii.OpenImmo:Content.Kueche': true
+          'Ujamii.OpenImmo:Content.Moebliert': true
+          'Ujamii.OpenImmo:Content.Serviceleistungen': true
+          'Ujamii.OpenImmo:Content.Sicherheitstechnik': true
+          'Ujamii.OpenImmo:Content.Stellplatzart': true
+          'Ujamii.OpenImmo:Content.Unterkellert': true
+          'Ujamii.OpenImmo:Content.UserDefinedAnyfield': true
+          'Ujamii.OpenImmo:Content.UserDefinedExtend': true
+          'Ujamii.OpenImmo:Content.UserDefinedSimplefield': true
           '*': false

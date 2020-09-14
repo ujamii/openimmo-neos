@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Content.StpSonstige) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.StpSonstige) < prototype(Neos.Fusion:Component) {
     bemerkung = ${q(node).property('bemerkung')}
     platzart = ${q(node).property('platzart')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.StpSonstige {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.StpSonstige {...props}/>
     `
 }

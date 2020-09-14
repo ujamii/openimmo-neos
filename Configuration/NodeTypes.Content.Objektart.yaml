@@ -1,7 +1,7 @@
-'Ujamii.OpenImmoNeos:Content.Objektart':
+'Ujamii.OpenImmo:Content.Objektart':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
-    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Ujamii.OpenImmo:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
     label: Objektart
@@ -12,18 +12,18 @@
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'Ujamii.OpenImmoNeos:Content.BueroPraxen': true
-          'Ujamii.OpenImmoNeos:Content.Einzelhandel': true
-          'Ujamii.OpenImmoNeos:Content.FreizeitimmobilieGewerblich': true
-          'Ujamii.OpenImmoNeos:Content.Gastgewerbe': true
-          'Ujamii.OpenImmoNeos:Content.Grundstueck': true
-          'Ujamii.OpenImmoNeos:Content.HallenLagerProd': true
-          'Ujamii.OpenImmoNeos:Content.Haus': true
-          'Ujamii.OpenImmoNeos:Content.LandUndForstwirtschaft': true
-          'Ujamii.OpenImmoNeos:Content.string': true
-          'Ujamii.OpenImmoNeos:Content.Parken': true
-          'Ujamii.OpenImmoNeos:Content.Sonstige': true
-          'Ujamii.OpenImmoNeos:Content.Wohnung': true
-          'Ujamii.OpenImmoNeos:Content.Zimmer': true
-          'Ujamii.OpenImmoNeos:Content.ZinshausRenditeobjekt': true
+          'Ujamii.OpenImmo:Content.BueroPraxen': true
+          'Ujamii.OpenImmo:Content.Einzelhandel': true
+          'Ujamii.OpenImmo:Content.FreizeitimmobilieGewerblich': true
+          'Ujamii.OpenImmo:Content.Gastgewerbe': true
+          'Ujamii.OpenImmo:Content.Grundstueck': true
+          'Ujamii.OpenImmo:Content.HallenLagerProd': true
+          'Ujamii.OpenImmo:Content.Haus': true
+          'Ujamii.OpenImmo:Content.LandUndForstwirtschaft': true
+          'Ujamii.OpenImmo:Content.string': true
+          'Ujamii.OpenImmo:Content.Parken': true
+          'Ujamii.OpenImmo:Content.Sonstige': true
+          'Ujamii.OpenImmo:Content.Wohnung': true
+          'Ujamii.OpenImmo:Content.Zimmer': true
+          'Ujamii.OpenImmo:Content.ZinshausRenditeobjekt': true
           '*': false

@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Content.Sonstigemietenetto) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Sonstigemietenetto) < prototype(Neos.Fusion:Component) {
     sonstigemieteust = ${q(node).property('sonstigemieteust')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Sonstigemietenetto {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Sonstigemietenetto {...props}/>
     `
 }

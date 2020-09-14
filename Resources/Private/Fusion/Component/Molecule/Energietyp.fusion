@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.Energietyp) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.Energietyp) < prototype(Neos.Fusion:Component) {
     kfw40 = null
     kfw55 = null
     kfw60 = null
@@ -9,14 +9,14 @@ prototype(Ujamii.OpenImmoNeos:Component.Molecule.Energietyp) < prototype(Neos.Fu
     niedrigenergie = null
     passivhaus = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kfw40" value={props.kfw40} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kfw55" value={props.kfw55} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kfw60" value={props.kfw60} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kfw70" value={props.kfw70} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="minergiebauweise" value={props.minergiebauweise} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="minergieZertifiziert" value={props.minergieZertifiziert} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="neubaustandard" value={props.neubaustandard} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="niedrigenergie" value={props.niedrigenergie} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="passivhaus" value={props.passivhaus} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="kfw40" value={props.kfw40} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="kfw55" value={props.kfw55} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="kfw60" value={props.kfw60} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="kfw70" value={props.kfw70} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="minergiebauweise" value={props.minergiebauweise} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="minergieZertifiziert" value={props.minergieZertifiziert} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="neubaustandard" value={props.neubaustandard} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="niedrigenergie" value={props.niedrigenergie} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="passivhaus" value={props.passivhaus} />
     `
 }

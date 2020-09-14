@@ -1,8 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Content.EmailSonstige) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.EmailSonstige) < prototype(Neos.Fusion:Component) {
     bemerkung = ${q(node).property('bemerkung')}
     emailart = ${q(node).property('emailart')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.EmailSonstige {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.EmailSonstige {...props}/>
     `
 }

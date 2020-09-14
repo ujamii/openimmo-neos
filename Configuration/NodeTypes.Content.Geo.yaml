@@ -1,7 +1,7 @@
-'Ujamii.OpenImmoNeos:Content.Geo':
+'Ujamii.OpenImmo:Content.Geo':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
-    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Ujamii.OpenImmo:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
     label: Geo
@@ -131,11 +131,11 @@
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'Ujamii.OpenImmoNeos:Content.Geokoordinaten': true
-          'Ujamii.OpenImmoNeos:Content.LageGebiet': true
-          'Ujamii.OpenImmoNeos:Content.LageImBau': true
-          'Ujamii.OpenImmoNeos:Content.Land': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedAnyfield': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedExtend': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield': true
+          'Ujamii.OpenImmo:Content.Geokoordinaten': true
+          'Ujamii.OpenImmo:Content.LageGebiet': true
+          'Ujamii.OpenImmo:Content.LageImBau': true
+          'Ujamii.OpenImmo:Content.Land': true
+          'Ujamii.OpenImmo:Content.UserDefinedAnyfield': true
+          'Ujamii.OpenImmo:Content.UserDefinedExtend': true
+          'Ujamii.OpenImmo:Content.UserDefinedSimplefield': true
           '*': false

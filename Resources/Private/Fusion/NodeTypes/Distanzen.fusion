@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Content.Distanzen) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Distanzen) < prototype(Neos.Fusion:Component) {
     distanzZu = ${q(node).property('distanzZu')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Distanzen {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Distanzen {...props}/>
     `
 }

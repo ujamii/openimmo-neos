@@ -6,10 +6,10 @@
 #
 ##
 
-'Ujamii.OpenImmoNeos:Constraint.Content.Restricted':
+'Ujamii.OpenImmo:Constraint.Content.Restricted':
   abstract: true
 
 'Neos.Neos:ContentCollection':
   constraints:
     nodeTypes:
-      'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': false
+      'Ujamii.OpenImmo:Constraint.Content.Restricted': false

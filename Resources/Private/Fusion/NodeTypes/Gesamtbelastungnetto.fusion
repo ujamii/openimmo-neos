@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Content.Gesamtbelastungnetto) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Gesamtbelastungnetto) < prototype(Neos.Fusion:Component) {
     gesamtbelastungust = ${q(node).property('gesamtbelastungust')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Gesamtbelastungnetto {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Gesamtbelastungnetto {...props}/>
     `
 }

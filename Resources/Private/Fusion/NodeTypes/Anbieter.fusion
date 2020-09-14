@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Content.Anbieter) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Anbieter) < prototype(Neos.Fusion:Component) {
     anbieternr = ${q(node).property('anbieternr')}
     firma = ${q(node).property('firma')}
     impressum = ${q(node).property('impressum')}
@@ -8,6 +8,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Anbieter) < prototype(Neos.Fusion:Componen
         nodePath = 'main'
     }
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Anbieter {...props} mainContent={mainContent}/>
+        <Ujamii.OpenImmo:Component.Molecule.Anbieter {...props} mainContent={mainContent}/>
     `
 }

@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Content.Daten) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Daten) < prototype(Neos.Fusion:Component) {
     anhanginhalt = ${q(node).property('anhanginhalt')}
     pfad = ${q(node).property('pfad')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Daten {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Daten {...props}/>
     `
 }

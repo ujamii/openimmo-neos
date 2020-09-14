@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.Freitexte) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.Freitexte) < prototype(Neos.Fusion:Component) {
     ausstattBeschr = null
     dreizeiler = null
     lage = null
@@ -6,12 +6,12 @@ prototype(Ujamii.OpenImmoNeos:Component.Molecule.Freitexte) < prototype(Neos.Fus
     objekttitel = null
     sonstigeAngaben = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="ausstattBeschr" value={props.ausstattBeschr} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="dreizeiler" value={props.dreizeiler} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="lage" value={props.lage} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="objektbeschreibung" value={props.objektbeschreibung} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="objekttitel" value={props.objekttitel} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="sonstigeAngaben" value={props.sonstigeAngaben} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="ausstattBeschr" value={props.ausstattBeschr} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="dreizeiler" value={props.dreizeiler} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="lage" value={props.lage} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="objektbeschreibung" value={props.objektbeschreibung} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="objekttitel" value={props.objekttitel} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="sonstigeAngaben" value={props.sonstigeAngaben} />
         {props.mainContent}
     `
 }

@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Content.Preise) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Preise) < prototype(Neos.Fusion:Component) {
     abstand = ${q(node).property('abstand')}
     courtageHinweis = ${q(node).property('courtageHinweis')}
     erbpacht = ${q(node).property('erbpacht')}
@@ -40,6 +40,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Preise) < prototype(Neos.Fusion:Component)
         nodePath = 'main'
     }
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Preise {...props} mainContent={mainContent}/>
+        <Ujamii.OpenImmo:Component.Molecule.Preise {...props} mainContent={mainContent}/>
     `
 }

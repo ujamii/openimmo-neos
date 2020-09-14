@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Content.ZustandAngaben) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.ZustandAngaben) < prototype(Neos.Fusion:Component) {
     altlasten = ${q(node).property('altlasten')}
     baujahr = ${q(node).property('baujahr')}
     bauzone = ${q(node).property('bauzone')}
@@ -7,6 +7,6 @@ prototype(Ujamii.OpenImmoNeos:Content.ZustandAngaben) < prototype(Neos.Fusion:Co
         nodePath = 'main'
     }
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.ZustandAngaben {...props} mainContent={mainContent}/>
+        <Ujamii.OpenImmo:Component.Molecule.ZustandAngaben {...props} mainContent={mainContent}/>
     `
 }

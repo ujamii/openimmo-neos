@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Content.ImpressumStrukt) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.ImpressumStrukt) < prototype(Neos.Fusion:Component) {
     berufsaufsichtsbehoerde = ${q(node).property('berufsaufsichtsbehoerde')}
     firmenanschrift = ${q(node).property('firmenanschrift')}
     firmenname = ${q(node).property('firmenname')}
@@ -10,6 +10,6 @@ prototype(Ujamii.OpenImmoNeos:Content.ImpressumStrukt) < prototype(Neos.Fusion:C
     vertretungsberechtigter = ${q(node).property('vertretungsberechtigter')}
     weiteres = ${q(node).property('weiteres')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.ImpressumStrukt {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.ImpressumStrukt {...props}/>
     `
 }

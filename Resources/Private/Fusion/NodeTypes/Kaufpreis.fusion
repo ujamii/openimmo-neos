@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Content.Kaufpreis) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Kaufpreis) < prototype(Neos.Fusion:Component) {
     aufAnfrage = ${q(node).property('aufAnfrage')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Kaufpreis {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Kaufpreis {...props}/>
     `
 }

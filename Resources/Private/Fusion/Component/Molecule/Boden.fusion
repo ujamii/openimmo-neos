@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.Boden) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.Boden) < prototype(Neos.Fusion:Component) {
     dielen = null
     doppelboden = null
     estrich = null
@@ -14,19 +14,19 @@ prototype(Ujamii.OpenImmoNeos:Component.Molecule.Boden) < prototype(Neos.Fusion:
     teppich = null
     terrakotta = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="dielen" value={props.dielen} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="doppelboden" value={props.doppelboden} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="estrich" value={props.estrich} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="fertigparkett" value={props.fertigparkett} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="fliesen" value={props.fliesen} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="granit" value={props.granit} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kunststoff" value={props.kunststoff} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="laminat" value={props.laminat} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="linoleum" value={props.linoleum} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="marmor" value={props.marmor} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="parkett" value={props.parkett} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="stein" value={props.stein} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="teppich" value={props.teppich} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="terrakotta" value={props.terrakotta} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="dielen" value={props.dielen} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="doppelboden" value={props.doppelboden} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="estrich" value={props.estrich} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="fertigparkett" value={props.fertigparkett} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="fliesen" value={props.fliesen} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="granit" value={props.granit} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="kunststoff" value={props.kunststoff} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="laminat" value={props.laminat} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="linoleum" value={props.linoleum} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="marmor" value={props.marmor} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="parkett" value={props.parkett} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="stein" value={props.stein} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="teppich" value={props.teppich} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="terrakotta" value={props.terrakotta} />
     `
 }

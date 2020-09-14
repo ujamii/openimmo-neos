@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Content.Dachform) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Dachform) < prototype(Neos.Fusion:Component) {
     flachdach = ${q(node).property('flachdach')}
     krueppelwalmdach = ${q(node).property('krueppelwalmdach')}
     mansarddach = ${q(node).property('mansarddach')}
@@ -7,6 +7,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Dachform) < prototype(Neos.Fusion:Componen
     satteldach = ${q(node).property('satteldach')}
     walmdach = ${q(node).property('walmdach')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Dachform {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Dachform {...props}/>
     `
 }

@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Content.AngeschlGastronomie) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.AngeschlGastronomie) < prototype(Neos.Fusion:Component) {
     bar = ${q(node).property('bar')}
     hotelrestaurant = ${q(node).property('hotelrestaurant')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.AngeschlGastronomie {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.AngeschlGastronomie {...props}/>
     `
 }

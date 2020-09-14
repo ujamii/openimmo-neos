@@ -1,6 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Content.Waehrung) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Waehrung) < prototype(Neos.Fusion:Component) {
     isoWaehrung = ${q(node).property('isoWaehrung')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Waehrung {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Waehrung {...props}/>
     `
 }

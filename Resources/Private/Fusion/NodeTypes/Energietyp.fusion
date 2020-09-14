@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Content.Energietyp) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Energietyp) < prototype(Neos.Fusion:Component) {
     kfw40 = ${q(node).property('kfw40')}
     kfw55 = ${q(node).property('kfw55')}
     kfw60 = ${q(node).property('kfw60')}
@@ -9,6 +9,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Energietyp) < prototype(Neos.Fusion:Compon
     niedrigenergie = ${q(node).property('niedrigenergie')}
     passivhaus = ${q(node).property('passivhaus')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Energietyp {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Energietyp {...props}/>
     `
 }

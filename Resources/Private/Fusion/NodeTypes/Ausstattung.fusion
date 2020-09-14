@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Content.Ausstattung) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Ausstattung) < prototype(Neos.Fusion:Component) {
     abstellraum = ${q(node).property('abstellraum')}
     ausstattKategorie = ${q(node).property('ausstattKategorie')}
     barrierefrei = ${q(node).property('barrierefrei')}
@@ -39,6 +39,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Ausstattung) < prototype(Neos.Fusion:Compo
         nodePath = 'main'
     }
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Ausstattung {...props} mainContent={mainContent}/>
+        <Ujamii.OpenImmo:Component.Molecule.Ausstattung {...props} mainContent={mainContent}/>
     `
 }

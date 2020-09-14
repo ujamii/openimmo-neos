@@ -1,8 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Content.StpParkhaus) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.StpParkhaus) < prototype(Neos.Fusion:Component) {
     anzahl = ${q(node).property('anzahl')}
     stellplatzkaufpreis = ${q(node).property('stellplatzkaufpreis')}
     stellplatzmiete = ${q(node).property('stellplatzmiete')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.StpParkhaus {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.StpParkhaus {...props}/>
     `
 }

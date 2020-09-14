@@ -1,4 +1,4 @@
-'Ujamii.OpenImmoNeos:Document.OpenImmoRoot':
+'Ujamii.OpenImmo:Document.OpenImmoRoot':
   superTypes:
     'Neos.Neos:Document': true
   ui:
@@ -8,5 +8,5 @@
   childNodes:
     constraints:
       nodeTypes:
-        'Ujamii.OpenImmoNeos:Content.Immobilie': true
+        'Ujamii.OpenImmo:Content.Immobilie': true
         '*': false

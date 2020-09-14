@@ -1,8 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.Daten) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.Daten) < prototype(Neos.Fusion:Component) {
     anhanginhalt = null
     pfad = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anhanginhalt" value={props.anhanginhalt} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="pfad" value={props.pfad} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="anhanginhalt" value={props.anhanginhalt} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="pfad" value={props.pfad} />
     `
 }

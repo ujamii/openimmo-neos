@@ -1,8 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.Distanzen) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.Distanzen) < prototype(Neos.Fusion:Component) {
     distanzZu = null
     value = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="distanzZu" value={props.distanzZu} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="distanzZu" value={props.distanzZu} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="value" value={props.value} />
     `
 }

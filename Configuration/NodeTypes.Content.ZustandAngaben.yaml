@@ -1,7 +1,7 @@
-'Ujamii.OpenImmoNeos:Content.ZustandAngaben':
+'Ujamii.OpenImmo:Content.ZustandAngaben':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
-    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Ujamii.OpenImmo:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
     label: ZustandAngaben
@@ -40,14 +40,14 @@
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'Ujamii.OpenImmoNeos:Content.Alter': true
-          'Ujamii.OpenImmoNeos:Content.BebaubarNach': true
-          'Ujamii.OpenImmoNeos:Content.Energiepass': true
-          'Ujamii.OpenImmoNeos:Content.Erschliessung': true
-          'Ujamii.OpenImmoNeos:Content.ErschliessungUmfang': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedAnyfield': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedExtend': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield': true
-          'Ujamii.OpenImmoNeos:Content.Verkaufstatus': true
-          'Ujamii.OpenImmoNeos:Content.Zustand': true
+          'Ujamii.OpenImmo:Content.Alter': true
+          'Ujamii.OpenImmo:Content.BebaubarNach': true
+          'Ujamii.OpenImmo:Content.Energiepass': true
+          'Ujamii.OpenImmo:Content.Erschliessung': true
+          'Ujamii.OpenImmo:Content.ErschliessungUmfang': true
+          'Ujamii.OpenImmo:Content.UserDefinedAnyfield': true
+          'Ujamii.OpenImmo:Content.UserDefinedExtend': true
+          'Ujamii.OpenImmo:Content.UserDefinedSimplefield': true
+          'Ujamii.OpenImmo:Content.Verkaufstatus': true
+          'Ujamii.OpenImmo:Content.Zustand': true
           '*': false

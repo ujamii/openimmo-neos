@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Content.Freitexte) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Freitexte) < prototype(Neos.Fusion:Component) {
     ausstattBeschr = ${q(node).property('ausstattBeschr')}
     dreizeiler = ${q(node).property('dreizeiler')}
     lage = ${q(node).property('lage')}
@@ -9,6 +9,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Freitexte) < prototype(Neos.Fusion:Compone
         nodePath = 'main'
     }
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Freitexte {...props} mainContent={mainContent}/>
+        <Ujamii.OpenImmo:Component.Molecule.Freitexte {...props} mainContent={mainContent}/>
     `
 }

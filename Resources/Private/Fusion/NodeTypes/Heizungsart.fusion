@@ -1,10 +1,10 @@
-prototype(Ujamii.OpenImmoNeos:Content.Heizungsart) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Heizungsart) < prototype(Neos.Fusion:Component) {
     etage = ${q(node).property('etage')}
     fern = ${q(node).property('fern')}
     fussboden = ${q(node).property('fussboden')}
     ofen = ${q(node).property('ofen')}
     zentral = ${q(node).property('zentral')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Heizungsart {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Heizungsart {...props}/>
     `
 }

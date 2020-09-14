@@ -1,5 +1,5 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.Immobilie) < prototype(Neos.Fusion:Component) {
-    
+prototype(Ujamii.OpenImmo:Component.Molecule.Immobilie) < prototype(Neos.Fusion:Component) {
+
     renderer = afx`
         {props.mainContent}
     `

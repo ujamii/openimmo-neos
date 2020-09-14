@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Content.AusrichtBalkonTerrasse) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.AusrichtBalkonTerrasse) < prototype(Neos.Fusion:Component) {
     nord = ${q(node).property('nord')}
     nordost = ${q(node).property('nordost')}
     nordwest = ${q(node).property('nordwest')}
@@ -8,6 +8,6 @@ prototype(Ujamii.OpenImmoNeos:Content.AusrichtBalkonTerrasse) < prototype(Neos.F
     suedwest = ${q(node).property('suedwest')}
     west = ${q(node).property('west')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.AusrichtBalkonTerrasse {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.AusrichtBalkonTerrasse {...props}/>
     `
 }

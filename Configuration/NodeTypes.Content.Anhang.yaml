@@ -1,8 +1,8 @@
-'Ujamii.OpenImmoNeos:Content.Anhang':
+'Ujamii.OpenImmo:Content.Anhang':
   label: '${q(node).property("anhangtitel") + " (" + q(node).property("format") + ")"}'
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
-    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Ujamii.OpenImmo:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
     label: Anhang

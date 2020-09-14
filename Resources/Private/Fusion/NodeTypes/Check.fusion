@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Content.Check) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Check) < prototype(Neos.Fusion:Component) {
     ctype = ${q(node).property('ctype')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Check {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Check {...props}/>
     `
 }

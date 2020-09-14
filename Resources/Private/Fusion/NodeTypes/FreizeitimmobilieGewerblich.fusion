@@ -1,6 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Content.FreizeitimmobilieGewerblich) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.FreizeitimmobilieGewerblich) < prototype(Neos.Fusion:Component) {
     freizeitTyp = ${q(node).property('freizeitTyp')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.FreizeitimmobilieGewerblich {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.FreizeitimmobilieGewerblich {...props}/>
     `
 }

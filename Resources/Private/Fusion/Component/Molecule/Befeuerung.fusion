@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.Befeuerung) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.Befeuerung) < prototype(Neos.Fusion:Component) {
     alternativ = null
     block = null
     elektro = null
@@ -14,19 +14,19 @@ prototype(Ujamii.OpenImmoNeos:Component.Molecule.Befeuerung) < prototype(Neos.Fu
     solar = null
     wasserElektro = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="alternativ" value={props.alternativ} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="block" value={props.block} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="elektro" value={props.elektro} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="erdwaerme" value={props.erdwaerme} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="fern" value={props.fern} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="fluessiggas" value={props.fluessiggas} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gas" value={props.gas} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="holz" value={props.holz} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kohle" value={props.kohle} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="luftwp" value={props.luftwp} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="oel" value={props.oel} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="pellet" value={props.pellet} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="solar" value={props.solar} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="wasserElektro" value={props.wasserElektro} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="alternativ" value={props.alternativ} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="block" value={props.block} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="elektro" value={props.elektro} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="erdwaerme" value={props.erdwaerme} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="fern" value={props.fern} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="fluessiggas" value={props.fluessiggas} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="gas" value={props.gas} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="holz" value={props.holz} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="kohle" value={props.kohle} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="luftwp" value={props.luftwp} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="oel" value={props.oel} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="pellet" value={props.pellet} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="solar" value={props.solar} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="wasserElektro" value={props.wasserElektro} />
     `
 }

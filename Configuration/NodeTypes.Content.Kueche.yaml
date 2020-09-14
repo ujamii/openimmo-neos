@@ -1,7 +1,7 @@
-'Ujamii.OpenImmoNeos:Content.Kueche':
+'Ujamii.OpenImmo:Content.Kueche':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
-    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Ujamii.OpenImmo:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
     label: Kueche

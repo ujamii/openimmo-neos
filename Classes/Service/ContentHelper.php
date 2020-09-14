@@ -1,6 +1,6 @@
 <?php
 
-namespace Ujamii\OpenImmoNeos\Service;
+namespace Ujamii\OpenImmo\Service;
 
 use Neos\ContentRepository\Domain\Model\Node;
 use Neos\ContentRepository\Domain\Model\NodeInterface;

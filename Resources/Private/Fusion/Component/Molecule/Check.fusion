@@ -1,8 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.Check) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.Check) < prototype(Neos.Fusion:Component) {
     ctype = null
     value = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="ctype" value={props.ctype} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="ctype" value={props.ctype} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="value" value={props.value} />
     `
 }

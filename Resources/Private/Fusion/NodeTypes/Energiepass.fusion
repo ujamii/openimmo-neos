@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Content.Energiepass) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Energiepass) < prototype(Neos.Fusion:Component) {
     ausstelldatum = ${q(node).property('ausstelldatum')}
     baujahr = ${q(node).property('baujahr')}
     endenergiebedarf = ${q(node).property('endenergiebedarf')}
@@ -19,6 +19,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Energiepass) < prototype(Neos.Fusion:Compo
     waermewert = ${q(node).property('waermewert')}
     wertklasse = ${q(node).property('wertklasse')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Energiepass {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Energiepass {...props}/>
     `
 }

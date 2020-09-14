@@ -1,8 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.Summemietenetto) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.Summemietenetto) < prototype(Neos.Fusion:Component) {
     summemieteust = null
     value = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="summemieteust" value={props.summemieteust} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="summemieteust" value={props.summemieteust} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="value" value={props.value} />
     `
 }

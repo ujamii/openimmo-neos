@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Content.VerwaltungTechn) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.VerwaltungTechn) < prototype(Neos.Fusion:Component) {
     aktivBis = ${q(node).property('aktivBis')}
     aktivVon = ${q(node).property('aktivVon')}
     gruppenKennung = ${q(node).property('gruppenKennung')}
@@ -15,6 +15,6 @@ prototype(Ujamii.OpenImmoNeos:Content.VerwaltungTechn) < prototype(Neos.Fusion:C
         nodePath = 'main'
     }
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.VerwaltungTechn {...props} mainContent={mainContent}/>
+        <Ujamii.OpenImmo:Component.Molecule.VerwaltungTechn {...props} mainContent={mainContent}/>
     `
 }

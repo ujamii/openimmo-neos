@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Content.Betriebskostennetto) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Betriebskostennetto) < prototype(Neos.Fusion:Component) {
     betriebskostenust = ${q(node).property('betriebskostenust')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Betriebskostennetto {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Betriebskostennetto {...props}/>
     `
 }

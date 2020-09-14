@@ -1,6 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Content.ObjektText) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.ObjektText) < prototype(Neos.Fusion:Component) {
     lang = ${q(node).property('lang')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.ObjektText {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.ObjektText {...props}/>
     `
 }

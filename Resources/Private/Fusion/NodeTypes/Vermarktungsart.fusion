@@ -1,9 +1,9 @@
-prototype(Ujamii.OpenImmoNeos:Content.Vermarktungsart) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Vermarktungsart) < prototype(Neos.Fusion:Component) {
     erbpacht = ${q(node).property('erbpacht')}
     kauf = ${q(node).property('kauf')}
     leasing = ${q(node).property('leasing')}
     mietePacht = ${q(node).property('mietePacht')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Vermarktungsart {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Vermarktungsart {...props}/>
     `
 }

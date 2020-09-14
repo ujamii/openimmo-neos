@@ -1,10 +1,10 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.TelSonstige) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.TelSonstige) < prototype(Neos.Fusion:Component) {
     bemerkung = null
     telefonart = null
     value = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bemerkung" value={props.bemerkung} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="telefonart" value={props.telefonart} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="value" value={props.value} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="bemerkung" value={props.bemerkung} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="telefonart" value={props.telefonart} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="value" value={props.value} />
     `
 }

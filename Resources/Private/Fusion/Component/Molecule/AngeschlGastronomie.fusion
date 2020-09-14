@@ -1,8 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.AngeschlGastronomie) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.AngeschlGastronomie) < prototype(Neos.Fusion:Component) {
     bar = null
     hotelrestaurant = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bar" value={props.bar} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="hotelrestaurant" value={props.hotelrestaurant} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="bar" value={props.bar} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="hotelrestaurant" value={props.hotelrestaurant} />
     `
 }

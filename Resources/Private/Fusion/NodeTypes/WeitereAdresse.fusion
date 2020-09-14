@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Content.WeitereAdresse) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.WeitereAdresse) < prototype(Neos.Fusion:Component) {
     adressart = ${q(node).property('adressart')}
     adressfreigabe = ${q(node).property('adressfreigabe')}
     anrede = ${q(node).property('anrede')}
@@ -30,6 +30,6 @@ prototype(Ujamii.OpenImmoNeos:Content.WeitereAdresse) < prototype(Neos.Fusion:Co
         nodePath = 'main'
     }
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.WeitereAdresse {...props} mainContent={mainContent}/>
+        <Ujamii.OpenImmo:Component.Molecule.WeitereAdresse {...props} mainContent={mainContent}/>
     `
 }

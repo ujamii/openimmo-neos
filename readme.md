@@ -69,7 +69,7 @@ content node types may be adjusted. You have to re-generate the package files wi
 The fusion view for the root element is pretty basic, so will probably want to overwrite it:
 
 ```neosfusion
-prototype(Ujamii.OpenImmoNeos:Document.OpenImmoRoot) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Document.OpenImmoRoot) < prototype(Neos.Fusion:Component) {
     renderer = 'Bitte eine Immobilie im Baum auswählen!'
 }
 ```

@@ -1,6 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Content.InnenCourtage) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.InnenCourtage) < prototype(Neos.Fusion:Component) {
     mitMwst = ${q(node).property('mitMwst')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.InnenCourtage {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.InnenCourtage {...props}/>
     `
 }

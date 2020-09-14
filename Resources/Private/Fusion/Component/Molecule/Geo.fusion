@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.Geo) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.Geo) < prototype(Neos.Fusion:Component) {
     anzahlEtagen = null
     bundesland = null
     etage = null
@@ -17,23 +17,23 @@ prototype(Ujamii.OpenImmoNeos:Component.Molecule.Geo) < prototype(Neos.Fusion:Co
     virtuelletour = null
     wohnungsnr = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anzahlEtagen" value={props.anzahlEtagen} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bundesland" value={props.bundesland} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="etage" value={props.etage} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="flur" value={props.flur} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="flurstueck" value={props.flurstueck} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gemarkung" value={props.gemarkung} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gemeindecode" value={props.gemeindecode} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="hausnummer" value={props.hausnummer} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kartenMakro" value={props.kartenMakro} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kartenMikro" value={props.kartenMikro} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="luftbildern" value={props.luftbildern} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="ort" value={props.ort} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="plz" value={props.plz} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="regionalerZusatz" value={props.regionalerZusatz} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="strasse" value={props.strasse} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="virtuelletour" value={props.virtuelletour} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="wohnungsnr" value={props.wohnungsnr} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="anzahlEtagen" value={props.anzahlEtagen} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="bundesland" value={props.bundesland} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="etage" value={props.etage} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="flur" value={props.flur} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="flurstueck" value={props.flurstueck} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="gemarkung" value={props.gemarkung} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="gemeindecode" value={props.gemeindecode} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="hausnummer" value={props.hausnummer} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="kartenMakro" value={props.kartenMakro} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="kartenMikro" value={props.kartenMikro} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="luftbildern" value={props.luftbildern} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="ort" value={props.ort} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="plz" value={props.plz} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="regionalerZusatz" value={props.regionalerZusatz} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="strasse" value={props.strasse} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="virtuelletour" value={props.virtuelletour} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="wohnungsnr" value={props.wohnungsnr} />
         {props.mainContent}
     `
 }

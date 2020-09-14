@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Content.Befeuerung) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Befeuerung) < prototype(Neos.Fusion:Component) {
     alternativ = ${q(node).property('alternativ')}
     block = ${q(node).property('block')}
     elektro = ${q(node).property('elektro')}
@@ -14,6 +14,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Befeuerung) < prototype(Neos.Fusion:Compon
     solar = ${q(node).property('solar')}
     wasserElektro = ${q(node).property('wasserElektro')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Befeuerung {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Befeuerung {...props}/>
     `
 }

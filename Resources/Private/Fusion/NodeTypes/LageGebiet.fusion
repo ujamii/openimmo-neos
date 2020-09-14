@@ -1,6 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Content.LageGebiet) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.LageGebiet) < prototype(Neos.Fusion:Component) {
     gebiete = ${q(node).property('gebiete')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.LageGebiet {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.LageGebiet {...props}/>
     `
 }

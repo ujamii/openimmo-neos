@@ -1,10 +1,10 @@
-prototype(Ujamii.OpenImmoNeos:Content.Anhang) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Anhang) < prototype(Neos.Fusion:Component) {
     anhangtitel = ${q(node).property('anhangtitel')}
     daten = ${q(node).property('daten')}
     format = ${q(node).property('format')}
     gruppe = ${q(node).property('gruppe')}
     location = ${q(node).property('location')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Anhang {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Anhang {...props}/>
     `
 }

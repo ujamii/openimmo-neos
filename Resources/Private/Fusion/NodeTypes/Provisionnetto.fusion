@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Content.Provisionnetto) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Provisionnetto) < prototype(Neos.Fusion:Component) {
     provisionust = ${q(node).property('provisionust')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Provisionnetto {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Provisionnetto {...props}/>
     `
 }

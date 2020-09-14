@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Content.MieteinnahmenSoll) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.MieteinnahmenSoll) < prototype(Neos.Fusion:Component) {
     periode = ${q(node).property('periode')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.MieteinnahmenSoll {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.MieteinnahmenSoll {...props}/>
     `
 }

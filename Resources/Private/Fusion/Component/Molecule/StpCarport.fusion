@@ -1,10 +1,10 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.StpCarport) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.StpCarport) < prototype(Neos.Fusion:Component) {
     anzahl = null
     stellplatzkaufpreis = null
     stellplatzmiete = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anzahl" value={props.anzahl} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="stellplatzkaufpreis" value={props.stellplatzkaufpreis} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="stellplatzmiete" value={props.stellplatzmiete} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="anzahl" value={props.anzahl} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="stellplatzkaufpreis" value={props.stellplatzkaufpreis} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="stellplatzmiete" value={props.stellplatzmiete} />
     `
 }

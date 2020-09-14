@@ -1,7 +1,7 @@
-'Ujamii.OpenImmoNeos:Content.UserDefinedExtend':
+'Ujamii.OpenImmo:Content.UserDefinedExtend':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
-    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Ujamii.OpenImmo:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
     label: UserDefinedExtend
@@ -12,5 +12,5 @@
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'Ujamii.OpenImmoNeos:Content.string': true
+          'Ujamii.OpenImmo:Content.string': true
           '*': false

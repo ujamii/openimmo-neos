@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Content.Bieterverfahren) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Bieterverfahren) < prototype(Neos.Fusion:Component) {
     beginnAngebotsphase = ${q(node).property('beginnAngebotsphase')}
     beginnBietzeit = ${q(node).property('beginnBietzeit')}
     besichtigungstermin = ${q(node).property('besichtigungstermin')}
@@ -10,6 +10,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Bieterverfahren) < prototype(Neos.Fusion:C
         nodePath = 'main'
     }
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Bieterverfahren {...props} mainContent={mainContent}/>
+        <Ujamii.OpenImmo:Component.Molecule.Bieterverfahren {...props} mainContent={mainContent}/>
     `
 }

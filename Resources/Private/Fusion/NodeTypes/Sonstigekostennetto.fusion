@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Content.Sonstigekostennetto) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Sonstigekostennetto) < prototype(Neos.Fusion:Component) {
     sonstigekostenust = ${q(node).property('sonstigekostenust')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Sonstigekostennetto {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Sonstigekostennetto {...props}/>
     `
 }

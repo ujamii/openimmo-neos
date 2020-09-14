@@ -1,6 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Content.MaxMietdauer) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.MaxMietdauer) < prototype(Neos.Fusion:Component) {
     maxDauer = ${q(node).property('maxDauer')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.MaxMietdauer {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.MaxMietdauer {...props}/>
     `
 }

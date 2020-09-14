@@ -1,6 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Content.Ausblick) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Ausblick) < prototype(Neos.Fusion:Component) {
     blick = ${q(node).property('blick')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Ausblick {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Ausblick {...props}/>
     `
 }

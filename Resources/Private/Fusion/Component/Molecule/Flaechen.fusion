@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.Flaechen) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.Flaechen) < prototype(Neos.Fusion:Component) {
     anzahlBadezimmer = null
     anzahlBalkone = null
     anzahlBetten = null
@@ -46,52 +46,52 @@ prototype(Ujamii.OpenImmoNeos:Component.Molecule.Flaechen) < prototype(Neos.Fusi
     verwaltungsflaeche = null
     wohnflaeche = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anzahlBadezimmer" value={props.anzahlBadezimmer} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anzahlBalkone" value={props.anzahlBalkone} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anzahlBetten" value={props.anzahlBetten} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anzahlGewerbeeinheiten" value={props.anzahlGewerbeeinheiten} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anzahlLogia" value={props.anzahlLogia} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anzahlSchlafzimmer" value={props.anzahlSchlafzimmer} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anzahlSepWc" value={props.anzahlSepWc} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anzahlStellplaetze" value={props.anzahlStellplaetze} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anzahlTagungsraeume" value={props.anzahlTagungsraeume} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anzahlTerrassen" value={props.anzahlTerrassen} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anzahlWohneinheiten" value={props.anzahlWohneinheiten} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anzahlWohnSchlafzimmer" value={props.anzahlWohnSchlafzimmer} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="anzahlZimmer" value={props.anzahlZimmer} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="ausnuetzungsziffer" value={props.ausnuetzungsziffer} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="balkonTerrasseFlaeche" value={props.balkonTerrasseFlaeche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="beheizbareFlaeche" value={props.beheizbareFlaeche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bgf" value={props.bgf} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bmz" value={props.bmz} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bueroflaeche" value={props.bueroflaeche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bueroteilflaeche" value={props.bueroteilflaeche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="dachbodenflaeche" value={props.dachbodenflaeche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="einliegerwohnung" value={props.einliegerwohnung} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="fensterfront" value={props.fensterfront} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="fensterfrontQm" value={props.fensterfrontQm} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="flaechebis" value={props.flaechebis} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="flaechevon" value={props.flaechevon} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="freiflaeche" value={props.freiflaeche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gartenflaeche" value={props.gartenflaeche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gastroflaeche" value={props.gastroflaeche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gesamtflaeche" value={props.gesamtflaeche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gfz" value={props.gfz} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="grundstuecksflaeche" value={props.grundstuecksflaeche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="grundstuecksfront" value={props.grundstuecksfront} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="grz" value={props.grz} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kellerflaeche" value={props.kellerflaeche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="kubatur" value={props.kubatur} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="ladenflaeche" value={props.ladenflaeche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="lagerflaeche" value={props.lagerflaeche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="nutzflaeche" value={props.nutzflaeche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="plaetzeGastraum" value={props.plaetzeGastraum} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="sonstflaeche" value={props.sonstflaeche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="teilbarAb" value={props.teilbarAb} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="verkaufsflaeche" value={props.verkaufsflaeche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="vermietbareFlaeche" value={props.vermietbareFlaeche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="verwaltungsflaeche" value={props.verwaltungsflaeche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="wohnflaeche" value={props.wohnflaeche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="anzahlBadezimmer" value={props.anzahlBadezimmer} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="anzahlBalkone" value={props.anzahlBalkone} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="anzahlBetten" value={props.anzahlBetten} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="anzahlGewerbeeinheiten" value={props.anzahlGewerbeeinheiten} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="anzahlLogia" value={props.anzahlLogia} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="anzahlSchlafzimmer" value={props.anzahlSchlafzimmer} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="anzahlSepWc" value={props.anzahlSepWc} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="anzahlStellplaetze" value={props.anzahlStellplaetze} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="anzahlTagungsraeume" value={props.anzahlTagungsraeume} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="anzahlTerrassen" value={props.anzahlTerrassen} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="anzahlWohneinheiten" value={props.anzahlWohneinheiten} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="anzahlWohnSchlafzimmer" value={props.anzahlWohnSchlafzimmer} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="anzahlZimmer" value={props.anzahlZimmer} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="ausnuetzungsziffer" value={props.ausnuetzungsziffer} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="balkonTerrasseFlaeche" value={props.balkonTerrasseFlaeche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="beheizbareFlaeche" value={props.beheizbareFlaeche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="bgf" value={props.bgf} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="bmz" value={props.bmz} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="bueroflaeche" value={props.bueroflaeche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="bueroteilflaeche" value={props.bueroteilflaeche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="dachbodenflaeche" value={props.dachbodenflaeche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="einliegerwohnung" value={props.einliegerwohnung} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="fensterfront" value={props.fensterfront} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="fensterfrontQm" value={props.fensterfrontQm} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="flaechebis" value={props.flaechebis} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="flaechevon" value={props.flaechevon} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="freiflaeche" value={props.freiflaeche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="gartenflaeche" value={props.gartenflaeche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="gastroflaeche" value={props.gastroflaeche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="gesamtflaeche" value={props.gesamtflaeche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="gfz" value={props.gfz} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="grundstuecksflaeche" value={props.grundstuecksflaeche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="grundstuecksfront" value={props.grundstuecksfront} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="grz" value={props.grz} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="kellerflaeche" value={props.kellerflaeche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="kubatur" value={props.kubatur} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="ladenflaeche" value={props.ladenflaeche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="lagerflaeche" value={props.lagerflaeche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="nutzflaeche" value={props.nutzflaeche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="plaetzeGastraum" value={props.plaetzeGastraum} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="sonstflaeche" value={props.sonstflaeche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="teilbarAb" value={props.teilbarAb} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="verkaufsflaeche" value={props.verkaufsflaeche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="vermietbareFlaeche" value={props.vermietbareFlaeche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="verwaltungsflaeche" value={props.verwaltungsflaeche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="wohnflaeche" value={props.wohnflaeche} />
         {props.mainContent}
     `
 }

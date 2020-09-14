@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Atom.SimpleProperty) < prototype(Neos.Fusion:Component) {
     name = ''
     value = ''
 

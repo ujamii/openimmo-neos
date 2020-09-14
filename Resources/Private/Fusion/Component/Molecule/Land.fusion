@@ -1,6 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.Land) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.Land) < prototype(Neos.Fusion:Component) {
     isoLand = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="isoLand" value={props.isoLand} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="isoLand" value={props.isoLand} />
     `
 }

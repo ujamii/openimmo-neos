@@ -1,6 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Content.BebaubarNach) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.BebaubarNach) < prototype(Neos.Fusion:Component) {
     bebaubarAttr = ${q(node).property('bebaubarAttr')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.BebaubarNach {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.BebaubarNach {...props}/>
     `
 }

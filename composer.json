@@ -1,5 +1,5 @@
 {
-    "name": "ujamii/openimmo-neos",
+    "name": "ujamii/openimmo",
     "description": "NEOS CMS package for showing OpenImmo based data on a NEOS based website",
     "type": "neos-package",
     "license": "GPL-3.0-only",
@@ -16,12 +16,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Ujamii\\OpenImmoNeos\\": "Classes/"
+            "Ujamii\\OpenImmo\\": "Classes/"
         }
     },
     "extra": {
         "neos": {
-            "package-key": "Ujamii.OpenImmoNeos"
+            "package-key": "Ujamii.OpenImmo"
         }
     }
 }

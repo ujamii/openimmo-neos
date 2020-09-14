@@ -1,9 +1,9 @@
-prototype(Ujamii.OpenImmoNeos:Content.LageImBau) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.LageImBau) < prototype(Neos.Fusion:Component) {
     hinten = ${q(node).property('hinten')}
     links = ${q(node).property('links')}
     rechts = ${q(node).property('rechts')}
     vorne = ${q(node).property('vorne')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.LageImBau {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.LageImBau {...props}/>
     `
 }

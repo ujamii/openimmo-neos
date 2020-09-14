@@ -1,6 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Content.Grundstueck) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Grundstueck) < prototype(Neos.Fusion:Component) {
     grundstTyp = ${q(node).property('grundstTyp')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Grundstueck {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Grundstueck {...props}/>
     `
 }

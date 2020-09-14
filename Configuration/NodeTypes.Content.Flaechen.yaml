@@ -1,7 +1,7 @@
-'Ujamii.OpenImmoNeos:Content.Flaechen':
+'Ujamii.OpenImmo:Content.Flaechen':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
-    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Ujamii.OpenImmo:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
     label: Flaechen
@@ -334,7 +334,7 @@
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'Ujamii.OpenImmoNeos:Content.UserDefinedAnyfield': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedExtend': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield': true
+          'Ujamii.OpenImmo:Content.UserDefinedAnyfield': true
+          'Ujamii.OpenImmo:Content.UserDefinedExtend': true
+          'Ujamii.OpenImmo:Content.UserDefinedSimplefield': true
           '*': false

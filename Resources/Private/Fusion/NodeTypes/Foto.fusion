@@ -1,8 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Content.Foto) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Foto) < prototype(Neos.Fusion:Component) {
     daten = ${q(node).property('daten')}
     format = ${q(node).property('format')}
     location = ${q(node).property('location')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Foto {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Foto {...props}/>
     `
 }

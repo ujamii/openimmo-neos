@@ -1,6 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Content.PreisZeiteinheit) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.PreisZeiteinheit) < prototype(Neos.Fusion:Component) {
     zeiteinheit = ${q(node).property('zeiteinheit')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.PreisZeiteinheit {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.PreisZeiteinheit {...props}/>
     `
 }

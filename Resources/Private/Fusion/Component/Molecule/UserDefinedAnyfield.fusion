@@ -1,6 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.UserDefinedAnyfield) < prototype(Neos.Fusion:Component) {
-    
+prototype(Ujamii.OpenImmo:Component.Molecule.UserDefinedAnyfield) < prototype(Neos.Fusion:Component) {
+
     renderer = afx`
-        
+
     `
 }

@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.Stellplatzart) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.Stellplatzart) < prototype(Neos.Fusion:Component) {
     carport = null
     duplex = null
     freiplatz = null
@@ -6,11 +6,11 @@ prototype(Ujamii.OpenImmoNeos:Component.Molecule.Stellplatzart) < prototype(Neos
     parkhaus = null
     tiefgarage = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="carport" value={props.carport} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="duplex" value={props.duplex} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="freiplatz" value={props.freiplatz} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="garage" value={props.garage} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="parkhaus" value={props.parkhaus} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="tiefgarage" value={props.tiefgarage} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="carport" value={props.carport} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="duplex" value={props.duplex} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="freiplatz" value={props.freiplatz} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="garage" value={props.garage} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="parkhaus" value={props.parkhaus} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="tiefgarage" value={props.tiefgarage} />
     `
 }

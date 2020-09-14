@@ -1,8 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Content.Sicherheitstechnik) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Sicherheitstechnik) < prototype(Neos.Fusion:Component) {
     alarmanlage = ${q(node).property('alarmanlage')}
     kamera = ${q(node).property('kamera')}
     polizeiruf = ${q(node).property('polizeiruf')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Sicherheitstechnik {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Sicherheitstechnik {...props}/>
     `
 }

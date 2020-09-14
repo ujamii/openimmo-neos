@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Content.Summemietenetto) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Summemietenetto) < prototype(Neos.Fusion:Component) {
     summemieteust = ${q(node).property('summemieteust')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Summemietenetto {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Summemietenetto {...props}/>
     `
 }

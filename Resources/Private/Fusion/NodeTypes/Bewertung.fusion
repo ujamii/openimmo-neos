@@ -1,8 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Content.Bewertung) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Bewertung) < prototype(Neos.Fusion:Component) {
     @context.mainContent = Neos.Neos:ContentCollection {
         nodePath = 'main'
     }
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Bewertung {...props} mainContent={mainContent}/>
+        <Ujamii.OpenImmo:Component.Molecule.Bewertung {...props} mainContent={mainContent}/>
     `
 }

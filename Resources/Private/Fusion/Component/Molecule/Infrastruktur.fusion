@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.Infrastruktur) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.Infrastruktur) < prototype(Neos.Fusion:Component) {
     zulieferung = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="zulieferung" value={props.zulieferung} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="zulieferung" value={props.zulieferung} />
         {props.mainContent}
     `
 }

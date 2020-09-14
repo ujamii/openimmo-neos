@@ -1,8 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Content.Bauweise) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Bauweise) < prototype(Neos.Fusion:Component) {
     fertigteile = ${q(node).property('fertigteile')}
     holz = ${q(node).property('holz')}
     massiv = ${q(node).property('massiv')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Bauweise {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Bauweise {...props}/>
     `
 }

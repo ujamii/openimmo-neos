@@ -1,6 +1,6 @@
 <?php
 
-namespace Ujamii\OpenImmoNeos\Command;
+namespace Ujamii\OpenImmo\Command;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use gossi\codegen\model\PhpClass;
@@ -24,7 +24,7 @@ use Ujamii\OpenImmo\API\Daten;
 use Ujamii\OpenImmo\API\Immobilie;
 use Ujamii\OpenImmo\API\Openimmo;
 use Ujamii\OpenImmo\Handler\DateTimeHandler;
-use Ujamii\OpenImmoNeos\Service\ContentHelper;
+use Ujamii\OpenImmo\Service\ContentHelper;
 
 /**
  * @Flow\Scope("singleton")
@@ -121,7 +121,7 @@ class OpenImmoCommandController extends CommandController
             $this->sendAndExit(1);
         }
 
-        $packagePath = $this->packageManager->getPackage('Ujamii.OpenImmoNeos')->getPackagePath();
+        $packagePath = $this->packageManager->getPackage('Ujamii.OpenImmo')->getPackagePath();
 
         $this->outputLine("Found {$numberOfClasses} classes in namespace {$this->openImmoApiNamespace}");
         $this->generateNodeTypeYamlConfig($packagePath);
@@ -209,7 +209,7 @@ class OpenImmoCommandController extends CommandController
             $estateIdenitifer = $immobilie->getVerwaltungTechn()->getObjektnrIntern();
             /* @var NodeInterface $existingNode */
             $existingNode = $this->contentHelper->findNode(
-                'Ujamii.OpenImmoNeos:Document.Immobilie',
+                'Ujamii.OpenImmo:Document.Immobilie',
                 ['estateIdentifier' => $estateIdenitifer]
             );
 
@@ -229,7 +229,7 @@ class OpenImmoCommandController extends CommandController
                         }
 
                         $existingNode = $this->contentHelper->createNodeFromTemplateInParent(
-                            'Ujamii.OpenImmoNeos:Document.Immobilie',
+                            'Ujamii.OpenImmo:Document.Immobilie',
                             $parentNode->getNodeAggregateIdentifier(),
                             [
                                 'title'            => $this->generateNodeName($immobilie),
@@ -437,7 +437,7 @@ class OpenImmoCommandController extends CommandController
             $propertyGetterCode   = implode(PHP_EOL . '    ', array_filter($propertyGetters));
             $moleculePropertyCode = implode(PHP_EOL . '    ', array_filter($moleculeProperties));
             $rendererCode         = implode(PHP_EOL . '        ', array_filter($propertyRenderer));
-            $moleculeName         = "Ujamii.OpenImmoNeos:Component.Molecule.{$documentName}";
+            $moleculeName         = "Ujamii.OpenImmo:Component.Molecule.{$documentName}";
 
             $fusionCode = "prototype({$nodeType}) < prototype(Neos.Fusion:Component) {" . PHP_EOL .
                           "    {$propertyGetterCode}" . PHP_EOL .
@@ -450,7 +450,7 @@ class OpenImmoCommandController extends CommandController
                            "    `" . PHP_EOL .
                            "}";
 
-            $moleculeCode = "prototype(Ujamii.OpenImmoNeos:Component.Molecule.{$documentName}) < prototype(Neos.Fusion:Component) {" . PHP_EOL .
+            $moleculeCode = "prototype(Ujamii.OpenImmo:Component.Molecule.{$documentName}) < prototype(Neos.Fusion:Component) {" . PHP_EOL .
                             "    {$moleculePropertyCode}" . PHP_EOL .
                             "    renderer = afx`" . PHP_EOL .
                             "        {$rendererCode}" . PHP_EOL .
@@ -526,7 +526,7 @@ class OpenImmoCommandController extends CommandController
             case 'DateTime<\'Y-m-d\'>':
             case 'DateTime<\'Y-m-d\TH:i:s\'>':
             case 'DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>':
-                $fusionCode = "<Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name=\"{$property->getName()}\" value={props.{$property->getName()}} />";
+                $fusionCode = "<Ujamii.OpenImmo:Component.Atom.SimpleProperty name=\"{$property->getName()}\" value={props.{$property->getName()}} />";
                 break;
 
             default:
@@ -584,8 +584,8 @@ class OpenImmoCommandController extends CommandController
                 }
 
                 $targetNodeType = $this->getChildNodeType($classProperty);
-                if ( ! in_array($targetNodeType, [null, 'Ujamii.OpenImmoNeos:Content.Daten'])) {
-                    // the NodeType Ujamii.OpenImmoNeos:Content.Daten is special, as this will be converted to
+                if ( ! in_array($targetNodeType, [null, 'Ujamii.OpenImmo:Content.Daten'])) {
+                    // the NodeType Ujamii.OpenImmo:Content.Daten is special, as this will be converted to
                     // a NEOS CMS asset instead of a string based property.
                     $allowedChildNodes[$targetNodeType] = true;
                 }
@@ -615,11 +615,11 @@ class OpenImmoCommandController extends CommandController
                 $this->nodeHasChildNodesCache[$nodeType] = true;
             } else {
                 $documentType                                                                       = 'Content';
-                $yaml[$nodeType]['superTypes']['Ujamii.OpenImmoNeos:Constraint.Content.Restricted'] = true;
+                $yaml[$nodeType]['superTypes']['Ujamii.OpenImmo:Constraint.Content.Restricted'] = true;
             }
             $yaml[$nodeType]['superTypes']['Neos.Neos:' . $documentType] = true;
 
-            if (count($allowedChildNodes) > 0 && $nodeType != 'Ujamii.OpenImmoNeos:Content.Anhang') {
+            if (count($allowedChildNodes) > 0 && $nodeType != 'Ujamii.OpenImmo:Content.Anhang') {
                 $allowedChildNodes['*']                  = false;
                 $yaml[$nodeType]['childNodes']['main']   = [
                     'type'        => 'Neos.Neos:ContentCollection',
@@ -792,7 +792,7 @@ class OpenImmoCommandController extends CommandController
             $documentOrContent = 'Content';
         }
 
-        return "Ujamii.OpenImmoNeos:{$documentOrContent}.{$classname}";
+        return "Ujamii.OpenImmo:{$documentOrContent}.{$classname}";
     }
 
     /**

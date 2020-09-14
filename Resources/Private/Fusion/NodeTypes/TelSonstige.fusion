@@ -1,8 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Content.TelSonstige) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.TelSonstige) < prototype(Neos.Fusion:Component) {
     bemerkung = ${q(node).property('bemerkung')}
     telefonart = ${q(node).property('telefonart')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.TelSonstige {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.TelSonstige {...props}/>
     `
 }

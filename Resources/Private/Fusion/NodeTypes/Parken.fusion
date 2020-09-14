@@ -1,6 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Content.Parken) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Parken) < prototype(Neos.Fusion:Component) {
     parkenTyp = ${q(node).property('parkenTyp')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Parken {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Parken {...props}/>
     `
 }

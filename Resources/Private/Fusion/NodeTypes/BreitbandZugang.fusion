@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Content.BreitbandZugang) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.BreitbandZugang) < prototype(Neos.Fusion:Component) {
     art = ${q(node).property('art')}
     speed = ${q(node).property('speed')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.BreitbandZugang {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.BreitbandZugang {...props}/>
     `
 }

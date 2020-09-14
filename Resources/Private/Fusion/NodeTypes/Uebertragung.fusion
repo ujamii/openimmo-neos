@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Content.Uebertragung) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Uebertragung) < prototype(Neos.Fusion:Component) {
     art = ${q(node).property('art')}
     modus = ${q(node).property('modus')}
     regiId = ${q(node).property('regiId')}
@@ -9,6 +9,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Uebertragung) < prototype(Neos.Fusion:Comp
     umfang = ${q(node).property('umfang')}
     version = ${q(node).property('version')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Uebertragung {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Uebertragung {...props}/>
     `
 }

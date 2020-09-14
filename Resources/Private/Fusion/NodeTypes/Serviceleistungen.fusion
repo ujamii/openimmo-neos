@@ -1,10 +1,10 @@
-prototype(Ujamii.OpenImmoNeos:Content.Serviceleistungen) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Serviceleistungen) < prototype(Neos.Fusion:Component) {
     betreutesWohnen = ${q(node).property('betreutesWohnen')}
     catering = ${q(node).property('catering')}
     einkauf = ${q(node).property('einkauf')}
     reinigung = ${q(node).property('reinigung')}
     wachdienst = ${q(node).property('wachdienst')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Serviceleistungen {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Serviceleistungen {...props}/>
     `
 }

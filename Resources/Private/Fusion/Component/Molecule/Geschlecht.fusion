@@ -1,6 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.Geschlecht) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.Geschlecht) < prototype(Neos.Fusion:Component) {
     geschlAttr = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="geschlAttr" value={props.geschlAttr} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="geschlAttr" value={props.geschlAttr} />
     `
 }

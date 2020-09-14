@@ -1,7 +1,7 @@
-'Ujamii.OpenImmoNeos:Content.Nebenkostenprom2von':
+'Ujamii.OpenImmo:Content.Nebenkostenprom2von':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
-    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Ujamii.OpenImmo:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
     label: Nebenkostenprom2von

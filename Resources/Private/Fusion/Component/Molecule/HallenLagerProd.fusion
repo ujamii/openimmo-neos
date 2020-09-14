@@ -1,6 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.HallenLagerProd) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.HallenLagerProd) < prototype(Neos.Fusion:Component) {
     hallenTyp = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="hallenTyp" value={props.hallenTyp} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="hallenTyp" value={props.hallenTyp} />
     `
 }

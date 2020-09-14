@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Content.Geo) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Geo) < prototype(Neos.Fusion:Component) {
     anzahlEtagen = ${q(node).property('anzahlEtagen')}
     bundesland = ${q(node).property('bundesland')}
     etage = ${q(node).property('etage')}
@@ -20,6 +20,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Geo) < prototype(Neos.Fusion:Component) {
         nodePath = 'main'
     }
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Geo {...props} mainContent={mainContent}/>
+        <Ujamii.OpenImmo:Component.Molecule.Geo {...props} mainContent={mainContent}/>
     `
 }

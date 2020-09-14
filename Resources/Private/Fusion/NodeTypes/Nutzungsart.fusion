@@ -1,9 +1,9 @@
-prototype(Ujamii.OpenImmoNeos:Content.Nutzungsart) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Nutzungsart) < prototype(Neos.Fusion:Component) {
     anlage = ${q(node).property('anlage')}
     gewerbe = ${q(node).property('gewerbe')}
     waz = ${q(node).property('waz')}
     wohnen = ${q(node).property('wohnen')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Nutzungsart {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Nutzungsart {...props}/>
     `
 }

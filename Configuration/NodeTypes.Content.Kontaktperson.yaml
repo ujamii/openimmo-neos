@@ -1,7 +1,7 @@
-'Ujamii.OpenImmoNeos:Content.Kontaktperson':
+'Ujamii.OpenImmo:Content.Kontaktperson':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
-    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Ujamii.OpenImmo:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
     label: Kontaktperson
@@ -222,11 +222,11 @@
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'Ujamii.OpenImmoNeos:Content.EmailSonstige': true
-          'Ujamii.OpenImmoNeos:Content.Foto': true
-          'Ujamii.OpenImmoNeos:Content.Land': true
-          'Ujamii.OpenImmoNeos:Content.TelSonstige': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedAnyfield': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedExtend': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield': true
+          'Ujamii.OpenImmo:Content.EmailSonstige': true
+          'Ujamii.OpenImmo:Content.Foto': true
+          'Ujamii.OpenImmo:Content.Land': true
+          'Ujamii.OpenImmo:Content.TelSonstige': true
+          'Ujamii.OpenImmo:Content.UserDefinedAnyfield': true
+          'Ujamii.OpenImmo:Content.UserDefinedExtend': true
+          'Ujamii.OpenImmo:Content.UserDefinedSimplefield': true
           '*': false

@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.Bieterverfahren) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.Bieterverfahren) < prototype(Neos.Fusion:Component) {
     beginnAngebotsphase = null
     beginnBietzeit = null
     besichtigungstermin = null
@@ -7,13 +7,13 @@ prototype(Ujamii.OpenImmoNeos:Component.Molecule.Bieterverfahren) < prototype(Ne
     hoechstgebotZeigen = null
     mindestpreis = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="beginnAngebotsphase" value={props.beginnAngebotsphase} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="beginnBietzeit" value={props.beginnBietzeit} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="besichtigungstermin" value={props.besichtigungstermin} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="besichtigungstermin2" value={props.besichtigungstermin2} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="endeBietzeit" value={props.endeBietzeit} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="hoechstgebotZeigen" value={props.hoechstgebotZeigen} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="mindestpreis" value={props.mindestpreis} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="beginnAngebotsphase" value={props.beginnAngebotsphase} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="beginnBietzeit" value={props.beginnBietzeit} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="besichtigungstermin" value={props.besichtigungstermin} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="besichtigungstermin2" value={props.besichtigungstermin2} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="endeBietzeit" value={props.endeBietzeit} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="hoechstgebotZeigen" value={props.hoechstgebotZeigen} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="mindestpreis" value={props.mindestpreis} />
         {props.mainContent}
     `
 }

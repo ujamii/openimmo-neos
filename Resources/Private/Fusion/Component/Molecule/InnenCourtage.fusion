@@ -1,6 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.InnenCourtage) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.InnenCourtage) < prototype(Neos.Fusion:Component) {
     mitMwst = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="mitMwst" value={props.mitMwst} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="mitMwst" value={props.mitMwst} />
     `
 }

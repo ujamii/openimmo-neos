@@ -1,6 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Content.Master) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Master) < prototype(Neos.Fusion:Component) {
     visible = ${q(node).property('visible')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Master {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Master {...props}/>
     `
 }

@@ -1,7 +1,7 @@
-'Ujamii.OpenImmoNeos:Content.Openimmo':
+'Ujamii.OpenImmo:Content.Openimmo':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
-    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Ujamii.OpenImmo:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
     label: Openimmo
@@ -12,8 +12,8 @@
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'Ujamii.OpenImmoNeos:Content.Anbieter': true
-          'Ujamii.OpenImmoNeos:Content.Uebertragung': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedAnyfield': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield': true
+          'Ujamii.OpenImmo:Content.Anbieter': true
+          'Ujamii.OpenImmo:Content.Uebertragung': true
+          'Ujamii.OpenImmo:Content.UserDefinedAnyfield': true
+          'Ujamii.OpenImmo:Content.UserDefinedSimplefield': true
           '*': false

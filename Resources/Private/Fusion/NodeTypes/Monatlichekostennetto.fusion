@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Content.Monatlichekostennetto) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Monatlichekostennetto) < prototype(Neos.Fusion:Component) {
     monatlichekostenust = ${q(node).property('monatlichekostenust')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Monatlichekostennetto {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Monatlichekostennetto {...props}/>
     `
 }

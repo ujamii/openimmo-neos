@@ -1,6 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.Zimmer) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.Zimmer) < prototype(Neos.Fusion:Component) {
     zimmertyp = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="zimmertyp" value={props.zimmertyp} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="zimmertyp" value={props.zimmertyp} />
     `
 }

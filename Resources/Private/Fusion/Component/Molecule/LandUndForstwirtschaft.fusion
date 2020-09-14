@@ -1,6 +1,6 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.LandUndForstwirtschaft) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.LandUndForstwirtschaft) < prototype(Neos.Fusion:Component) {
     landTyp = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="landTyp" value={props.landTyp} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="landTyp" value={props.landTyp} />
     `
 }

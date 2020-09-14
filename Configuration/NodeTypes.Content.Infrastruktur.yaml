@@ -1,7 +1,7 @@
-'Ujamii.OpenImmoNeos:Content.Infrastruktur':
+'Ujamii.OpenImmo:Content.Infrastruktur':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
-    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Ujamii.OpenImmo:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
     label: Infrastruktur
@@ -19,10 +19,10 @@
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'Ujamii.OpenImmoNeos:Content.Ausblick': true
-          'Ujamii.OpenImmoNeos:Content.Distanzen': true
-          'Ujamii.OpenImmoNeos:Content.DistanzenSport': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedAnyfield': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedExtend': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield': true
+          'Ujamii.OpenImmo:Content.Ausblick': true
+          'Ujamii.OpenImmo:Content.Distanzen': true
+          'Ujamii.OpenImmo:Content.DistanzenSport': true
+          'Ujamii.OpenImmo:Content.UserDefinedAnyfield': true
+          'Ujamii.OpenImmo:Content.UserDefinedExtend': true
+          'Ujamii.OpenImmo:Content.UserDefinedSimplefield': true
           '*': false

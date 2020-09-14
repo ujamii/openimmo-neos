@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Content.Hauptmietzinsnetto) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Hauptmietzinsnetto) < prototype(Neos.Fusion:Component) {
     hauptmietzinsust = ${q(node).property('hauptmietzinsust')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Hauptmietzinsnetto {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Hauptmietzinsnetto {...props}/>
     `
 }

@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Content.Versteigerung) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Versteigerung) < prototype(Neos.Fusion:Component) {
     aktenzeichen = ${q(node).property('aktenzeichen')}
     amtsgericht = ${q(node).property('amtsgericht')}
     verkehrswert = ${q(node).property('verkehrswert')}
@@ -6,6 +6,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Versteigerung) < prototype(Neos.Fusion:Com
     zvtermin = ${q(node).property('zvtermin')}
     zwangsversteigerung = ${q(node).property('zwangsversteigerung')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Versteigerung {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Versteigerung {...props}/>
     `
 }

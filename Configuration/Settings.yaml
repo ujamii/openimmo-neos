@@ -2,13 +2,13 @@ Neos:
   Neos:
     fusion:
       autoInclude:
-        Ujamii.OpenImmoNeos: true
+        Ujamii.OpenImmo: true
 
 Ujamii:
-  OpenImmoNeos:
+  OpenImmo:
     import:
       sourceDirectory: 'import/'
-      targetNodeType: 'Ujamii.OpenImmoNeos:Document.OpenImmoRoot'
+      targetNodeType: 'Ujamii.OpenImmo:Document.OpenImmoRoot'
     nodeTypeIcons:
       default: icon-sign
       Anhaenge: icon-image

@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Content.Flaechen) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Flaechen) < prototype(Neos.Fusion:Component) {
     anzahlBadezimmer = ${q(node).property('anzahlBadezimmer')}
     anzahlBalkone = ${q(node).property('anzahlBalkone')}
     anzahlBetten = ${q(node).property('anzahlBetten')}
@@ -49,6 +49,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Flaechen) < prototype(Neos.Fusion:Componen
         nodePath = 'main'
     }
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Flaechen {...props} mainContent={mainContent}/>
+        <Ujamii.OpenImmo:Component.Molecule.Flaechen {...props} mainContent={mainContent}/>
     `
 }

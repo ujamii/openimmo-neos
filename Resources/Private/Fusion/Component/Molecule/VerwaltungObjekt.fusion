@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.VerwaltungObjekt) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.VerwaltungObjekt) < prototype(Neos.Fusion:Component) {
     abdatum = null
     alsFerien = null
     bisdatum = null
@@ -18,24 +18,24 @@ prototype(Ujamii.OpenImmoNeos:Component.Molecule.VerwaltungObjekt) < prototype(N
     wbsSozialwohnung = null
     zugang = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="abdatum" value={props.abdatum} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="alsFerien" value={props.alsFerien} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bisdatum" value={props.bisdatum} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="branchen" value={props.branchen} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="denkmalgeschuetzt" value={props.denkmalgeschuetzt} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gewerblicheNutzung" value={props.gewerblicheNutzung} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="gruppennummer" value={props.gruppennummer} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="haustiere" value={props.haustiere} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="hochhaus" value={props.hochhaus} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="laufzeit" value={props.laufzeit} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="maxPersonen" value={props.maxPersonen} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="nichtraucher" value={props.nichtraucher} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="objektadresseFreigeben" value={props.objektadresseFreigeben} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="verfuegbarAb" value={props.verfuegbarAb} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="vermietet" value={props.vermietet} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="versteigerungstermin" value={props.versteigerungstermin} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="wbsSozialwohnung" value={props.wbsSozialwohnung} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="zugang" value={props.zugang} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="abdatum" value={props.abdatum} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="alsFerien" value={props.alsFerien} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="bisdatum" value={props.bisdatum} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="branchen" value={props.branchen} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="denkmalgeschuetzt" value={props.denkmalgeschuetzt} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="gewerblicheNutzung" value={props.gewerblicheNutzung} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="gruppennummer" value={props.gruppennummer} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="haustiere" value={props.haustiere} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="hochhaus" value={props.hochhaus} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="laufzeit" value={props.laufzeit} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="maxPersonen" value={props.maxPersonen} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="nichtraucher" value={props.nichtraucher} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="objektadresseFreigeben" value={props.objektadresseFreigeben} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="verfuegbarAb" value={props.verfuegbarAb} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="vermietet" value={props.vermietet} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="versteigerungstermin" value={props.versteigerungstermin} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="wbsSozialwohnung" value={props.wbsSozialwohnung} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="zugang" value={props.zugang} />
         {props.mainContent}
     `
 }

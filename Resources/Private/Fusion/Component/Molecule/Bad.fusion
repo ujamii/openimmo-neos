@@ -1,14 +1,14 @@
-prototype(Ujamii.OpenImmoNeos:Component.Molecule.Bad) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Component.Molecule.Bad) < prototype(Neos.Fusion:Component) {
     bidet = null
     dusche = null
     fenster = null
     pissoir = null
     wanne = null
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="bidet" value={props.bidet} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="dusche" value={props.dusche} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="fenster" value={props.fenster} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="pissoir" value={props.pissoir} />
-        <Ujamii.OpenImmoNeos:Component.Atom.SimpleProperty name="wanne" value={props.wanne} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="bidet" value={props.bidet} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="dusche" value={props.dusche} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="fenster" value={props.fenster} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="pissoir" value={props.pissoir} />
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="wanne" value={props.wanne} />
     `
 }

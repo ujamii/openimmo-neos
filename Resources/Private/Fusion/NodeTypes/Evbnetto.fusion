@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Content.Evbnetto) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Evbnetto) < prototype(Neos.Fusion:Component) {
     evbust = ${q(node).property('evbust')}
     value = ${q(node).property('value')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Evbnetto {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Evbnetto {...props}/>
     `
 }

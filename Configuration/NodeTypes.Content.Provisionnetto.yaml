@@ -1,7 +1,7 @@
-'Ujamii.OpenImmoNeos:Content.Provisionnetto':
+'Ujamii.OpenImmo:Content.Provisionnetto':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
-    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Ujamii.OpenImmo:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
     label: Provisionnetto

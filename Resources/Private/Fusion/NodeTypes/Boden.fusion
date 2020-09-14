@@ -1,4 +1,4 @@
-prototype(Ujamii.OpenImmoNeos:Content.Boden) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Boden) < prototype(Neos.Fusion:Component) {
     dielen = ${q(node).property('dielen')}
     doppelboden = ${q(node).property('doppelboden')}
     estrich = ${q(node).property('estrich')}
@@ -14,6 +14,6 @@ prototype(Ujamii.OpenImmoNeos:Content.Boden) < prototype(Neos.Fusion:Component) 
     teppich = ${q(node).property('teppich')}
     terrakotta = ${q(node).property('terrakotta')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Boden {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Boden {...props}/>
     `
 }

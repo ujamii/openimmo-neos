@@ -1,7 +1,7 @@
-'Ujamii.OpenImmoNeos:Content.Parken':
+'Ujamii.OpenImmo:Content.Parken':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
-    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Ujamii.OpenImmo:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
     label: Parken

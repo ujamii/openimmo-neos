@@ -1,8 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Content.Kueche) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Kueche) < prototype(Neos.Fusion:Component) {
     ebk = ${q(node).property('ebk')}
     offen = ${q(node).property('offen')}
     pantry = ${q(node).property('pantry')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Kueche {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Kueche {...props}/>
     `
 }

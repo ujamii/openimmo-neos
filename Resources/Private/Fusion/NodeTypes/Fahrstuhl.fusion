@@ -1,7 +1,7 @@
-prototype(Ujamii.OpenImmoNeos:Content.Fahrstuhl) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Fahrstuhl) < prototype(Neos.Fusion:Component) {
     lasten = ${q(node).property('lasten')}
     personen = ${q(node).property('personen')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Fahrstuhl {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.Fahrstuhl {...props}/>
     `
 }

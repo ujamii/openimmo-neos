@@ -1,8 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Content.StpDuplex) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.StpDuplex) < prototype(Neos.Fusion:Component) {
     anzahl = ${q(node).property('anzahl')}
     stellplatzkaufpreis = ${q(node).property('stellplatzkaufpreis')}
     stellplatzmiete = ${q(node).property('stellplatzmiete')}
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.StpDuplex {...props}/>
+        <Ujamii.OpenImmo:Component.Molecule.StpDuplex {...props}/>
     `
 }

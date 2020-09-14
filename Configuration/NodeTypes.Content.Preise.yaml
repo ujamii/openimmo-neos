@@ -1,7 +1,7 @@
-'Ujamii.OpenImmoNeos:Content.Preise':
+'Ujamii.OpenImmo:Content.Preise':
   superTypes:
     'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
-    'Ujamii.OpenImmoNeos:Constraint.Content.Restricted': true
+    'Ujamii.OpenImmo:Constraint.Content.Restricted': true
     'Neos.Neos:Content': true
   ui:
     label: Preise
@@ -275,38 +275,38 @@
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'Ujamii.OpenImmoNeos:Content.AussenCourtage': true
-          'Ujamii.OpenImmoNeos:Content.Betriebskostennetto': true
-          'Ujamii.OpenImmoNeos:Content.Evbnetto': true
-          'Ujamii.OpenImmoNeos:Content.Gesamtbelastungnetto': true
-          'Ujamii.OpenImmoNeos:Content.Gesamtkostenprom2von': true
-          'Ujamii.OpenImmoNeos:Content.Gesamtmietenetto': true
-          'Ujamii.OpenImmoNeos:Content.Hauptmietzinsnetto': true
-          'Ujamii.OpenImmoNeos:Content.Heizkostennetto': true
-          'Ujamii.OpenImmoNeos:Content.InnenCourtage': true
-          'Ujamii.OpenImmoNeos:Content.Kaufpreis': true
-          'Ujamii.OpenImmoNeos:Content.Kaufpreisnetto': true
-          'Ujamii.OpenImmoNeos:Content.MieteinnahmenIst': true
-          'Ujamii.OpenImmoNeos:Content.MieteinnahmenSoll': true
-          'Ujamii.OpenImmoNeos:Content.Monatlichekostennetto': true
-          'Ujamii.OpenImmoNeos:Content.Nebenkostenprom2von': true
-          'Ujamii.OpenImmoNeos:Content.Nettomieteprom2von': true
-          'Ujamii.OpenImmoNeos:Content.PreisZeiteinheit': true
-          'Ujamii.OpenImmoNeos:Content.Provisionnetto': true
-          'Ujamii.OpenImmoNeos:Content.ProvisionTeilen': true
-          'Ujamii.OpenImmoNeos:Content.Ruecklagenetto': true
-          'Ujamii.OpenImmoNeos:Content.Sonstigekostennetto': true
-          'Ujamii.OpenImmoNeos:Content.Sonstigemietenetto': true
-          'Ujamii.OpenImmoNeos:Content.StpCarport': true
-          'Ujamii.OpenImmoNeos:Content.StpDuplex': true
-          'Ujamii.OpenImmoNeos:Content.StpFreiplatz': true
-          'Ujamii.OpenImmoNeos:Content.StpGarage': true
-          'Ujamii.OpenImmoNeos:Content.StpParkhaus': true
-          'Ujamii.OpenImmoNeos:Content.StpSonstige': true
-          'Ujamii.OpenImmoNeos:Content.StpTiefgarage': true
-          'Ujamii.OpenImmoNeos:Content.Summemietenetto': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedAnyfield': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedExtend': true
-          'Ujamii.OpenImmoNeos:Content.UserDefinedSimplefield': true
-          'Ujamii.OpenImmoNeos:Content.Waehrung': true
+          'Ujamii.OpenImmo:Content.AussenCourtage': true
+          'Ujamii.OpenImmo:Content.Betriebskostennetto': true
+          'Ujamii.OpenImmo:Content.Evbnetto': true
+          'Ujamii.OpenImmo:Content.Gesamtbelastungnetto': true
+          'Ujamii.OpenImmo:Content.Gesamtkostenprom2von': true
+          'Ujamii.OpenImmo:Content.Gesamtmietenetto': true
+          'Ujamii.OpenImmo:Content.Hauptmietzinsnetto': true
+          'Ujamii.OpenImmo:Content.Heizkostennetto': true
+          'Ujamii.OpenImmo:Content.InnenCourtage': true
+          'Ujamii.OpenImmo:Content.Kaufpreis': true
+          'Ujamii.OpenImmo:Content.Kaufpreisnetto': true
+          'Ujamii.OpenImmo:Content.MieteinnahmenIst': true
+          'Ujamii.OpenImmo:Content.MieteinnahmenSoll': true
+          'Ujamii.OpenImmo:Content.Monatlichekostennetto': true
+          'Ujamii.OpenImmo:Content.Nebenkostenprom2von': true
+          'Ujamii.OpenImmo:Content.Nettomieteprom2von': true
+          'Ujamii.OpenImmo:Content.PreisZeiteinheit': true
+          'Ujamii.OpenImmo:Content.Provisionnetto': true
+          'Ujamii.OpenImmo:Content.ProvisionTeilen': true
+          'Ujamii.OpenImmo:Content.Ruecklagenetto': true
+          'Ujamii.OpenImmo:Content.Sonstigekostennetto': true
+          'Ujamii.OpenImmo:Content.Sonstigemietenetto': true
+          'Ujamii.OpenImmo:Content.StpCarport': true
+          'Ujamii.OpenImmo:Content.StpDuplex': true
+          'Ujamii.OpenImmo:Content.StpFreiplatz': true
+          'Ujamii.OpenImmo:Content.StpGarage': true
+          'Ujamii.OpenImmo:Content.StpParkhaus': true
+          'Ujamii.OpenImmo:Content.StpSonstige': true
+          'Ujamii.OpenImmo:Content.StpTiefgarage': true
+          'Ujamii.OpenImmo:Content.Summemietenetto': true
+          'Ujamii.OpenImmo:Content.UserDefinedAnyfield': true
+          'Ujamii.OpenImmo:Content.UserDefinedExtend': true
+          'Ujamii.OpenImmo:Content.UserDefinedSimplefield': true
+          'Ujamii.OpenImmo:Content.Waehrung': true
           '*': false

@@ -1,8 +1,8 @@
-prototype(Ujamii.OpenImmoNeos:Content.Openimmo) < prototype(Neos.Fusion:Component) {
+prototype(Ujamii.OpenImmo:Content.Openimmo) < prototype(Neos.Fusion:Component) {
     @context.mainContent = Neos.Neos:ContentCollection {
         nodePath = 'main'
     }
     renderer = afx`
-        <Ujamii.OpenImmoNeos:Component.Molecule.Openimmo {...props} mainContent={mainContent}/>
+        <Ujamii.OpenImmo:Component.Molecule.Openimmo {...props} mainContent={mainContent}/>
     `
 }
