@@ -1,5 +1,5 @@
 prototype(Ujamii.OpenImmo:Content.UserDefinedAnyfield) < prototype(Neos.Fusion:Component) {
-
+    
     renderer = afx`
         <Ujamii.OpenImmo:Component.Molecule.UserDefinedAnyfield {...props}/>
     `
