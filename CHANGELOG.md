@@ -1,3 +1,6 @@
+## 0.2.1 (November 20, 2020)
+  - [BUGFIX] using an absolute path failed during archive extraction
+
 ## 0.2.0 (September 14, 2020)
   - [TASK] regenerated package files
   - [TEST] renamed package
