@@ -579,14 +579,17 @@ class OpenImmoCommandController extends CommandController
             /* @var PhpProperty $classProperty */
             foreach ($classProperties as $classProperty) {
                 $neosPropertyConfig = $this->getPropertyConfig($classProperty, $modelClass);
+
                 if (null !== $neosPropertyConfig) {
                     $yamlProperties[$classProperty->getName()] = $neosPropertyConfig;
                 }
 
                 $targetNodeType = $this->getChildNodeType($classProperty);
-                if ( ! in_array($targetNodeType, [null, 'Ujamii.OpenImmo:Content.Daten'])) {
+                if ( ! in_array($targetNodeType, [null, 'Ujamii.OpenImmo:Content.Daten', 'Ujamii.OpenImmo:Content.string'])) {
                     // the NodeType Ujamii.OpenImmo:Content.Daten is special, as this will be converted to
                     // a NEOS CMS asset instead of a string based property.
+
+                    // string type is added as text property instead of child node
                     $allowedChildNodes[$targetNodeType] = true;
                 }
             }
@@ -676,6 +679,10 @@ class OpenImmoCommandController extends CommandController
                         ]
                     ];
                 }
+                break;
+
+            case 'array<string>':
+                $neosPropType = 'string';
                 break;
 
             case 'float':
