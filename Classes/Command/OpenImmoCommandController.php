@@ -308,7 +308,7 @@ class OpenImmoCommandController extends CommandController
                     if ($classProperty->getName() == 'daten') {
                         // import asset
                         /* @var Daten $propertyValue */
-                        $neosImage = $this->contentHelper->importImage(FLOW_PATH_ROOT . $directory . DIRECTORY_SEPARATOR . $propertyValue->getPfad());
+                        $neosImage = $this->contentHelper->importImage($directory . DIRECTORY_SEPARATOR . $propertyValue->getPfad());
                         $existingNode->setProperty($classProperty->getName(), $neosImage);
                         $this->outputLine("<info>Imported image from {$directory}/{$propertyValue->getPfad()}.</info>");
                     } else {
