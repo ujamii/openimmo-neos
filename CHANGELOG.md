@@ -1,3 +1,7 @@
+## 0.2.3 (November 20, 2020)
+  - [BUGFIX] array of string properties are now handled as strings correctly
+  - [BUGFIX] string properties are not a child node type
+
 ## 0.2.2 (November 20, 2020)
   - [BUGFIX] using an absolute path failed during image import
 
