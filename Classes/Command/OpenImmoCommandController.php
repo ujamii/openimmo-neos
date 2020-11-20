@@ -151,7 +151,7 @@ class OpenImmoCommandController extends CommandController
                 $hasUnzip = (bool)$finder->find('unzip');
                 if ($hasUnzip) {
                     $directoryName = $zipFile->getFilenameWithoutExtension();
-                    $absoluteTargetDirectory = FLOW_PATH_ROOT . $importSourceDirectory . $directoryName;
+                    $absoluteTargetDirectory = $importSourceDirectory . $directoryName;
                     if ( ! is_dir($absoluteTargetDirectory)) {
                         $this->outputLine("<info>extracting {$zipFile->getRealPath()} to {$absoluteTargetDirectory}</info>");
                         $process = new Process(['unzip', $zipFile->getRealPath(), "-d{$absoluteTargetDirectory}"], $zipFile->getPath());
