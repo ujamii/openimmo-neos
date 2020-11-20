@@ -6,11 +6,11 @@
   ui:
     label: Bewertung
     icon: icon-star-half-alt
-  properties: {  }
-  childNodes:
-    main:
-      type: 'Neos.Neos:ContentCollection'
-      constraints:
-        nodeTypes:
-          'Ujamii.OpenImmo:Content.string': true
-          '*': false
+  properties:
+    feld:
+      type: string
+      ui:
+        label: Feld
+        reloadIfChanged: true
+        inspector:
+          group: openimmo

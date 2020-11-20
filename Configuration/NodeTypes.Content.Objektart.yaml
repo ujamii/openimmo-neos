@@ -6,7 +6,14 @@
   ui:
     label: Objektart
     icon: icon-tags
-  properties: {  }
+  properties:
+    objektartZusatz:
+      type: string
+      ui:
+        label: ObjektartZusatz
+        reloadIfChanged: true
+        inspector:
+          group: openimmo
   childNodes:
     main:
       type: 'Neos.Neos:ContentCollection'
@@ -20,7 +27,6 @@
           'Ujamii.OpenImmo:Content.HallenLagerProd': true
           'Ujamii.OpenImmo:Content.Haus': true
           'Ujamii.OpenImmo:Content.LandUndForstwirtschaft': true
-          'Ujamii.OpenImmo:Content.string': true
           'Ujamii.OpenImmo:Content.Parken': true
           'Ujamii.OpenImmo:Content.Sonstige': true
           'Ujamii.OpenImmo:Content.Wohnung': true

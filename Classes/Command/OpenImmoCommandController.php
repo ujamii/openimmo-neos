@@ -287,6 +287,12 @@ class OpenImmoCommandController extends CommandController
 
             switch ($matches[1]) {
 
+                case 'array<string>':
+                    $propertyValue = implode(', ', $propertyValue);
+                    $existingNode->setProperty($classProperty->getName(), $propertyValue);
+                    $this->outputLine("<info>Filling property {$classProperty->getName()} with value \"{$propertyValue}\".</info>");
+                    break;
+
                 case 'boolean':
                 case 'string':
                 case 'float':

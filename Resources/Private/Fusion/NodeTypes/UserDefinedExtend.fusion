@@ -1,8 +1,6 @@
 prototype(Ujamii.OpenImmo:Content.UserDefinedExtend) < prototype(Neos.Fusion:Component) {
-    @context.mainContent = Neos.Neos:ContentCollection {
-        nodePath = 'main'
-    }
+    
     renderer = afx`
-        <Ujamii.OpenImmo:Component.Molecule.UserDefinedExtend {...props} mainContent={mainContent}/>
+        <Ujamii.OpenImmo:Component.Molecule.UserDefinedExtend {...props}/>
     `
 }
