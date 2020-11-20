@@ -1,3 +1,6 @@
+## 0.2.2 (November 20, 2020)
+  - [BUGFIX] using an absolute path failed during image import
+
 ## 0.2.1 (November 20, 2020)
   - [BUGFIX] using an absolute path failed during archive extraction
 
