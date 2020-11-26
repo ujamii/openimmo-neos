@@ -1,3 +1,6 @@
+## 0.3.0 (November 26, 2020)
+  - [BUGFIX] updated to ujamii/openimmo 0.6 to fix missing values from mixed xml fields
+
 ## 0.2.3 (November 20, 2020)
   - [BUGFIX] array of string properties are now handled as strings correctly
   - [BUGFIX] string properties are not a child node type
