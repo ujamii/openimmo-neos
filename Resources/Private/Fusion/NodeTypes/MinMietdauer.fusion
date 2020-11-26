@@ -1,5 +1,6 @@
 prototype(Ujamii.OpenImmo:Content.MinMietdauer) < prototype(Neos.Fusion:Component) {
     minDauer = ${q(node).property('minDauer')}
+    value = ${q(node).property('value')}
     renderer = afx`
         <Ujamii.OpenImmo:Component.Molecule.MinMietdauer {...props}/>
     `

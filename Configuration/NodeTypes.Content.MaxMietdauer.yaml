@@ -25,3 +25,10 @@
                 label: Tag
               WOCHE:
                 label: Woche
+    value:
+      type: string
+      ui:
+        label: Value
+        reloadIfChanged: true
+        inspector:
+          group: openimmo

@@ -1,6 +1,8 @@
 prototype(Ujamii.OpenImmo:Component.Molecule.Master) < prototype(Neos.Fusion:Component) {
+    value = null
     visible = null
     renderer = afx`
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="value" value={props.value} />
         <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="visible" value={props.visible} />
     `
 }

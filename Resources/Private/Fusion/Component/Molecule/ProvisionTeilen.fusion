@@ -1,6 +1,8 @@
 prototype(Ujamii.OpenImmo:Component.Molecule.ProvisionTeilen) < prototype(Neos.Fusion:Component) {
+    value = null
     wert = null
     renderer = afx`
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="value" value={props.value} />
         <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="wert" value={props.wert} />
     `
 }

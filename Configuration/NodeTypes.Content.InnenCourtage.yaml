@@ -14,3 +14,10 @@
         reloadIfChanged: true
         inspector:
           group: openimmo
+    value:
+      type: string
+      ui:
+        label: Value
+        reloadIfChanged: true
+        inspector:
+          group: openimmo

@@ -1,4 +1,5 @@
 prototype(Ujamii.OpenImmo:Content.Master) < prototype(Neos.Fusion:Component) {
+    value = ${q(node).property('value')}
     visible = ${q(node).property('visible')}
     renderer = afx`
         <Ujamii.OpenImmo:Component.Molecule.Master {...props}/>

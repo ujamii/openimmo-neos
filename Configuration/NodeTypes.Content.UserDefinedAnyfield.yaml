@@ -6,4 +6,11 @@
   ui:
     label: UserDefinedAnyfield
     icon: icon-sign
-  properties: {  }
+  properties:
+    value:
+      type: string
+      ui:
+        label: Value
+        reloadIfChanged: true
+        inspector:
+          group: openimmo

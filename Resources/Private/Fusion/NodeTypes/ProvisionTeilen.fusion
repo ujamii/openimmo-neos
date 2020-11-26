@@ -1,4 +1,5 @@
 prototype(Ujamii.OpenImmo:Content.ProvisionTeilen) < prototype(Neos.Fusion:Component) {
+    value = ${q(node).property('value')}
     wert = ${q(node).property('wert')}
     renderer = afx`
         <Ujamii.OpenImmo:Component.Molecule.ProvisionTeilen {...props}/>

@@ -1,6 +1,6 @@
 prototype(Ujamii.OpenImmo:Component.Molecule.UserDefinedAnyfield) < prototype(Neos.Fusion:Component) {
-    
+    value = null
     renderer = afx`
-        
+        <Ujamii.OpenImmo:Component.Atom.SimpleProperty name="value" value={props.value} />
     `
 }
