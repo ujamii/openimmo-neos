@@ -9,6 +9,7 @@ Ujamii:
     import:
       sourceDirectory: 'import/'
       targetNodeType: 'Ujamii.OpenImmo:Document.OpenImmoRoot'
+      showAddressInUrl: false
     nodeTypeIcons:
       default: icon-sign
       Anhaenge: icon-image

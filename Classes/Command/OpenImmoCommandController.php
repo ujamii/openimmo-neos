@@ -150,7 +150,7 @@ class OpenImmoCommandController extends CommandController
                 $finder   = new ExecutableFinder;
                 $hasUnzip = (bool)$finder->find('unzip');
                 if ($hasUnzip) {
-                    $directoryName = $zipFile->getFilenameWithoutExtension();
+                    $directoryName           = $zipFile->getFilenameWithoutExtension();
                     $absoluteTargetDirectory = $importSourceDirectory . $directoryName;
                     if ( ! is_dir($absoluteTargetDirectory)) {
                         $this->outputLine("<info>extracting {$zipFile->getRealPath()} to {$absoluteTargetDirectory}</info>");
@@ -225,16 +225,22 @@ class OpenImmoCommandController extends CommandController
                         if (is_null($parentNode)) {
                             $this->outputLine("<error>No parent node of type {$this->importConfig['targetNodeType']} found!</error>");
                             $this->sendAndExit(1);
+
                             return false;
                         }
 
+                        $nodeProperties = [
+                            'title'            => $this->generateNodeName($immobilie),
+                            'estateIdentifier' => $estateIdenitifer,
+                        ];
+                        if (!$this->importConfig['showAddressInUrl']) {
+                            $nodeProperties['uriPathSegment'] = $estateIdenitifer;
+                            $nodeProperties['titleOverride']  = $estateIdenitifer;
+                        }
                         $existingNode = $this->contentHelper->createNodeFromTemplateInParent(
                             'Ujamii.OpenImmo:Document.Immobilie',
                             $parentNode->getNodeAggregateIdentifier(),
-                            [
-                                'title'            => $this->generateNodeName($immobilie),
-                                'estateIdentifier' => $estateIdenitifer,
-                            ],
+                            $nodeProperties,
                             $this->generateNodeName($immobilie)
                         );
 
@@ -248,6 +254,7 @@ class OpenImmoCommandController extends CommandController
                     if (is_null($existingNode)) {
                         $this->outputLine("<error>No estate item found with identifier {$estateIdenitifer}!</error>");
                         $this->sendAndExit(1);
+
                         return false;
                     }
 
@@ -601,7 +608,7 @@ class OpenImmoCommandController extends CommandController
             }
 
             $this->nodeHasChildNodesCache[$nodeType] = false;
-            $yaml = [];
+            $yaml                                    = [];
             if (isset($this->nodeTypeLabels[ucfirst($documentName)])) {
                 $yaml[$nodeType]['label'] = $this->nodeTypeLabels[ucfirst($documentName)];
             }
@@ -623,7 +630,7 @@ class OpenImmoCommandController extends CommandController
                 $documentType                            = 'Document';
                 $this->nodeHasChildNodesCache[$nodeType] = true;
             } else {
-                $documentType                                                                       = 'Content';
+                $documentType                                                                   = 'Content';
                 $yaml[$nodeType]['superTypes']['Ujamii.OpenImmo:Constraint.Content.Restricted'] = true;
             }
             $yaml[$nodeType]['superTypes']['Neos.Neos:' . $documentType] = true;
