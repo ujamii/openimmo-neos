@@ -23,9 +23,10 @@ The content tree might look like this:
 
 If you like the features listed below, or maybe some your own additions, feel free to fork and open a pull request.
 
-- [ ] the UPDATE xml action does not delete things at the moment 
+- [x] the UPDATE xml action does not delete things at the moment 
 - [ ] currently, the package uses the German OpenImmo labels for everything, so make use of default NEOS translation features
 - [ ] export data into xml/zip format
+- [ ] do all changes in a separate workspace and publish the changes to its base workspace instead of doing things live
 
 ## Installation
 
