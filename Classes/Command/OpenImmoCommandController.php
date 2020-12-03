@@ -3,6 +3,7 @@
 namespace Ujamii\OpenImmo\Command;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
+use Doctrine\Common\Collections\ArrayCollection;
 use gossi\codegen\model\PhpClass;
 use gossi\codegen\model\PhpConstant;
 use gossi\codegen\model\PhpProperty;
@@ -95,6 +96,11 @@ class OpenImmoCommandController extends CommandController
     protected $persistenceManager;
 
     /**
+     * @var ArrayCollection
+     */
+    protected $nodesToBeDeactivated;
+
+    /**
      * Generates wrapper files (yaml and fusion) for the ujamii/openimmo API.
      *
      * @return int|void|null
@@ -141,7 +147,8 @@ class OpenImmoCommandController extends CommandController
      */
     public function importCommand()
     {
-        $importSourceDirectory = $this->importConfig['sourceDirectory'];
+        $this->nodesToBeDeactivated = new ArrayCollection();
+        $importSourceDirectory      = $this->importConfig['sourceDirectory'];
         $this->outputLine("Importing ZIP files from directory {$importSourceDirectory} ...");
 
         $finder = new Finder();
@@ -258,6 +265,10 @@ class OpenImmoCommandController extends CommandController
                     }
 
                     $this->updateNodePropertiesAndChildren($existingNode, $immobilie, $directory);
+                    /* @var NodeInterface $nodeToHide */
+                    foreach ($this->nodesToBeDeactivated as $nodeToHide) {
+                        $nodeToHide->setHidden(true);
+                    }
                     break;
 
                 case Aktion::AKTIONART_DELETE:
@@ -292,13 +303,25 @@ class OpenImmoCommandController extends CommandController
      *
      * @throws NodeNotFoundException
      * @throws \Neos\ContentRepository\Exception\ImportException
+     * @throws \Neos\ContentRepository\Exception\NodeException
      * @throws \Neos\ContentRepository\Exception\NodeTypeNotFoundException
      * @throws \ReflectionException
      */
     protected function updateNodePropertiesAndChildren(NodeInterface $existingNode, object $estateData, string $directory)
     {
-        $reflectionClass       = new \ReflectionClass($estateData);
-        $classProperties       = $reflectionClass->getProperties();
+        $reflectionClass  = new \ReflectionClass($estateData);
+        $classProperties  = $reflectionClass->getProperties();
+        $primaryChildNode = $this->getCollectionChildNode($existingNode);
+
+        // make hidden node visible again and hide children before update process
+        $this->nodesToBeDeactivated->remove($existingNode->getNodeAggregateIdentifier()->__toString());
+
+        if (null !== $primaryChildNode) {
+            /* @var NodeInterface $anyChildNode */
+            foreach ($primaryChildNode->findChildNodes() as $anyChildNode) {
+                $this->nodesToBeDeactivated->set($anyChildNode->getNodeAggregateIdentifier()->__toString(), $anyChildNode);
+            }
+        }
 
         foreach ($classProperties as $classProperty) {
             $getterName    = 'get' . ucfirst($classProperty->getName());
@@ -346,7 +369,6 @@ class OpenImmoCommandController extends CommandController
                         $this->outputLine("<info>Imported image from {$directory}/{$propertyValue->getPfad()}.</info>");
                     } else {
                         $classPropertyType = $this->getNodeTypeNameFromClassname($matches[1]);
-                        $primaryChildNode  = $this->getCollectionChildNode($existingNode);
                         if (null == $primaryChildNode) {
                             break;
                         }
@@ -408,6 +430,7 @@ class OpenImmoCommandController extends CommandController
      * @param string $directory
      *
      * @return Openimmo
+     * @throws \Exception
      */
     protected function getParsedXml(string $directory): ?Openimmo
     {
