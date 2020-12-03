@@ -297,13 +297,15 @@ class OpenImmoCommandController extends CommandController
      */
     protected function updateNodePropertiesAndChildren(NodeInterface $existingNode, object $estateData, string $directory)
     {
-        $reflectionClass = new \ReflectionClass($estateData);
-        $classProperties = $reflectionClass->getProperties();
+        $reflectionClass       = new \ReflectionClass($estateData);
+        $classProperties       = $reflectionClass->getProperties();
 
         foreach ($classProperties as $classProperty) {
             $getterName    = 'get' . ucfirst($classProperty->getName());
             $propertyValue = $estateData->{$getterName}();
             if (empty($propertyValue)) {
+                $this->outputLine("<info>Removing property {$classProperty->getName()} as it is empty in import data.</info>");
+                $existingNode->removeProperty($classProperty->getName());
                 continue;
             }
 
