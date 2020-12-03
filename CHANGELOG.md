@@ -1,3 +1,11 @@
+## 0.5.0 (December 03, 2020)
+  - [BUGFIX] existing nodes now get hidden if they are not present in the import data.
+  - [BUGFIX] existing nodes may have properties which are no longer present in the next import. This lead to wrong data. So now, existing properties are removed if they are not present in the import data.
+  - [BUGFIX] an existing directory with the same name as the zip file but different content crashed the import. So if an existing dir of that name is found now, it is deleted before import. 
+  - [BUGFIX] existing nodes are now hidden, if they are not present in the imported xml file 
+  - [TASK] make usage of NEOS' Files class to delete directory recursively instead of own code 
+  - [TASK] deprecated getPrimaryChildNode is no longer used
+
 ## 0.4.0 (November 26, 2020)
   - [FEATURE] added feature to hide address from url
 
