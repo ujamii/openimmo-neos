@@ -15,6 +15,7 @@ use Neos\Flow\Cli\CommandController;
 use Neos\Flow\Package\PackageManager;
 use Neos\Flow\Persistence\PersistenceManagerInterface;
 use Neos\Neos\Controller\Exception\NodeNotFoundException;
+use Neos\Utility\Files;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Process\ExecutableFinder;
 use Symfony\Component\Process\Process;
@@ -31,6 +32,8 @@ use Ujamii\OpenImmo\Service\ContentHelper;
  */
 class OpenImmoCommandController extends CommandController
 {
+    public const OPEN_IMMO_DOCUMENT_IMMOBILIE = 'Ujamii.OpenImmo:Document.Immobilie';
+
     /**
      * @var string
      */
@@ -152,31 +155,27 @@ class OpenImmoCommandController extends CommandController
                 if ($hasUnzip) {
                     $directoryName           = $zipFile->getFilenameWithoutExtension();
                     $absoluteTargetDirectory = $importSourceDirectory . $directoryName;
-                    if ( ! is_dir($absoluteTargetDirectory)) {
-                        $this->outputLine("<info>extracting {$zipFile->getRealPath()} to {$absoluteTargetDirectory}</info>");
-                        $process = new Process(['unzip', $zipFile->getRealPath(), "-d{$absoluteTargetDirectory}"], $zipFile->getPath());
-                        $process->run();
+                    if (is_dir($absoluteTargetDirectory)) {
+                        $this->outputLine("<info>directory {$directoryName} already exists, so delete it!</info>");
+                        Files::removeDirectoryRecursively($importSourceDirectory . $directoryName);
+                    }
+                    $this->outputLine("<info>extracting {$zipFile->getRealPath()} to {$absoluteTargetDirectory}</info>");
+                    $process = new Process(['unzip', $zipFile->getRealPath(), "-d{$absoluteTargetDirectory}"], $zipFile->getPath());
+                    $process->run();
 
-                        if ( ! $process->isSuccessful()) {
-                            $this->outputLine('<error>unzip failed with error:</error>');
-                            $this->output($process->getOutput());
-                            $this->sendAndExit(1);
-                        }
-                    } else {
-                        $this->outputLine("<info>directory {$directoryName} already exists</info>");
+                    if ( ! $process->isSuccessful()) {
+                        $this->outputLine('<error>unzip failed with error:</error>');
+                        $this->output($process->getOutput());
+                        $this->sendAndExit(1);
                     }
 
                     $importResult = $this->importOpenImmoDirectory($importSourceDirectory . $directoryName);
                     if ($importResult) {
+                        Files::removeDirectoryRecursively($importSourceDirectory . $directoryName);
                         // delete zip file and unpacked files
                         unlink($zipFile->getRealPath());
-                        $deleteFileFinder = new Finder();
-                        $deleteFileFinder->files()->in($importSourceDirectory . $directoryName);
-                        foreach ($deleteFileFinder as $fileToDelete) {
-                            unlink($fileToDelete->getRealPath());
-                        }
-                        rmdir($importSourceDirectory . $directoryName);
                         $this->outputLine("<info>deleted {$directoryName} and {$zipFile->getFilename()}</info>");
+
                     }
                 } else {
                     $this->outputLine('<error>unzip not found on this host!</error>');
@@ -203,15 +202,26 @@ class OpenImmoCommandController extends CommandController
         $this->outputLine("Importing xml and assets from directory {$directory} ...");
         $openImmo = $this->getParsedXml($directory);
 
+        // get all existing nodes before import for comparison
+        $existingRealEstateNodes = $this->contentHelper->findNodesByNodeType(self::OPEN_IMMO_DOCUMENT_IMMOBILIE);
+        $existingNodeCount       = count($existingRealEstateNodes);
+        $this->outputLine("<info>Found {$existingNodeCount} nodes in system before import.</info>");
+
         /* @var Immobilie */
         foreach ($openImmo->getAnbieter()[0]->getImmobilie() as $immobilie) {
             $actionToPerform  = $immobilie->getVerwaltungTechn()->getAktion()->getAktionart();
-            $estateIdenitifer = $immobilie->getVerwaltungTechn()->getObjektnrIntern();
-            /* @var NodeInterface $existingNode */
-            $existingNode = $this->contentHelper->findNode(
-                'Ujamii.OpenImmo:Document.Immobilie',
-                ['estateIdentifier' => $estateIdenitifer]
-            );
+            $estateIdentifier = $immobilie->getVerwaltungTechn()->getObjektnrIntern();
+
+            /* @var ?NodeInterface $existingNode */
+            $existingNode = null;
+            /* @var NodeInterface $nodeFromDb */
+            foreach ($existingRealEstateNodes as $nodeKey => $nodeFromDb) {
+                if ($nodeFromDb->getProperty('estateIdentifier') === $estateIdentifier) {
+                    $existingNode = $nodeFromDb;
+                    unset($existingRealEstateNodes[$nodeKey]);
+                    break;
+                }
+            }
 
             switch ($actionToPerform) {
 
@@ -231,14 +241,14 @@ class OpenImmoCommandController extends CommandController
 
                         $nodeProperties = [
                             'title'            => $this->generateNodeName($immobilie),
-                            'estateIdentifier' => $estateIdenitifer,
+                            'estateIdentifier' => $estateIdentifier,
                         ];
-                        if (!$this->importConfig['showAddressInUrl']) {
-                            $nodeProperties['uriPathSegment'] = $estateIdenitifer;
-                            $nodeProperties['titleOverride']  = $estateIdenitifer;
+                        if ( ! $this->importConfig['showAddressInUrl']) {
+                            $nodeProperties['uriPathSegment'] = $estateIdentifier;
+                            $nodeProperties['titleOverride']  = $estateIdentifier;
                         }
                         $existingNode = $this->contentHelper->createNodeFromTemplateInParent(
-                            'Ujamii.OpenImmo:Document.Immobilie',
+                            self::OPEN_IMMO_DOCUMENT_IMMOBILIE,
                             $parentNode->getNodeAggregateIdentifier(),
                             $nodeProperties,
                             $this->generateNodeName($immobilie)
@@ -252,16 +262,24 @@ class OpenImmoCommandController extends CommandController
 
                 case Aktion::AKTIONART_DELETE:
                     if (is_null($existingNode)) {
-                        $this->outputLine("<error>No estate item found with identifier {$estateIdenitifer}!</error>");
+                        $this->outputLine("<error>No estate item found with identifier {$estateIdentifier}!</error>");
                         $this->sendAndExit(1);
 
                         return false;
                     }
 
-                    $this->outputLine("<info>Removing real estate node {$estateIdenitifer}!</info>");
+                    $this->outputLine("<info>Removing real estate node {$estateIdentifier}!</info>");
                     $existingNode->remove();
                     break;
             }
+        }
+
+        $deactivateNodeCount = count($existingRealEstateNodes);
+        $this->outputLine("<info>deactivating {$deactivateNodeCount} existing nodes which were not included in the import:</info>");
+        /* @var NodeInterface $nodesToDeactivate */
+        foreach ($existingRealEstateNodes as $nodesToDeactivate) {
+            $nodesToDeactivate->setHidden(true);
+            $this->outputLine("<info>deactivating object '{$nodesToDeactivate->getProperty('estateIdentifier')}'.</info>");
         }
 
         return true;
@@ -326,8 +344,12 @@ class OpenImmoCommandController extends CommandController
                         $this->outputLine("<info>Imported image from {$directory}/{$propertyValue->getPfad()}.</info>");
                     } else {
                         $classPropertyType = $this->getNodeTypeNameFromClassname($matches[1]);
+                        $primaryChildNode  = $this->getCollectionChildNode($existingNode);
+                        if (null == $primaryChildNode) {
+                            break;
+                        }
                         /* @var TraversableNodes $childNodes */
-                        $childNodes      = $existingNode->getPrimaryChildNode()->findChildNodes(new NodeTypeConstraints(false, [$classPropertyType]));
+                        $childNodes      = $primaryChildNode->findChildNodes(new NodeTypeConstraints(false, [$classPropertyType]));
                         $childNodesArray = $childNodes->toArray();
                         $this->outputLine("<info>Found {$childNodes->count()} of type {$classPropertyType}</info>");
 
@@ -337,7 +359,7 @@ class OpenImmoCommandController extends CommandController
                                 for ($i = $childNodes->count(); $i < count($propertyValue); $i++) {
                                     $childNode         = $this->contentHelper->createNodeFromTemplateInParent(
                                         $classPropertyType,
-                                        $existingNode->getPrimaryChildNode()->getNodeAggregateIdentifier()
+                                        $primaryChildNode->getNodeAggregateIdentifier()
                                     );
                                     $childNodesArray[] = $childNode;
                                 }
@@ -352,7 +374,7 @@ class OpenImmoCommandController extends CommandController
                             if ($childNodes->count() == 0) {
                                 $childNodesArray[] = $this->contentHelper->createNodeFromTemplateInParent(
                                     $classPropertyType,
-                                    $existingNode->getPrimaryChildNode()->getNodeAggregateIdentifier()
+                                    $primaryChildNode->getNodeAggregateIdentifier()
                                 );
                             }
                             $this->updateNodePropertiesAndChildren($childNodesArray[0], $propertyValue, $directory);
@@ -361,6 +383,22 @@ class OpenImmoCommandController extends CommandController
                     break;
 
             }
+        }
+    }
+
+    /**
+     * @param NodeInterface $node
+     *
+     * @return ?NodeInterface
+     */
+    protected function getCollectionChildNode(NodeInterface $node)
+    {
+        /* @var TraversableNodes $result */
+        $result = $node->findChildNodes(new NodeTypeConstraints(false, ['Neos.Neos:ContentCollection']), 1);
+        if ($result->count() == 1) {
+            return $result->getIterator()->current();
+        } else {
+            return null;
         }
     }
 
