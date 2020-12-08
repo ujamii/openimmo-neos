@@ -11,11 +11,15 @@ use JMS\Serializer\Handler\HandlerRegistryInterface;
 use Neos\ContentRepository\Domain\Model\NodeInterface;
 use Neos\ContentRepository\Domain\NodeType\NodeTypeConstraints;
 use Neos\ContentRepository\Domain\Projection\Content\TraversableNodes;
+use Neos\ContentRepository\Exception\ImportException;
+use Neos\ContentRepository\Exception\NodeException;
+use Neos\ContentRepository\Exception\NodeTypeNotFoundException;
 use Neos\Flow\Annotations as Flow;
 use Neos\Flow\Cli\CommandController;
 use Neos\Flow\Package\PackageManager;
 use Neos\Flow\Persistence\PersistenceManagerInterface;
 use Neos\Neos\Controller\Exception\NodeNotFoundException;
+use Neos\Utility\Exception\FilesException;
 use Neos\Utility\Files;
 use Psr\Log\LoggerInterface;
 use ReflectionException;
@@ -113,7 +117,7 @@ class OpenImmoCommandController extends CommandController
      *
      * @return int|void|null
      * @throws \Neos\Flow\Package\Exception\UnknownPackageException
-     * @throws \ReflectionException
+     * @throws ReflectionException
      */
     public function generateCommand()
     {
@@ -148,10 +152,11 @@ class OpenImmoCommandController extends CommandController
     /**
      * Imports OpenImmo data from configured directory.
      * @throws NodeNotFoundException
-     * @throws \Neos\ContentRepository\Exception\ImportException
-     * @throws \Neos\ContentRepository\Exception\NodeTypeNotFoundException
+     * @throws NodeTypeNotFoundException
+     * @throws ReflectionException
      * @throws \Neos\Eel\Exception
-     * @throws \ReflectionException
+     * @throws FilesException
+     * @throws NodeException
      */
     public function importCommand()
     {
@@ -206,11 +211,12 @@ class OpenImmoCommandController extends CommandController
      * @param string $directory
      *
      * @return bool
+     * @throws NodeException
      * @throws NodeNotFoundException
-     * @throws \Neos\ContentRepository\Exception\ImportException
-     * @throws \Neos\ContentRepository\Exception\NodeTypeNotFoundException
+     * @throws NodeTypeNotFoundException
+     * @throws ReflectionException
      * @throws \Neos\Eel\Exception
-     * @throws \ReflectionException
+     * @throws \Exception
      */
     protected function importOpenImmoDirectory(string $directory): bool
     {
@@ -310,10 +316,9 @@ class OpenImmoCommandController extends CommandController
      * @param string $directory Path of the current deflated archive for importing binary assets.
      *
      * @throws NodeNotFoundException
-     * @throws \Neos\ContentRepository\Exception\ImportException
-     * @throws \Neos\ContentRepository\Exception\NodeException
-     * @throws \Neos\ContentRepository\Exception\NodeTypeNotFoundException
-     * @throws \ReflectionException
+     * @throws NodeException
+     * @throws NodeTypeNotFoundException
+     * @throws ReflectionException
      */
     protected function updateNodePropertiesAndChildren(NodeInterface $existingNode, object $estateData, string $directory)
     {
@@ -371,10 +376,14 @@ class OpenImmoCommandController extends CommandController
                 default:
                     if ($classProperty->getName() == 'daten') {
                         // import asset
-                        /* @var Daten $propertyValue */
-                        $neosImage = $this->contentHelper->importImage($directory . DIRECTORY_SEPARATOR . $propertyValue->getPfad());
-                        $existingNode->setProperty($classProperty->getName(), $neosImage);
-                        $this->outputLine("<info>Imported image from {$directory}/{$propertyValue->getPfad()}.</info>");
+                        try {
+                            /* @var Daten $propertyValue */
+                            $neosImage = $this->contentHelper->importImage($directory . DIRECTORY_SEPARATOR . $propertyValue->getPfad());
+                            $existingNode->setProperty($classProperty->getName(), $neosImage);
+                            $this->outputLine("<info>Imported image from {$directory}/{$propertyValue->getPfad()}.</info>");
+                        } catch (ImportException $e) {
+                            $this->outputLine("<error>Importing image {$directory}/{$propertyValue->getPfad()} failed! ({$e->getMessage()})</error>");
+                        }
                     } else {
                         $classPropertyType = $this->getNodeTypeNameFromClassname($matches[1]);
                         if (null == $primaryChildNode) {
@@ -862,13 +871,11 @@ class OpenImmoCommandController extends CommandController
             case 'DateTime<\'Y-m-d\TH:i:s\', null, [\'Y-m-d\TH:i:sP\', \'Y-m-d\TH:i:s\']>':
                 // those can be ignored
                 return null;
-                break;
 
             default:
                 $singularTypeName = str_replace('array<', '', str_replace('>', '', $typeFromPhpClass));
 
                 return $this->getNodeTypeNameFromClassname($singularTypeName);
-                break;
         }
     }
 
