@@ -1,3 +1,8 @@
+## 0.6.0 (December 08, 2020)
+  - [TASK] solved some code improvement hints
+  - [FEATURE] added new option to log imported xml string
+  - [DOC] updated TODOs
+
 ## 0.5.0 (December 03, 2020)
   - [BUGFIX] existing nodes now get hidden if they are not present in the import data.
   - [BUGFIX] existing nodes may have properties which are no longer present in the next import. This lead to wrong data. So now, existing properties are removed if they are not present in the import data.
