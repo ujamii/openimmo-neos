@@ -17,6 +17,8 @@ use Neos\Flow\Package\PackageManager;
 use Neos\Flow\Persistence\PersistenceManagerInterface;
 use Neos\Neos\Controller\Exception\NodeNotFoundException;
 use Neos\Utility\Files;
+use Psr\Log\LoggerInterface;
+use ReflectionException;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Process\ExecutableFinder;
 use Symfony\Component\Process\Process;
@@ -94,6 +96,12 @@ class OpenImmoCommandController extends CommandController
      * @Flow\Inject
      */
     protected $persistenceManager;
+
+    /**
+     * @var LoggerInterface
+     * @Flow\Inject
+     */
+    protected $logger;
 
     /**
      * @var ArrayCollection
@@ -449,6 +457,10 @@ class OpenImmoCommandController extends CommandController
                     $registry->registerSubscribingHandler(new DateTimeHandler());
                 });
             $serializer = $builder->build();
+
+            if ($this->importConfig['logLastImportedXml']) {
+                $this->logger->info(trim($xmlString));
+            }
 
             /* @var Openimmo $openImmo */
             return $serializer->deserialize($xmlString, Openimmo::class, 'xml');

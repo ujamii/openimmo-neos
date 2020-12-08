@@ -10,6 +10,7 @@ Ujamii:
       sourceDirectory: 'import/'
       targetNodeType: 'Ujamii.OpenImmo:Document.OpenImmoRoot'
       showAddressInUrl: false
+      logLastImportedXml: false
     nodeTypeIcons:
       default: icon-sign
       Anhaenge: icon-image
