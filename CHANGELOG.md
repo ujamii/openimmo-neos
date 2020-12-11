@@ -1,3 +1,6 @@
+## 0.6.1 (December 11, 2020)
+  - [BUGFIX] as one openimmo xml may not contain all real estate objects, we can not hide nodes which were not included
+
 ## 0.6.0 (December 08, 2020)
   - [TASK] solved some code improvement hints
   - [FEATURE] added new option to log imported xml string
