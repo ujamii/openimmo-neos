@@ -239,7 +239,6 @@ class OpenImmoCommandController extends CommandController
             foreach ($existingRealEstateNodes as $nodeKey => $nodeFromDb) {
                 if ($nodeFromDb->getProperty('estateIdentifier') === $estateIdentifier) {
                     $existingNode = $nodeFromDb;
-                    unset($existingRealEstateNodes[$nodeKey]);
                     break;
                 }
             }
@@ -297,14 +296,6 @@ class OpenImmoCommandController extends CommandController
                     $existingNode->remove();
                     break;
             }
-        }
-
-        $deactivateNodeCount = count($existingRealEstateNodes);
-        $this->outputLine("<info>deactivating {$deactivateNodeCount} existing nodes which were not included in the import:</info>");
-        /* @var NodeInterface $nodesToDeactivate */
-        foreach ($existingRealEstateNodes as $nodesToDeactivate) {
-            $nodesToDeactivate->setHidden(true);
-            $this->outputLine("<info>deactivating object '{$nodesToDeactivate->getProperty('estateIdentifier')}'.</info>");
         }
 
         return true;
