@@ -1,3 +1,6 @@
+## 0.6.2 (February 12, 2021)
+  - [BUGFIX] first import of new nodes with several levels of children failed because no collection node has been persisted
+
 ## 0.6.1 (December 11, 2020)
   - [BUGFIX] as one openimmo xml may not contain all real estate objects, we can not hide nodes which were not included
 
