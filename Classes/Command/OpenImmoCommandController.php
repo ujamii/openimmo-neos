@@ -408,6 +408,8 @@ class OpenImmoCommandController extends CommandController
                                     $classPropertyType,
                                     $primaryChildNode->getNodeAggregateIdentifier()
                                 );
+
+                                $this->persistenceManager->persistAll();
                             }
                             $this->updateNodePropertiesAndChildren($childNodesArray[0], $propertyValue, $directory);
                         }
