@@ -1,3 +1,10 @@
+## 0.8.0 (February 22, 2021)
+  - Merge pull request #1 from ujamii/task/update-library
+  - [FEATURE] as the ujamii/openimmo library now parses sub fields of type Feld[] correctly, the node type Feld is new in this package
+  - [TASK] as "boolean" fields were renamed to "bool" type in the library, we have to take care of this here as well
+  - [FEATURE] as the ujamii/openimmo library now parses sub fields of type Feld[] correctly, the node types Bewertung and UserDefinedExtend have been rebuilt
+  - [TASK] raised library constraint
+
 ## 0.6.2 (February 12, 2021)
   - [BUGFIX] first import of new nodes with several levels of children failed because no collection node has been persisted
 
