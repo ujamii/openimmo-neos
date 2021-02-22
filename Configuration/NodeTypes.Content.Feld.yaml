@@ -1,0 +1,37 @@
+'Ujamii.OpenImmo:Content.Feld':
+  superTypes:
+    'Ujamii.OpenImmo:Mixin.Content.OpenImmoInspector': true
+    'Ujamii.OpenImmo:Constraint.Content.Restricted': true
+    'Neos.Neos:Content': true
+  ui:
+    label: Feld
+    icon: icon-sign
+  properties:
+    modus:
+      type: string
+      ui:
+        label: Modus
+        reloadIfChanged: true
+        inspector:
+          group: openimmo
+    name:
+      type: string
+      ui:
+        label: Name
+        reloadIfChanged: true
+        inspector:
+          group: openimmo
+    typ:
+      type: string
+      ui:
+        label: Typ
+        reloadIfChanged: true
+        inspector:
+          group: openimmo
+    wert:
+      type: string
+      ui:
+        label: Wert
+        reloadIfChanged: true
+        inspector:
+          group: openimmo

@@ -1,0 +1,7 @@
+prototype(Ujamii.OpenImmo:Content.Feld) < prototype(Neos.Fusion:Component) {
+    name = ${q(node).property('name')}
+    wert = ${q(node).property('wert')}
+    renderer = afx`
+        <Ujamii.OpenImmo:Component.Molecule.Feld {...props}/>
+    `
+}

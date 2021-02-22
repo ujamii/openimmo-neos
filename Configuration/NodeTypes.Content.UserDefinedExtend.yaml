@@ -6,11 +6,11 @@
   ui:
     label: UserDefinedExtend
     icon: icon-sign
-  properties:
-    feld:
-      type: string
-      ui:
-        label: Feld
-        reloadIfChanged: true
-        inspector:
-          group: openimmo
+  properties: {  }
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Ujamii.OpenImmo:Content.Feld': true
+          '*': false

@@ -347,7 +347,7 @@ class OpenImmoCommandController extends CommandController
                     $this->outputLine("<info>Filling property {$classProperty->getName()} with value \"{$propertyValue}\".</info>");
                     break;
 
-                case 'boolean':
+                case 'bool':
                 case 'string':
                 case 'float':
                 case 'int':
@@ -567,7 +567,7 @@ class OpenImmoCommandController extends CommandController
 
         switch ($typeFromPhpClass) {
 
-            case 'boolean':
+            case 'bool':
             case 'string':
             case 'float':
             case 'int':
@@ -608,7 +608,7 @@ class OpenImmoCommandController extends CommandController
 
         switch ($typeFromPhpClass) {
 
-            case 'boolean':
+            case 'bool':
             case 'string':
             case 'float':
             case 'int':
@@ -743,9 +743,9 @@ class OpenImmoCommandController extends CommandController
         $additionalConfig = [];
         switch ($typeFromPhpClass) {
 
-            case 'boolean':
+            case 'bool':
             case 'string':
-                $neosPropType = $typeFromPhpClass;
+                $neosPropType = $typeFromPhpClass === 'bool' ? 'boolean' : $typeFromPhpClass;
                 if ($property->getDocblock()->hasTag('see')) {
                     // there may also be constants with that name, then generate a fixed selectbox
                     $items = [];
@@ -854,7 +854,7 @@ class OpenImmoCommandController extends CommandController
 
         switch ($typeFromPhpClass) {
 
-            case 'boolean':
+            case 'bool':
             case 'string':
             case 'float':
             case 'int':
