@@ -1,6 +1,6 @@
 prototype(Ujamii.OpenImmo:Component.Molecule.UserDefinedExtend) < prototype(Neos.Fusion:Component) {
     
     renderer = afx`
-        
+        {props.mainContent}
     `
 }
