@@ -16,12 +16,16 @@
         inspector:
           group: openimmo
     daten:
-      type: Neos\Media\Domain\Model\ResourceBasedInterface
+      type: Neos\Media\Domain\Model\Asset
       ui:
         label: Daten
         reloadIfChanged: true
         inspector:
           group: openimmo
+          editorOptions:
+            features:
+              crop: true
+              resize: true
     format:
       type: string
       ui:

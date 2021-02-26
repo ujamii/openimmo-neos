@@ -414,7 +414,7 @@ class NeosAdapterGenerator
             default:
                 if ($property->getName() == 'daten') {
                     // special case for assets
-                    $neosPropType     = 'Neos\Media\Domain\Model\ResourceBasedInterface';
+                    $neosPropType     = 'Neos\Media\Domain\Model\Asset';
                     $additionalConfig = [
                         'ui' => [
                             'inspector' => [
