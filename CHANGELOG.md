@@ -1,3 +1,13 @@
+## 0.9.0 (February 26, 2021)
+  - Merge pull request #3 from ujamii/update-v0.9
+  - [FEATURE] every imported asset is now taggen with "openimmo" to simplify cleanup
+  - [DOC] added housekeeping section to the readme
+  - [FEATURE] added new command "openimmo:clear"
+  - [TASK] update library to v0.9
+  - Merge pull request #2 from ujamii/refactoring
+  - [BUGFIX] importing assets may cause a crash, so assets are now imported differently (not every asset is an image)
+  - [TASK] separated the command controller into two classes, one for each single command
+
 ## 0.8.0 (February 22, 2021)
   - Merge pull request #1 from ujamii/task/update-library
   - [FEATURE] as the ujamii/openimmo library now parses sub fields of type Feld[] correctly, the node type Feld is new in this package
