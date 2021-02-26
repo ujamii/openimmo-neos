@@ -16,7 +16,7 @@
         inspector:
           group: openimmo
     daten:
-      type: Neos\Media\Domain\Model\ImageInterface
+      type: Neos\Media\Domain\Model\Asset
       ui:
         label: Daten
         reloadIfChanged: true
