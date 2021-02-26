@@ -177,7 +177,7 @@ class ContentHelper
      * @return Asset|null
      * @throws ImportException
      */
-    public function importAsset(string $remoteFile): ?Image
+    public function importAsset(string $remoteFile): ?Asset
     {
         try {
             $resource = $this->resourceManager->importResource($remoteFile);
