@@ -2,14 +2,23 @@
 
 namespace Ujamii\OpenImmo\Command;
 
+use Neos\ContentRepository\Domain\Model\NodeInterface;
 use Neos\Flow\Annotations as Flow;
 use Neos\Flow\Cli\CommandController;
+use Ujamii\OpenImmo\Service\ContentHelper;
 
 /**
  * @Flow\Scope("singleton")
  */
 class OpenImmoCommandController extends CommandController
 {
+
+    /**
+     * @var ContentHelper
+     * @Flow\Inject
+     */
+    protected $contentHelper;
+
     /**
      * Generates wrapper files (yaml and fusion) for the ujamii/openimmo API.
      *
@@ -39,6 +48,20 @@ class OpenImmoCommandController extends CommandController
         } catch (\Exception $e) {
             $this->output->outputLine("<error>{$e->getMessage()}</error>");
             $this->sendAndExit(1);
+        }
+    }
+
+    /**
+     * Removes all nodes belonging to this package from the content repository.
+     *
+     * @throws \Neos\Eel\Exception
+     */
+    public function clearCommand(): void
+    {
+        /* @var array<NodeInterface> $allImmoNodes */
+        $allImmoNodes = $this->contentHelper->findNodesByNodeType(OpenImmoImporter::OPEN_IMMO_DOCUMENT_IMMOBILIE);
+        foreach ($allImmoNodes as $immoNode) {
+            $immoNode->remove();
         }
     }
 
