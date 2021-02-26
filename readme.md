@@ -83,6 +83,14 @@ All the rendering is done with the files located in `Resources/Private/Fusion/Co
 You can customize the source directory for the import (where the zip files are located) and the default
 root node (by node type) to which the data will be imported.
 
+### Housekeeping
+
+With the `./flow openimmo:clear` command, all nodes of type `Ujamii.OpenImmo:Document.Immobilie` are removed from the
+content repository, which might be handy if you want to clean up.
+
+If you like to clean up all the assets as well, you can use the builtin command `./flow media:removeunused --assume-yes --only-tags=openimmo`
+because all the assets created during an import will have the tag `openimmo`. 
+
 ### Update code based on newer API classes 
 
 1. Update the composer package, including dev packages AND `--optimize-autoloader`, otherwise the class loading will fail!

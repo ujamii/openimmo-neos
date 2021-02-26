@@ -15,8 +15,10 @@ use Neos\Flow\ResourceManagement\ResourceManager;
 use Neos\Flow\Security\Context as SecurityContext;
 use Neos\Media\Domain\Model\Asset;
 use Neos\Media\Domain\Model\Image;
+use Neos\Media\Domain\Model\Tag;
 use Neos\Media\Domain\Repository\AssetRepository;
 use Neos\Media\Domain\Repository\ImageRepository;
+use Neos\Media\Domain\Repository\TagRepository;
 use Neos\Neos\Controller\Exception\NodeNotFoundException;
 
 class ContentHelper
@@ -62,6 +64,12 @@ class ContentHelper
      * @Flow\Inject
      */
     protected $assetRepository;
+
+    /**
+     * @var TagRepository
+     * @Flow\Inject
+     */
+    protected $tagRepository;
 
     /**
      * @param string $nodeType
@@ -159,6 +167,7 @@ class ContentHelper
             $resource = $this->resourceManager->importResource($remoteImageUrl);
             if ($resource) {
                 $image = new Image($resource);
+                $image->addTag($this->getDefaultTag());
                 $this->imageRepository->add($image);
 
                 return $image;
@@ -183,6 +192,7 @@ class ContentHelper
             $resource = $this->resourceManager->importResource($remoteFile);
             if ($resource) {
                 $asset = new Asset($resource);
+                $asset->addTag($this->getDefaultTag());
                 $this->assetRepository->add($asset);
 
                 return $asset;
@@ -193,5 +203,20 @@ class ContentHelper
         }
 
         return null;
+    }
+
+    /**
+     * @return Tag
+     * @throws \Neos\Flow\Persistence\Exception\IllegalObjectTypeException
+     */
+    protected function getDefaultTag(): Tag
+    {
+        $tag = $this->tagRepository->findOneByLabel('openimmo');
+        if (!$tag) {
+            $tag = new Tag('openimmo');
+            $this->tagRepository->add($tag);
+            $this->persistenceManager->persistAll();
+        }
+        return $tag;
     }
 }
