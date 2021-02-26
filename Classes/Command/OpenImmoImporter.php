@@ -268,14 +268,26 @@ class OpenImmoImporter
 
                 default:
                     if ($classProperty->getName() == 'daten') {
-                        // import asset
-                        try {
-                            /* @var Daten $propertyValue */
-                            $neosImage = $this->contentHelper->importImage($directory . DIRECTORY_SEPARATOR . $propertyValue->getPfad());
-                            $existingNode->setProperty($classProperty->getName(), $neosImage);
-                            $this->output->outputLine("<info>Imported image from {$directory}/{$propertyValue->getPfad()}.</info>");
-                        } catch (ImportException $e) {
-                            $this->output->outputLine("<error>Importing image {$directory}/{$propertyValue->getPfad()} failed! ({$e->getMessage()})</error>");
+                        $format = $estateData->getFormat();
+                        /* @var Daten $propertyValue */
+                        if ($format == 'pdf') {
+                            // import asset
+                            try {
+                                $neosAsset = $this->contentHelper->importAsset($directory . DIRECTORY_SEPARATOR . $propertyValue->getPfad());
+                                $existingNode->setProperty($classProperty->getName(), $neosAsset);
+                                $this->output->outputLine("<info>Imported asset from {$directory}/{$propertyValue->getPfad()}.</info>");
+                            } catch (ImportException $e) {
+                                $this->output->outputLine("<error>Importing asset {$directory}/{$propertyValue->getPfad()} failed! ({$e->getMessage()})</error>");
+                            }
+                        } else {
+                            // import image
+                            try {
+                                $neosImage = $this->contentHelper->importImage($directory . DIRECTORY_SEPARATOR . $propertyValue->getPfad());
+                                $existingNode->setProperty($classProperty->getName(), $neosImage);
+                                $this->output->outputLine("<info>Imported image from {$directory}/{$propertyValue->getPfad()}.</info>");
+                            } catch (ImportException $e) {
+                                $this->output->outputLine("<error>Importing image {$directory}/{$propertyValue->getPfad()} failed! ({$e->getMessage()})</error>");
+                            }
                         }
                     } else {
                         $classPropertyType = NeosAdapterGenerator::getNodeTypeNameFromClassname($matches[1]);

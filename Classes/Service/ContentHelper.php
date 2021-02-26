@@ -13,7 +13,9 @@ use Neos\Flow\Annotations as Flow;
 use Neos\Flow\Persistence\PersistenceManagerInterface;
 use Neos\Flow\ResourceManagement\ResourceManager;
 use Neos\Flow\Security\Context as SecurityContext;
+use Neos\Media\Domain\Model\Asset;
 use Neos\Media\Domain\Model\Image;
+use Neos\Media\Domain\Repository\AssetRepository;
 use Neos\Media\Domain\Repository\ImageRepository;
 use Neos\Neos\Controller\Exception\NodeNotFoundException;
 
@@ -54,6 +56,12 @@ class ContentHelper
      * @Flow\Inject
      */
     protected $imageRepository;
+
+    /**
+     * @var AssetRepository
+     * @Flow\Inject
+     */
+    protected $assetRepository;
 
     /**
      * @param string $nodeType
@@ -158,6 +166,30 @@ class ContentHelper
         } catch (\Exception $e) {
             // no image :-(
             throw new ImportException("Image could not be imported. Reason: {$e->getMessage()}", 1583856335, $e);
+        }
+
+        return null;
+    }
+
+    /**
+     * @param string $remoteFile
+     *
+     * @return Asset|null
+     * @throws ImportException
+     */
+    public function importAsset(string $remoteFile): ?Image
+    {
+        try {
+            $resource = $this->resourceManager->importResource($remoteFile);
+            if ($resource) {
+                $asset = new Asset($resource);
+                $this->assetRepository->add($asset);
+
+                return $asset;
+            }
+        } catch (\Exception $e) {
+            // no asset :-(
+            throw new ImportException("Asset could not be imported. Reason: {$e->getMessage()}", 1583856335, $e);
         }
 
         return null;
