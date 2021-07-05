@@ -1,3 +1,6 @@
+## 0.9.1 (July 05, 2021)
+  - [BUGFIX] the default action in the standard is "add"
+
 ## 0.9.0 (February 26, 2021)
   - Merge pull request #3 from ujamii/update-v0.9
   - [FEATURE] every imported asset is now taggen with "openimmo" to simplify cleanup
