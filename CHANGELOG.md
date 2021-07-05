@@ -1,3 +1,6 @@
+## 0.6.3 (July 05, 2021)
+  - [BUGFIX] the default action in the standard is "add"
+
 ## 0.6.2 (February 12, 2021)
   - [BUGFIX] first import of new nodes with several levels of children failed because no collection node has been persisted
 
