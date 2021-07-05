@@ -154,6 +154,7 @@ class OpenImmoImporter
 
             switch ($actionToPerform) {
 
+                default:
                 case Aktion::AKTIONART_CHANGE:
                     if (is_null($existingNode)) {
                         // create
