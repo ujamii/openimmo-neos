@@ -81,34 +81,38 @@ class OpenImmoImporter
 
         if ($finder->hasResults()) {
             foreach ($finder as $zipFile) {
-                // unzip file
-                $finder   = new ExecutableFinder;
-                $hasUnzip = (bool)$finder->find('unzip');
-                if ($hasUnzip) {
-                    $directoryName           = $zipFile->getFilenameWithoutExtension();
-                    $absoluteTargetDirectory = $importSourceDirectory . $directoryName;
-                    if (is_dir($absoluteTargetDirectory)) {
-                        $this->output->outputLine("<info>directory {$directoryName} already exists, so delete it!</info>");
-                        Files::removeDirectoryRecursively($importSourceDirectory . $directoryName);
-                    }
-                    $this->output->outputLine("<info>extracting {$zipFile->getRealPath()} to {$absoluteTargetDirectory}</info>");
-                    $process = new Process(['unzip', $zipFile->getRealPath(), "-d{$absoluteTargetDirectory}"], $zipFile->getPath());
-                    $process->run();
+                try {
+                    // unzip file
+                    $finder   = new ExecutableFinder;
+                    $hasUnzip = (bool)$finder->find('unzip');
+                    if ($hasUnzip) {
+                        $directoryName           = $zipFile->getFilenameWithoutExtension();
+                        $absoluteTargetDirectory = $importSourceDirectory . $directoryName;
+                        if (is_dir($absoluteTargetDirectory)) {
+                            $this->output->outputLine("<info>directory {$directoryName} already exists, so delete it!</info>");
+                            Files::removeDirectoryRecursively($importSourceDirectory . $directoryName);
+                        }
+                        $this->output->outputLine("<info>extracting {$zipFile->getRealPath()} to {$absoluteTargetDirectory}</info>");
+                        $process = new Process(['unzip', $zipFile->getRealPath(), "-d{$absoluteTargetDirectory}"], $zipFile->getPath());
+                        $process->run();
 
-                    if ( ! $process->isSuccessful()) {
-                        throw new \Exception("<error>unzip failed with error: {$process->getOutput()}</error>");
-                    }
+                        if ( ! $process->isSuccessful()) {
+                            throw new \Exception("<error>unzip failed with error: {$process->getOutput()}</error>");
+                        }
 
-                    $importResult = $this->importOpenImmoDirectory($importSourceDirectory . $directoryName);
-                    if ($importResult) {
-                        Files::removeDirectoryRecursively($importSourceDirectory . $directoryName);
-                        // delete zip file and unpacked files
-                        unlink($zipFile->getRealPath());
-                        $this->output->outputLine("<info>deleted {$directoryName} and {$zipFile->getFilename()}</info>");
+                        $importResult = $this->importOpenImmoDirectory($importSourceDirectory . $directoryName);
+                        if ($importResult) {
+                            Files::removeDirectoryRecursively($importSourceDirectory . $directoryName);
+                            // delete zip file and unpacked files
+                            unlink($zipFile->getRealPath());
+                            $this->output->outputLine("<info>deleted {$directoryName} and {$zipFile->getFilename()}</info>");
 
+                        }
+                    } else {
+                        throw new \Exception('<error>unzip not found on this host!</error>');
                     }
-                } else {
-                    throw new \Exception('<error>unzip not found on this host!</error>');
+                } catch (\Exception $e) {
+                    $this->output->outputLine($e->getMessage());
                 }
             }
         } else {
