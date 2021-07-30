@@ -1,3 +1,6 @@
+## 0.9.2 (July 30, 2021)
+  - [BUGFIX] added a try catch block to not break the loop if something goes wrong for one item
+
 ## 0.9.1 (July 05, 2021)
   - [BUGFIX] the default action in the standard is "add"
 
