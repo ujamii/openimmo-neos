@@ -1,3 +1,6 @@
+## 0.9.3 (August 19, 2021)
+  - [BUGFIX] removed exceptions in loops (oops)
+
 ## 0.9.2 (July 30, 2021)
   - [BUGFIX] added a try catch block to not break the loop if something goes wrong for one item
 
