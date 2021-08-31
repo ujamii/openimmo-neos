@@ -1,3 +1,6 @@
+## 0.9.4 (August 31, 2021)
+  - [BUGFIX] replaced continue inside switch with break
+
 ## 0.9.3 (August 19, 2021)
   - [BUGFIX] removed exceptions in loops (oops)
 
