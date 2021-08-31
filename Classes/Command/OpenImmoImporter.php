@@ -168,7 +168,7 @@ class OpenImmoImporter
                         );
                         if (is_null($parentNode)) {
                             $this->output->outputLine("<error>No parent node of type {$this->importConfig['targetNodeType']} found!</error>");
-                            continue;
+                            break;
                         }
 
                         $nodeProperties = [
@@ -199,7 +199,7 @@ class OpenImmoImporter
                 case Aktion::AKTIONART_DELETE:
                     if (is_null($existingNode)) {
                         $this->output->outputLine("<error>No estate item found with identifier {$estateIdentifier}!</error>");
-                        continue;
+                        break;
                     }
 
                     $this->output->outputLine("<info>Removing real estate node {$estateIdentifier}!</info>");
