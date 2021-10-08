@@ -24,6 +24,7 @@ use Ujamii\OpenImmo\API\Aktion;
 use Ujamii\OpenImmo\API\Daten;
 use Ujamii\OpenImmo\API\Immobilie;
 use Ujamii\OpenImmo\API\Openimmo;
+use Ujamii\OpenImmo\API\Uebertragung;
 use Ujamii\OpenImmo\Handler\DateTimeHandler;
 use Ujamii\OpenImmo\Service\ContentHelper;
 
@@ -141,6 +142,14 @@ class OpenImmoImporter
         $existingNodeCount       = count($existingRealEstateNodes);
         $this->output->outputLine("<info>Found {$existingNodeCount} nodes in system before import.</info>");
 
+        if ($openImmo->getUebertragung()->getUmfang() === Uebertragung::UMFANG_VOLL) {
+            // if the xml file contains all currently available objects, deactivate everything we already have
+            /** @var NodeInterface $existingRealEstateNode */
+            foreach ($existingRealEstateNodes as $existingRealEstateNode) {
+                $existingRealEstateNode->remove();
+            }
+        }
+
         /* @var Immobilie */
         foreach ($openImmo->getAnbieter()[0]->getImmobilie() as $immobilie) {
             $actionToPerform  = $immobilie->getVerwaltungTechn()->getAktion()->getAktionart();
@@ -152,6 +161,10 @@ class OpenImmoImporter
             foreach ($existingRealEstateNodes as $nodeKey => $nodeFromDb) {
                 if ($nodeFromDb->getProperty('estateIdentifier') === $estateIdentifier) {
                     $existingNode = $nodeFromDb;
+
+                    // we may have flagged this for removal before, but if this object is
+                    // still present in the new import, we can keep it instead of delete+create.
+                    $existingNode->setRemoved(false);
                     break;
                 }
             }
