@@ -1,3 +1,6 @@
+## 0.9.5 (October 08, 2021)
+  - [BUGFIX] if xml is of type UMFANG_VOLL, delete all existing data before import
+
 ## 0.9.4 (August 31, 2021)
   - [BUGFIX] replaced continue inside switch with break
 
